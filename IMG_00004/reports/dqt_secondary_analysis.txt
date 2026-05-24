@@ -1,0 +1,212 @@
+================================================================================
+IMG_00004.jpg - COMPREHENSIVE SECONDARY DQT ANOMOLY & "UNSTABLE" ANALYSIS
+Source: R:\nevermore\stack\arg\IMG_00004.jpg
+File: IMG_00004.jpg (489,353 bytes)
+MD5: 4A3E7D4E4B41FE03A6CC96D3423C5B7F
+SHA256: 637F1008EFD01AAC359895FFA957465E5C02C5E4E5D75ABB3769AA8FC07AA4FA
+Source: https://project-skyscraper.com/2005/04/13/quote/
+File size: 489353 bytes (0x77789)
+================================================================================
+
+--- DQT TABLE OFFSETS AND BINARY EXTRACTION ---
+
+The JPEG 4 DQT markers:
+
+  DQT # | Name         | Marker Offset | Segment Length | Data Bytes      | Table ID
+  ------+--------------+---------------+----------------+-----------------+---------
+    1   | ThumbL_DQT1  | 0x01F0 (496)  | 69 bytes       | 0x01F5-0x0234   | 0 (Luma)
+    2   | ThumbC_DQT2  | 0x0235 (565)  | 69 bytes       | 0x023A-0x0279   | 1 (Chroma)
+    3   | MainL_DQT3   | 0x1DB9 (7609) | 69 bytes       | 0x1DBE-0x1DFD   | 0 (Luma)
+    4   | MainC_DQT4   | 0x1DFE (7678) | 69 bytes       | 0x1E03-0x1E42   | 1 (Chroma)
+
+  DQT segment structure per marker:
+    FF DB  (2 bytes - marker)
+    LL LL  (2 bytes - length, always 0x0043 = 67 + 2 length bytes = 69 total)
+    PxTxx  (1 byte - precision[4 bits] | table_id[4 bits])
+    [64 bytes of quantization data in zigzag order]
+
+  Extracted binary files:
+    ThumbL_DQT1.bin           (69 bytes - full DQT segment)
+    ThumbL_DQT1_values.bin    (64 bytes - values only)
+    ThumbC_DQT2.bin           (69 bytes)
+    ThumbC_DQT2_values.bin    (64 bytes)
+    MainL_DQT3.bin            (69 bytes - anomalous)
+    MainL_DQT3_values.bin     (64 bytes - anomalous)
+    MainC_DQT4.bin            (69 bytes - anomalous)
+    MainC_DQT4_values.bin     (64 bytes - anomalous)
+
+
+--- MAIN IMAGE DQT TABLES (ANOMALOUS - only values {1,2,3}) ---
+
+DQT3 (Main Luma) - Zigzag storage order:
+  [0]   1   1   1   1   1   1   1   1
+  [1]   1   1   1   1   1   1   1   1
+  [2]   1   1   1   1   1   1   1   1
+  [3]   1   1   1   1   1   1   1   1
+  [4]   1   1   1   1   1   1   1   1
+  [5]   1   1   1   2   2   2   2   2
+  [6]   2   2   2   2   2   2   3   3
+  [7]   3   3   3   3   3   3   3   3
+
+  Value counts: 1=43, 2=11, 3=10
+
+DQT3 (Main Luma) - Natural raster order (de-zigzagged) - DIAGONAL STAIRCASE:
+  [0]   1   1   1   1   1   1   1   1
+  [1]   1   1   1   1   1   1   1   1
+  [2]   1   1   1   1   1   1   1   2
+  [3]   1   1   1   1   1   1   2   2
+  [4]   1   1   1   1   1   2   2   3
+  [5]   1   1   1   1   2   2   3   3
+  [6]   1   1   1   2   2   3   3   3
+  [7]   1   1   2   2   3   3   3   3
+
+  The 1->2 boundary runs approximately along anti-diagonal sum 8-9.
+  The 2->3 boundary runs approximately along anti-diagonal sum 11.
+
+DQT4 (Main Chroma) - Zigzag storage order:
+  [0]   1   1   1   1   1   1   1   1
+  [1]   1   1   2   2   1   2   2   3
+  [2]   3   3   3   3   3   3   3   3
+  [3]   3   3   3   3   3   3   3   3
+  [4]   3   3   3   3   3   3   3   3
+  [5]   3   3   3   3   3   3   3   3
+  [6]   3   3   3   3   3   3   3   3
+  [7]   3   3   3   3   3   3   3   3
+
+  Value counts: 1=11, 2=4, 3=49
+
+DQT4 (Main Chroma) - Natural raster order (de-zigzagged) - DIAGONAL STAIRCASE:
+  [0]   1   1   1   1   2   3   3   3
+  [1]   1   1   1   2   3   3   3   3
+  [2]   1   1   1   3   3   3   3   3
+  [3]   1   2   3   3   3   3   3   3
+  [4]   2   3   3   3   3   3   3   3
+  [5]   3   3   3   3   3   3   3   3
+  [6]   3   3   3   3   3   3   3   3
+  [7]   3   3   3   3   3   3   3   3
+
+  The 1->2 boundary is on anti-diagonal sum 4 (cells (0,4),(1,3),(3,1),(4,0)).
+  The 2->3 boundary is immediately on anti-diagonal sum 4-5.
+  NOTE: Cell (2,2) on sum=4 is value 1, NOT 2 - a single-cell anomaly.
+
+  Thumnail DQT of no significance (normal).
+
+--- COMBINED DQT3*3 + DQT4 GRID ---
+
+DQT3*3 + DQT4 (Zigzag storage order):
+  [0]   4   4   4   4   4   4   4   4
+  [1]   4   4   5   5   4   5   5   6
+  [2]   6   6   6   6   6   6   6   6
+  [3]   6   6   6   6   6   6   6   6
+  [4]   6   6   6   6   6   6   6   6
+  [5]   6   6   6   9   9   9   9   9
+  [6]   9   9   9   9   9   9  12  12
+  [7]  12  12  12  12  12  12  12  12
+
+DQT3*3 + DQT4 (Natural raster order - de-zigzagged):
+  [0]   4   4   4   4   5   6   6   6
+  [1]   4   4   4   5   6   6   6   6
+  [2]   4   4   4   6   6   6   6   9
+  [3]   4   5   6   6   6   6   9   9
+  [4]   5   6   6   6   6   9   9  12
+  [5]   6   6   6   6   9   9  12  12
+  [6]   6   6   6   9   9  12  12  12
+  [7]   6   6   9   9  12  12  12  12
+
+As letters A-E (4->A, 5->B, 6->C, 9->D, 12->E):
+  [0]  A A A A B C C C
+  [1]  A A A B C C C C
+  [2]  A A A C C C C D
+  [3]  A B C C C C D D
+  [4]  B C C C C D D E
+  [5]  C C C C D D E E
+  [6]  C C C D D E E E
+  [7]  C C D D E E E E
+
+As digits 0-4 (4->0, 5->1, 6->2, 9->3, 12->4):
+  [0]  0 0 0 0 1 2 2 2
+  [1]  0 0 0 1 2 2 2 2
+  [2]  0 0 0 2 2 2 2 3
+  [3]  0 1 2 2 2 2 3 3
+  [4]  1 2 2 2 2 3 3 4
+  [5]  2 2 2 2 3 3 4 4
+  [6]  2 2 2 3 3 4 4 4
+  [7]  2 2 3 3 4 4 4 4
+
+--- DQT LSB BYTE EXTRACTION ---
+
+  DQT1 (ThumbL): 15 F0 B5 AA 04 46 47 84
+  DQT2 (ThumbC): E9 94 00 00 00 00 00 00
+  DQT3 (MainL):  FF FF FF FF FF E0 03 FF
+  DQT4 (MainC):  FF C9 FF FF FF FF FF FF
+
+  Non-FF bytes from anomalous DQTs:
+    DQT3: 0xE0 (= 224 = max red channel value in image)
+           0x03 (= 3 = ARG context number)
+    DQT4: 0xC9 (= 201 = max green channel value in image)
+    Combined: E0 03 C9
+
+  DQT3 XOR DQT4 (LSBs): 00 36 00 00 00 1F FC 00
+
+--- UNSTABLE ANALYSIS RESULTS ---
+
+1. Single Anomaly Cell:
+   The combined grid has exactly 1 non-uniform anti-diagonal:
+
+   Sum=4: values at {(0,4):5, (1,3):5, (2,2):4, (3,1):5, (4,0):5}
+
+   Cell (2,2) has value 4 (A) instead of the expected 5 (B).
+   This is caused by DQT4[zigzag_idx=12] = 1 instead of 2.
+
+2. DQT3 XOR DQT4 in Natural Order:
+  [0]   0   0   0   0   3   2   2   2
+  [1]   0   0   0   3   2   2   2   2
+  [2]   0   0   0   2   2   2   2   1
+  [3]   0   3   2   2   2   2   1   1
+  [4]   3   2   2   2   2   1   1   0
+  [5]   2   2   2   2   1   1   0   0
+  [6]   2   2   2   1   1   0   0   0
+  [7]   2   2   1   1   0   0   0   0
+
+3. DQT3 - DQT4 (Difference) in Natural Order:
+  [0]   0   0   0   0  -1  -2  -2  -2
+  [1]   0   0   0  -1  -2  -2  -2  -2
+  [2]   0   0   0  -2  -2  -2  -2  -1
+  [3]   0  -1  -2  -2  -2  -2  -1  -1
+  [4]  -1  -2  -2  -2  -2  -1  -1   0
+  [5]  -2  -2  -2  -2  -1  -1   0   0
+  [6]  -2  -2  -2  -1  -1   0   0   0
+  [7]  -2  -2  -1  -1   0   0   0   0
+
+4. Decay path through DQT indices (pos += v3+v4):
+   0->2->4->6->8->10->13->16->20->24->28->32->36->40->44->49->54->60
+   Combined values along path: 4,4,4,4,4,5,5,6,6,6,6,6,6,6,9,9,12,12
+
+5. "Unstable" positions:
+   DQT4=2 positions: zigzag indices [10,11,13,14] = natural (4,0),(3,1),(1,3),(0,4)
+   DQT3=3 positions: zigzag indices [54-63] = bottom-right corner of grid
+
+--- ADDITIONAL INFORMATION ---
+
+  - DQT binary as XOR cipher key vs SOS segment -> incoherent
+  - DQT nibble-pair encoding -> pattern reflects underlying {1,2,3} values
+  - DQT base-3 conversion -> integers not obviously meaningful
+  - DQT difference (DQT3 - DQT4) letter mappings -> gradient patterns, no text
+  - Periodic table atomic number mapping -> no correlation found
+  - "Decay path" traversal -> only gradient values, no hidden text
+  - Anti-diagonal boundary analysis -> boundaries at sums 3,4,8,10
+  - Pattern A7 (B=167 anomaly) found 5 times in file at offsets [818,1036,1340,1500,1560]
+  - Pattern E0C9 found 5 times [60629,93554,124076,228378,241176]
+
+--- ANOMALY PIXEL CROSS-REFERENCES ---
+
+  Single pixel at (739, 1070):
+    R=224 (0xE0) = matches DQT3 LSB byte 0xE0
+    G=201 (0xC9) = matches DQT4 LSB byte 0xC9
+    B=167 (0xA7) = pattern found in file but NOT in DQT LSBs
+
+  Only pixel with R=224 (max red): (739, 1070)
+  Only pixel with G=201 (max green): (739, 1070)
+  Only pixel with B>=214: (79, 103) with B=214
+
+  Cluster of 8 bright pixels near (739, 1070) forms a small highlight region.

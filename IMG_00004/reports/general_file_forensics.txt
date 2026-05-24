@@ -1,0 +1,175 @@
+================================================================================
+IMG_00004.jpg - GENERAL FORENSIC ANALYSIS
+Source: R:\nevermore\stack\arg\IMG_00004.jpg
+File: IMG_00004.jpg (489,353 bytes)
+MD5: 4A3E7D4E4B41FE03A6CC96D3423C5B7F
+SHA256: 637F1008EFD01AAC359895FFA957465E5C02C5E4E5D75ABB3769AA8FC07AA4FA
+Source: https://project-skyscraper.com/2005/04/13/quote/
+File size: 489353 bytes (0x77789)
+================================================================================
+
+
+--- WEBPAGE CONTEXT ---
+URL: https://project-skyscraper.com/2005/04/13/quote/
+Post: QUOTE (Apr 13, 2005)
+Tag: unstable
+memory bloc 1113384720: Sunday Morning
+
+Poem: 'Blue birds are invisible on the blue sky,'
+      'They vanish in silence where secrets lie.'
+      'No wing, no shadow, no trace in the light,'
+      'They are the unseen that watches the night.'
+
+Related images: Wallace-Stevens.jpg (on page)
+Prev: /1970/01/01/origin/ (memory bloc 0: no/value)
+Next: /2026/03/24/sleep-mode-46105/ (memory bloc 1774393645: sleeping)
+
+--- FILE STRUCTURE ---
+  0x000000 [     2] SOI      
+  0x000002 [    18] APP0     len=16
+  0x000014 [  4411] APP1     len=4409
+  0x00114F [    16] APP14    len=14
+  0x00115F [  3162] APP2     len=3160
+  0x001DB9 [    69] DQT      len=67
+  0x001DFE [    69] DQT      len=67
+  0x001E43 [    19] SOF2     len=17
+  0x001E56 [    32] DHT      len=30
+  0x001E76 [    54] DHT      len=52
+  0x001EAC [    30] DHT      len=28
+  0x001ECA [    80] DHT      len=78
+  0x001F1A [    76] DHT      len=74
+  0x001F66 [ 32029] SOS      scan=32015B
+  0x009C83 [ 36362] SOS      scan=36352B
+  0x012A8D [ 37318] SOS      scan=37308B
+  0x01BC53 [ 51313] SOS      scan=51303B
+  0x0284C4 [ 59956] SOS      scan=59946B
+  0x036EF8 [ 62640] SOS      scan=62630B
+  0x0463A8 [201695] SOS      scan=201685B
+  0x077787 [     2] EOI      
+
+  No data after EOI
+
+--- PROGRESSIVE JPEG SCAN STRUCTURE ---
+  SOF2 at 0x1E43: 1212x742, 8bit, 3 components
+    Comp 1: sampling=1x1, DQT=0
+    Comp 2: sampling=1x1, DQT=1
+    Comp 3: sampling=1x1, DQT=1
+  SOS #1 at 0x43D: comps=ID1(DC0,AC0),ID2(DC1,AC1),ID3(DC1,AC1) spec=(0,63) approx=(0,0) full AC [2992 bytes]
+  SOS #2 at 0x1F66: comps=ID1(DC0,AC0),ID2(DC1,AC0),ID3(DC1,AC0) spec=(0,0) approx=(0,0) DC [32015 bytes]
+  SOS #3 at 0x9C83: comps=ID2(DC0,AC0) spec=(1,5) approx=(0,0) AC bands 1-5 [36352 bytes]
+  SOS #4 at 0x12A8D: comps=ID3(DC0,AC0) spec=(1,5) approx=(0,0) AC bands 1-5 [37308 bytes]
+  SOS #5 at 0x1BC53: comps=ID1(DC0,AC0) spec=(1,5) approx=(0,0) AC bands 1-5 [51303 bytes]
+  SOS #6 at 0x284C4: comps=ID2(DC0,AC2) spec=(6,63) approx=(0,0) full AC [59946 bytes]
+  SOS #7 at 0x36EF8: comps=ID3(DC0,AC2) spec=(6,63) approx=(0,0) full AC [62630 bytes]
+  SOS #8 at 0x463A8: comps=ID1(DC0,AC1) spec=(6,63) approx=(0,0) full AC [201685 bytes]
+
+  Total compressed data: 484,231 bytes over 8 scans
+
+--- EMBEDDED FILES & SIGNATURES ---
+  SOI markers: [(0, '0x0'), (494, '0x1ee')]
+  GZIP at offset 0x2F672
+  GZIP at offset 0x31F22
+  GZIP at offset 0x3F72E
+  GZIP at offset 0x6DA77
+
+	!ALL FALSE POSITIVES!
+
+--- STATISTICAL ANALYSIS ---
+  File entropy: 7.9803 bits/byte
+  Unused byte values: 0
+  Top 5 bytes: ['0x0(0)=5744', '0x20(32)=2738', '0x24(36)=2578', '0x4(4)=2471', '0x44(68)=2441']
+  Bot 5 bytes: ['0xE6(230)=1425', '0xE1(225)=1382', '0xEF(239)=1355', '0xF0(240)=1352', '0xF3(243)=1282']
+  Entropy at 0x2 (APP0): 2.975 bits/byte (18B)
+  Entropy at 0x14 (APP1): 7.306 bits/byte (4411B)
+  Entropy at 0x114F (APP14): 2.906 bits/byte (16B)
+  Entropy at 0x115F (APP2): 7.030 bits/byte (3162B)
+  Entropy at 0x1DB9 (DQT): 1.665 bits/byte (69B)
+  Entropy at 0x1DFE (DQT): 1.382 bits/byte (69B)
+  Entropy at 0x1E43 (SOF2): 3.261 bits/byte (19B)
+  Entropy at 0x1E56 (DHT): 3.082 bits/byte (32B)
+  Entropy at 0x1E76 (DHT): 4.625 bits/byte (54B)
+  Entropy at 0x1EAC (DHT): 2.823 bits/byte (30B)
+  Entropy at 0x1ECA (DHT): 5.742 bits/byte (80B)
+  Entropy at 0x1F1A (DHT): 5.644 bits/byte (76B)
+  Entropy at 0x1F66 (SOS): 7.972 bits/byte (32029B)
+  Entropy at 0x9C83 (SOS): 7.939 bits/byte (36362B)
+  Entropy at 0x12A8D (SOS): 7.940 bits/byte (37318B)
+  Entropy at 0x1BC53 (SOS): 7.934 bits/byte (51313B)
+  Entropy at 0x284C4 (SOS): 7.952 bits/byte (59956B)
+  Entropy at 0x36EF8 (SOS): 7.951 bits/byte (62640B)
+  Entropy at 0x463A8 (SOS): 7.968 bits/byte (201695B)
+
+--- MEMORY BLOC NUMBERS ---
+  memory bloc (quote page) = 1113384720
+    hex: 0x425CE710
+    bytes BE: 425ce710
+    bytes LE: 10e75c42
+    found BE at: NOT FOUND
+    found LE at: NOT FOUND
+    as decimal string: NOT FOUND
+    factors: [2, 2, 2, 2, 3, 5, 7, 131, 5059]
+    mod 64: 16 -> DQT4[16] = ?
+    as UTC: 2005-04-13 09:32:00
+  memory bloc (sleep page) = 1774393645
+    hex: 0x69C3192D
+    bytes BE: 69c3192d
+    bytes LE: 2d19c369
+    found BE at: NOT FOUND
+    found LE at: NOT FOUND
+    as decimal string: NOT FOUND
+    factors: [5, 37, 9591317]
+    mod 64: 45 -> DQT4[45] = ?
+    as UTC: 2026-03-24 23:07:25
+  memory bloc (origin page) = 0
+    hex: 0x00000000
+    bytes BE: 00000000
+    bytes LE: 00000000
+    found BE at: 0xC2
+    found LE at: 0xC2
+    as decimal string: 0xA9
+    factors: []
+    mod 64: 0 -> DQT4[0] = ?
+    as UTC: 1970-01-01 00:00:00
+
+--- DQT LSB/PIXEL CROSS-REFERENCE ---
+  DQT3 LSB bytes: 0xFF 0xFF 0xFF 0xFF 0xFF 0xE0 0x03 0xFF
+  DQT4 LSB bytes: 0xFF 0xC9 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF
+  Non-FF: DQT3=['0xe0', '0x3'] DQT4=['0xc9']
+  Anomaly pixel R=224(0xE0) G=201(0xC9) B=167(0xA7)
+  DQT3[5]=0xE0 matches R, DQT4[1]=0xC9 matches G
+  DQT3[6]=0x03 = ARG#3 (not in pixel)
+  Pattern E0 03 C9 first at: NOT FOUND
+  Pattern E0 C9 A7 at: NOT FOUND
+
+======================
+KEY FINDINGS (GENERAL)
+======================
+
+1. Progressive JPEG with 7 scans and anomalous DQT tables
+   - SOF2 at 0x1E43: 1212x742, 3 components, 8-bit
+   - 7 SOS scans (unusually many): DC + 6 AC refinement scans
+   - Total compressed data: ~488KB over 7 scans
+
+2. DQT tables at 0x1DB9/0x1DFE use only values {1,2,3}
+   - DQT3 LSB non-FF: 0xE0, 0x03 -> matches pixel R=224, ARG#3
+   - DQT4 LSB non-FF: 0xC9 -> matches pixel G=201
+   - Anomaly pixel at (739,1070): R=224, G=201, B=167
+   - CABAA from DQT4[16,9,10,4,3]
+
+3. EXIF metadata
+   - Artist: 'A' (also XPAuthor hex: 41000000)
+   - DateTime: 2005:04:13 11:28:19 (matches post date)
+   - No GPS data, no maker notes, no unusual tags
+
+4. Webpage context
+   - memory bloc 1113384720 = Unix timestamp of Apr 13, 2005
+   - Poem: 'Blue birds...' -> confirms 'blue' hint
+   - 'Vanish in silence' / 'no trace' -> stego hint
+   - 'unstable' tag confirmed
+   - Wallace-Stevens.jpg: 1950x2400, clean (no appended data)
+
+5. No hidden data found:
+   - No data after EOI
+   - No ZIP/GZIP/PDF/PNG embedded in non-standard areas
+   - No COM markers, no DNL, no unknown markers
+   - Standard EXIF/ICC profile (no hidden tags)

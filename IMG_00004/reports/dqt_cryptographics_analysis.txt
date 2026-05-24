@@ -1,0 +1,358 @@
+================================================================================
+IMG_00004.jpg - DQT FORENSIC ANALYSIS REPORT
+Source: R:\nevermore\stack\arg\IMG_00004.jpg
+File: IMG_00004.jpg (489,353 bytes)
+MD5: 4A3E7D4E4B41FE03A6CC96D3423C5B7F
+SHA256: 637F1008EFD01AAC359895FFA957465E5C02C5E4E5D75ABB3769AA8FC07AA4FA
+Source: https://project-skyscraper.com/2005/04/13/quote/
+File size: 489353 bytes (0x77789)
+================================================================================
+
+--- FILE OVERVIEW ---
+
+- JPEG image, 1212 x 742 pixels, RGB, 8-bit per channel
+- JFIF v1.2, DPI 72x72
+- Progressive JPEG with 8 scans
+- Entropy: 7.98 bits/byte (high - typical for JPEG)
+- Contains embedded EXIF thumbnail (160x98 RGB JPEG)
+- 84,896 unique colors
+- No appended data after JPEG EOI marker
+
+--- CRITICAL ANOMALY: UNUSUAL QUANTIZATION TABLES (DQT) ---
+
+LOCATION: Main image DQT markers at offsets 7609 and 7678
+
+DQT #3 (Luminance, table ID=0): VALUES LIMITED TO {1, 2, 3}
+DQT #4 (Chrominance, table ID=1): VALUES LIMITED TO {1, 2, 3}
+
+This is EXTREMELY unusual. Standard JPEG quantization tables range from
+1-255 with a gradient of increasing values from low to high frequency.
+Having only values 1,2,3 means the image is compressed near-losslessly -
+unprecedented for a 1212x742 photographic image and a known indicator of
+DQT cryptographic / steganographic messages.
+
+DQT #3 in raster (8x8) order (numbers):
+  Row 0: 1 1 1 1 1 1 1 1
+  Row 1: 1 1 1 1 1 1 1 1
+  Row 2: 1 1 1 1 1 2 1 1
+  Row 3: 1 1 1 1 1 1 1 1
+  Row 4: 1 1 2 3 3 2 2 1
+  Row 5: 1 1 1 1 1 1 2 2
+  Row 6: 3 3 2 2 1 1 1 2
+  Row 7: 2 3 3 3 2 3 3 3
+
+DQT #4 in raster (8x8) order:
+  Row 0: 1 1 1 3 1 1 1 2
+  Row 1: 3 3 3 3 3 2 1 1
+  Row 2: 1 3 3 3 3 3 3 3
+  Row 3: 3 3 2 1 1 2 3 3
+  Row 4: 3 3 3 3 3 3 3 3
+  Row 5: 3 3 3 3 3 3 3 3
+  Row 6: 3 3 3 3 3 3 3 3
+  Row 7: 3 3 3 3 3 3 3 3
+
+DQT #3 in raster (8x8) order (# = 3, + = 2, . = 1):
+  Row 0: . . . . . . . .
+  Row 1: . . . . . . . .
+  Row 2: . . . . . + . .
+  Row 3: . . . . . . . .
+  Row 4: . . + # # + + .
+  Row 5: . . . . . . + +
+  Row 6: # # + + . . . +
+  Row 7: + # # # + # # #
+
+DQT #4 in raster (8x8) order:
+  Row 0: . . . # . . . +
+  Row 1: # # # # # + . .
+  Row 2: . # # # # # # #
+  Row 3: # # + . . + # #
+  Row 4: # # # # # # # #
+  Row 5: # # # # # # # #
+  Row 6: # # # # # # # #
+  Row 7: # # # # # # # #
+
+These patterns are clearly non-random and intentionally constructed.
+Possible interpretations:
+  a) Binary encoding (reading 2/3 as 1, 1 as 0)
+  b) Ternary encoding (base-3 to ASCII)
+  c) Visual pattern/QR-like encoding
+  d) The values are a hint that only low bits matter (quantization
+     near 1 preserves all pixel data perfectly for LSB stego)
+
+DQT #3 LSBs extracted as bytes: 0xFFFFFFFFFFE003FF
+DQT #4 LSBs extracted as bytes: 0xFFC9FFFFFFFFFF
+
+--- NOTABLE ANOMALY: MAX PIXEL VALUE CAPPED AT 224 ---
+
+- Maximum pixel value across ALL three channels is 224 (not 255)
+- Exactly ONE pixel has R=224 at coordinates (739, 1070)
+  - Surrounding pixels form a natural gradient, suggesting this is
+    the peak of a highlight region
+  - G=201, B=167 at this location
+- Other R-channel values >200 are extremely rare (only 10 pixels total)
+- This could indicate:
+  a) The original image data was shifted/scaled
+  b) The value 224 (0xE0) serves as a marker or delimiter
+  c) The upper bits (values 224-255) encode metadata
+- Cluster of rare R values found at row 739, columns 1066-1071:
+    (739, 1066): R=187
+    (739, 1067): R=198
+    (739, 1068): R=213
+    (739, 1069): R=222
+    (739, 1070): R=224 <-- max pixel
+    (739, 1071): R=207
+
+--- EXIF DATA ---
+
+- Artist field: "A" (single character - unusual)
+- XPAuthor (tag 40093): "A\x00\x00\x00" (UTF-16LE encoding of "A")
+- DateTime: 2005:04:13 11:28:19 (possibly significant)
+- SubsecTimeOriginal: "00" (rounded to even second - suspicious)
+- Tag 0xEA1C (59932): 180 bytes, mostly zeros (likely padding/unused)
+- Orientation: 1 (normal)
+- ICC Profile: sRGB IEC61966-2.1
+
+--- LSB STEGANOGRAPHY ANALYSIS ---
+
+All three channels show ~50% LSB ones (R=49.92%, G=50.02%, B=50.07%).
+This is consistent with either natural image noise or encoded data
+with balanced bit distribution.
+
+LSB extraction produced ~4029 readable strings but none appear to be
+coherent English text. Attempted bit orderings:
+  - RGB interleaved per pixel
+  - All R bits, then G bits, then B bits
+  - 2-LSB and 4-LSB extraction
+No clear message was recovered from LSB analysis.
+
+Note: The DQT values of 1-3 (near-lossless) ensure that pixel data
+survives JPEG compression intact. If LSB stego was used, this ensures
+no data loss during compression.
+
+--- BIT ANALYSIS PER CHANNEL ---
+
+Unusual bit distributions (% ones):
+  Channel  Bit 4  Bit 5  Bit 6  Bit 7
+  --------  -----  -----  -----  -----
+  R         51.1%  52.0%  60.9%   8.0%
+  G         42.6%  42.7%  38.5%  45.8%
+  B         53.8%  69.3%   8.4%  58.6%
+
+Bit 7 of R is only 8% ones (consistent with max=224)
+Bit 6 of B is only 8.4% ones (unusual)
+Bit 6 of R is 60.9% ones (high)
+Bit 5 of B is 69.3% ones (high)
+
+These deviations from expected ~50% in higher bits are unusual for
+natural images and suggest possible data encoding in higher bit planes.
+
+--- EMBEDDED THUMBNAIL JPEG #2 ---
+
+- Location: Within EXIF APP1 segment, offset 494 in file
+- Size: 3,599 bytes (160x98 pixels)
+- DQT tables: Somewhat unusual but not noteworthy
+- Differs from rescaled main image (mean diff 3.6-4.9 per channel),
+  confirming it's a separately generated/processed thumbnail
+- Saved to: thumbnail.png
+
+--- AUDIO/SPECTROGRAM ANALYSIS ---
+
+- Image dimensions (1212x742) are not standard spectrogram proportions
+- Column means analyzed for periodic patterns: no strong periodicity found
+- No evidence of audio data encoded as pixels
+- Row/column anomaly detection: 25 anomalous columns detected (high
+  inter-column variation) but none form a clear pattern
+
+--- OVERVIEW OF CRYPTOGRAPHIC APPROACHES ---
+
+All approaches assume the DQT tables (MainL_DQT3 and MainC_DQT4) with
+anomalous values {1,2,3} encode cryptographic material. The standard
+thumbnail DQTs (DQT1, DQT2) serve as a control/baseline.
+
+Total of crypto technique indicators tested from miss-dig-img (Annabel-runner):
+- stream cipher
+- Vigenere
+- AES
+- Polybius
+- Trifid
+- RSA
+- differential
+- Feistel
+- hash (general)
+- RC4
+- permutation box
+- composite keys
+- mnemonic
+- ARG-key decryption
+- base-3/5 decoding
+- Golomb
+- DPCM
+- Feistel (test 2)
+- LSB key
+- entropy
+- bit-select
+- reverse Trifid
+- column-major
+- anti-diagonal
+- Baconian
+- delta patterns
+- Baconian thresholds
+- base-5 digits
+
+None produced a coherent English plaintext message indicator, or message chunk.
+Some other observations were found.
+
+--- MOST PROMISING CRYPTOGRAPHIC LEADS ---
+
+Lead 1: "CABAA" from DQT4 at ARG positions
+
+  ARG context numbers: [16, 9, 10, 1912, 4, 3, "blue"]
+  
+  DQT4 values at ARG number zigzag indices:
+    DQT4[16] = 3 -> 'C'
+    DQT4[ 9] = 1 -> 'A'
+    DQT4[10] = 2 -> 'B'
+    DQT4[ 4] = 1 -> 'A'
+    DQT4[ 3] = 1 -> 'A'
+  
+  Result: "CABAA" consistently from DQT3*64+DQT4 mapping.
+  
+  DQT3*64 + DQT4 at same positions: 67='C', 65='A', 66='B', 65='A', 65='A'
+  Confirms "CABAA" regardless of combination formula.
+
+  May be 3 symbol anagramtic or cipher key.
+
+
+Lead 2: Single Anomaly Cell in DQT4
+
+  Zigzag index 12: DQT4[12] = 1 (expected 2 for diagonal uniformity)
+  Natural 8x8 position: (2,2)
+  Combined grid value: 4 (all other sum=4 diagonal cells have 5)
+  Difference: -1 from expected
+  
+  This is the ONLY non-uniformity in the entire combined grid.
+  All 14 other anti-diagonal sums are perfectly uniform.
+  The anomaly at (2,2) = "center" of the 8x8 grid.
+  This could be: a checksum, a parity bit, a single-bit message, or
+  an indicator of which cell to read for the real data.
+
+
+Lead 3: 4 Unused (DQT3,DQT4) Combinations -- Gradient Skips "Backward" States
+
+  9 possible (DQT3,DQT4) combinations across values {1,2,3}:
+  Only 5 are used: (1,1)=4, (1,2)=5, (1,3)=6, (2,3)=9, (3,3)=12
+  4 are UNUSED: (2,1)=7, (2,2)=8, (3,1)=10, (3,2)=11
+  
+  The gradient deliberately avoids states where DQT3 > DQT4. The
+  anomaly at DQT4[12]=1 (instead of 2) creates the sole occurrence
+  of DQT3 == DQT4 within the anti-diagonal sum=4 band.
+  
+  The combined values {7,8,10,11} have no inherent letter mapping
+  but do have the right quantity for "BLUE" -- (4 unused states,
+  4 letters in "blue"). The meaningful observation is structural:
+  the gradient steps forward (DQT3 <= DQT4) 63 out of 64 cells.
+
+
+Lead 4: DQT LSB Non-FF Bytes Match Anomaly Pixel
+
+  DQT3 LSB non-FF bytes: 0xE0, 0x03
+  DQT4 LSB non-FF byte:  0xC9
+  Anomaly pixel (739,1070): R=224(0xE0), G=201(0xC9)
+  ARG number 3 matches 0x03.
+  
+  DQT LSB XOR (DQT3 XOR DQT4): 0x00 0x36 0x00 0x00 0x00 0x1F 0xFC 0x00
+  Non-zero at byte positions 1, 5, 6 = transition bands in the gradient.
+
+
+Lead 5: DQT Transition Indices
+
+  DQT3 transitions: at zigzag index 42 (1->2) and 53 (2->3)
+  DQT4 transitions: at zigzag index 9 (1->2) and 12 (2->1, the anomaly)
+  
+  Four critical zigzag indices: 9, 12, 42, 53
+  Sorted: 9, 12, 42, 53
+  As ASCII: 9='\t', 12='\x0c', 42='*', 53='5'
+  As hex key: 09 0C 2A 35
+
+
+Lead 6: Column-Major Trifid Reading Produces "BR"
+
+  DQT3 trits read column-by-column from natural 8x8 order,
+  grouped in 3-trit Trifid blocks:
+    Column 7, group 0: [0,0,1] -> 'B'
+    Column 7, group 1: [1,2,2] -> 'R'
+
+
+Lead 7: Large Integer Properties
+
+  DQT3 (505 bits): divisible by 5
+  DQT4 (505 bits): divisible by 71
+  gcd(DQT3, DQT4) = 1 (coprime)
+  DQT3||DQT4: 1017-bit composite
+  
+  1912 = 2^3 × 239 (239 is prime)
+  239th 8x8 block in image: row 1, column 88 (pixels 8-15, 704-711)
+  Block mean blue value: 155.4
+
+
+Lead 8: Anti-Diagonal Sum=4 Binary Pattern
+
+  Sum=4 band in combined grid: [1,1,0,1,1] as binary
+  = 0x1B = 27 = 'ESC' character
+  Or as 5-bit binary: 11011 = 27
+  This is the ONLY non-uniform anti-diagonal band.
+
+
+--- ZERO OUTCOMES TECHNIQUES ---
+
+  - RC4 stream cipher (keys: DQT3, DQT4, SHA256 hashes)
+  - AES key derivation from DQT hashes
+  - XOR stream cipher with DQT3/4 tiled on all RGB channels
+  - Vigenere cipher (DQT3/DQT4 as shift key)
+  - DQT as Polybius 3x3 square (all keyword permutations tested)
+  - Trifid 3x3x3 cube (5 different z-coordinate derivations)
+  - DQT as RSA parameters (no prime factor found)
+  - DQT as permutation box for image data
+  - DQT values as coordinates into image pixel data
+  - DPCM accumulation of DQT trits
+  - All base-3 and base-5 integer conversions
+  - Baconian cipher (all thresholds)
+  - DQT delta patterns as bitstreams
+  - Feistel-like transformation
+  - Golomb-Rice / Huffman-like decoding
+  - Chinese Remainder Theorem
+  - Composite key from all metadata + DQT data
+  - EXIF thumbnail pixel extraction at DQT positions
+
+
+--- SUMMARY & SUGGESTED NEXT STEPS ---
+
+1. The "CABAA" decode from DQT4 at ARG-numbered indices is the most
+   internally consistent result. If correct:
+   - It may be a fragment of a larger key/password
+   - Or the DQT encodes a cipher key, not a plaintext message
+
+2. The anomaly pixel R=224(0xE0), G=201(0xC9), B=167(0xA7) directly matches
+   DQT LSB non-FF bytes 0xE0, 0xC9. The missing 0xA7 from DQT LSBs might
+   indicate a third DQT byte was intentionally omitted, or B=167(0xA7) is
+   a separate clue (pattern found at 5 file offsets).
+
+3. The 4 transition indices [9,12,42,53] as a cryptographic key warrant
+   further experimentation with different cipher modes.
+
+4. If the DQT values ARE the key (not ciphertext), they may decode data in
+   other ARG puzzle files or stages.
+
+
+--- BINARY FILES AND OFFSETS ---
+
+All DQT files extracted to bin:
+
+  ThumbL_DQT1.bin        (69B)  Offset 0x01F0  Data 0x01F5-0x0234
+  ThumbL_DQT1_values.bin (64B)
+  ThumbC_DQT2.bin        (69B)  Offset 0x0235  Data 0x023A-0x0279
+  ThumbC_DQT2_values.bin (64B)
+  MainL_DQT3.bin         (69B)  Offset 0x1DB9  Data 0x1DBE-0x1DFD
+  MainL_DQT3_values.bin  (64B)
+  MainC_DQT4.bin         (69B)  Offset 0x1DFE  Data 0x1E03-0x1E42
+  MainC_DQT4_values.bin  (64B)

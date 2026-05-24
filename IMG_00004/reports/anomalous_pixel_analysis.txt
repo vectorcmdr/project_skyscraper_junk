@@ -1,0 +1,129 @@
+================================================================================
+IMG_00004.jpg - PIXEL ANOMALY DEEP DIVE
+Source: R:\nevermore\stack\arg\IMG_00004.jpg
+File: IMG_00004.jpg (489,353 bytes)
+MD5: 4A3E7D4E4B41FE03A6CC96D3423C5B7F
+SHA256: 637F1008EFD01AAC359895FFA957465E5C02C5E4E5D75ABB3769AA8FC07AA4FA
+Source: https://project-skyscraper.com/2005/04/13/quote/
+File size: 489353 bytes (0x77789)
+================================================================================
+
+--- PIXEL ANOMALY DEEP DIVE (Row 739, Col 1070) ---
+
+Verified Facts:
+
+(1) Pixel (739,1070): R=224(0xE0), G=201(0xC9), B=167(0xA7)
+
+(2) Uniqueness:
+    - ONLY pixel with R=224 AND G=201 globally
+    - ONLY pixel with R=224 (global max for R channel)
+    - ONLY pixel with G=201 (global max for G channel)
+    - B=167 is NOT the global max (max B=214 at pixel (79,103))
+    - Pixels matching [224,201,167] exactly: exactly 1
+
+(3) DQT LSB match:
+    - R=224(0xE0) = DQT3 LSB byte 5
+    - G=201(0xC9) = DQT4 LSB byte 1
+    - DQT3 LSB byte 6 = 0x03 (ARG #3) - NOT represented in pixel RGB
+    - B=167(0xA7) - NOT present as any DQT LSB byte
+
+(4) Non-FF DQT LSB bytes: [0xE0, 0x03, 0xC9]
+    Pixel RGB bytes:       [0xE0, 0xC9, 0xA7]
+    Overlap: E0 (R) and C9 (G). Missing from pixel: 03. Missing from DQT: A7.
+
+9x9 Neighborhood Analysis:
+
+    dr=-4: (111,110, 66) (114,115, 75) (118,116, 77) (115,116, 76) 
+           (101,103, 63) ( 94, 95, 55) ( 98,100, 60) (110,111, 71) 
+           (144,142,104)
+    dr=-3: (102,103, 63) (108,109, 69) (117,115, 76) (118,113, 73) 
+           (112,104, 65) ( 96, 89, 47) ( 84, 77, 35) ( 86, 77, 36) 
+           (137,125, 87)
+    dr=-2: (123,113, 77) (123,113, 77) (126,116, 80) (134,120, 85) 
+           (136,120, 84) (117,101, 65) ( 87, 71, 37) ( 77, 58, 25) 
+           (111, 91, 58)
+    dr=-1: (153,143,107) (149,139,103) (149,136,101) (156,142,107) 
+           (165,149,113) (150,134, 98) (119, 99, 64) (110, 90, 55) 
+           (102, 82, 49)
+    dr= 0: (187,169,133) (198,180,144) (213,195,159) (222,199,165) 
+           (224,201,167) (207,184,150) (186,163,129) (185,162,128) 
+           (159,136,102)
+    dr= 1: (201,183,147) (204,186,150) (205,185,150) (199,176,142) 
+           (178,154,120) (153,129, 95) (141,117, 83) (141,118, 84) 
+           (123,100, 66)
+    dr= 2: (155,135,100) (148,128, 93) (137,114, 80) (127,103, 69) 
+           (108, 82, 49) ( 94, 65, 33) ( 91, 62, 30) ( 89, 60, 28) 
+           ( 86, 57, 27)
+
+    The pixel sits at the center of a specular highlight forming a smooth
+    peak. The highlight is natural-looking (smooth Gaussian-like falloff
+    in all directions). Matches nature of image. Likely uninteresting.
+
+Highlight Profile (Row 739, Cols 1055-1085):
+
+    Differences between consecutive pixels (corrected for uint8 overflow):
+    1066->1067: dR=+11, dG=+11, dB=+11   UNIFORM
+    1067->1068: dR=+15, dG=+15, dB=+15   UNIFORM
+    1068->1069: dR= +9, dG= +4, dB= +6   NON-UNIFORM
+    1069->1070: dR= +2, dG= +2, dB= +2   UNIFORM (anomaly peak)
+    1070->1071: dR=-17, dG=-17, dB=-17   UNIFORM
+    1071->1072: dR=-21, dG=-21, dB=-21   UNIFORM
+
+    The 1068→1069 transition is the only non-uniform step in the 7-pixel
+    peak region. R jumps +9 while G only +4 and B +6. This could indicate
+    intentional manipulation, JPEG compression artifacts, or natural
+    chromatic aberration in the highlight.
+
+JPEG Block Context:
+
+    - 8x8 block (92,133): rows 736-741, cols 1064-1071 (truncated at
+      bottom edge - image height is 742)
+    - Block index: 14117 of 14136 Y blocks (near end of image)
+    - Pixel's position within block: row 3, col 6
+    - Pixel's DCT zigzag index in block: 44
+    - DQT3[44]=2, DQT4[44]=3 (luma quantization=2, chroma=3)
+
+B=167 (0xA7) Investigation:
+
+    - File byte at offset 167 = 0x10 = 16 (ARG number #16)
+    - 0xA7 appears 1779 times in the file (mostly in compressed SOS data)
+    - Pattern C9A7 appears 8 times at offsets:
+      33195, 59468, 63332, 99041, 228877, 229681, 316815, 478055
+      - all in JPEG scan data (SOS)
+    - 0xA7 NOT present in any DQT segment (DQT1-DQT4)
+    - 0xA7 XOR 0xE0 XOR 0xC9 = 0x8E (meaning unclear)
+    - (0xE0 + 0xC9) & 0xFF = 0xA9, diff from A7 = 2
+    - Nibbles of A7: 0xA(10)=ARG#10, 0x7=7 - partial match to ARG numbers
+
+DQT LSB in Natural Grid Layout (NEW):
+
+    DQT4 rows as bytes (MSB first):
+      row 0: 0xF7        row 4: 0x7F
+      row 1: 0xEF        row 5: 0xFF
+      row 2: 0xFF        row 6: 0xFF
+      row 3: 0xBF        row 7: 0xFF
+
+    DQT4 columns as bytes (same as rows - symmetric in LSB):
+      247, 239, 255, 191, 127, 255, 255, 255
+
+    XOR anti-diagonals: only sum=4 (0x1B=27) and sum=9 (0x3F=63)
+    and sum=10 (0x1F=31) are non-zero - all other sums give 0x00.
+
+    DQT3 rows as bytes (LSB): 255,255,254,252,249,243,231,207
+    Pattern: decreasing by 1,2,3,6,12,24 (doubling increments)
+
+
+--- OPEN ANALYSIS ROUTES ---
+
+1) What does B=167 represent? It's the only anomaly pixel component
+   not matched to DQT LSB bytes. Three possibilities:
+
+   a) It's a pointer to file offset 167 where byte=0x10=16 (ARG#16)
+   b) It's the "missing" byte that complements E0, 03, C9 into a
+      complete 4-byte sequence (E0 03 C9 A7)
+   c) It's the value at DQT zigzag 167%64=39: DQT3[39]=1, DQT4[39]=3
+
+2) Is the DQT LSB sequence E0 03 C9 (with 03 being ARG#3) the intended
+   payload, with the pixel serving as confirmation/cross-reference?
+
+3) DCT domain may benefit from being checked via custom decoder?
