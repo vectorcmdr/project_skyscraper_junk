@@ -1,0 +1,333 @@
+================================================================================
+QUICK DEEP DCT COEFFICIENT ANALYSIS - skyscraper_out_2
+================================================================================
+
+======================================================================
+1. DCT FREQUENCY PLANE VISUALIZATION
+======================================================================
+  Saved: dct_Y_all_frequencies.png
+  Saved: dct_Cb_all_frequencies.png
+  Saved: dct_Cr_all_frequencies.png
+
+======================================================================
+2. DCT LSB BITPLANES PER FREQUENCY
+======================================================================
+  Saved: dct_Y_lsb_planes.png
+  Saved: dct_Cb_lsb_planes.png
+  Saved: dct_Cr_lsb_planes.png
+
+======================================================================
+3. PER-BLOCK MULTI-FREQUENCY LSB BIT VECTORS
+======================================================================
+
+  Y: 89998 unique 64-bit signatures out of 90000 blocks
+  Max LSB bit-pair correlation: 0.3016
+  Strong period 5: row-mean variance = 2631933703920261115961917449437184.0
+  Strong period 6: row-mean variance = 2534387452206404745111448760352768.0
+  Strong period 7: row-mean variance = 129805929067429675695259527413760.0
+  Strong period 8: row-mean variance = 1303312498887365667805404998926336.0
+  Strong period 9: row-mean variance = 406601266550689871903884973178880.0
+  Strong period 10: row-mean variance = 9992464391762661706914236672770048.0
+  Strong period 11: row-mean variance = 540735526073263752847451263860736.0
+  Strong period 12: row-mean variance = 3702646851985312118335614415273984.0
+  Strong period 13: row-mean variance = 193298950691857005406474538582016.0
+  Strong period 14: row-mean variance = 950717930755075664410327602167808.0
+  Strong period 15: row-mean variance = 15152935904669666562937067944280064.0
+  Strong period 16: row-mean variance = 1401475688006223934514800751542272.0
+  Strong period 17: row-mean variance = 221921414821651344229534542069760.0
+  Strong period 18: row-mean variance = 2649085277125251162927783437402112.0
+  Strong period 19: row-mean variance = 273477875288769400986650347044864.0
+  Strong period 20: row-mean variance = 23807278327934968211941597147824128.0
+  Strong period 21: row-mean variance = 751604926551245134645906794086400.0
+  Strong period 22: row-mean variance = 1362124047351135066110941466722304.0
+  Strong period 23: row-mean variance = 409509688107189047191791325937664.0
+  Strong period 24: row-mean variance = 3905986543625724344053671435173888.0
+  Strong period 25: row-mean variance = 21816630223528466876541106214928384.0
+  Strong period 26: row-mean variance = 1095727260902922777366276952031232.0
+  Strong period 27: row-mean variance = 771070674779367613378566830424064.0
+  Strong period 28: row-mean variance = 1764242608445102066660523672338432.0
+  Strong period 29: row-mean variance = 620560869017810311599647811960832.0
+  Strong period 30: row-mean variance = 27938602744268173710765276658663424.0
+  Strong period 31: row-mean variance = 594102171524243314370083744120832.0
+  Strong period 32: row-mean variance = 1879467407077416706458529315160064.0
+  Strong period 33: row-mean variance = 1350862801434766213664891763425280.0
+  Strong period 34: row-mean variance = 1162645475829992818263634405752832.0
+  Strong period 35: row-mean variance = 3526893675800089254134249173286912.0
+  Strong period 36: row-mean variance = 4014950991205101082796305070161920.0
+  Strong period 37: row-mean variance = 746325553835201546617028662525952.0
+  Strong period 38: row-mean variance = 1230611682176040926859683377971200.0
+  Strong period 39: row-mean variance = 922162144774482414141636830298112.0
+  Strong period 40: row-mean variance = 24017702735577224823346257457053696.0
+  Strong period 41: row-mean variance = 816261975707987269400239177465856.0
+  Strong period 42: row-mean variance = 3269618346167947951153289652862976.0
+  Strong period 43: row-mean variance = 1422010718260345120465668754374656.0
+  Strong period 44: row-mean variance = 2261850811573733145424465093459968.0
+  Strong period 45: row-mean variance = 15605104740638121000987508191789056.0
+  Strong period 46: row-mean variance = 1748798478210467083110890870931456.0
+  Strong period 47: row-mean variance = 1142846939010926944507495400341504.0
+  Strong period 48: row-mean variance = 4375922465166741282168104418279424.0
+  Strong period 49: row-mean variance = 1343522545200062878232631920558080.0
+
+  Cb: 82184 unique 64-bit signatures out of 90000 blocks
+  Max LSB bit-pair correlation: 0.3881
+  Strong period 5: row-mean variance = 682601986619437738807598524661760.0
+  Strong period 6: row-mean variance = 3329262193328997908671773041229824.0
+  Strong period 7: row-mean variance = 102885028350372971201409321009152.0
+  Strong period 8: row-mean variance = 1427197570406445204818319669985280.0
+  Strong period 9: row-mean variance = 647644247252110241736982425239552.0
+  Strong period 10: row-mean variance = 5578728322736181682532751492775936.0
+  Strong period 11: row-mean variance = 266538027691847443362718909726720.0
+  Strong period 12: row-mean variance = 4942508758801310036004329198977024.0
+  Strong period 13: row-mean variance = 180588391872736685107849872801792.0
+  Strong period 14: row-mean variance = 944481305309395614441862284181504.0
+  Strong period 15: row-mean variance = 12774372696093464766073982299406336.0
+  Strong period 16: row-mean variance = 1748441105311241795566611699073024.0
+  Strong period 17: row-mean variance = 227918977156162815034684885434368.0
+  Strong period 18: row-mean variance = 3474758874935494188543342469447680.0
+  Strong period 19: row-mean variance = 670440659699584861629450582753280.0
+  Strong period 20: row-mean variance = 19404549970851580206235160361828352.0
+  Strong period 21: row-mean variance = 1318872492736863143256819499008000.0
+  Strong period 22: row-mean variance = 1202546853885558591268759082631168.0
+  Strong period 23: row-mean variance = 630113323955072340781694959222784.0
+  Strong period 24: row-mean variance = 5165056966573937504367284565573632.0
+  Strong period 25: row-mean variance = 16595988218809403596207318571679744.0
+  Strong period 26: row-mean variance = 1257506869477588564150007569055744.0
+  Strong period 27: row-mean variance = 978522606708474632087810175139840.0
+  Strong period 28: row-mean variance = 1802433633344500073559234472574976.0
+  Strong period 29: row-mean variance = 817544988030270793269295907340288.0
+  Strong period 30: row-mean variance = 25011880050746251717064574577410048.0
+  Strong period 31: row-mean variance = 376330825842538393314306241331200.0
+  Strong period 32: row-mean variance = 2023893608840581848095165259972608.0
+  Strong period 33: row-mean variance = 1696242035803379409267251302367232.0
+  Strong period 34: row-mean variance = 1159895714828877632486735035236352.0
+  Strong period 35: row-mean variance = 1962756166164974710040920275812352.0
+  Strong period 36: row-mean variance = 5301007899221310691323279470231552.0
+  Strong period 37: row-mean variance = 772560238873639026420426087596032.0
+  Strong period 38: row-mean variance = 1783107574231428367216338909790208.0
+  Strong period 39: row-mean variance = 1349670723427405086701807793602560.0
+  Strong period 40: row-mean variance = 19692601299916054541670690045558784.0
+  Strong period 41: row-mean variance = 617786669222185022123284954611712.0
+  Strong period 42: row-mean variance = 4291767196078024686503197595926528.0
+  Strong period 43: row-mean variance = 1727652348067778600695983763357696.0
+  Strong period 44: row-mean variance = 2121653978328132581523863115923456.0
+  Strong period 45: row-mean variance = 13359265502960134139290444812517376.0
+  Strong period 46: row-mean variance = 1997761374441625929171969431830528.0
+  Strong period 47: row-mean variance = 1708096097091124632658856533557248.0
+  Strong period 48: row-mean variance = 5705934371267285021260966197723136.0
+  Strong period 49: row-mean variance = 948540858976706105629874348621824.0
+
+  Cr: 84250 unique 64-bit signatures out of 90000 blocks
+  Max LSB bit-pair correlation: 0.3078
+  Strong period 5: row-mean variance = 2165216468910435245150960288268288.0
+  Strong period 6: row-mean variance = 4233013969557552637483850536058880.0
+  Strong period 7: row-mean variance = 152910490451516889812626455920640.0
+  Strong period 8: row-mean variance = 1828598741890808721596586729144320.0
+  Strong period 9: row-mean variance = 308265759404627951869550844182528.0
+  Strong period 10: row-mean variance = 9905452528485820886706173549477888.0
+  Strong period 11: row-mean variance = 104015184593202822145929384034304.0
+  Strong period 12: row-mean variance = 5650140972870240436028489330589696.0
+  Strong period 13: row-mean variance = 150440745078501078057241563627520.0
+  Strong period 14: row-mean variance = 1942110809381624286407921386913792.0
+  Strong period 15: row-mean variance = 18873984659512473528247137448493056.0
+  Strong period 16: row-mean variance = 2007380368617838998662810378960896.0
+  Strong period 17: row-mean variance = 135764887559317552562676531462144.0
+  Strong period 18: row-mean variance = 4354084356304295998008550674661376.0
+  Strong period 19: row-mean variance = 779497809947998633709754191446016.0
+  Strong period 20: row-mean variance = 28672049438511803558277341226467328.0
+  Strong period 21: row-mean variance = 807809750882929888524408599871488.0
+  Strong period 22: row-mean variance = 1808308644247485777185696412336128.0
+  Strong period 23: row-mean variance = 767728822122047169487156386201600.0
+  Strong period 24: row-mean variance = 6046540626634883245154172244328448.0
+  Strong period 25: row-mean variance = 27871353719834296907523936833503232.0
+  Strong period 26: row-mean variance = 1912378545769379796564585364848640.0
+  Strong period 27: row-mean variance = 779199041435469044060098819784704.0
+  Strong period 28: row-mean variance = 2774083674954691776343174214057984.0
+  Strong period 29: row-mean variance = 1563735806484074800705860901273600.0
+  Strong period 30: row-mean variance = 34837905059148961585231455259197440.0
+  Strong period 31: row-mean variance = 637391664515883893357619609337856.0
+  Strong period 32: row-mean variance = 2563250159328003594126672162455552.0
+  Strong period 33: row-mean variance = 1135331905271541759944507009269760.0
+  Strong period 34: row-mean variance = 2106586069110422214528232482406400.0
+  Strong period 35: row-mean variance = 3599005097737795522542888095318016.0
+  Strong period 36: row-mean variance = 6188650923967231072739069979000832.0
+  Strong period 37: row-mean variance = 1166466925433390230589805741211648.0
+  Strong period 38: row-mean variance = 2761634702395706976021472060899328.0
+  Strong period 39: row-mean variance = 860754393110975368718618812481536.0
+  Strong period 40: row-mean variance = 29131594428721884847089861743607808.0
+  Strong period 41: row-mean variance = 1790283186000387285304038869958656.0
+  Strong period 42: row-mean variance = 5673958672013710378697069256769536.0
+  Strong period 43: row-mean variance = 1969041192299520010918463191121920.0
+  Strong period 44: row-mean variance = 2826336338724052611981930647257088.0
+  Strong period 45: row-mean variance = 20047083639529963978055873042841600.0
+  Strong period 46: row-mean variance = 3177930102651066810625377928478720.0
+  Strong period 47: row-mean variance = 1141649129570122137712298093969408.0
+  Strong period 48: row-mean variance = 6721672056203587750024508950446080.0
+  Strong period 49: row-mean variance = 1437015482646609472885017662193664.0
+
+======================================================================
+4. 25-BLOCK PERIOD ANALYSIS (Y DC)
+======================================================================
+  Y DC: 12 complete cycles of 25 blocks
+  DC cycle average shape: (300, 25)
+    dc_master_25block_period_sr8000.wav: 1.0KB, 0.06s
+    dc_master_25block_period_sr22050.wav: 1.0KB, 0.02s
+
+  Master 25-block DC waveform:
+    block  0: +125.6
+    block  1: +134.6
+    block  2: +162.1
+    block  3: +138.5
+    block  4: +121.4
+    block  5: +118.5
+    block  6: +105.5
+    block  7: +143.2
+    block  8: +151.3
+    block  9: +118.5
+    block 10: +128.3
+    block 11: +126.5
+    block 12: +162.4
+    block 13: +174.2
+    block 14: +118.5
+    block 15: +175.9
+    block 16: +212.4
+    block 17: +188.7
+    block 18: +151.3
+    block 19: +151.1
+    block 20: +175.5
+    block 21: +177.6
+    block 22: +164.1
+    block 23: +146.5
+    block 24: +153.5
+
+  Master wave frequency components:
+
+======================================================================
+5. Y DC ROW SPECTROGRAM
+======================================================================
+  Saved: dc_row_profile.png
+    dc_row_bandpass_sr8000.wav: 0.6KB, 0.04s
+    dc_row_bandpass_sr22050.wav: 0.6KB, 0.01s
+
+======================================================================
+6. MULTI-FREQUENCY LSB DECODING
+======================================================================
+
+  Y:
+
+  Cb:
+
+  Cr:
+
+======================================================================
+7. DIFFERENTIAL FREQUENCY DECODING (LSB XOR between freq pairs)
+======================================================================
+
+  Y:
+    [skip=1] Total XOR text runs: 5565
+    [skip=2] Total XOR text runs: 6131
+    [skip=4] Total XOR text runs: 6524
+    [skip=8] Total XOR text runs: 4732
+
+  Cb:
+    [skip=1] Total XOR text runs: 2926
+    [skip=2] Total XOR text runs: 3348
+    [skip=4] Total XOR text runs: 3777
+    [skip=8] Total XOR text runs: 2465
+
+  Cr:
+    [skip=1] Total XOR text runs: 2741
+    [skip=2] Total XOR text runs: 3123
+    [skip=4] Total XOR text runs: 3349
+    [skip=8] Total XOR text runs: 2440
+
+======================================================================
+8. BLOCK POSITION ENCODING (specific blocks carry data)
+======================================================================
+
+  Y: checking subsampled block patterns...
+    stride=2, 8 freqs: printable=0.529, n_bytes=45000
+    stride=2, 16 freqs: printable=0.528, n_bytes=90000
+    stride=3, 8 freqs: printable=0.531, n_bytes=30000
+    stride=3, 16 freqs: printable=0.533, n_bytes=60000
+    stride=4, 8 freqs: printable=0.529, n_bytes=22500
+    stride=4, 16 freqs: printable=0.529, n_bytes=45000
+    stride=5, 8 freqs: printable=0.524, n_bytes=18000
+    stride=5, 16 freqs: printable=0.529, n_bytes=36000
+    stride=6, 8 freqs: printable=0.527, n_bytes=15000
+    stride=6, 16 freqs: printable=0.528, n_bytes=30000
+    stride=10, 8 freqs: printable=0.528, n_bytes=9000
+    stride=10, 16 freqs: printable=0.530, n_bytes=18000
+    stride=12, 8 freqs: printable=0.528, n_bytes=7500
+    stride=12, 16 freqs: printable=0.531, n_bytes=15000
+    stride=15, 8 freqs: printable=0.526, n_bytes=6000
+    stride=15, 16 freqs: printable=0.534, n_bytes=12000
+    stride=20, 8 freqs: printable=0.512, n_bytes=4500
+    stride=20, 16 freqs: printable=0.520, n_bytes=9000
+    stride=25, 8 freqs: printable=0.497, n_bytes=3600
+    stride=25, 16 freqs: printable=0.512, n_bytes=7200
+
+  Cb: checking subsampled block patterns...
+
+  Cr: checking subsampled block patterns...
+
+======================================================================
+9. DCT COEFFICIENT DIFF (jpeglib sky vs computed orig block DCT)
+======================================================================
+  DCT diff (quantized) shape: (300, 300, 8, 8)
+  Non-zero diff blocks: 3709569 out of 5760000
+    Freq  0: 89902/90000 blocks changed (99.9%)
+      diff range: [-1431, 1487]
+    Freq  1: 83108/90000 blocks changed (92.3%)
+      diff range: [-598, 638]
+    Freq  2: 80948/90000 blocks changed (89.9%)
+      diff range: [-588, 606]
+    Freq  5: 75629/90000 blocks changed (84.0%)
+      diff range: [-367, 526]
+    Freq 10: 79958/90000 blocks changed (88.8%)
+      diff range: [-265, 199]
+    Freq 15: 39603/90000 blocks changed (44.0%)
+      diff range: [-33, 33]
+    Freq 25: 79713/90000 blocks changed (88.6%)
+      diff range: [-163, 174]
+    Freq 63: 3642/90000 blocks changed (4.0%)
+      diff range: [-7, 6]
+
+======================================================================
+10. DC CYCLE SPECTROGRAM
+======================================================================
+  Saved: dc_cycle_raster.png
+  Saved: dc_25block_template.png
+
+======================================================================
+11. AUDIO ENCODING FROM DC CYCLE PATTERNS
+======================================================================
+    dc_full_trimmed_sr8000.wav: 175.8KB, 11.25s
+    dc_row0_sr8000.wav: 0.6KB, 0.04s
+    dc_row50_sr8000.wav: 0.6KB, 0.04s
+    dc_row100_sr8000.wav: 0.6KB, 0.04s
+    dc_row150_sr8000.wav: 0.6KB, 0.04s
+    dc_row200_sr8000.wav: 0.6KB, 0.04s
+    dc_row250_sr8000.wav: 0.6KB, 0.04s
+    dc_full_trimmed_sr22050.wav: 175.8KB, 4.08s
+    dc_row0_sr22050.wav: 0.6KB, 0.01s
+    dc_row50_sr22050.wav: 0.6KB, 0.01s
+    dc_row100_sr22050.wav: 0.6KB, 0.01s
+    dc_row150_sr22050.wav: 0.6KB, 0.01s
+    dc_row200_sr22050.wav: 0.6KB, 0.01s
+    dc_row250_sr22050.wav: 0.6KB, 0.01s
+
+======================================================================
+12. KEY FINDINGS
+======================================================================
+
+  DCT Analysis Summary:
+    - 25-block (200px) period confirmed in Y DC coefficients
+    - Y DC master waveform extracted from cycle averaging
+    - LSB bias per frequency: low freqs near random, high freqs nearly all even
+    - Per-block 64-bit LSB signature computed
+    - Multi-frequency LSB decoding attempted with various groupings
+    - Differential (XOR) decoding across frequency pairs tested
+    - Subsampled block position encoding checked
+    - DCT diff between sky and original computed
+    - Audio files generated from DC cycle patterns
+
