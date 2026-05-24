@@ -1,0 +1,5 @@
+--- WALLACE-STEVENS.JPG ANALYSIS ---
+  File size: 10869 bytes
+  No data after EOI
+  SOF: 300x300
+  Entropy: 7.9553
