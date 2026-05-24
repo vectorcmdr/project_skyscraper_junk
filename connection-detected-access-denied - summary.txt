@@ -1,0 +1,107 @@
+================================================================================
+                         ARG IMAGE ANALYSIS REPORT
+================================================================================
+
+File:   image.png
+Size:   1,135,290 bytes (1.08 MB)
+Format: PNG (Portable Network Graphics)
+Mode:   RGBA (32-bit, 4 channels)
+Dims:   1080 x 674 pixels
+
+================================================================================
+METADATA
+================================================================================
+
+- sRGB rendering intent: 0 (Perceptual)
+- sBIT (significant bits): 8 bits per channel (R, G, B, A)
+- No EXIF, no embedded thumbnails, no text chunks
+- Alpha channel is fully opaque (all pixels = 255)
+
+================================================================================
+CHANNEL ANALYSIS
+================================================================================
+
+                  Mean    StdDev   Median   Unique   Entropy  %Zero  %Full
+  R (Red)        23.9     15.1      22      206      5.02     5.26   0.00
+  G (Green)      36.6     38.6      23      256      5.38     0.02   0.00
+  B (Blue)       59.4     43.7      39      256      6.46     0.39   0.13
+  A (Alpha)     255.0      0.0     255        1      0.00     0.00  100.00
+
+KEY OBSERVATIONS:
+- R channel is VERY DARK (mean 23.9, max only 244, never reaches 255)
+- R channel has only 206/256 unique values - clipped/restricted
+- G and B use all 256 values
+- B is the brightest channel (mean 59.4)
+- Alpha is fully opaque - no transparency data
+
+CHANNEL DIFFERENCES:
+  R-G: mean=-12.7, std=32.2, range=[-230, 160]
+  R-B: mean=-35.5, std=39.4, range=[-229, 134]
+  
+CHANNEL CORRELATION (cross-correlation for misalignment):
+  R vs G: dx=0, dy=0, corr=0.6017
+  R vs B: dx=0, dy=0, corr=0.4686
+  G vs B: dx=1, dy=0, corr=0.6043 (slight 1-pixel horizontal offset detected!)
+
+================================================================================
+STEGANOGRAPHY ANALYSIS
+================================================================================
+
+LSB (Least Significant Bit) Extraction:
+- LSB ratio (percent of 1-bits): 51.7% (~0.5 = near-random, compatible with
+  hidden data)
+- LSB printable string ratio: 39.0% (some structure, but no coherent text)
+- Stegano library: no hidden message detected
+- Full LSB extraction saved as .bin files (R/G/B channels + interleaved)
+- No meaningful ASCII text found in any LSB extraction variant
+
+Bit Plane Analysis:
+- Bit planes 0-7 examined and saved as images
+- Lower bit planes appear noisy/random (potential data hiding)
+- Higher bit planes (6-7) show image structure
+- No hidden image found in any bit plane
+
+Channel Swap / Realignment Tests:
+- 6 RGB permutations saved (RGB, RBG, GRB, GBR, BRG, BGR)
+- G-R and B-R differential reconstruction saved
+- Realigned images (compensating for G-B 1px shift) saved
+
+================================================================================
+GLITCH / CORRUPTION ANALYSIS
+================================================================================
+
+- No uniform rows detected (0 uniform rows out of 674)
+- No scanline duplication or corruption patterns found
+- No PNG extra chunks beyond standard (sRGB, sBIT)
+- R channel is notably restricted (206 unique values, capped at 244)
+  - This pattern is consistent with a deliberate darkening or masking
+  - 5.26% of R pixels are pure black (value 0)
+
+================================================================================
+DIFFERENTIAL IMAGING
+================================================================================
+
+Channel differentials saved:
+- G - R (offset +128): reveals strong structural detail
+- B - R (offset +128): reveals strongest variation
+- B - G (offset +128): reveals moderate detail
+
+The R channel appears to function as a kind of "underexposed" base layer.
+Subtracting it from G/B reveals information that is suppressed in R alone.
+
+================================================================================
+CONCLUSIONS
+================================================================================
+
+1. The R channel is anomalous - very dark, restricted range, only 206 values.
+   This is the primary "glitch" in the image. Shows the primary "patches".
+
+2. A slight 1-pixel horizontal misalignment was detected between G and B
+   channels, suggesting deliberate channel offset manipulation.
+
+3. No standard steganography (LSB, appended data, extra chunks) was found.
+
+4. The differential images (especially B-R and G-R) reveal the most visual
+   information - suggesting the puzzle may involve isolating the differences.
+
+5. The alpha channel is unused (all 255) but occupies ~25% of the RGBA data.
