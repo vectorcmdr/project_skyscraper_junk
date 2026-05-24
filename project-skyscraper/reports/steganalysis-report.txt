@@ -1,0 +1,473 @@
+================================================================================
+STEGANALYSIS REPORT
+Source: R:\nevermore\stack\arg\project-skyscraper.jpg
+================================================================================
+
+--- 1. JPEG STRUCTURE SUMMARY ---
+  Dimensions       : 2400 x 2400
+  Type             : Progressive (SOF2)
+  Bit depth        : 8-bit
+  Components       : 3 (Y, Cb, Cr)
+  Scans            : 10
+  DQT tables       : 2 (both near-lossless with values 1-3)
+  DHT tables       : 10
+
+--- 2. QUANTISATION TABLE ANOMALIES ---
+  Table #0: 64/64 entries differ from standard
+    Actual min=1, max=3  vs  Standard min=10, max=121
+    All 64 values are between 1 and 3 - extremely unusual
+    Effect: near-lossless compression, very large file size
+  Table #1: 64/64 entries differ from standard
+    Actual min=1, max=3  vs  Standard min=17, max=99
+    All 64 values are between 1 and 3 - extremely unusual
+    Effect: near-lossless compression, very large file size
+
+--- 3. COEFFICIENT STATISTICS ---
+  Y:
+    Total coefficients     : 5760000
+    Non-zero               : 2332946 (40.5%)
+    Zero                   : 3427054 (59.5%)
+    Non-zero even          : 761431 (32.6% of non-zero)
+    Non-zero odd           : 1571515 (67.4% of non-zero)
+    DC range               : -990 .. 771
+    AC mean                : 0.0166
+    AC std                 : 31.4516
+  Cb:
+    Total coefficients     : 5760000
+    Non-zero               : 1296143 (22.5%)
+    Zero                   : 4463857 (77.5%)
+    Non-zero even          : 317947 (24.5% of non-zero)
+    Non-zero odd           : 978196 (75.5% of non-zero)
+    DC range               : -943 .. 805
+    AC mean                : -0.0428
+    AC std                 : 8.2154
+  Cr:
+    Total coefficients     : 5760000
+    Non-zero               : 1428044 (24.8%)
+    Zero                   : 4331956 (75.2%)
+    Non-zero even          : 371968 (26.0% of non-zero)
+    Non-zero odd           : 1056076 (74.0% of non-zero)
+    DC range               : -899 .. 897
+    AC mean                : 0.0851
+    AC std                 : 13.6518
+
+--- 4. LSB BIAS ANALYSIS ---
+  Y: LSB=1 bias: 67.4%  LSB=0 bias: 32.6%
+    Per-frequency LSB=1%:
+      ZZ 0 (row=0,col=0): 49.7%  (nz=89914)
+      ZZ 1 (row=0,col=1): 55.8%  (nz=79001)
+      ZZ 2 (row=0,col=2): 57.5%  (nz=75971)
+      ZZ 4 (row=0,col=4): 65.3%  (nz=61848)
+      ZZ 8 (row=1,col=0): 55.8%  (nz=78981)
+      ZZ16 (row=2,col=0): 58.0%  (nz=75458)
+      ZZ32 (row=4,col=0): 60.9%  (nz=69353)
+      ZZ48 (row=6,col=0): 70.7%  (nz=54946)
+      ZZ63 (row=7,col=7): 88.4%  (nz=1512)
+  Cb: LSB=1 bias: 75.5%  LSB=0 bias: 24.5%
+    Per-frequency LSB=1%:
+      ZZ 0 (row=0,col=0): 49.9%  (nz=89887)
+      ZZ 1 (row=0,col=1): 63.6%  (nz=69241)
+      ZZ 2 (row=0,col=2): 68.3%  (nz=64349)
+      ZZ 4 (row=0,col=4): 80.8%  (nz=29242)
+      ZZ 8 (row=1,col=0): 60.8%  (nz=72097)
+      ZZ16 (row=2,col=0): 65.4%  (nz=67102)
+      ZZ32 (row=4,col=0): 78.7%  (nz=36726)
+      ZZ48 (row=6,col=0): 72.1%  (nz=22121)
+      ZZ63 (row=7,col=7): 93.2%  (nz=1534)
+  Cr: LSB=1 bias: 74.0%  LSB=0 bias: 26.0%
+    Per-frequency LSB=1%:
+      ZZ 0 (row=0,col=0): 50.1%  (nz=89853)
+      ZZ 1 (row=0,col=1): 61.9%  (nz=71720)
+      ZZ 2 (row=0,col=2): 65.2%  (nz=67903)
+      ZZ 4 (row=0,col=4): 74.6%  (nz=30256)
+      ZZ 8 (row=1,col=0): 59.9%  (nz=74114)
+      ZZ16 (row=2,col=0): 64.1%  (nz=69771)
+      ZZ32 (row=4,col=0): 73.4%  (nz=36868)
+      ZZ48 (row=6,col=0): 73.0%  (nz=26171)
+      ZZ63 (row=7,col=7): 93.7%  (nz=2143)
+
+--- 5. SCAN STRUCTURE ANALYSIS ---
+  Scan 0: comps=[1,2,3] range=[0,0] AH=0 AL=1 - DC scan
+  Scan 1: comps=[1] range=[1,5] AH=0 AL=2 - AC spectral range [1,5]
+  Scan 2: comps=[3] range=[1,63] AH=0 AL=1 - AC spectral range [1,63]
+  Scan 3: comps=[2] range=[1,63] AH=0 AL=1 - AC spectral range [1,63]
+  Scan 4: comps=[1] range=[6,63] AH=0 AL=2 - AC spectral range [6,63]
+  Scan 5: comps=[1] range=[1,63] AH=2 AL=1 - AC spectral range [1,63], refinement (AH=2)
+  Scan 6: comps=[1,2,3] range=[0,0] AH=1 AL=0 - DC scan, refinement (AH=1)
+  Scan 7: comps=[3] range=[1,63] AH=1 AL=0 - AC spectral range [1,63], refinement (AH=1)
+  Scan 8: comps=[2] range=[1,63] AH=1 AL=0 - AC spectral range [1,63], refinement (AH=1)
+  Scan 9: comps=[1] range=[1,63] AH=1 AL=0 - AC spectral range [1,63], refinement (AH=1)
+
+  Total scans: 10 (typical progressive JPEG uses 3-5)
+
+--- 6. ORIGINAL-COMPARISON ANALYSIS ---
+  Per-channel mean pixel difference vs resized original:
+    R: 53.2  G: 26.5  B: 32.2
+  Pixels diff > 30: 44.1% of image
+  Pixels diff > 50: 23.2% of image
+  Pixels diff > 80: 10.4% of image
+
+--- 7. SUMMARY ---
+
+Key findings:
+  1. Both tables contain values 1-3 instead of standard 16-99. This is intentionally
+     near-lossless - unusual for a background image on a website (3.5 MB JPEG).
+  2. LSB of non-zero coefficients shows bias toward 1 (55-92% depending on frequency).
+     This is consistent with near-lossless quantization skewing the distribution,
+     not necessarily steganographic embedding.
+  3. 10 progressive scans - more than typical (3-5). Unusual spectral
+     decomposition: Y AC split into zigzag bands 1-5 and 6-63, chroma separated
+     into individual component scans.
+  4. No data appended after EOI marker.
+  5. The near-lossless QTables preserve fine spatial detail - possibly to maintain
+     the waveform/glitch patterns visible in bitplane analysis and image.
+
+--- 8. ADDITIONAL ANALYSIS ---
+
+--- CHI-SQUARE STEGANALYSIS ---
+
+Y: Chi-square results (frequencies where p > 0.05 suggests embedding):
+  Frequencies with p > 0.05 (strong embedding signal): 1/64
+  Frequencies with 0.001 < p <= 0.05 (moderate): 0/64
+    ZZ 0 (0,0): 99 pairs, chi2=100.5, df=99, p=0.4390
+  Frequencies with p <= 0.001 (natural, no embedding signal): 63
+    ZZ 1 (0,1): 99 pairs, chi2=1753.4, p=0.000000
+    ZZ 2 (0,2): 99 pairs, chi2=2920.4, p=0.000000
+    ZZ 3 (0,3): 99 pairs, chi2=7750.9, p=0.000000
+    ZZ 4 (0,4): 99 pairs, chi2=12369.3, p=0.000000
+    ZZ 5 (0,5): 99 pairs, chi2=22234.5, p=0.000000
+    ZZ 6 (0,6): 99 pairs, chi2=23621.6, p=0.000000
+    ZZ 7 (0,7): 55 pairs, chi2=62705.8, p=0.000000
+    ZZ 8 (1,0): 99 pairs, chi2=2165.2, p=0.000000
+    ZZ 9 (1,1): 99 pairs, chi2=4298.0, p=0.000000
+    ZZ10 (1,2): 98 pairs, chi2=5119.4, p=0.000000
+
+Cb: Chi-square results (frequencies where p > 0.05 suggests embedding):
+  Frequencies with p > 0.05 (strong embedding signal): 1/64
+  Frequencies with 0.001 < p <= 0.05 (moderate): 0/64
+    ZZ 0 (0,0): 99 pairs, chi2=109.0, df=99, p=0.2321
+  Frequencies with p <= 0.001 (natural, no embedding signal): 63
+    ZZ 1 (0,1): 99 pairs, chi2=6119.4, p=0.000000
+    ZZ 2 (0,2): 99 pairs, chi2=9119.7, p=0.000000
+    ZZ 3 (0,3): 67 pairs, chi2=26027.5, p=0.000000
+    ZZ 4 (0,4): 40 pairs, chi2=43823.4, p=0.000000
+    ZZ 5 (0,5): 37 pairs, chi2=62053.6, p=0.000000
+    ZZ 6 (0,6): 33 pairs, chi2=66620.7, p=0.000000
+    ZZ 7 (0,7): 28 pairs, chi2=70900.4, p=0.000000
+    ZZ 8 (1,0): 99 pairs, chi2=4687.0, p=0.000000
+    ZZ 9 (1,1): 94 pairs, chi2=9511.0, p=0.000000
+    ZZ10 (1,2): 72 pairs, chi2=10729.7, p=0.000000
+
+Cr: Chi-square results (frequencies where p > 0.05 suggests embedding):
+  Frequencies with p > 0.05 (strong embedding signal): 0/64
+  Frequencies with 0.001 < p <= 0.05 (moderate): 0/64
+  Frequencies with p <= 0.001 (natural, no embedding signal): 64
+    ZZ 0 (0,0): 99 pairs, chi2=248.9, p=0.000000
+    ZZ 1 (0,1): 99 pairs, chi2=4512.3, p=0.000000
+    ZZ 2 (0,2): 99 pairs, chi2=6897.9, p=0.000000
+    ZZ 3 (0,3): 88 pairs, chi2=22605.3, p=0.000000
+    ZZ 4 (0,4): 49 pairs, chi2=42698.6, p=0.000000
+    ZZ 5 (0,5): 44 pairs, chi2=57379.7, p=0.000000
+    ZZ 6 (0,6): 32 pairs, chi2=61865.0, p=0.000000
+    ZZ 7 (0,7): 24 pairs, chi2=69681.4, p=0.000000
+    ZZ 8 (1,0): 99 pairs, chi2=3601.9, p=0.000000
+    ZZ 9 (1,1): 94 pairs, chi2=7232.5, p=0.000000
+
+--- F5 STEGANOGRAPHY DETECTION ---
+
+Y:
+  Total AC coefficients: 5670000
+  Zero coefficients: 3426968 (60.4%)
+  Non-zero coefficients: 2243032 (39.6%)
+  Mean: -0.008, Std: 21.454, Laplacian b: 15.170
+  Expected zero % (Laplacian): 96.8%
+  Actual zero %: 60.4%
+  Zero excess: -36.3% (normal)
+  Even: 716234 (31.9%), Odd: 1526798 (68.1%)
+  *** EVEN/ODD ASYMMETRY: ratio=0.469 ***
+  Per-frequency odd/even (top flags):
+    ZZ63 (7,7): nz= 1512, E=  175 O= 1337 ratio=0.131
+    ZZ62 (7,6): nz= 1914, E=  239 O= 1675 ratio=0.143
+    ZZ58 (7,2): nz=13483, E= 2160 O=11323 ratio=0.191
+    ZZ37 (4,5): nz=11234, E= 1864 O= 9370 ratio=0.199
+    ZZ55 (6,7): nz= 1977, E=  330 O= 1647 ratio=0.200
+    ZZ30 (3,6): nz=10914, E= 1863 O= 9051 ratio=0.206
+    ZZ60 (7,4): nz= 3153, E=  543 O= 2610 ratio=0.208
+    ZZ54 (6,6): nz= 2656, E=  458 O= 2198 ratio=0.208
+    ZZ44 (5,4): nz=12081, E= 2117 O= 9964 ratio=0.212
+    ZZ61 (7,5): nz= 2388, E=  423 O= 1965 ratio=0.215
+    ZZ51 (6,3): nz=13728, E= 2514 O=11214 ratio=0.224
+    ZZ23 (2,7): nz=11033, E= 2036 O= 8997 ratio=0.226
+    ZZ57 (7,1): nz=16584, E= 3063 O=13521 ratio=0.227
+    ZZ14 (1,6): nz=41840, E= 7830 O=34010 ratio=0.230
+    ZZ50 (6,2): nz=16834, E= 3169 O=13665 ratio=0.232
+  KS test vs Laplacian: stat=0.2647, p=0.0000
+  *** Distribution deviates from Laplacian (p < 0.05) ***
+
+Cb:
+  Total AC coefficients: 5670000
+  Zero coefficients: 4463744 (78.7%)
+  Non-zero coefficients: 1206256 (21.3%)
+  Mean: 0.007, Std: 9.912, Laplacian b: 7.009
+  Expected zero % (Laplacian): 93.1%
+  Actual zero %: 78.7%
+  Zero excess: -14.4% (normal)
+  Even: 272945 (22.6%), Odd: 933311 (77.4%)
+  *** EVEN/ODD ASYMMETRY: ratio=0.292 ***
+  Per-frequency odd/even (top flags):
+    ZZ54 (6,6): nz= 2558, E=  141 O= 2417 ratio=0.058
+    ZZ55 (6,7): nz= 2075, E=  118 O= 1957 ratio=0.060
+    ZZ60 (7,4): nz= 3255, E=  215 O= 3040 ratio=0.071
+    ZZ63 (7,7): nz= 1534, E=  104 O= 1430 ratio=0.073
+    ZZ53 (6,5): nz= 3044, E=  210 O= 2834 ratio=0.074
+    ZZ52 (6,4): nz= 4412, E=  308 O= 4104 ratio=0.075
+    ZZ44 (5,4): nz= 5109, E=  367 O= 4742 ratio=0.077
+    ZZ45 (5,5): nz= 3602, E=  261 O= 3341 ratio=0.078
+    ZZ62 (7,6): nz= 1945, E=  141 O= 1804 ratio=0.078
+    ZZ46 (5,6): nz= 2826, E=  205 O= 2621 ratio=0.078
+    ZZ37 (4,5): nz= 4535, E=  329 O= 4206 ratio=0.078
+    ZZ61 (7,5): nz= 2482, E=  186 O= 2296 ratio=0.081
+    ZZ39 (4,7): nz= 3023, E=  230 O= 2793 ratio=0.082
+    ZZ47 (5,7): nz= 2315, E=  180 O= 2135 ratio=0.084
+    ZZ19 (2,3): nz=25532, E= 2004 O=23528 ratio=0.085
+  KS test vs Laplacian: stat=0.2757, p=0.0000
+  *** Distribution deviates from Laplacian (p < 0.05) ***
+
+Cr:
+  Total AC coefficients: 5670000
+  Zero coefficients: 4331809 (76.4%)
+  Non-zero coefficients: 1338191 (23.6%)
+  Mean: 0.049, Std: 12.507, Laplacian b: 8.844
+  Expected zero % (Laplacian): 94.5%
+  Actual zero %: 76.4%
+  Zero excess: -18.1% (normal)
+  Even: 327101 (24.4%), Odd: 1011090 (75.6%)
+  *** EVEN/ODD ASYMMETRY: ratio=0.324 ***
+  Per-frequency odd/even (top flags):
+    ZZ54 (6,6): nz= 3307, E=  208 O= 3099 ratio=0.067
+    ZZ62 (7,6): nz= 2623, E=  165 O= 2458 ratio=0.067
+    ZZ63 (7,7): nz= 2143, E=  136 O= 2007 ratio=0.068
+    ZZ61 (7,5): nz= 3250, E=  218 O= 3032 ratio=0.072
+    ZZ55 (6,7): nz= 2651, E=  182 O= 2469 ratio=0.074
+    ZZ60 (7,4): nz= 4393, E=  302 O= 4091 ratio=0.074
+    ZZ51 (6,3): nz= 7895, E=  573 O= 7322 ratio=0.078
+    ZZ52 (6,4): nz= 5730, E=  454 O= 5276 ratio=0.086
+    ZZ53 (6,5): nz= 4042, E=  323 O= 3719 ratio=0.087
+    ZZ46 (5,6): nz= 3777, E=  304 O= 3473 ratio=0.088
+    ZZ44 (5,4): nz= 6791, E=  559 O= 6232 ratio=0.090
+    ZZ58 (7,2): nz= 8058, E=  687 O= 7371 ratio=0.093
+    ZZ59 (7,3): nz= 5915, E=  520 O= 5395 ratio=0.096
+    ZZ37 (4,5): nz= 6146, E=  547 O= 5599 ratio=0.098
+    ZZ47 (5,7): nz= 3055, E=  272 O= 2783 ratio=0.098
+  KS test vs Laplacian: stat=0.2925, p=0.0000
+  *** Distribution deviates from Laplacian (p < 0.05) ***
+
+--- COMPARISON WITH ORIGINAL IMAGE (PIXEL DOMAIN DCT) ---
+
+Computing block DCT for both images...
+Sky DCT blocks: 300x300
+Orig DCT blocks: 300x300
+
+Modified DCT coefficients (vs resized original): 3715600/5760000 (64.5%)
+  DC modifications: 89911/90000
+  AC modifications: 516400/630000
+
+Modification rate per frequency:
+  ZZ 0 (0,0): 99.9% modified
+  ZZ 1 (0,1): 92.3% modified
+  ZZ 2 (0,2): 90.0% modified
+  ZZ 3 (0,3): 89.6% modified
+  ZZ 4 (0,4): 88.0% modified
+  ZZ 5 (0,5): 84.3% modified
+  ZZ 6 (0,6): 81.0% modified
+  ZZ 7 (0,7): 48.5% modified
+  ZZ 8 (1,0): 94.3% modified
+  ZZ 9 (1,1): 90.0% modified
+  ZZ10 (1,2): 88.9% modified
+  ZZ11 (1,3): 88.5% modified
+  ZZ12 (1,4): 86.3% modified
+  ZZ13 (1,5): 82.7% modified
+  ZZ14 (1,6): 79.3% modified
+  ZZ15 (1,7): 44.1% modified
+  ZZ16 (2,0): 91.6% modified
+  ZZ17 (2,1): 89.2% modified
+  ZZ18 (2,2): 88.7% modified
+  ZZ19 (2,3): 87.8% modified
+  ZZ20 (2,4): 84.1% modified
+  ZZ21 (2,5): 81.7% modified
+  ZZ22 (2,6): 54.3% modified
+  ZZ23 (2,7): 39.5% modified
+  ZZ24 (3,0): 91.6% modified
+  ZZ25 (3,1): 88.7% modified
+  ZZ26 (3,2): 87.8% modified
+  ZZ27 (3,3): 86.5% modified
+  ZZ28 (3,4): 83.3% modified
+  ZZ29 (3,5): 61.0% modified
+  ZZ30 (3,6): 50.9% modified
+  ZZ31 (3,7): 18.2% modified
+  ZZ32 (4,0): 90.6% modified
+  ZZ33 (4,1): 87.4% modified
+  ZZ34 (4,2): 85.0% modified
+  ZZ35 (4,3): 83.8% modified
+  ZZ36 (4,4): 64.2% modified
+  ZZ37 (4,5): 58.5% modified
+  ZZ38 (4,6): 28.0% modified
+  ZZ39 (4,7): 14.8% modified
+  ZZ40 (5,0): 88.4% modified
+  ZZ41 (5,1): 84.3% modified
+  ZZ42 (5,2): 82.9% modified
+  ZZ43 (5,3): 64.5% modified
+  ZZ44 (5,4): 61.4% modified
+  ZZ45 (5,5): 35.4% modified
+  ZZ46 (5,6): 22.7% modified
+  ZZ47 (5,7): 11.3% modified
+  ZZ48 (6,0): 84.7% modified
+  ZZ49 (6,1): 82.2% modified
+  ZZ50 (6,2): 62.0% modified
+  ZZ51 (6,3): 60.5% modified
+  ZZ52 (6,4): 37.8% modified
+  ZZ53 (6,5): 27.9% modified
+  ZZ54 (6,6): 16.3% modified
+  ZZ56 (7,0): 65.0% modified
+  ZZ57 (7,1): 59.0% modified
+  ZZ58 (7,2): 56.8% modified
+  ZZ59 (7,3): 34.0% modified
+  ZZ60 (7,4): 27.7% modified
+  ZZ61 (7,5): 18.0% modified
+
+AC modification concentration:
+  Mean per block: 6.74
+  Max per block: 8.00
+  Std per block: 1.07
+
+Vertical modification distribution:
+  Top third: 6.58 AC mods/block
+  Mid third: 6.80 AC mods/block
+  Bot third: 6.83 AC mods/block
+
+LSB flips in modified coefficients: 2401028/3715600 (64.6%)
+  LSB zeros: 2298473/3715600 (61.9%)
+
+--- BIT-PAIR ENCODING ANALYSIS ---
+
+Y: Bit-pair distribution (1121502 pairs):
+  00 :   132651 ( 11.8%)
+  11 :   537923 ( 48.0%)
+  01 :   225655 ( 20.1%)
+  10 :   225273 ( 20.1%)
+  Chi-square: 335920.4, p=0.0000
+  Bit-pair distribution deviates from uniform (natural image behavior)
+
+Y: Nibble distribution (137458 nibbles):
+  0x0:   3701 (  2.7%) #
+  0x1:   5072 (  3.7%) #
+  0x2:   5011 (  3.6%) #
+  0x3:   7160 (  5.2%) ##
+  0x4:   5066 (  3.7%) #
+  0x5:   7200 (  5.2%) ##
+  0x6:   6860 (  5.0%) ##
+  0x7:  11597 (  8.4%) ####
+  0x8:   4919 (  3.6%) #
+  0x9:   7151 (  5.2%) ##
+  0xA:   7177 (  5.2%) ##
+  0xB:  11648 (  8.5%) ####
+  0xC:   7366 (  5.4%) ##
+  0xD:  11560 (  8.4%) ####
+  0xE:  11656 (  8.5%) ####
+  0xF:  24314 ( 17.7%) ########
+  Chi-square vs uniform: 43228.0, p=0.0000
+
+Cb: Bit-pair distribution (603111 pairs):
+  00 :    45970 (  7.6%)
+  11 :   376139 ( 62.4%)
+  01 :    90449 ( 15.0%)
+  10 :    90553 ( 15.0%)
+  Chi-square: 457885.4, p=0.0000
+  Bit-pair distribution deviates from uniform (natural image behavior)
+
+Cb: Nibble distribution (96419 nibbles):
+  0x0:   1743 (  1.8%) 
+  0x1:   2447 (  2.5%) #
+  0x2:   2541 (  2.6%) #
+  0x3:   4321 (  4.5%) ##
+  0x4:   2585 (  2.7%) #
+  0x5:   4104 (  4.3%) ##
+  0x6:   4135 (  4.3%) ##
+  0x7:   8590 (  8.9%) ####
+  0x8:   2601 (  2.7%) #
+  0x9:   4147 (  4.3%) ##
+  0xA:   4210 (  4.4%) ##
+  0xB:   8370 (  8.7%) ####
+  0xC:   4154 (  4.3%) ##
+  0xD:   8376 (  8.7%) ####
+  0xE:   8564 (  8.9%) ####
+  0xF:  25531 ( 26.5%) #############
+  Chi-square vs uniform: 81619.9, p=0.0000
+
+Cr: Bit-pair distribution (669080 pairs):
+  00 :    56152 (  8.4%)
+  11 :   398131 ( 59.5%)
+  01 :   107525 ( 16.1%)
+  10 :   107272 ( 16.0%)
+  Chi-square: 435303.6, p=0.0000
+  Bit-pair distribution deviates from uniform (natural image behavior)
+
+Cr: Nibble distribution (101967 nibbles):
+  0x0:   2108 (  2.1%) #
+  0x1:   2903 (  2.8%) #
+  0x2:   2813 (  2.8%) #
+  0x3:   4765 (  4.7%) ##
+  0x4:   2959 (  2.9%) #
+  0x5:   4761 (  4.7%) ##
+  0x6:   4633 (  4.5%) ##
+  0x7:   8914 (  8.7%) ####
+  0x8:   3051 (  3.0%) #
+  0x9:   4617 (  4.5%) ##
+  0xA:   4641 (  4.6%) ##
+  0xB:   8706 (  8.5%) ####
+  0xC:   4889 (  4.8%) ##
+  0xD:   8794 (  8.6%) ####
+  0xE:   9009 (  8.8%) ####
+  0xF:  24404 ( 23.9%) ###########
+  Chi-square vs uniform: 67774.0, p=0.0000
+
+--- BENFORD'S LAW ANALYSIS (FIRST DIGIT) ---
+
+Y DC coefficients: first-digit distribution (89914 values):
+  1: observed=24376 ( 27.1%) expected=27067 ( 30.1%) ######################################################
+  2: observed= 8526 (  9.5%) expected=15833 ( 17.6%) ##################
+  3: observed= 9100 ( 10.1%) expected=11234 ( 12.5%) ####################
+  4: observed=13078 ( 14.5%) expected= 8714 (  9.7%) #############################
+  5: observed=18322 ( 20.4%) expected= 7120 (  7.9%) ########################################
+  6: observed=10718 ( 11.9%) expected= 6019 (  6.7%) #######################
+  7: observed= 2728 (  3.0%) expected= 5214 (  5.8%) ######
+  8: observed= 1748 (  1.9%) expected= 4599 (  5.1%) ###
+  9: observed= 1318 (  1.5%) expected= 4114 (  4.6%) ##
+  Chi-square: 32379.3
+  *** DEVIATES from Benford's law (possible tampering) ***
+
+Cb DC coefficients: first-digit distribution (89887 values):
+  1: observed=62304 ( 69.3%) expected=27059 ( 30.1%) ##########################################################################################################################################
+  2: observed= 5136 (  5.7%) expected=15828 ( 17.6%) ###########
+  3: observed= 3626 (  4.0%) expected=11230 ( 12.5%) ########
+  4: observed= 3276 (  3.6%) expected= 8711 (  9.7%) #######
+  5: observed= 3318 (  3.7%) expected= 7117 (  7.9%) #######
+  6: observed= 3085 (  3.4%) expected= 6018 (  6.7%) ######
+  7: observed= 3272 (  3.6%) expected= 5213 (  5.8%) #######
+  8: observed= 2914 (  3.2%) expected= 4598 (  5.1%) ######
+  9: observed= 2956 (  3.3%) expected= 4113 (  4.6%) ######
+  Chi-square: 66793.9
+  *** DEVIATES from Benford's law (possible tampering) ***
+
+Cr DC coefficients: first-digit distribution (89853 values):
+  1: observed=13193 ( 14.7%) expected=27048 ( 30.1%) #############################
+  2: observed=13807 ( 15.4%) expected=15822 ( 17.6%) ##############################
+  3: observed=27427 ( 30.5%) expected=11226 ( 12.5%) #############################################################
+  4: observed= 8287 (  9.2%) expected= 8708 (  9.7%) ##################
+  5: observed=14916 ( 16.6%) expected= 7115 (  7.9%) #################################
+  6: observed= 6589 (  7.3%) expected= 6015 (  6.7%) ##############
+  7: observed= 2164 (  2.4%) expected= 5211 (  5.8%) ####
+  8: observed= 1887 (  2.1%) expected= 4596 (  5.1%) ####
+  9: observed= 1583 (  1.8%) expected= 4111 (  4.6%) ###
+  Chi-square: 44296.8
+  *** DEVIATES from Benford's law (possible tampering) ***

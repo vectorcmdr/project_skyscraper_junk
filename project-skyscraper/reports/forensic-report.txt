@@ -1,0 +1,114 @@
+================================================================================
+JPEG FORENSIC ANALYSIS REPORT  (CORRECTED)
+Source: R:\nevermore\stack\arg\project-skyscraper.jpg
+Size: 3578047 bytes (3494.2 KB)
+================================================================================
+
+--- HEADER MARKERS ---
+        0  0xFFD8  SOI                  
+        2  0xFFE0  APP0/JFIF            (16 bytes)
+       20  0xFFDB  DQT                  (67 bytes)
+       89  0xFFDB  DQT                  (67 bytes)
+      158  0xFFC2  SOF2                 (17 bytes)
+      177  0xFFC4  DHT                  (30 bytes)
+      209  0xFFC4  DHT                  (30 bytes)
+      241  0xFFDA  SOS                  (12 bytes)
+   183449  0xFFC4  DHT                  (57 bytes)
+   183508  0xFFDA  SOS                  (8 bytes)
+   330677  0xFFC4  DHT                  (112 bytes)
+   330791  0xFFDA  SOS                  (8 bytes)
+   747467  0xFFC4  DHT                  (111 bytes)
+   747580  0xFFDA  SOS                  (8 bytes)
+  1101222  0xFFC4  DHT                  (108 bytes)
+  1101332  0xFFDA  SOS                  (8 bytes)
+  1521906  0xFFC4  DHT                  (40 bytes)
+  1521948  0xFFDA  SOS                  (8 bytes)
+  1909370  0xFFDA  SOS                  (12 bytes)
+  1943247  0xFFC4  DHT                  (39 bytes)
+  1943288  0xFFDA  SOS                  (8 bytes)
+  2458366  0xFFC4  DHT                  (38 bytes)
+  2458406  0xFFDA  SOS                  (8 bytes)
+  2925644  0xFFC4  DHT                  (38 bytes)
+  2925684  0xFFDA  SOS                  (8 bytes)
+  3578045  0xFFD9  EOI                  
+
+--- SOF2 (PROGRESSIVE) DETAIL ---
+  Bits/sample : 8
+  Dimensions  : 2400 x 2400
+  Components  : 3
+  Component 0: ID=1, H_Samp=1, V_Samp=1, QTable#=0
+  Component 1: ID=2, H_Samp=1, V_Samp=1, QTable#=1
+  Component 2: ID=3, H_Samp=1, V_Samp=1, QTable#=1
+
+--- DQT (QUANTISATION TABLE) DETAIL ---
+  Table #0 at offset 20: precision=8-bit, 64 values
+    Min=1, Max=3, Avg=1.7
+    Non-default entries: 30
+    Natural-order 8x8 matrix:
+        1   1   1   1   1   1   1   1
+        1   1   1   1   1   1   1   1
+        1   1   1   1   2   2   2   1
+        1   1   1   1   1   1   1   2
+        2   2   3   3   3   3   2   2
+        1   1   1   1   1   2   2   3
+        3   3   3   2   2   1   2   2
+        3   3   3   3   2   3   3   3
+    Zigzag-order values:
+      [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+    Saved to dqt_table_0.csv
+    Differences vs standard luminance table: 64/64
+  Table #1 at offset 89: precision=8-bit, 64 values
+    Min=1, Max=3, Avg=2.7
+    Non-default entries: 56
+    Natural-order 8x8 matrix:
+        1   1   1   3   2   1   1   3
+        3   3   3   3   3   2   1   1
+        2   3   3   3   3   3   3   3
+        3   3   2   2   1   3   3   3
+        3   3   3   3   3   3   3   3
+        3   3   3   3   3   3   3   3
+        3   3   3   3   3   3   3   3
+        3   3   3   3   3   3   3   3
+    Zigzag-order values:
+      [1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 3, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+    Saved to dqt_table_1.csv
+    Differences vs standard chrominance table: 64/64
+
+--- DHT (HUFFMAN TABLE) SUMMARY ---
+  DHT #1: Class=DC, ID=0, 11 symbols
+  DHT #2: Class=DC, ID=1, 11 symbols
+  DHT #3: Class=AC, ID=0, 38 symbols
+  DHT #4: Class=AC, ID=1, 93 symbols
+  DHT #5: Class=AC, ID=1, 92 symbols
+  DHT #6: Class=AC, ID=0, 89 symbols
+  DHT #7: Class=AC, ID=0, 21 symbols
+  DHT #8: Class=AC, ID=1, 20 symbols
+  DHT #9: Class=AC, ID=1, 19 symbols
+  DHT #10: Class=AC, ID=0, 19 symbols
+
+--- SOS (SCAN) DETAIL ---
+  Scan 0 at     241: 3 comp(s): ID=1 DC=0 AC=0, ID=2 DC=1 AC=0, ID=3 DC=1 AC=0
+    Spectral: SS= 0 SE= 0  AH= 0 AL= 1  [DC scan]
+  Scan 1 at  183508: 1 comp(s): ID=1 DC=0 AC=0
+    Spectral: SS= 1 SE= 5  AH= 0 AL= 2  [AC spectral 1..5]
+  Scan 2 at  330791: 1 comp(s): ID=3 DC=0 AC=1
+    Spectral: SS= 1 SE=63  AH= 0 AL= 1  [AC spectral 1..63]
+  Scan 3 at  747580: 1 comp(s): ID=2 DC=0 AC=1
+    Spectral: SS= 1 SE=63  AH= 0 AL= 1  [AC spectral 1..63]
+  Scan 4 at 1101332: 1 comp(s): ID=1 DC=0 AC=0
+    Spectral: SS= 6 SE=63  AH= 0 AL= 2  [AC spectral 6..63]
+  Scan 5 at 1521948: 1 comp(s): ID=1 DC=0 AC=0
+    Spectral: SS= 1 SE=63  AH= 2 AL= 1  [AC spectral 1..63] [refinement]
+  Scan 6 at 1909370: 3 comp(s): ID=1 DC=0 AC=0, ID=2 DC=0 AC=0, ID=3 DC=0 AC=0
+    Spectral: SS= 0 SE= 0  AH= 1 AL= 0  [DC scan] [refinement]
+  Scan 7 at 1943288: 1 comp(s): ID=3 DC=0 AC=1
+    Spectral: SS= 1 SE=63  AH= 1 AL= 0  [AC spectral 1..63] [refinement]
+  Scan 8 at 2458406: 1 comp(s): ID=2 DC=0 AC=1
+    Spectral: SS= 1 SE=63  AH= 1 AL= 0  [AC spectral 1..63] [refinement]
+  Scan 9 at 2925684: 1 comp(s): ID=1 DC=0 AC=0
+    Spectral: SS= 1 SE=63  AH= 1 AL= 0  [AC spectral 1..63] [refinement]
+
+--- COM / APP DATA ---
+
+--- FILE FOOTER (after last SOS data) ---
+  EOI at offset 3578045, no trailing data
