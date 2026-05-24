@@ -31,49 +31,6 @@ Verified Facts:
     Pixel RGB bytes:       [0xE0, 0xC9, 0xA7]
     Overlap: E0 (R) and C9 (G). Missing from pixel: 03. Missing from DQT: A7.
 
-9x9 Neighborhood Analysis:
-
-    dr=-4: (111,110, 66) (114,115, 75) (118,116, 77) (115,116, 76) 
-           (101,103, 63) ( 94, 95, 55) ( 98,100, 60) (110,111, 71) 
-           (144,142,104)
-    dr=-3: (102,103, 63) (108,109, 69) (117,115, 76) (118,113, 73) 
-           (112,104, 65) ( 96, 89, 47) ( 84, 77, 35) ( 86, 77, 36) 
-           (137,125, 87)
-    dr=-2: (123,113, 77) (123,113, 77) (126,116, 80) (134,120, 85) 
-           (136,120, 84) (117,101, 65) ( 87, 71, 37) ( 77, 58, 25) 
-           (111, 91, 58)
-    dr=-1: (153,143,107) (149,139,103) (149,136,101) (156,142,107) 
-           (165,149,113) (150,134, 98) (119, 99, 64) (110, 90, 55) 
-           (102, 82, 49)
-    dr= 0: (187,169,133) (198,180,144) (213,195,159) (222,199,165) 
-           (224,201,167) (207,184,150) (186,163,129) (185,162,128) 
-           (159,136,102)
-    dr= 1: (201,183,147) (204,186,150) (205,185,150) (199,176,142) 
-           (178,154,120) (153,129, 95) (141,117, 83) (141,118, 84) 
-           (123,100, 66)
-    dr= 2: (155,135,100) (148,128, 93) (137,114, 80) (127,103, 69) 
-           (108, 82, 49) ( 94, 65, 33) ( 91, 62, 30) ( 89, 60, 28) 
-           ( 86, 57, 27)
-
-    The pixel sits at the center of a specular highlight forming a smooth
-    peak. The highlight is natural-looking (smooth Gaussian-like falloff
-    in all directions). Matches nature of image. Likely uninteresting.
-
-Highlight Profile (Row 739, Cols 1055-1085):
-
-    Differences between consecutive pixels (corrected for uint8 overflow):
-    1066->1067: dR=+11, dG=+11, dB=+11   UNIFORM
-    1067->1068: dR=+15, dG=+15, dB=+15   UNIFORM
-    1068->1069: dR= +9, dG= +4, dB= +6   NON-UNIFORM
-    1069->1070: dR= +2, dG= +2, dB= +2   UNIFORM (anomaly peak)
-    1070->1071: dR=-17, dG=-17, dB=-17   UNIFORM
-    1071->1072: dR=-21, dG=-21, dB=-21   UNIFORM
-
-    The 1068→1069 transition is the only non-uniform step in the 7-pixel
-    peak region. R jumps +9 while G only +4 and B +6. This could indicate
-    intentional manipulation, JPEG compression artifacts, or natural
-    chromatic aberration in the highlight.
-
 JPEG Block Context:
 
     - 8x8 block (92,133): rows 736-741, cols 1064-1071 (truncated at
