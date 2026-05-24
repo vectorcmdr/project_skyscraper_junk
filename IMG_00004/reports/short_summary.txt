@@ -1,0 +1,23 @@
+Interesting output summary:
+
+1. JPG `APP0` (offset 0x000002) is len=16, but with an embedded thumbnail should be more, like len=18. Odd but not a hard hit.
+
+2. The embedded thumbnail is likely generated from the original image before data manipulation, but after visual edits, as it contains DQT that look normal and has not inherited the main images.
+
+3. SOI markers for GZIP and PK, all false positives.
+
+4. Image has 7 SOS scans, which is unusually high (DC + 6 AC refinement scans). Add this to the anomalous DQT tables and there are now two clear signs of intentional data manipulation and not just image screwing and compression. (See statistical anlysius in general forensics report)
+
+5. Anomalous pixel at (739,1070): R=224, G=201, B=167. Pointer?
+
+6. DQT table values are all 1->3 (as previously noted). Highly unusual, nearly lossless and almost certainly a sign of data tampering. Likely cryptographic.
+
+7. DQT3 LSB non-FF: 0xE0, 0x03 -> matches pixel R=224, ARG#3
+
+8. DQT4 LSB non-FF: 0xC9 -> matches pixel G=201
+
+9. DQT LSB sequence E0,03,C9.
+
+8. CABAA sequence from DQT4[16,9,10,4,3].
+
+9. EXIF metadata contains a few interesting / anomalous values (see file)
