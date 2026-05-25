@@ -1,0 +1,8 @@
+| Source               | Bits | Value (Hex)    | Decimal
+| sky DQT0             | 30   | 0x007FFF       | 32767
+| sky DQT1             | 56   | 0x23FFFFFFFFFF | —
+| trace/img4 Set1 DQT0 | 21   | 0x0003FF       | 1023
+| trace/img4 Set1 DQT1 | 53   | 0x0FFFFFFFFFFF | —
+| XOR D0               | 30   | 0x0003C0       | 960
+
+TR4CE/IMG4 Set 0 DQT0 2-bit decode: `1763fa108f27c9d900713038203e8471`
