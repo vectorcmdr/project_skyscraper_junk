@@ -1,0 +1,15 @@
+TR4CE.jpg LSB Pattern Analysis
+========================================
+Pattern: 6db6db
+Pattern bytes: [109, 182, 219]
+Repeats: 1514/14118 (10.7%)
+
+Byte analysis:
+  Byte 0: 109 (0x6d, binary: 01101101, ASCII: m)
+  Byte 1: 182 (0xb6, binary: 10110110, ASCII: ?)
+  Byte 2: 219 (0xdb, binary: 11011011, ASCII: ?)
+
+XOR relationships:
+  0x6d XOR 0xdb = 0xb6
+  0x6d XOR 0xb6 = 0xdb
+  0xb6 XOR 0xdb = 0x6d (equals first byte!)
