@@ -1,0 +1,122 @@
+================================================================================
+CROSS-INJECTION REPORT
+Generated: 2026-05-25
+================================================================================
+
+Variants created: 12
+Successful: 12
+
+============================================================
+DETAILED VARIANT LOG
+------------------------------------------------------------
+
+Variant: SKY_WITH_TR4CE_QT.jpg
+  Description: Replace SKY QT with TR4CE QT
+  Source image: SKY
+  QT[0]: unique=[1, 2, 3], >1 count=21
+    Diff vs SKY: 14, vs TR4CE: 0, vs IMG4: 0
+  QT[1]: unique=[1, 2, 3], >1 count=53
+    Diff vs SKY: 5, vs TR4CE: 0, vs IMG4: 0
+
+Variant: SKY_WITH_IMG4_QT.jpg
+  Description: Replace SKY QT with IMG4 QT
+  Source image: SKY
+  QT[0]: unique=[1, 2, 3], >1 count=21
+    Diff vs SKY: 14, vs TR4CE: 0, vs IMG4: 0
+  QT[1]: unique=[1, 2, 3], >1 count=53
+    Diff vs SKY: 5, vs TR4CE: 0, vs IMG4: 0
+
+Variant: SKY_WITH_TR4CE_QT0_ONLY.jpg
+  Description: Replace SKY QT0 with TR4CE QT0
+  Source image: SKY
+  QT[0]: unique=[1, 2, 3], >1 count=21
+    Diff vs SKY: 14, vs TR4CE: 0, vs IMG4: 0
+  QT[1]: unique=[1, 2, 3], >1 count=56
+    Diff vs SKY: 0, vs TR4CE: 5, vs IMG4: 5
+
+Variant: SKY_WITH_TR4CE_QT1_ONLY.jpg
+  Description: Replace SKY QT1 with TR4CE QT1
+  Source image: SKY
+  QT[0]: unique=[1, 2, 3], >1 count=30
+    Diff vs SKY: 0, vs TR4CE: 14, vs IMG4: 14
+  QT[1]: unique=[1, 2, 3], >1 count=53
+    Diff vs SKY: 5, vs TR4CE: 0, vs IMG4: 0
+
+Variant: SKY_TR4CE_OVERLAY.jpg
+  Description: Overlay TR4CE >1 values onto SKY
+  Source image: SKY
+  QT[0]: unique=[1, 2, 3], >1 count=30
+    Diff vs SKY: 5, vs TR4CE: 9, vs IMG4: 9
+  QT[1]: unique=[1, 2, 3], >1 count=56
+    Diff vs SKY: 2, vs TR4CE: 3, vs IMG4: 3
+
+Variant: SKY_IMG4_OVERLAY.jpg
+  Description: Overlay IMG4 >1 values onto SKY
+  Source image: SKY
+  QT[0]: unique=[1, 2, 3], >1 count=30
+    Diff vs SKY: 5, vs TR4CE: 9, vs IMG4: 9
+  QT[1]: unique=[1, 2, 3], >1 count=56
+    Diff vs SKY: 2, vs TR4CE: 3, vs IMG4: 3
+
+Variant: SKY_XOR_TR4CE.jpg
+  Description: SKY ^ TR4CE (keep SKY where XOR=0)
+  Source image: SKY
+  QT[0]: unique=[1, 2, 3], >1 count=25
+    Diff vs SKY: 14, vs TR4CE: 14, vs IMG4: 14
+  QT[1]: unique=[1, 2, 3], >1 count=54
+    Diff vs SKY: 5, vs TR4CE: 5, vs IMG4: 5
+
+Variant: SKY_XOR_IMG4.jpg
+  Description: SKY ^ IMG4 (keep SKY where XOR=0)
+  Source image: SKY
+  QT[0]: unique=[1, 2, 3], >1 count=25
+    Diff vs SKY: 14, vs TR4CE: 14, vs IMG4: 14
+  QT[1]: unique=[1, 2, 3], >1 count=54
+    Diff vs SKY: 5, vs TR4CE: 5, vs IMG4: 5
+
+Variant: SKY_ADD_TR4CE.jpg
+  Description: SKY + TR4CE QT (clipped)
+  Source image: SKY
+  QT[0]: unique=[2, 3, 4, 5, 6], >1 count=64
+    Diff vs SKY: 64, vs TR4CE: 64, vs IMG4: 64
+  QT[1]: unique=[2, 3, 4, 5, 6], >1 count=64
+    Diff vs SKY: 64, vs TR4CE: 64, vs IMG4: 64
+
+Variant: SKY_SUB_TR4CE.jpg
+  Description: |SKY - TR4CE| QT
+  Source image: SKY
+  QT[0]: unique=[1], >1 count=0
+    Diff vs SKY: 30, vs TR4CE: 21, vs IMG4: 21
+  QT[1]: unique=[1], >1 count=0
+    Diff vs SKY: 56, vs TR4CE: 53, vs IMG4: 53
+
+Variant: SKY_MAX_TR4CE.jpg
+  Description: MAX(SKY, TR4CE) QT
+  Source image: SKY
+  QT[0]: unique=[1, 2, 3], >1 count=30
+    Diff vs SKY: 0, vs TR4CE: 14, vs IMG4: 14
+  QT[1]: unique=[1, 2, 3], >1 count=56
+    Diff vs SKY: 0, vs TR4CE: 5, vs IMG4: 5
+
+Variant: SKY_MIN_TR4CE.jpg
+  Description: MIN(SKY, TR4CE) QT (>=1)
+  Source image: SKY
+  QT[0]: unique=[1, 2, 3], >1 count=21
+    Diff vs SKY: 14, vs TR4CE: 0, vs IMG4: 0
+  QT[1]: unique=[1, 2, 3], >1 count=53
+    Diff vs SKY: 5, vs TR4CE: 0, vs IMG4: 0
+
+============================================================
+XOR Analysis of cross-injections
+
+SKY_XOR_TR4CE:
+  QT[0] XOR results (values >1): [3, 3, 3, 2, 3, 2, 3, 2, 3, 3, 2, 3, 3, 3, 2, 3, 3, 3, 3, 3, 2, 3, 3, 3, 3]
+  QT[0] as ASCII: [03][03][03][02][03][02][03][02][03][03][02][03][03][03][02][03][03][03][03][03][02][03][03][03][03]
+  QT[1] XOR results (values >1): [3, 3, 3, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+  QT[1] as ASCII: [03][03][03][03][02][03][03][03][03][03][03][03][03][03][03][03][02][03][03][03][03][03][03][03][03][03][03][03][03][03][03][03][03][03][03][03][03][03][03][03]
+
+SKY_XOR_IMG4:
+  QT[0] XOR results (values >1): [3, 3, 3, 2, 3, 2, 3, 2, 3, 3, 2, 3, 3, 3, 2, 3, 3, 3, 3, 3, 2, 3, 3, 3, 3]
+  QT[0] as ASCII: [03][03][03][02][03][02][03][02][03][03][02][03][03][03][02][03][03][03][03][03][02][03][03][03][03]
+  QT[1] XOR results (values >1): [3, 3, 3, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+  QT[1] as ASCII: [03][03][03][03][02][03][03][03][03][03][03][03][03][03][03][03][02][03][03][03][03][03][03][03][03][03][03][03][03][03][03][03][03][03][03][03][03][03][03][03]
