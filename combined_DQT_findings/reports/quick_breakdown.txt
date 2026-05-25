@@ -1,0 +1,45 @@
+======================================================================
+QUICK OUTPUTS
+======================================================================
+
+  1. TR4CE and IMG_00004 are from the SAME source - identical QTables
+     (64/64 match for both tables), identical ICC profile, identical scan pattern.
+  
+  2. project-skyscraper.jpg was created by the SAME tooling but with different
+     parameters - QTables similar (50-59/64 match) but not identical, different
+     scan pattern (10 scans vs 7), different chroma subsampling.
+  
+  3. The near-lossless QTable (values 1-3) is the signature of this creator.
+  
+  4. TR4CE has a solid-color top border - might be intentional framing.
+  
+  5. Column periodicity ~6-7px is very regular - likely structural from the
+     encoding process rather than data columns.
+  
+  6. ICC profile identical between TR4CE and IMG_00004 (3144 bytes)
+     - both tagged as sRGB with specific CMM.
+  
+  7. No clear text data found in DCT LSB extraction across any strategy.
+
+
+--- CROSS-FILE PATTERN SUMMARY ---
+
+                    TR4CE.jpg       IMG_00004.jpg   project-skyscraper.jpg
+  =================================================================
+  Dimensions          624x181         1212x742        2400x2400
+  Progressive         YES             YES             YES
+  QTable values       1,2,3           1,2,3 [+0]      1,2,3
+  QTable #0 match     IDENTICAL       IDENTICAL       50/64 match
+  QTable #1 match     IDENTICAL       IDENTICAL       59/64 match
+  ICC profile         IDENTICAL       IDENTICAL       N/A
+  Scan pattern        IDENTICAL       IDENTICAL       DIFFERENT (10 scans)
+  EXIF thumbnail      YES             YES             NO
+  Custom tag 0xEA1C   YES             ?               NO
+  Concatenated JPEGs  EXIF thumb      EXIF thumb      NO
+  
+  -> TR4CE and IMG_00004 share exact QTables, ICC, and scan pattern
+  -> project-skyscraper was created by SAME tool but with slightly different parameters
+  -> All three share near-lossless QTables (values 1-3)
+  -> The "glitch" encoding method is consistent across all images
+  -> Thumbnail is DIFFERENT from downscaled main
+  -> JPEG #1 unopenable (truncated)
