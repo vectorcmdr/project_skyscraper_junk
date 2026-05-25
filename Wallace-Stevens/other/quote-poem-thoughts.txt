@@ -1,0 +1,4 @@
+Last change:
+Word positions 3, 10, 32
+Significance of change: Flip: +1/-1 / +1,-1,-1 / -/1,+/1,+/1
+Rotations: +/- 13, 20, 8 or +/- 13, 13, 20, 20, 8, 8
