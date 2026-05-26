@@ -1,0 +1,46 @@
+======================================================================
+DEEP PIXEL ANALYSIS: connection-detected
+======================================================================
+Shape: (1000, 1600, 3), dtype: uint8
+Min/Max per channel:
+  R: min=17, max=199, mean=22.77, std=10.60
+  G: min=16, max=230, mean=36.73, std=53.04
+  B: min=4, max=230, mean=59.95, std=63.80
+
+--- Entropy Analysis ---
+  R entropy: 1.7562 bits (max=8.0)
+  G entropy: 2.4325 bits (max=8.0)
+  B entropy: 2.8958 bits (max=8.0)
+
+--- LSB Distribution ---
+  R LSB1 ratio: 0.4284 (0.5 = random, far from 0.5 = potential stego)
+  G LSB1 ratio: 0.5132 (0.5 = random, far from 0.5 = potential stego)
+  B LSB1 ratio: 0.8553 (0.5 = random, far from 0.5 = potential stego)
+
+--- 2-Bit LSB Distribution ---
+  R 2-bit value distribution:
+    val 0: 46316 (2.89%)
+    val 1: 639064 (39.94%)
+    val 2: 868324 (54.27%)
+    val 3: 46296 (2.89%)
+  G 2-bit value distribution:
+    val 0: 642982 (40.19%)
+    val 1: 758488 (47.41%)
+    val 2: 135944 (8.50%)
+    val 3: 62586 (3.91%)
+  B 2-bit value distribution:
+    val 0: 86747 (5.42%)
+    val 1: 729699 (45.61%)
+    val 2: 144763 (9.05%)
+    val 3: 638791 (39.92%)
+
+--- LSB Raw Data Extraction ---
+  G LSB0 found 1 printable strings:
+    b'>@O  '
+  B LSB0 found 1 printable strings:
+    b'|~0O'
+
+--- Inter-Channel Correlation ---
+  R-G correlation: -0.0856
+  R-B correlation: -0.0133
+  G-B correlation: 0.0390

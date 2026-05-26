@@ -1,0 +1,98 @@
+ADVANCED DECODING REPORT
+======================================================================
+
+--- Row Pattern Analysis ---
+Total rows: 1000
+Unique row patterns: 1000
+Most common pattern repeats: 1 times
+
+Significant row periods found: 7
+  Period 2: 809 matching rows
+  Period 3: 743 matching rows
+  Period 4: 660 matching rows
+  Period 5: 590 matching rows
+  Period 6: 515 matching rows
+  Period 7: 442 matching rows
+  Period 8: 359 matching rows
+
+--- Column Pattern Analysis ---
+Total columns: 1600
+Unique column patterns: 1024
+
+--- Raw Pixel Data Interpretation ---
+Total raw bytes: 4800000
+ASCII strings found in raw RGB: 20
+  b'c)!c)Bc)Bc)YR)YR)Y-)Y'
+  b'c-OccOccY`mY`mY8mY'
+  b'cm&cm&cmIcnYTnYTnY+nY'
+  b' s  s [s([s('
+  b's)+s)+s)'
+  b's($shXsyXsyfs{fs{fs|fs|fs|fs|fs|fs|cs|Ks|Ks|!s|'
+  b')z})z}){K){K){"){'
+  b';I^;I!8I!8I'
+  b';I+;I+;I58I7-I7-I7'
+  b'6;P7;I7;I79I7'
+  b'#: #-!#-!#-!)-!+-!+-!+-!+-!+-'
+  b'$-!K-!K-!'
+  b'#-!N-!N-!'
+  b'#; "- "-!'
+  b'#B!#-!#-!"-!'
+  b'KTBKWBKWEKWEKWEKWEKWEKWEKWDKWDKW5KW'
+  b'*K1*K1BKSEKWEKWEKWEKWEKWEKWEKWEKW9KW9KW'
+  b'"K&"K&?KMECWECWE!WE'
+  b'KB6KB6KW6KWEKWEKWE7WE'
+  b'EKWEKWEKWEKWEKWEKWEKWEKWEKWEKWEKWEKW)KW)KW)KW)KW'
+
+  R-plane-first: 28523 strings
+    b'?EEEEEE??'
+    b'TYYYYYYYYU--'
+    b'##=SSYYYYYXGG$'
+    b'))IIYYYYYYH$$'
+    b'@EEEEEE@@'
+
+  B-plane-first: 28523 strings
+    b' (())))))))))))))(( '
+    b'%))))))))))))))))))))))))))))))))))))))))))))))))))))(((##'
+    b'##(()))))))))))))))&&'
+    b'&&)))))))))))))))))))&'
+    b"!!'))))))))))))))))))))))))))))))))))))))))))))))))))))))))))&&"
+
+  interleaved-BGR: 19 strings
+    b')c!)cB)cB)RY)RY)-Y)'
+    b'ccOccOm`Ym`Ym8Ym'
+    b'mc&mc&ncInTYnTYn+Yn'
+    b' s  s (s[(s[)s'
+    b')s+)s+)s'
+
+--- Binary Row Encoding ---
+Threshold brightness: 39.82
+Total runs: 42
+Run lengths (first 50): [92, 5, 2, 1, 90, 10, 90, 30, 49, 11, 10, 10, 30, 10, 1, 1, 2, 2, 2, 22, 20, 10, 10, 50, 50, 10, 50, 40, 19, 42, 19, 10, 11, 9, 7, 1, 2, 10, 40, 50, 59, 11]
+Potential Morse: 21 dots, 21 dashes (median=10.5)
+
+--- Color Palette ---
+Unique colors: 15515
+First 20 unique colors:
+  RGB( 17,  16,   4)
+  RGB( 17,  16,   5)
+  RGB( 17,  16,   6)
+  RGB( 17,  16,   7)
+  RGB( 17,  16,   8)
+  RGB( 17,  16,   9)
+  RGB( 17,  16,  13)
+  RGB( 17,  16,  17)
+  RGB( 17,  16,  18)
+  RGB( 17,  16,  19)
+  RGB( 17,  16,  20)
+  RGB( 17,  16,  21)
+  RGB( 17,  16,  22)
+  RGB( 17,  16,  23)
+  RGB( 17,  16,  24)
+  RGB( 17,  16,  25)
+  RGB( 17,  16,  26)
+  RGB( 17,  16,  27)
+  RGB( 17,  16,  28)
+  RGB( 17,  16,  29)
+
+--- Parity-Based Encoding ---
+Parity strings: 0

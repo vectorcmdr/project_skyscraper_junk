@@ -1,0 +1,30 @@
+SPECTROGRAM / AUDIO ANALYSIS REPORT
+======================================================================
+Source: connection-detected-access-denied-v0-8c7atk6y141h1.png
+Dimensions: 1600x1000, channels: 3
+
+--- METHOD 1: Image-as-Spectrogram (time=X, freq=Y) ---
+  Method 1a (normal orientation): 3196800 samples, saved as method1a_normal.wav
+  Method 1b (flipped, low-freq-at-bottom): 3196800 samples
+
+--- METHOD 2: Griffin-Lim Iterative Phase Reconstruction ---
+  Griffin-Lim (50 iter, downsampled 4x): 199200 samples
+
+--- METHOD 3: Raw Pixel Data as Audio ---
+  3a: Raw grayscale as audio, 1600000 samples
+  3b: Row average as audio @ 8kHz, 1000 samples
+  3c: Column average as audio @ 8kHz, 1600 samples
+  3d: R-G stereo interleaved, 1600000 frames
+
+--- METHOD 4: Color-Encoded Spectrogram ---
+  4a: Channel R as spectrogram, 3196800 samples
+  4a: Channel G as spectrogram, 3196800 samples
+  4a: Channel B as spectrogram, 3196800 samples
+
+--- METHOD 5: Alternative Scan Patterns ---
+  5a: Diagonal scan audio, 1600000 samples
+  5b: Snake scan audio, 1600000 samples
+
+--- METHOD 6: 2D FFT Analysis ---
+  6: 2D FFT magnitude spectrum saved
+  6: Autocorrelation saved
