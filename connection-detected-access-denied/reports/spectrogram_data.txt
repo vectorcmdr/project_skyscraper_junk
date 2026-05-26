@@ -1,0 +1,16 @@
+Spectrogram Dimensions: (674, 1080, 4)
+Value Range: 0 to 255
+Mean: 93.7171
+Std: 98.6942
+
+R Channel:
+  Mean: 23.8951, Std: 15.1273
+  Min: 0, Max: 244
+
+G Channel:
+  Mean: 36.6051, Std: 38.6094
+  Min: 0, Max: 255
+
+B Channel:
+  Mean: 59.3683, Std: 43.7466
+  Min: 0, Max: 255
