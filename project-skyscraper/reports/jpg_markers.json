@@ -1,0 +1,182 @@
+[
+  {
+    "marker": "0xD8",
+    "pos": 0,
+    "len": 0,
+    "type": "standalone"
+  },
+  {
+    "marker": "0xE0",
+    "pos": 2,
+    "len": 16,
+    "data_preview": "4a46494600010201004800480000",
+    "type": "segment"
+  },
+  {
+    "marker": "0xDB",
+    "pos": 20,
+    "len": 67,
+    "data_preview": "0001010101010101010101010101010101010101010101010101010101020101",
+    "type": "segment"
+  },
+  {
+    "marker": "0xDB",
+    "pos": 89,
+    "len": 67,
+    "data_preview": "0101010101010102010102030202020303030303030303030303030303030303",
+    "type": "segment"
+  },
+  {
+    "marker": "0xC2",
+    "pos": 158,
+    "len": 17,
+    "data_preview": "080960096003011100021101031101",
+    "type": "segment"
+  },
+  {
+    "marker": "0xC4",
+    "pos": 177,
+    "len": 30,
+    "data_preview": "0000020202030101000000000000000000020300010405060708090a",
+    "type": "segment"
+  },
+  {
+    "marker": "0xC4",
+    "pos": 209,
+    "len": 30,
+    "data_preview": "0100020203010101010000000000000000010200030405060708090a",
+    "type": "segment"
+  },
+  {
+    "marker": "0xDA",
+    "pos": 241,
+    "len": 12,
+    "data_preview": "03010002100310000001",
+    "type": "segment"
+  },
+  {
+    "marker": "0xC4",
+    "pos": 183449,
+    "len": 57,
+    "data_preview": "1000010302050303030205050101010003010002110304050610122107314113",
+    "type": "segment"
+  },
+  {
+    "marker": "0xDA",
+    "pos": 183508,
+    "len": 8,
+    "data_preview": "010100010502",
+    "type": "segment"
+  },
+  {
+    "marker": "0xC4",
+    "pos": 330677,
+    "len": 112,
+    "data_preview": "1100010203050305080a0b0e0307000213010002031121040512314106516110",
+    "type": "segment"
+  },
+  {
+    "marker": "0xDA",
+    "pos": 330791,
+    "len": 8,
+    "data_preview": "010301013f01",
+    "type": "segment"
+  },
+  {
+    "marker": "0xC4",
+    "pos": 747467,
+    "len": 111,
+    "data_preview": "11000102030404060a0c0908060706010d010002031121040512311041516106",
+    "type": "segment"
+  },
+  {
+    "marker": "0xDA",
+    "pos": 747580,
+    "len": 8,
+    "data_preview": "010201013f01",
+    "type": "segment"
+  },
+  {
+    "marker": "0xC4",
+    "pos": 1101222,
+    "len": 108,
+    "data_preview": "10000102030504030a0906070c0608020b010011022131030412415105226171",
+    "type": "segment"
+  },
+  {
+    "marker": "0xDA",
+    "pos": 1101332,
+    "len": 8,
+    "data_preview": "010100063f02",
+    "type": "segment"
+  },
+  {
+    "marker": "0xC4",
+    "pos": 1521906,
+    "len": 40,
+    "data_preview": "10000202010304020301010101000000000111002131415161718191f0a1b1c1",
+    "type": "segment"
+  },
+  {
+    "marker": "0xDA",
+    "pos": 1521948,
+    "len": 8,
+    "data_preview": "010100013f21",
+    "type": "segment"
+  },
+  {
+    "marker": "0xDA",
+    "pos": 1909370,
+    "len": 12,
+    "data_preview": "03010002000300000010",
+    "type": "segment"
+  },
+  {
+    "marker": "0xC4",
+    "pos": 1943247,
+    "len": 39,
+    "data_preview": "110100010303030501010101000000000001110021314151f061718191a1b1c1",
+    "type": "segment"
+  },
+  {
+    "marker": "0xDA",
+    "pos": 1943288,
+    "len": 8,
+    "data_preview": "010301013f10",
+    "type": "segment"
+  },
+  {
+    "marker": "0xC4",
+    "pos": 2458366,
+    "len": 38,
+    "data_preview": "11010002020103040301010100000000000100112131415161718191a1f0b1c1",
+    "type": "segment"
+  },
+  {
+    "marker": "0xDA",
+    "pos": 2458406,
+    "len": 8,
+    "data_preview": "010201013f10",
+    "type": "segment"
+  },
+  {
+    "marker": "0xC4",
+    "pos": 2925644,
+    "len": 38,
+    "data_preview": "10010002020202020203010101000000000111210031415161718191a1b1c1d1",
+    "type": "segment"
+  },
+  {
+    "marker": "0xDA",
+    "pos": 2925684,
+    "len": 8,
+    "data_preview": "010100013f10",
+    "type": "segment"
+  },
+  {
+    "marker": "0xD9",
+    "pos": 3578045,
+    "len": 0,
+    "type": "EOI"
+  }
+]
