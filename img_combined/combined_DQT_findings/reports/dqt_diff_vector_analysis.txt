@@ -1,0 +1,141 @@
+================================================================================
+DEEP ANALYSIS: DQT DIFFERENCE VECTORS vs DELTAS
+================================================================================
+
+Deltas: [3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 2, 3, 2]
+Total DQT diff entries: 19 (DQT0: 14, DQT1: 5)
+
+--------------------------------------------------------------------------------
+1. DIFF POSITIONS AS STEP/DELTA SEQUENCE
+--------------------------------------------------------------------------------
+  Diff zigzag positions (sorted): [28, 35, 36, 37, 38, 39, 40, 41, 42, 49, 50, 51, 52, 53, 6, 9, 10, 12, 14]
+  Steps between diffs: [28, 7, 1, 1, 1, 1, 1, 1, 1, 7, 1, 1, 1, 1, -47, 3, 1, 2, 2]
+  Common prefix with deltas: 0/15
+
+--------------------------------------------------------------------------------
+2. DQT VALUES AT SEQ-POSITIONS (seq%64)
+--------------------------------------------------------------------------------
+  [ 0] 25 Mar seq=46105 pos=25 delta=3 | DQT0: PS=1 Base=1   | DQT1: PS=3 Base=3  
+  [ 1] 27 Mar seq=46108 pos=28 delta=2 | DQT0: PS=2 Base=1 * | DQT1: PS=3 Base=3  
+  [ 2] 30 Mar seq=46110 pos=30 delta=3 | DQT0: PS=1 Base=1   | DQT1: PS=3 Base=3  
+  [ 3]  1 Apr seq=46113 pos=33 delta=2 | DQT0: PS=1 Base=1   | DQT1: PS=3 Base=3  
+  [ 4]  4 Apr seq=46115 pos=35 delta=3 | DQT0: PS=2 Base=1 * | DQT1: PS=3 Base=3  
+  [ 5]  6 Apr seq=46118 pos=38 delta=2 | DQT0: PS=2 Base=1 * | DQT1: PS=3 Base=3  
+  [ 6]  9 Apr seq=46120 pos=40 delta=3 | DQT0: PS=2 Base=1 * | DQT1: PS=3 Base=3  
+  [ 7] 11 Apr seq=46123 pos=43 delta=2 | DQT0: PS=2 Base=2   | DQT1: PS=3 Base=3  
+  [ 8] 14 Apr seq=46125 pos=45 delta=3 | DQT0: PS=2 Base=2   | DQT1: PS=3 Base=3  
+  [ 9] 16 Apr seq=46128 pos=48 delta=2 | DQT0: PS=2 Base=2   | DQT1: PS=3 Base=3  
+  [10] 18 Apr seq=46130 pos=50 delta=3 | DQT0: PS=3 Base=2 * | DQT1: PS=3 Base=3  
+  [11] 21 Apr seq=46133 pos=53 delta=2 | DQT0: PS=3 Base=2 * | DQT1: PS=3 Base=3  
+  [12] 23 Apr seq=46135 pos=55 delta=2 | DQT0: PS=3 Base=3   | DQT1: PS=3 Base=3  
+  [13] 26 Apr seq=46137 pos=57 delta=3 | DQT0: PS=3 Base=3   | DQT1: PS=3 Base=3  
+  [14] 28 Apr seq=46140 pos=60 delta=2 | DQT0: PS=3 Base=3   | DQT1: PS=3 Base=3  
+  [15]  1 May seq=46142 pos=62 delta=- | DQT0: PS=3 Base=3   | DQT1: PS=3 Base=3  
+
+--------------------------------------------------------------------------------
+3. DECODING: CUMULATIVE SUM OF DELTAS MATCHING DQT TRANSITION POSITIONS
+--------------------------------------------------------------------------------
+  PS DQT0 transitions: [(27, 1, 2), (28, 2, 1), (34, 1, 2), (48, 2, 3)]
+  Base DQT0 transitions: [(42, 1, 2), (53, 2, 3)]
+  Cumulative sum of deltas: [3, 5, 8, 10, 13, 15, 18, 20, 23, 25, 28, 30, 32, 35, 37]
+  PS DQT0 transition positions: [27, 28, 34, 48]
+  Base DQT0 transition positions: [42, 53]
+  Delta cumsum hits PS DQT0 transitions: 1/15 ([28])
+  Delta cumsum hits Base DQT0 transitions: 0/15 ([])
+
+--------------------------------------------------------------------------------
+4. ENCODING DIFF POSITIONS AS KEY
+--------------------------------------------------------------------------------
+  PS_DQT0 values at diff positions: [2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 1, 1, 1, 1, 1]
+  PS_DQT0 as binary (1/2=0, 3=1): 0000000001111100000
+  Delta bits XOR key bits: 101010101101100
+  Base_DQT0 values at diff positions: [1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1]
+  Base_DQT0 as binary (1/2=0, 3=1): 0000000000000000000
+  Delta bits XOR key bits: 101010101010010
+
+--------------------------------------------------------------------------------
+5. DQT DIFFERENCE MAP (8x8)
+--------------------------------------------------------------------------------
+  Legend: .=same, 2=PS has 2 where base has 1, 3=PS has 3 where base has 2
+    DQT0 diff map:
+      . . . . 2 . . 3
+      . . . . . . . .
+      2 . . . 2 . 2 .
+      . . . 2 . 3 . 2
+      2 2 3 . . 3 . 2
+      . . . . . 2 . 3
+      . . 3 . 2 . 2 .
+      3 . . . . . . .
+    DQT0+DQT1 combined diff map:
+      . . . . 2 . . 3
+      . . . . . . . .
+      2 . . . 2 . 2 .
+      . . . 2 . 3 . 2
+      2 2 3 . . 3 . 2
+      . . . . . 2 . 3
+      . . 3 . 2 . 2 .
+      3 . . . . . . .
+
+--------------------------------------------------------------------------------
+6. SEQ VALUES AS DQT RASTER COORDINATES
+--------------------------------------------------------------------------------
+  Using seq%8 for column and (seq//8)%8 for row:
+  [ 0] 25 Mar seq=46105 -> raster(3,1) zigzag=20 delta=3 | DQT0=1/1 DQT1=3/3  
+  [ 1] 27 Mar seq=46108 -> raster(3,4) zigzag= 7 delta=2 | DQT0=1/1 DQT1=1/1  
+  [ 2] 30 Mar seq=46110 -> raster(3,6) zigzag=21 delta=3 | DQT0=1/1 DQT1=3/3  
+  [ 3]  1 Apr seq=46113 -> raster(4,1) zigzag=42 delta=2 | DQT0=2/1 DQT1=3/3 *
+  [ 4]  4 Apr seq=46115 -> raster(4,3) zigzag=56 delta=3 | DQT0=3/3 DQT1=3/3  
+  [ 5]  6 Apr seq=46118 -> raster(4,6) zigzag=43 delta=2 | DQT0=2/2 DQT1=3/3  
+  [ 6]  9 Apr seq=46120 -> raster(5,0) zigzag=29 delta=3 | DQT0=1/1 DQT1=3/3  
+  [ 7] 11 Apr seq=46123 -> raster(5,3) zigzag=23 delta=2 | DQT0=1/1 DQT1=3/3  
+  [ 8] 14 Apr seq=46125 -> raster(5,5) zigzag=37 delta=3 | DQT0=2/1 DQT1=3/3 *
+  [ 9] 16 Apr seq=46128 -> raster(6,0) zigzag=58 delta=2 | DQT0=3/3 DQT1=3/3  
+  [10] 18 Apr seq=46130 -> raster(6,2) zigzag=52 delta=3 | DQT0=3/2 DQT1=3/3 *
+  [11] 21 Apr seq=46133 -> raster(6,5) zigzag=31 delta=2 | DQT0=1/1 DQT1=3/3  
+  [12] 23 Apr seq=46135 -> raster(6,7) zigzag=46 delta=2 | DQT0=2/2 DQT1=3/3  
+  [13] 26 Apr seq=46137 -> raster(7,1) zigzag=60 delta=3 | DQT0=3/3 DQT1=3/3  
+  [14] 28 Apr seq=46140 -> raster(7,4) zigzag=47 delta=2 | DQT0=2/2 DQT1=3/3  
+  [15]  1 May seq=46142 -> raster(7,6) zigzag=62 delta=- | DQT0=3/3 DQT1=3/3  
+
+--------------------------------------------------------------------------------
+7. PATTERN vs DQT DIFF PATTERN CORRELATION
+--------------------------------------------------------------------------------
+  Hour intervals: [35.1, 83.1, 35.1, 83.1, 35.1, 83.1, 35.1, 83.1, 35.1, 59.1, 59.1, 59.1, 83.1, 35.1, 83.1]
+  Deltas:          [3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 2, 3, 2]
+  Delta pattern:   101010101010010 (2=0,3=1)
+  Hour groups:     ABABABABACCCBAB
+  Delta by hour group:
+    A=~35h (1.5d): 2=0, 3=6
+    B=~83h (3.5d): 2=6, 3=0
+    C=~59h (2.5d): 2=2, 3=1
+
+--------------------------------------------------------------------------------
+8. FIBONACCI / GOLDEN RATIO CONNECTION
+--------------------------------------------------------------------------------
+  2 and 3 are CONSECUTIVE FIBONACCI numbers (F3=2, F4=3)
+  This suggests the delta sequence may encode a phi-based counter.
+  Check: are the deltas related to the golden ratio (phi ≈ 1.618)?
+  3/2 = 1.5 ≈ phi (within 7.3%)
+  2/3 = 0.667 ≈ 1/phi (within 7.9%)
+  83.1/35.1 = 2.368 ≈ phi²? (phi² = 2.618, within 9.6%)
+
+--------------------------------------------------------------------------------
+9. COMBINED ANALYSIS: DELTAS AS DIFF POSITION SELECTORS
+--------------------------------------------------------------------------------
+  Diff positions (DQT0): [28, 35, 36, 37, 38, 39, 40, 41, 42, 49, 50, 51, 52, 53]
+  Delta-walk through diff positions: positions=see below
+    [ 0] delta=3 -> walk_pos=3, diff_pos=37, DQT0[37]=2
+    [ 1] delta=2 -> walk_pos=5, diff_pos=39, DQT0[39]=2
+    [ 2] delta=3 -> walk_pos=8, diff_pos=42, DQT0[42]=2
+    [ 3] delta=2 -> walk_pos=10, diff_pos=50, DQT0[50]=3
+    [ 4] delta=3 -> walk_pos=13, diff_pos=53, DQT0[53]=3
+    [ 5] delta=2 -> walk_pos=1, diff_pos=35, DQT0[35]=2
+    [ 6] delta=3 -> walk_pos=4, diff_pos=38, DQT0[38]=2
+    [ 7] delta=2 -> walk_pos=6, diff_pos=40, DQT0[40]=2
+    [ 8] delta=3 -> walk_pos=9, diff_pos=49, DQT0[49]=3
+    [ 9] delta=2 -> walk_pos=11, diff_pos=51, DQT0[51]=3
+    [10] delta=3 -> walk_pos=0, diff_pos=28, DQT0[28]=2
+    [11] delta=2 -> walk_pos=2, diff_pos=36, DQT0[36]=2
+    [12] delta=2 -> walk_pos=4, diff_pos=38, DQT0[38]=2
+    [13] delta=3 -> walk_pos=7, diff_pos=41, DQT0[41]=2
+    [14] delta=2 -> walk_pos=9, diff_pos=49, DQT0[49]=3

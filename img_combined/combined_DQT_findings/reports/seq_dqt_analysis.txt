@@ -1,0 +1,900 @@
+================================================================================
+SEQ vs DQT/DCT FORENSICS ANALYSIS
+================================================================================
+Generated: 2026-05-28
+
+Entries: 16
+Seq values: [46105, 46108, 46110, 46113, 46115, 46118, 46120, 46123, 46125, 46128, 46130, 46133, 46135, 46137, 46140, 46142]
+Deltas: [3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 2, 3, 2]
+
+IMAGES ANALYZED:
+  IMG_00004: 489,353 bytes, 2 DQT tables
+    DQT[0]={1,2,3}=True, DQT[1]={1,2,3}=True
+  IMG_00004_1: 800,678 bytes, 2 DQT tables
+    DQT[0]={1,2,3}=True, DQT[1]={1,2,3}=True
+  TR4CE: 71,865 bytes, 2 DQT tables
+    DQT[0]={1,2,3}=True, DQT[1]={1,2,3}=True
+  cropped-project-skyscraper: 39,325 bytes, 2 DQT tables
+    DQT[0]={1,2,3}=False, DQT[1]={1,2,3}=False
+  project-skyscraper: 3,578,047 bytes, 2 DQT tables
+    DQT[0]={1,2,3}=True, DQT[1]={1,2,3}=True
+  project-skyscraper_media: 3,588,117 bytes, 2 DQT tables
+    DQT[0]={1,2,3}=True, DQT[1]={1,2,3}=True
+
+--------------------------------------------------------------------------------
+1. DELTA PATTERN DEEP ANALYSIS
+--------------------------------------------------------------------------------
+  Deltas: [3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 2, 3, 2]
+  Length: 15
+  Unique: [2, 3]
+  Counts: 2=8, 3=7
+  Pattern as binary (2=0,3=1): 101010101010010
+  Runs of 2s: [1, 1, 1, 1, 1, 2, 1]
+  Runs of 3s: [1, 1, 1, 1, 1, 1, 1]
+  As integer (2=0,3=1): 21842
+  As hex: 0x5552
+  As base-3 (2=0,3=1): 5380833 = 0x521AE1
+  Second diff: [-1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 0, 1, -1]
+  Alternation runs: [12, 3]
+  Hour intervals: ['35.1', '83.1', '35.1', '83.1', '35.1', '83.1', '35.1', '83.1', '35.1', '59.1', '59.1', '59.1', '83.1', '35.1', '83.1']
+  Entry 0: delta=3, hours=35.1
+  Entry 1: delta=2, hours=83.1
+  Entry 2: delta=3, hours=35.1
+  Entry 3: delta=2, hours=83.1
+  Entry 4: delta=3, hours=35.1
+  Entry 5: delta=2, hours=83.1
+  Entry 6: delta=3, hours=35.1
+  Entry 7: delta=2, hours=83.1
+  Entry 8: delta=3, hours=35.1
+  Entry 9: delta=2, hours=59.1
+  Entry 10: delta=3, hours=59.1
+  Entry 11: delta=2, hours=59.1
+  Entry 12: delta=2, hours=83.1
+  Entry 13: delta=3, hours=35.1
+  Entry 14: delta=2, hours=83.1
+
+--------------------------------------------------------------------------------
+2. MODULO PATTERNS IN SEQ VALUES
+--------------------------------------------------------------------------------
+  seq % 64 monotonic: [25, 28, 30, 33, 35, 38, 40, 43, 45, 48, 50, 53, 55, 57, 60, 62]
+  seq % 100 monotonic: [5, 8, 10, 13, 15, 18, 20, 23, 25, 28, 30, 33, 35, 37, 40, 42]
+  seq % 256 monotonic: [25, 28, 30, 33, 35, 38, 40, 43, 45, 48, 50, 53, 55, 57, 60, 62]
+
+--------------------------------------------------------------------------------
+3. DQT VALUE/DELTA MATCHING
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+4. HEARTBEAT SEQ → DQT POSITION MAPPING
+--------------------------------------------------------------------------------
+  IMG_00004_DQT[0]: seq%64 -> DQT value distribution: [' 1', ' 2', ' 3']
+  IMG_00004_DQT[1]: seq%64 -> DQT value distribution: [' 3']
+  IMG_00004_1_DQT[0]: seq%64 -> DQT value distribution: [' 1', ' 2', ' 3']
+  IMG_00004_1_DQT[1]: seq%64 -> DQT value distribution: [' 3']
+  TR4CE_DQT[0]: seq%64 -> DQT value distribution: [' 1', ' 2', ' 3']
+  TR4CE_DQT[1]: seq%64 -> DQT value distribution: [' 3']
+  project-skyscraper_DQT[0]: seq%64 -> DQT value distribution: [' 1', ' 2', ' 3']
+  project-skyscraper_DQT[1]: seq%64 -> DQT value distribution: [' 3']
+  project-skyscraper_media_DQT[0]: seq%64 -> DQT value distribution: [' 1', ' 2', ' 3']
+  project-skyscraper_media_DQT[1]: seq%64 -> DQT value distribution: [' 3']
+
+--------------------------------------------------------------------------------
+5. DQT AS KEYSTREAM FOR HEARTBEAT SEQ
+--------------------------------------------------------------------------------
+  IMG_00004_DQT[0]:
+  XOR with DQT (first 5): [46104, 46109, 46111, 46112, 46114]
+  ADD with DQT (first 5): [46106, 46109, 46111, 46114, 46116]
+  SUB with DQT (first 5): [46104, 46107, 46109, 46112, 46114]
+  IMG_00004_DQT[1]:
+  XOR with DQT (first 5): [46104, 46109, 46111, 46112, 46114]
+  ADD with DQT (first 5): [46106, 46109, 46111, 46114, 46116]
+  SUB with DQT (first 5): [46104, 46107, 46109, 46112, 46114]
+  IMG_00004_1_DQT[0]:
+  XOR with DQT (first 5): [46104, 46109, 46111, 46112, 46114]
+  ADD with DQT (first 5): [46106, 46109, 46111, 46114, 46116]
+  SUB with DQT (first 5): [46104, 46107, 46109, 46112, 46114]
+  IMG_00004_1_DQT[1]:
+  XOR with DQT (first 5): [46104, 46109, 46111, 46112, 46114]
+  ADD with DQT (first 5): [46106, 46109, 46111, 46114, 46116]
+  SUB with DQT (first 5): [46104, 46107, 46109, 46112, 46114]
+  TR4CE_DQT[0]:
+  XOR with DQT (first 5): [46104, 46109, 46111, 46112, 46114]
+  ADD with DQT (first 5): [46106, 46109, 46111, 46114, 46116]
+  SUB with DQT (first 5): [46104, 46107, 46109, 46112, 46114]
+  TR4CE_DQT[1]:
+  XOR with DQT (first 5): [46104, 46109, 46111, 46112, 46114]
+  ADD with DQT (first 5): [46106, 46109, 46111, 46114, 46116]
+  SUB with DQT (first 5): [46104, 46107, 46109, 46112, 46114]
+  project-skyscraper_DQT[0]:
+  XOR with DQT (first 5): [46104, 46109, 46111, 46112, 46114]
+  ADD with DQT (first 5): [46106, 46109, 46111, 46114, 46116]
+  SUB with DQT (first 5): [46104, 46107, 46109, 46112, 46114]
+  project-skyscraper_DQT[1]:
+  XOR with DQT (first 5): [46104, 46109, 46111, 46112, 46114]
+  ADD with DQT (first 5): [46106, 46109, 46111, 46114, 46116]
+  SUB with DQT (first 5): [46104, 46107, 46109, 46112, 46114]
+  project-skyscraper_media_DQT[0]:
+  XOR with DQT (first 5): [46104, 46109, 46111, 46112, 46114]
+  ADD with DQT (first 5): [46106, 46109, 46111, 46114, 46116]
+  SUB with DQT (first 5): [46104, 46107, 46109, 46112, 46114]
+  project-skyscraper_media_DQT[1]:
+  XOR with DQT (first 5): [46104, 46109, 46111, 46112, 46114]
+  ADD with DQT (first 5): [46106, 46109, 46111, 46114, 46116]
+  SUB with DQT (first 5): [46104, 46107, 46109, 46112, 46114]
+
+--------------------------------------------------------------------------------
+6. CROSS-IMAGE DQT DIFFERENCES
+--------------------------------------------------------------------------------
+  Images with {1,2,3} DQT: ['project-skyscraper', 'TR4CE', 'IMG_00004', 'IMG_00004_1', 'project-skyscraper_media']
+  project-skyscraper DQT[0]: 4 transitions
+    pos 27->28: 1->2
+    pos 28->29: 2->1
+    pos 34->35: 1->2
+    pos 48->49: 2->3
+  project-skyscraper DQT[1]: 6 transitions
+    pos 5->6: 1->2
+    pos 6->7: 2->1
+    pos 8->9: 1->2
+    pos 9->10: 2->3
+    pos 10->11: 3->2
+    pos 13->14: 2->3
+  TR4CE DQT[0]: 2 transitions
+    pos 42->43: 1->2
+    pos 53->54: 2->3
+  TR4CE DQT[1]: 4 transitions
+    pos 9->10: 1->2
+    pos 11->12: 2->1
+    pos 12->13: 1->2
+    pos 14->15: 2->3
+  IMG_00004 DQT[0]: 2 transitions
+    pos 42->43: 1->2
+    pos 53->54: 2->3
+  IMG_00004 DQT[1]: 4 transitions
+    pos 9->10: 1->2
+    pos 11->12: 2->1
+    pos 12->13: 1->2
+    pos 14->15: 2->3
+  IMG_00004_1 DQT[0]: 2 transitions
+    pos 42->43: 1->2
+    pos 53->54: 2->3
+  IMG_00004_1 DQT[1]: 4 transitions
+    pos 9->10: 1->2
+    pos 11->12: 2->1
+    pos 12->13: 1->2
+    pos 14->15: 2->3
+  project-skyscraper_media DQT[0]: 4 transitions
+    pos 27->28: 1->2
+    pos 28->29: 2->1
+    pos 34->35: 1->2
+    pos 48->49: 2->3
+  project-skyscraper_media DQT[1]: 6 transitions
+    pos 5->6: 1->2
+    pos 6->7: 2->1
+    pos 8->9: 1->2
+    pos 9->10: 2->3
+    pos 10->11: 3->2
+    pos 13->14: 2->3
+  DQT0: project-skyscraper vs IMG_00004: 14 diff positions
+    pos 28: PS=2 vs IMG_00004=1
+    pos 35: PS=2 vs IMG_00004=1
+    pos 36: PS=2 vs IMG_00004=1
+    pos 37: PS=2 vs IMG_00004=1
+    pos 38: PS=2 vs IMG_00004=1
+    pos 39: PS=2 vs IMG_00004=1
+    pos 40: PS=2 vs IMG_00004=1
+    pos 41: PS=2 vs IMG_00004=1
+    pos 42: PS=2 vs IMG_00004=1
+    pos 49: PS=3 vs IMG_00004=2
+    pos 50: PS=3 vs IMG_00004=2
+    pos 51: PS=3 vs IMG_00004=2
+    pos 52: PS=3 vs IMG_00004=2
+    pos 53: PS=3 vs IMG_00004=2
+  DQT0: project-skyscraper vs IMG_00004_1: 14 diff positions
+    pos 28: PS=2 vs IMG_00004_1=1
+    pos 35: PS=2 vs IMG_00004_1=1
+    pos 36: PS=2 vs IMG_00004_1=1
+    pos 37: PS=2 vs IMG_00004_1=1
+    pos 38: PS=2 vs IMG_00004_1=1
+    pos 39: PS=2 vs IMG_00004_1=1
+    pos 40: PS=2 vs IMG_00004_1=1
+    pos 41: PS=2 vs IMG_00004_1=1
+    pos 42: PS=2 vs IMG_00004_1=1
+    pos 49: PS=3 vs IMG_00004_1=2
+    pos 50: PS=3 vs IMG_00004_1=2
+    pos 51: PS=3 vs IMG_00004_1=2
+    pos 52: PS=3 vs IMG_00004_1=2
+    pos 53: PS=3 vs IMG_00004_1=2
+  DQT0: project-skyscraper vs TR4CE: 14 diff positions
+    pos 28: PS=2 vs TR4CE=1
+    pos 35: PS=2 vs TR4CE=1
+    pos 36: PS=2 vs TR4CE=1
+    pos 37: PS=2 vs TR4CE=1
+    pos 38: PS=2 vs TR4CE=1
+    pos 39: PS=2 vs TR4CE=1
+    pos 40: PS=2 vs TR4CE=1
+    pos 41: PS=2 vs TR4CE=1
+    pos 42: PS=2 vs TR4CE=1
+    pos 49: PS=3 vs TR4CE=2
+    pos 50: PS=3 vs TR4CE=2
+    pos 51: PS=3 vs TR4CE=2
+    pos 52: PS=3 vs TR4CE=2
+    pos 53: PS=3 vs TR4CE=2
+
+--------------------------------------------------------------------------------
+7. DQT ZIGZAG INTERLEAVE PATTERNS
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+8. DQT AS LARGE NUMBER ENCODING
+--------------------------------------------------------------------------------
+  project-skyscraper DQT0 as base-2 (20 entries) = 1048575
+  project-skyscraper Interleaved as base-2 (20 entries) = 1048640
+  project-skyscraper DQT0 as base-3 (20 entries) = 1743392200
+  project-skyscraper Interleaved as base-3 (20 entries) = 1743392930
+  project-skyscraper DQT0 as base-4 (20 entries) = 366503875925
+  project-skyscraper Interleaved as base-4 (20 entries) = 366503880022
+  TR4CE DQT0 as base-2 (20 entries) = 1048575
+  TR4CE Interleaved as base-2 (20 entries) = 1048575
+  TR4CE DQT0 as base-3 (20 entries) = 1743392200
+  TR4CE Interleaved as base-3 (20 entries) = 1743392200
+  TR4CE DQT0 as base-4 (20 entries) = 366503875925
+  TR4CE Interleaved as base-4 (20 entries) = 366503875925
+  IMG_00004 DQT0 as base-2 (20 entries) = 1048575
+  IMG_00004 Interleaved as base-2 (20 entries) = 1048575
+  IMG_00004 DQT0 as base-3 (20 entries) = 1743392200
+  IMG_00004 Interleaved as base-3 (20 entries) = 1743392200
+  IMG_00004 DQT0 as base-4 (20 entries) = 366503875925
+  IMG_00004 Interleaved as base-4 (20 entries) = 366503875925
+  IMG_00004_1 DQT0 as base-2 (20 entries) = 1048575
+  IMG_00004_1 Interleaved as base-2 (20 entries) = 1048575
+  IMG_00004_1 DQT0 as base-3 (20 entries) = 1743392200
+  IMG_00004_1 Interleaved as base-3 (20 entries) = 1743392200
+  IMG_00004_1 DQT0 as base-4 (20 entries) = 366503875925
+  IMG_00004_1 Interleaved as base-4 (20 entries) = 366503875925
+  project-skyscraper_media DQT0 as base-2 (20 entries) = 1048575
+  project-skyscraper_media Interleaved as base-2 (20 entries) = 1048640
+  project-skyscraper_media DQT0 as base-3 (20 entries) = 1743392200
+  project-skyscraper_media Interleaved as base-3 (20 entries) = 1743392930
+  project-skyscraper_media DQT0 as base-4 (20 entries) = 366503875925
+  project-skyscraper_media Interleaved as base-4 (20 entries) = 366503880022
+
+--------------------------------------------------------------------------------
+9. ENTROPY-CODED SEGMENT (ECS) ANALYSIS
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+10. OUTER ({1,2,3}) vs INNER DQT CORRELATION
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+11. POSITIONAL DELTA → DQT MAPPING (STEP WALK)
+--------------------------------------------------------------------------------
+  project-skyscraper: Looking up each delta as DQT position index:
+    heartbeat[0]: delta=3, start=0, pos=0, DQT0[0]=1
+    heartbeat[0]: delta=3, start=1, pos=1, DQT0[1]=1
+    heartbeat[0]: delta=3, start=2, pos=2, DQT0[2]=1
+    heartbeat[0]: delta=3, start=3, pos=3, DQT0[3]=1
+    heartbeat[0]: delta=3, start=4, pos=4, DQT0[4]=1
+    heartbeat[0]: delta=3, start=5, pos=5, DQT0[5]=1
+    heartbeat[0]: delta=3, start=6, pos=6, DQT0[6]=1
+    heartbeat[0]: delta=3, start=7, pos=7, DQT0[7]=1
+    heartbeat[1]: delta=2, start=0, pos=2, DQT0[2]=1
+    heartbeat[1]: delta=2, start=1, pos=3, DQT0[3]=1
+    heartbeat[1]: delta=2, start=2, pos=4, DQT0[4]=1
+    heartbeat[1]: delta=2, start=3, pos=5, DQT0[5]=1
+    heartbeat[1]: delta=2, start=4, pos=6, DQT0[6]=1
+    heartbeat[1]: delta=2, start=5, pos=7, DQT0[7]=1
+    heartbeat[1]: delta=2, start=6, pos=8, DQT0[8]=1
+    heartbeat[1]: delta=2, start=7, pos=9, DQT0[9]=1
+    heartbeat[2]: delta=3, start=0, pos=6, DQT0[6]=1
+    heartbeat[2]: delta=3, start=1, pos=7, DQT0[7]=1
+    heartbeat[2]: delta=3, start=2, pos=8, DQT0[8]=1
+    heartbeat[2]: delta=3, start=3, pos=9, DQT0[9]=1
+    heartbeat[2]: delta=3, start=4, pos=10, DQT0[10]=1
+    heartbeat[2]: delta=3, start=5, pos=11, DQT0[11]=1
+    heartbeat[2]: delta=3, start=6, pos=12, DQT0[12]=1
+    heartbeat[2]: delta=3, start=7, pos=13, DQT0[13]=1
+    heartbeat[3]: delta=2, start=0, pos=6, DQT0[6]=1
+    heartbeat[3]: delta=2, start=1, pos=7, DQT0[7]=1
+    heartbeat[3]: delta=2, start=2, pos=8, DQT0[8]=1
+    heartbeat[3]: delta=2, start=3, pos=9, DQT0[9]=1
+    heartbeat[3]: delta=2, start=4, pos=10, DQT0[10]=1
+    heartbeat[3]: delta=2, start=5, pos=11, DQT0[11]=1
+    heartbeat[3]: delta=2, start=6, pos=12, DQT0[12]=1
+    heartbeat[3]: delta=2, start=7, pos=13, DQT0[13]=1
+    heartbeat[4]: delta=3, start=0, pos=12, DQT0[12]=1
+    heartbeat[4]: delta=3, start=1, pos=13, DQT0[13]=1
+    heartbeat[4]: delta=3, start=2, pos=14, DQT0[14]=1
+    heartbeat[4]: delta=3, start=3, pos=15, DQT0[15]=1
+    heartbeat[4]: delta=3, start=4, pos=16, DQT0[16]=1
+    heartbeat[4]: delta=3, start=5, pos=17, DQT0[17]=1
+    heartbeat[4]: delta=3, start=6, pos=18, DQT0[18]=1
+    heartbeat[4]: delta=3, start=7, pos=19, DQT0[19]=1
+    heartbeat[5]: delta=2, start=0, pos=10, DQT0[10]=1
+    heartbeat[5]: delta=2, start=1, pos=11, DQT0[11]=1
+    heartbeat[5]: delta=2, start=2, pos=12, DQT0[12]=1
+    heartbeat[5]: delta=2, start=3, pos=13, DQT0[13]=1
+    heartbeat[5]: delta=2, start=4, pos=14, DQT0[14]=1
+    heartbeat[5]: delta=2, start=5, pos=15, DQT0[15]=1
+    heartbeat[5]: delta=2, start=6, pos=16, DQT0[16]=1
+    heartbeat[5]: delta=2, start=7, pos=17, DQT0[17]=1
+    heartbeat[6]: delta=3, start=0, pos=18, DQT0[18]=1
+    heartbeat[6]: delta=3, start=1, pos=19, DQT0[19]=1
+    heartbeat[6]: delta=3, start=2, pos=20, DQT0[20]=1
+    heartbeat[6]: delta=3, start=3, pos=21, DQT0[21]=1
+    heartbeat[6]: delta=3, start=4, pos=22, DQT0[22]=1
+    heartbeat[6]: delta=3, start=5, pos=23, DQT0[23]=1
+    heartbeat[6]: delta=3, start=6, pos=24, DQT0[24]=1
+    heartbeat[6]: delta=3, start=7, pos=25, DQT0[25]=1
+    heartbeat[7]: delta=2, start=0, pos=14, DQT0[14]=1
+    heartbeat[7]: delta=2, start=1, pos=15, DQT0[15]=1
+    heartbeat[7]: delta=2, start=2, pos=16, DQT0[16]=1
+    heartbeat[7]: delta=2, start=3, pos=17, DQT0[17]=1
+    heartbeat[7]: delta=2, start=4, pos=18, DQT0[18]=1
+    heartbeat[7]: delta=2, start=5, pos=19, DQT0[19]=1
+    heartbeat[7]: delta=2, start=6, pos=20, DQT0[20]=1
+    heartbeat[7]: delta=2, start=7, pos=21, DQT0[21]=1
+    heartbeat[8]: delta=3, start=0, pos=24, DQT0[24]=1
+    heartbeat[8]: delta=3, start=1, pos=25, DQT0[25]=1
+    heartbeat[8]: delta=3, start=2, pos=26, DQT0[26]=1
+    heartbeat[8]: delta=3, start=3, pos=27, DQT0[27]=1
+    heartbeat[8]: delta=3, start=4, pos=28, DQT0[28]=2
+    heartbeat[8]: delta=3, start=5, pos=29, DQT0[29]=1
+    heartbeat[8]: delta=3, start=6, pos=30, DQT0[30]=1
+    heartbeat[8]: delta=3, start=7, pos=31, DQT0[31]=1
+    heartbeat[9]: delta=2, start=0, pos=18, DQT0[18]=1
+    heartbeat[9]: delta=2, start=1, pos=19, DQT0[19]=1
+    heartbeat[9]: delta=2, start=2, pos=20, DQT0[20]=1
+    heartbeat[9]: delta=2, start=3, pos=21, DQT0[21]=1
+    heartbeat[9]: delta=2, start=4, pos=22, DQT0[22]=1
+    heartbeat[9]: delta=2, start=5, pos=23, DQT0[23]=1
+    heartbeat[9]: delta=2, start=6, pos=24, DQT0[24]=1
+    heartbeat[9]: delta=2, start=7, pos=25, DQT0[25]=1
+    heartbeat[10]: delta=3, start=0, pos=30, DQT0[30]=1
+    heartbeat[10]: delta=3, start=1, pos=31, DQT0[31]=1
+    heartbeat[10]: delta=3, start=2, pos=32, DQT0[32]=1
+    heartbeat[10]: delta=3, start=3, pos=33, DQT0[33]=1
+    heartbeat[10]: delta=3, start=4, pos=34, DQT0[34]=1
+    heartbeat[10]: delta=3, start=5, pos=35, DQT0[35]=2
+    heartbeat[10]: delta=3, start=6, pos=36, DQT0[36]=2
+    heartbeat[10]: delta=3, start=7, pos=37, DQT0[37]=2
+    heartbeat[11]: delta=2, start=0, pos=22, DQT0[22]=1
+    heartbeat[11]: delta=2, start=1, pos=23, DQT0[23]=1
+    heartbeat[11]: delta=2, start=2, pos=24, DQT0[24]=1
+    heartbeat[11]: delta=2, start=3, pos=25, DQT0[25]=1
+    heartbeat[11]: delta=2, start=4, pos=26, DQT0[26]=1
+    heartbeat[11]: delta=2, start=5, pos=27, DQT0[27]=1
+    heartbeat[11]: delta=2, start=6, pos=28, DQT0[28]=2
+    heartbeat[11]: delta=2, start=7, pos=29, DQT0[29]=1
+    heartbeat[12]: delta=2, start=0, pos=24, DQT0[24]=1
+    heartbeat[12]: delta=2, start=1, pos=25, DQT0[25]=1
+    heartbeat[12]: delta=2, start=2, pos=26, DQT0[26]=1
+    heartbeat[12]: delta=2, start=3, pos=27, DQT0[27]=1
+    heartbeat[12]: delta=2, start=4, pos=28, DQT0[28]=2
+    heartbeat[12]: delta=2, start=5, pos=29, DQT0[29]=1
+    heartbeat[12]: delta=2, start=6, pos=30, DQT0[30]=1
+    heartbeat[12]: delta=2, start=7, pos=31, DQT0[31]=1
+    heartbeat[13]: delta=3, start=0, pos=39, DQT0[39]=2
+    heartbeat[13]: delta=3, start=1, pos=40, DQT0[40]=2
+    heartbeat[13]: delta=3, start=2, pos=41, DQT0[41]=2
+    heartbeat[13]: delta=3, start=3, pos=42, DQT0[42]=2
+    heartbeat[13]: delta=3, start=4, pos=43, DQT0[43]=2
+    heartbeat[13]: delta=3, start=5, pos=44, DQT0[44]=2
+    heartbeat[13]: delta=3, start=6, pos=45, DQT0[45]=2
+    heartbeat[13]: delta=3, start=7, pos=46, DQT0[46]=2
+    heartbeat[14]: delta=2, start=0, pos=28, DQT0[28]=2
+    heartbeat[14]: delta=2, start=1, pos=29, DQT0[29]=1
+    heartbeat[14]: delta=2, start=2, pos=30, DQT0[30]=1
+    heartbeat[14]: delta=2, start=3, pos=31, DQT0[31]=1
+    heartbeat[14]: delta=2, start=4, pos=32, DQT0[32]=1
+    heartbeat[14]: delta=2, start=5, pos=33, DQT0[33]=1
+    heartbeat[14]: delta=2, start=6, pos=34, DQT0[34]=1
+    heartbeat[14]: delta=2, start=7, pos=35, DQT0[35]=2
+  TR4CE: Looking up each delta as DQT position index:
+    heartbeat[0]: delta=3, start=0, pos=0, DQT0[0]=1
+    heartbeat[0]: delta=3, start=1, pos=1, DQT0[1]=1
+    heartbeat[0]: delta=3, start=2, pos=2, DQT0[2]=1
+    heartbeat[0]: delta=3, start=3, pos=3, DQT0[3]=1
+    heartbeat[0]: delta=3, start=4, pos=4, DQT0[4]=1
+    heartbeat[0]: delta=3, start=5, pos=5, DQT0[5]=1
+    heartbeat[0]: delta=3, start=6, pos=6, DQT0[6]=1
+    heartbeat[0]: delta=3, start=7, pos=7, DQT0[7]=1
+    heartbeat[1]: delta=2, start=0, pos=2, DQT0[2]=1
+    heartbeat[1]: delta=2, start=1, pos=3, DQT0[3]=1
+    heartbeat[1]: delta=2, start=2, pos=4, DQT0[4]=1
+    heartbeat[1]: delta=2, start=3, pos=5, DQT0[5]=1
+    heartbeat[1]: delta=2, start=4, pos=6, DQT0[6]=1
+    heartbeat[1]: delta=2, start=5, pos=7, DQT0[7]=1
+    heartbeat[1]: delta=2, start=6, pos=8, DQT0[8]=1
+    heartbeat[1]: delta=2, start=7, pos=9, DQT0[9]=1
+    heartbeat[2]: delta=3, start=0, pos=6, DQT0[6]=1
+    heartbeat[2]: delta=3, start=1, pos=7, DQT0[7]=1
+    heartbeat[2]: delta=3, start=2, pos=8, DQT0[8]=1
+    heartbeat[2]: delta=3, start=3, pos=9, DQT0[9]=1
+    heartbeat[2]: delta=3, start=4, pos=10, DQT0[10]=1
+    heartbeat[2]: delta=3, start=5, pos=11, DQT0[11]=1
+    heartbeat[2]: delta=3, start=6, pos=12, DQT0[12]=1
+    heartbeat[2]: delta=3, start=7, pos=13, DQT0[13]=1
+    heartbeat[3]: delta=2, start=0, pos=6, DQT0[6]=1
+    heartbeat[3]: delta=2, start=1, pos=7, DQT0[7]=1
+    heartbeat[3]: delta=2, start=2, pos=8, DQT0[8]=1
+    heartbeat[3]: delta=2, start=3, pos=9, DQT0[9]=1
+    heartbeat[3]: delta=2, start=4, pos=10, DQT0[10]=1
+    heartbeat[3]: delta=2, start=5, pos=11, DQT0[11]=1
+    heartbeat[3]: delta=2, start=6, pos=12, DQT0[12]=1
+    heartbeat[3]: delta=2, start=7, pos=13, DQT0[13]=1
+    heartbeat[4]: delta=3, start=0, pos=12, DQT0[12]=1
+    heartbeat[4]: delta=3, start=1, pos=13, DQT0[13]=1
+    heartbeat[4]: delta=3, start=2, pos=14, DQT0[14]=1
+    heartbeat[4]: delta=3, start=3, pos=15, DQT0[15]=1
+    heartbeat[4]: delta=3, start=4, pos=16, DQT0[16]=1
+    heartbeat[4]: delta=3, start=5, pos=17, DQT0[17]=1
+    heartbeat[4]: delta=3, start=6, pos=18, DQT0[18]=1
+    heartbeat[4]: delta=3, start=7, pos=19, DQT0[19]=1
+    heartbeat[5]: delta=2, start=0, pos=10, DQT0[10]=1
+    heartbeat[5]: delta=2, start=1, pos=11, DQT0[11]=1
+    heartbeat[5]: delta=2, start=2, pos=12, DQT0[12]=1
+    heartbeat[5]: delta=2, start=3, pos=13, DQT0[13]=1
+    heartbeat[5]: delta=2, start=4, pos=14, DQT0[14]=1
+    heartbeat[5]: delta=2, start=5, pos=15, DQT0[15]=1
+    heartbeat[5]: delta=2, start=6, pos=16, DQT0[16]=1
+    heartbeat[5]: delta=2, start=7, pos=17, DQT0[17]=1
+    heartbeat[6]: delta=3, start=0, pos=18, DQT0[18]=1
+    heartbeat[6]: delta=3, start=1, pos=19, DQT0[19]=1
+    heartbeat[6]: delta=3, start=2, pos=20, DQT0[20]=1
+    heartbeat[6]: delta=3, start=3, pos=21, DQT0[21]=1
+    heartbeat[6]: delta=3, start=4, pos=22, DQT0[22]=1
+    heartbeat[6]: delta=3, start=5, pos=23, DQT0[23]=1
+    heartbeat[6]: delta=3, start=6, pos=24, DQT0[24]=1
+    heartbeat[6]: delta=3, start=7, pos=25, DQT0[25]=1
+    heartbeat[7]: delta=2, start=0, pos=14, DQT0[14]=1
+    heartbeat[7]: delta=2, start=1, pos=15, DQT0[15]=1
+    heartbeat[7]: delta=2, start=2, pos=16, DQT0[16]=1
+    heartbeat[7]: delta=2, start=3, pos=17, DQT0[17]=1
+    heartbeat[7]: delta=2, start=4, pos=18, DQT0[18]=1
+    heartbeat[7]: delta=2, start=5, pos=19, DQT0[19]=1
+    heartbeat[7]: delta=2, start=6, pos=20, DQT0[20]=1
+    heartbeat[7]: delta=2, start=7, pos=21, DQT0[21]=1
+    heartbeat[8]: delta=3, start=0, pos=24, DQT0[24]=1
+    heartbeat[8]: delta=3, start=1, pos=25, DQT0[25]=1
+    heartbeat[8]: delta=3, start=2, pos=26, DQT0[26]=1
+    heartbeat[8]: delta=3, start=3, pos=27, DQT0[27]=1
+    heartbeat[8]: delta=3, start=4, pos=28, DQT0[28]=1
+    heartbeat[8]: delta=3, start=5, pos=29, DQT0[29]=1
+    heartbeat[8]: delta=3, start=6, pos=30, DQT0[30]=1
+    heartbeat[8]: delta=3, start=7, pos=31, DQT0[31]=1
+    heartbeat[9]: delta=2, start=0, pos=18, DQT0[18]=1
+    heartbeat[9]: delta=2, start=1, pos=19, DQT0[19]=1
+    heartbeat[9]: delta=2, start=2, pos=20, DQT0[20]=1
+    heartbeat[9]: delta=2, start=3, pos=21, DQT0[21]=1
+    heartbeat[9]: delta=2, start=4, pos=22, DQT0[22]=1
+    heartbeat[9]: delta=2, start=5, pos=23, DQT0[23]=1
+    heartbeat[9]: delta=2, start=6, pos=24, DQT0[24]=1
+    heartbeat[9]: delta=2, start=7, pos=25, DQT0[25]=1
+    heartbeat[10]: delta=3, start=0, pos=30, DQT0[30]=1
+    heartbeat[10]: delta=3, start=1, pos=31, DQT0[31]=1
+    heartbeat[10]: delta=3, start=2, pos=32, DQT0[32]=1
+    heartbeat[10]: delta=3, start=3, pos=33, DQT0[33]=1
+    heartbeat[10]: delta=3, start=4, pos=34, DQT0[34]=1
+    heartbeat[10]: delta=3, start=5, pos=35, DQT0[35]=1
+    heartbeat[10]: delta=3, start=6, pos=36, DQT0[36]=1
+    heartbeat[10]: delta=3, start=7, pos=37, DQT0[37]=1
+    heartbeat[11]: delta=2, start=0, pos=22, DQT0[22]=1
+    heartbeat[11]: delta=2, start=1, pos=23, DQT0[23]=1
+    heartbeat[11]: delta=2, start=2, pos=24, DQT0[24]=1
+    heartbeat[11]: delta=2, start=3, pos=25, DQT0[25]=1
+    heartbeat[11]: delta=2, start=4, pos=26, DQT0[26]=1
+    heartbeat[11]: delta=2, start=5, pos=27, DQT0[27]=1
+    heartbeat[11]: delta=2, start=6, pos=28, DQT0[28]=1
+    heartbeat[11]: delta=2, start=7, pos=29, DQT0[29]=1
+    heartbeat[12]: delta=2, start=0, pos=24, DQT0[24]=1
+    heartbeat[12]: delta=2, start=1, pos=25, DQT0[25]=1
+    heartbeat[12]: delta=2, start=2, pos=26, DQT0[26]=1
+    heartbeat[12]: delta=2, start=3, pos=27, DQT0[27]=1
+    heartbeat[12]: delta=2, start=4, pos=28, DQT0[28]=1
+    heartbeat[12]: delta=2, start=5, pos=29, DQT0[29]=1
+    heartbeat[12]: delta=2, start=6, pos=30, DQT0[30]=1
+    heartbeat[12]: delta=2, start=7, pos=31, DQT0[31]=1
+    heartbeat[13]: delta=3, start=0, pos=39, DQT0[39]=1
+    heartbeat[13]: delta=3, start=1, pos=40, DQT0[40]=1
+    heartbeat[13]: delta=3, start=2, pos=41, DQT0[41]=1
+    heartbeat[13]: delta=3, start=3, pos=42, DQT0[42]=1
+    heartbeat[13]: delta=3, start=4, pos=43, DQT0[43]=2
+    heartbeat[13]: delta=3, start=5, pos=44, DQT0[44]=2
+    heartbeat[13]: delta=3, start=6, pos=45, DQT0[45]=2
+    heartbeat[13]: delta=3, start=7, pos=46, DQT0[46]=2
+    heartbeat[14]: delta=2, start=0, pos=28, DQT0[28]=1
+    heartbeat[14]: delta=2, start=1, pos=29, DQT0[29]=1
+    heartbeat[14]: delta=2, start=2, pos=30, DQT0[30]=1
+    heartbeat[14]: delta=2, start=3, pos=31, DQT0[31]=1
+    heartbeat[14]: delta=2, start=4, pos=32, DQT0[32]=1
+    heartbeat[14]: delta=2, start=5, pos=33, DQT0[33]=1
+    heartbeat[14]: delta=2, start=6, pos=34, DQT0[34]=1
+    heartbeat[14]: delta=2, start=7, pos=35, DQT0[35]=1
+  IMG_00004: Looking up each delta as DQT position index:
+    heartbeat[0]: delta=3, start=0, pos=0, DQT0[0]=1
+    heartbeat[0]: delta=3, start=1, pos=1, DQT0[1]=1
+    heartbeat[0]: delta=3, start=2, pos=2, DQT0[2]=1
+    heartbeat[0]: delta=3, start=3, pos=3, DQT0[3]=1
+    heartbeat[0]: delta=3, start=4, pos=4, DQT0[4]=1
+    heartbeat[0]: delta=3, start=5, pos=5, DQT0[5]=1
+    heartbeat[0]: delta=3, start=6, pos=6, DQT0[6]=1
+    heartbeat[0]: delta=3, start=7, pos=7, DQT0[7]=1
+    heartbeat[1]: delta=2, start=0, pos=2, DQT0[2]=1
+    heartbeat[1]: delta=2, start=1, pos=3, DQT0[3]=1
+    heartbeat[1]: delta=2, start=2, pos=4, DQT0[4]=1
+    heartbeat[1]: delta=2, start=3, pos=5, DQT0[5]=1
+    heartbeat[1]: delta=2, start=4, pos=6, DQT0[6]=1
+    heartbeat[1]: delta=2, start=5, pos=7, DQT0[7]=1
+    heartbeat[1]: delta=2, start=6, pos=8, DQT0[8]=1
+    heartbeat[1]: delta=2, start=7, pos=9, DQT0[9]=1
+    heartbeat[2]: delta=3, start=0, pos=6, DQT0[6]=1
+    heartbeat[2]: delta=3, start=1, pos=7, DQT0[7]=1
+    heartbeat[2]: delta=3, start=2, pos=8, DQT0[8]=1
+    heartbeat[2]: delta=3, start=3, pos=9, DQT0[9]=1
+    heartbeat[2]: delta=3, start=4, pos=10, DQT0[10]=1
+    heartbeat[2]: delta=3, start=5, pos=11, DQT0[11]=1
+    heartbeat[2]: delta=3, start=6, pos=12, DQT0[12]=1
+    heartbeat[2]: delta=3, start=7, pos=13, DQT0[13]=1
+    heartbeat[3]: delta=2, start=0, pos=6, DQT0[6]=1
+    heartbeat[3]: delta=2, start=1, pos=7, DQT0[7]=1
+    heartbeat[3]: delta=2, start=2, pos=8, DQT0[8]=1
+    heartbeat[3]: delta=2, start=3, pos=9, DQT0[9]=1
+    heartbeat[3]: delta=2, start=4, pos=10, DQT0[10]=1
+    heartbeat[3]: delta=2, start=5, pos=11, DQT0[11]=1
+    heartbeat[3]: delta=2, start=6, pos=12, DQT0[12]=1
+    heartbeat[3]: delta=2, start=7, pos=13, DQT0[13]=1
+    heartbeat[4]: delta=3, start=0, pos=12, DQT0[12]=1
+    heartbeat[4]: delta=3, start=1, pos=13, DQT0[13]=1
+    heartbeat[4]: delta=3, start=2, pos=14, DQT0[14]=1
+    heartbeat[4]: delta=3, start=3, pos=15, DQT0[15]=1
+    heartbeat[4]: delta=3, start=4, pos=16, DQT0[16]=1
+    heartbeat[4]: delta=3, start=5, pos=17, DQT0[17]=1
+    heartbeat[4]: delta=3, start=6, pos=18, DQT0[18]=1
+    heartbeat[4]: delta=3, start=7, pos=19, DQT0[19]=1
+    heartbeat[5]: delta=2, start=0, pos=10, DQT0[10]=1
+    heartbeat[5]: delta=2, start=1, pos=11, DQT0[11]=1
+    heartbeat[5]: delta=2, start=2, pos=12, DQT0[12]=1
+    heartbeat[5]: delta=2, start=3, pos=13, DQT0[13]=1
+    heartbeat[5]: delta=2, start=4, pos=14, DQT0[14]=1
+    heartbeat[5]: delta=2, start=5, pos=15, DQT0[15]=1
+    heartbeat[5]: delta=2, start=6, pos=16, DQT0[16]=1
+    heartbeat[5]: delta=2, start=7, pos=17, DQT0[17]=1
+    heartbeat[6]: delta=3, start=0, pos=18, DQT0[18]=1
+    heartbeat[6]: delta=3, start=1, pos=19, DQT0[19]=1
+    heartbeat[6]: delta=3, start=2, pos=20, DQT0[20]=1
+    heartbeat[6]: delta=3, start=3, pos=21, DQT0[21]=1
+    heartbeat[6]: delta=3, start=4, pos=22, DQT0[22]=1
+    heartbeat[6]: delta=3, start=5, pos=23, DQT0[23]=1
+    heartbeat[6]: delta=3, start=6, pos=24, DQT0[24]=1
+    heartbeat[6]: delta=3, start=7, pos=25, DQT0[25]=1
+    heartbeat[7]: delta=2, start=0, pos=14, DQT0[14]=1
+    heartbeat[7]: delta=2, start=1, pos=15, DQT0[15]=1
+    heartbeat[7]: delta=2, start=2, pos=16, DQT0[16]=1
+    heartbeat[7]: delta=2, start=3, pos=17, DQT0[17]=1
+    heartbeat[7]: delta=2, start=4, pos=18, DQT0[18]=1
+    heartbeat[7]: delta=2, start=5, pos=19, DQT0[19]=1
+    heartbeat[7]: delta=2, start=6, pos=20, DQT0[20]=1
+    heartbeat[7]: delta=2, start=7, pos=21, DQT0[21]=1
+    heartbeat[8]: delta=3, start=0, pos=24, DQT0[24]=1
+    heartbeat[8]: delta=3, start=1, pos=25, DQT0[25]=1
+    heartbeat[8]: delta=3, start=2, pos=26, DQT0[26]=1
+    heartbeat[8]: delta=3, start=3, pos=27, DQT0[27]=1
+    heartbeat[8]: delta=3, start=4, pos=28, DQT0[28]=1
+    heartbeat[8]: delta=3, start=5, pos=29, DQT0[29]=1
+    heartbeat[8]: delta=3, start=6, pos=30, DQT0[30]=1
+    heartbeat[8]: delta=3, start=7, pos=31, DQT0[31]=1
+    heartbeat[9]: delta=2, start=0, pos=18, DQT0[18]=1
+    heartbeat[9]: delta=2, start=1, pos=19, DQT0[19]=1
+    heartbeat[9]: delta=2, start=2, pos=20, DQT0[20]=1
+    heartbeat[9]: delta=2, start=3, pos=21, DQT0[21]=1
+    heartbeat[9]: delta=2, start=4, pos=22, DQT0[22]=1
+    heartbeat[9]: delta=2, start=5, pos=23, DQT0[23]=1
+    heartbeat[9]: delta=2, start=6, pos=24, DQT0[24]=1
+    heartbeat[9]: delta=2, start=7, pos=25, DQT0[25]=1
+    heartbeat[10]: delta=3, start=0, pos=30, DQT0[30]=1
+    heartbeat[10]: delta=3, start=1, pos=31, DQT0[31]=1
+    heartbeat[10]: delta=3, start=2, pos=32, DQT0[32]=1
+    heartbeat[10]: delta=3, start=3, pos=33, DQT0[33]=1
+    heartbeat[10]: delta=3, start=4, pos=34, DQT0[34]=1
+    heartbeat[10]: delta=3, start=5, pos=35, DQT0[35]=1
+    heartbeat[10]: delta=3, start=6, pos=36, DQT0[36]=1
+    heartbeat[10]: delta=3, start=7, pos=37, DQT0[37]=1
+    heartbeat[11]: delta=2, start=0, pos=22, DQT0[22]=1
+    heartbeat[11]: delta=2, start=1, pos=23, DQT0[23]=1
+    heartbeat[11]: delta=2, start=2, pos=24, DQT0[24]=1
+    heartbeat[11]: delta=2, start=3, pos=25, DQT0[25]=1
+    heartbeat[11]: delta=2, start=4, pos=26, DQT0[26]=1
+    heartbeat[11]: delta=2, start=5, pos=27, DQT0[27]=1
+    heartbeat[11]: delta=2, start=6, pos=28, DQT0[28]=1
+    heartbeat[11]: delta=2, start=7, pos=29, DQT0[29]=1
+    heartbeat[12]: delta=2, start=0, pos=24, DQT0[24]=1
+    heartbeat[12]: delta=2, start=1, pos=25, DQT0[25]=1
+    heartbeat[12]: delta=2, start=2, pos=26, DQT0[26]=1
+    heartbeat[12]: delta=2, start=3, pos=27, DQT0[27]=1
+    heartbeat[12]: delta=2, start=4, pos=28, DQT0[28]=1
+    heartbeat[12]: delta=2, start=5, pos=29, DQT0[29]=1
+    heartbeat[12]: delta=2, start=6, pos=30, DQT0[30]=1
+    heartbeat[12]: delta=2, start=7, pos=31, DQT0[31]=1
+    heartbeat[13]: delta=3, start=0, pos=39, DQT0[39]=1
+    heartbeat[13]: delta=3, start=1, pos=40, DQT0[40]=1
+    heartbeat[13]: delta=3, start=2, pos=41, DQT0[41]=1
+    heartbeat[13]: delta=3, start=3, pos=42, DQT0[42]=1
+    heartbeat[13]: delta=3, start=4, pos=43, DQT0[43]=2
+    heartbeat[13]: delta=3, start=5, pos=44, DQT0[44]=2
+    heartbeat[13]: delta=3, start=6, pos=45, DQT0[45]=2
+    heartbeat[13]: delta=3, start=7, pos=46, DQT0[46]=2
+    heartbeat[14]: delta=2, start=0, pos=28, DQT0[28]=1
+    heartbeat[14]: delta=2, start=1, pos=29, DQT0[29]=1
+    heartbeat[14]: delta=2, start=2, pos=30, DQT0[30]=1
+    heartbeat[14]: delta=2, start=3, pos=31, DQT0[31]=1
+    heartbeat[14]: delta=2, start=4, pos=32, DQT0[32]=1
+    heartbeat[14]: delta=2, start=5, pos=33, DQT0[33]=1
+    heartbeat[14]: delta=2, start=6, pos=34, DQT0[34]=1
+    heartbeat[14]: delta=2, start=7, pos=35, DQT0[35]=1
+  IMG_00004_1: Looking up each delta as DQT position index:
+    heartbeat[0]: delta=3, start=0, pos=0, DQT0[0]=1
+    heartbeat[0]: delta=3, start=1, pos=1, DQT0[1]=1
+    heartbeat[0]: delta=3, start=2, pos=2, DQT0[2]=1
+    heartbeat[0]: delta=3, start=3, pos=3, DQT0[3]=1
+    heartbeat[0]: delta=3, start=4, pos=4, DQT0[4]=1
+    heartbeat[0]: delta=3, start=5, pos=5, DQT0[5]=1
+    heartbeat[0]: delta=3, start=6, pos=6, DQT0[6]=1
+    heartbeat[0]: delta=3, start=7, pos=7, DQT0[7]=1
+    heartbeat[1]: delta=2, start=0, pos=2, DQT0[2]=1
+    heartbeat[1]: delta=2, start=1, pos=3, DQT0[3]=1
+    heartbeat[1]: delta=2, start=2, pos=4, DQT0[4]=1
+    heartbeat[1]: delta=2, start=3, pos=5, DQT0[5]=1
+    heartbeat[1]: delta=2, start=4, pos=6, DQT0[6]=1
+    heartbeat[1]: delta=2, start=5, pos=7, DQT0[7]=1
+    heartbeat[1]: delta=2, start=6, pos=8, DQT0[8]=1
+    heartbeat[1]: delta=2, start=7, pos=9, DQT0[9]=1
+    heartbeat[2]: delta=3, start=0, pos=6, DQT0[6]=1
+    heartbeat[2]: delta=3, start=1, pos=7, DQT0[7]=1
+    heartbeat[2]: delta=3, start=2, pos=8, DQT0[8]=1
+    heartbeat[2]: delta=3, start=3, pos=9, DQT0[9]=1
+    heartbeat[2]: delta=3, start=4, pos=10, DQT0[10]=1
+    heartbeat[2]: delta=3, start=5, pos=11, DQT0[11]=1
+    heartbeat[2]: delta=3, start=6, pos=12, DQT0[12]=1
+    heartbeat[2]: delta=3, start=7, pos=13, DQT0[13]=1
+    heartbeat[3]: delta=2, start=0, pos=6, DQT0[6]=1
+    heartbeat[3]: delta=2, start=1, pos=7, DQT0[7]=1
+    heartbeat[3]: delta=2, start=2, pos=8, DQT0[8]=1
+    heartbeat[3]: delta=2, start=3, pos=9, DQT0[9]=1
+    heartbeat[3]: delta=2, start=4, pos=10, DQT0[10]=1
+    heartbeat[3]: delta=2, start=5, pos=11, DQT0[11]=1
+    heartbeat[3]: delta=2, start=6, pos=12, DQT0[12]=1
+    heartbeat[3]: delta=2, start=7, pos=13, DQT0[13]=1
+    heartbeat[4]: delta=3, start=0, pos=12, DQT0[12]=1
+    heartbeat[4]: delta=3, start=1, pos=13, DQT0[13]=1
+    heartbeat[4]: delta=3, start=2, pos=14, DQT0[14]=1
+    heartbeat[4]: delta=3, start=3, pos=15, DQT0[15]=1
+    heartbeat[4]: delta=3, start=4, pos=16, DQT0[16]=1
+    heartbeat[4]: delta=3, start=5, pos=17, DQT0[17]=1
+    heartbeat[4]: delta=3, start=6, pos=18, DQT0[18]=1
+    heartbeat[4]: delta=3, start=7, pos=19, DQT0[19]=1
+    heartbeat[5]: delta=2, start=0, pos=10, DQT0[10]=1
+    heartbeat[5]: delta=2, start=1, pos=11, DQT0[11]=1
+    heartbeat[5]: delta=2, start=2, pos=12, DQT0[12]=1
+    heartbeat[5]: delta=2, start=3, pos=13, DQT0[13]=1
+    heartbeat[5]: delta=2, start=4, pos=14, DQT0[14]=1
+    heartbeat[5]: delta=2, start=5, pos=15, DQT0[15]=1
+    heartbeat[5]: delta=2, start=6, pos=16, DQT0[16]=1
+    heartbeat[5]: delta=2, start=7, pos=17, DQT0[17]=1
+    heartbeat[6]: delta=3, start=0, pos=18, DQT0[18]=1
+    heartbeat[6]: delta=3, start=1, pos=19, DQT0[19]=1
+    heartbeat[6]: delta=3, start=2, pos=20, DQT0[20]=1
+    heartbeat[6]: delta=3, start=3, pos=21, DQT0[21]=1
+    heartbeat[6]: delta=3, start=4, pos=22, DQT0[22]=1
+    heartbeat[6]: delta=3, start=5, pos=23, DQT0[23]=1
+    heartbeat[6]: delta=3, start=6, pos=24, DQT0[24]=1
+    heartbeat[6]: delta=3, start=7, pos=25, DQT0[25]=1
+    heartbeat[7]: delta=2, start=0, pos=14, DQT0[14]=1
+    heartbeat[7]: delta=2, start=1, pos=15, DQT0[15]=1
+    heartbeat[7]: delta=2, start=2, pos=16, DQT0[16]=1
+    heartbeat[7]: delta=2, start=3, pos=17, DQT0[17]=1
+    heartbeat[7]: delta=2, start=4, pos=18, DQT0[18]=1
+    heartbeat[7]: delta=2, start=5, pos=19, DQT0[19]=1
+    heartbeat[7]: delta=2, start=6, pos=20, DQT0[20]=1
+    heartbeat[7]: delta=2, start=7, pos=21, DQT0[21]=1
+    heartbeat[8]: delta=3, start=0, pos=24, DQT0[24]=1
+    heartbeat[8]: delta=3, start=1, pos=25, DQT0[25]=1
+    heartbeat[8]: delta=3, start=2, pos=26, DQT0[26]=1
+    heartbeat[8]: delta=3, start=3, pos=27, DQT0[27]=1
+    heartbeat[8]: delta=3, start=4, pos=28, DQT0[28]=1
+    heartbeat[8]: delta=3, start=5, pos=29, DQT0[29]=1
+    heartbeat[8]: delta=3, start=6, pos=30, DQT0[30]=1
+    heartbeat[8]: delta=3, start=7, pos=31, DQT0[31]=1
+    heartbeat[9]: delta=2, start=0, pos=18, DQT0[18]=1
+    heartbeat[9]: delta=2, start=1, pos=19, DQT0[19]=1
+    heartbeat[9]: delta=2, start=2, pos=20, DQT0[20]=1
+    heartbeat[9]: delta=2, start=3, pos=21, DQT0[21]=1
+    heartbeat[9]: delta=2, start=4, pos=22, DQT0[22]=1
+    heartbeat[9]: delta=2, start=5, pos=23, DQT0[23]=1
+    heartbeat[9]: delta=2, start=6, pos=24, DQT0[24]=1
+    heartbeat[9]: delta=2, start=7, pos=25, DQT0[25]=1
+    heartbeat[10]: delta=3, start=0, pos=30, DQT0[30]=1
+    heartbeat[10]: delta=3, start=1, pos=31, DQT0[31]=1
+    heartbeat[10]: delta=3, start=2, pos=32, DQT0[32]=1
+    heartbeat[10]: delta=3, start=3, pos=33, DQT0[33]=1
+    heartbeat[10]: delta=3, start=4, pos=34, DQT0[34]=1
+    heartbeat[10]: delta=3, start=5, pos=35, DQT0[35]=1
+    heartbeat[10]: delta=3, start=6, pos=36, DQT0[36]=1
+    heartbeat[10]: delta=3, start=7, pos=37, DQT0[37]=1
+    heartbeat[11]: delta=2, start=0, pos=22, DQT0[22]=1
+    heartbeat[11]: delta=2, start=1, pos=23, DQT0[23]=1
+    heartbeat[11]: delta=2, start=2, pos=24, DQT0[24]=1
+    heartbeat[11]: delta=2, start=3, pos=25, DQT0[25]=1
+    heartbeat[11]: delta=2, start=4, pos=26, DQT0[26]=1
+    heartbeat[11]: delta=2, start=5, pos=27, DQT0[27]=1
+    heartbeat[11]: delta=2, start=6, pos=28, DQT0[28]=1
+    heartbeat[11]: delta=2, start=7, pos=29, DQT0[29]=1
+    heartbeat[12]: delta=2, start=0, pos=24, DQT0[24]=1
+    heartbeat[12]: delta=2, start=1, pos=25, DQT0[25]=1
+    heartbeat[12]: delta=2, start=2, pos=26, DQT0[26]=1
+    heartbeat[12]: delta=2, start=3, pos=27, DQT0[27]=1
+    heartbeat[12]: delta=2, start=4, pos=28, DQT0[28]=1
+    heartbeat[12]: delta=2, start=5, pos=29, DQT0[29]=1
+    heartbeat[12]: delta=2, start=6, pos=30, DQT0[30]=1
+    heartbeat[12]: delta=2, start=7, pos=31, DQT0[31]=1
+    heartbeat[13]: delta=3, start=0, pos=39, DQT0[39]=1
+    heartbeat[13]: delta=3, start=1, pos=40, DQT0[40]=1
+    heartbeat[13]: delta=3, start=2, pos=41, DQT0[41]=1
+    heartbeat[13]: delta=3, start=3, pos=42, DQT0[42]=1
+    heartbeat[13]: delta=3, start=4, pos=43, DQT0[43]=2
+    heartbeat[13]: delta=3, start=5, pos=44, DQT0[44]=2
+    heartbeat[13]: delta=3, start=6, pos=45, DQT0[45]=2
+    heartbeat[13]: delta=3, start=7, pos=46, DQT0[46]=2
+    heartbeat[14]: delta=2, start=0, pos=28, DQT0[28]=1
+    heartbeat[14]: delta=2, start=1, pos=29, DQT0[29]=1
+    heartbeat[14]: delta=2, start=2, pos=30, DQT0[30]=1
+    heartbeat[14]: delta=2, start=3, pos=31, DQT0[31]=1
+    heartbeat[14]: delta=2, start=4, pos=32, DQT0[32]=1
+    heartbeat[14]: delta=2, start=5, pos=33, DQT0[33]=1
+    heartbeat[14]: delta=2, start=6, pos=34, DQT0[34]=1
+    heartbeat[14]: delta=2, start=7, pos=35, DQT0[35]=1
+  project-skyscraper_media: Looking up each delta as DQT position index:
+    heartbeat[0]: delta=3, start=0, pos=0, DQT0[0]=1
+    heartbeat[0]: delta=3, start=1, pos=1, DQT0[1]=1
+    heartbeat[0]: delta=3, start=2, pos=2, DQT0[2]=1
+    heartbeat[0]: delta=3, start=3, pos=3, DQT0[3]=1
+    heartbeat[0]: delta=3, start=4, pos=4, DQT0[4]=1
+    heartbeat[0]: delta=3, start=5, pos=5, DQT0[5]=1
+    heartbeat[0]: delta=3, start=6, pos=6, DQT0[6]=1
+    heartbeat[0]: delta=3, start=7, pos=7, DQT0[7]=1
+    heartbeat[1]: delta=2, start=0, pos=2, DQT0[2]=1
+    heartbeat[1]: delta=2, start=1, pos=3, DQT0[3]=1
+    heartbeat[1]: delta=2, start=2, pos=4, DQT0[4]=1
+    heartbeat[1]: delta=2, start=3, pos=5, DQT0[5]=1
+    heartbeat[1]: delta=2, start=4, pos=6, DQT0[6]=1
+    heartbeat[1]: delta=2, start=5, pos=7, DQT0[7]=1
+    heartbeat[1]: delta=2, start=6, pos=8, DQT0[8]=1
+    heartbeat[1]: delta=2, start=7, pos=9, DQT0[9]=1
+    heartbeat[2]: delta=3, start=0, pos=6, DQT0[6]=1
+    heartbeat[2]: delta=3, start=1, pos=7, DQT0[7]=1
+    heartbeat[2]: delta=3, start=2, pos=8, DQT0[8]=1
+    heartbeat[2]: delta=3, start=3, pos=9, DQT0[9]=1
+    heartbeat[2]: delta=3, start=4, pos=10, DQT0[10]=1
+    heartbeat[2]: delta=3, start=5, pos=11, DQT0[11]=1
+    heartbeat[2]: delta=3, start=6, pos=12, DQT0[12]=1
+    heartbeat[2]: delta=3, start=7, pos=13, DQT0[13]=1
+    heartbeat[3]: delta=2, start=0, pos=6, DQT0[6]=1
+    heartbeat[3]: delta=2, start=1, pos=7, DQT0[7]=1
+    heartbeat[3]: delta=2, start=2, pos=8, DQT0[8]=1
+    heartbeat[3]: delta=2, start=3, pos=9, DQT0[9]=1
+    heartbeat[3]: delta=2, start=4, pos=10, DQT0[10]=1
+    heartbeat[3]: delta=2, start=5, pos=11, DQT0[11]=1
+    heartbeat[3]: delta=2, start=6, pos=12, DQT0[12]=1
+    heartbeat[3]: delta=2, start=7, pos=13, DQT0[13]=1
+    heartbeat[4]: delta=3, start=0, pos=12, DQT0[12]=1
+    heartbeat[4]: delta=3, start=1, pos=13, DQT0[13]=1
+    heartbeat[4]: delta=3, start=2, pos=14, DQT0[14]=1
+    heartbeat[4]: delta=3, start=3, pos=15, DQT0[15]=1
+    heartbeat[4]: delta=3, start=4, pos=16, DQT0[16]=1
+    heartbeat[4]: delta=3, start=5, pos=17, DQT0[17]=1
+    heartbeat[4]: delta=3, start=6, pos=18, DQT0[18]=1
+    heartbeat[4]: delta=3, start=7, pos=19, DQT0[19]=1
+    heartbeat[5]: delta=2, start=0, pos=10, DQT0[10]=1
+    heartbeat[5]: delta=2, start=1, pos=11, DQT0[11]=1
+    heartbeat[5]: delta=2, start=2, pos=12, DQT0[12]=1
+    heartbeat[5]: delta=2, start=3, pos=13, DQT0[13]=1
+    heartbeat[5]: delta=2, start=4, pos=14, DQT0[14]=1
+    heartbeat[5]: delta=2, start=5, pos=15, DQT0[15]=1
+    heartbeat[5]: delta=2, start=6, pos=16, DQT0[16]=1
+    heartbeat[5]: delta=2, start=7, pos=17, DQT0[17]=1
+    heartbeat[6]: delta=3, start=0, pos=18, DQT0[18]=1
+    heartbeat[6]: delta=3, start=1, pos=19, DQT0[19]=1
+    heartbeat[6]: delta=3, start=2, pos=20, DQT0[20]=1
+    heartbeat[6]: delta=3, start=3, pos=21, DQT0[21]=1
+    heartbeat[6]: delta=3, start=4, pos=22, DQT0[22]=1
+    heartbeat[6]: delta=3, start=5, pos=23, DQT0[23]=1
+    heartbeat[6]: delta=3, start=6, pos=24, DQT0[24]=1
+    heartbeat[6]: delta=3, start=7, pos=25, DQT0[25]=1
+    heartbeat[7]: delta=2, start=0, pos=14, DQT0[14]=1
+    heartbeat[7]: delta=2, start=1, pos=15, DQT0[15]=1
+    heartbeat[7]: delta=2, start=2, pos=16, DQT0[16]=1
+    heartbeat[7]: delta=2, start=3, pos=17, DQT0[17]=1
+    heartbeat[7]: delta=2, start=4, pos=18, DQT0[18]=1
+    heartbeat[7]: delta=2, start=5, pos=19, DQT0[19]=1
+    heartbeat[7]: delta=2, start=6, pos=20, DQT0[20]=1
+    heartbeat[7]: delta=2, start=7, pos=21, DQT0[21]=1
+    heartbeat[8]: delta=3, start=0, pos=24, DQT0[24]=1
+    heartbeat[8]: delta=3, start=1, pos=25, DQT0[25]=1
+    heartbeat[8]: delta=3, start=2, pos=26, DQT0[26]=1
+    heartbeat[8]: delta=3, start=3, pos=27, DQT0[27]=1
+    heartbeat[8]: delta=3, start=4, pos=28, DQT0[28]=2
+    heartbeat[8]: delta=3, start=5, pos=29, DQT0[29]=1
+    heartbeat[8]: delta=3, start=6, pos=30, DQT0[30]=1
+    heartbeat[8]: delta=3, start=7, pos=31, DQT0[31]=1
+    heartbeat[9]: delta=2, start=0, pos=18, DQT0[18]=1
+    heartbeat[9]: delta=2, start=1, pos=19, DQT0[19]=1
+    heartbeat[9]: delta=2, start=2, pos=20, DQT0[20]=1
+    heartbeat[9]: delta=2, start=3, pos=21, DQT0[21]=1
+    heartbeat[9]: delta=2, start=4, pos=22, DQT0[22]=1
+    heartbeat[9]: delta=2, start=5, pos=23, DQT0[23]=1
+    heartbeat[9]: delta=2, start=6, pos=24, DQT0[24]=1
+    heartbeat[9]: delta=2, start=7, pos=25, DQT0[25]=1
+    heartbeat[10]: delta=3, start=0, pos=30, DQT0[30]=1
+    heartbeat[10]: delta=3, start=1, pos=31, DQT0[31]=1
+    heartbeat[10]: delta=3, start=2, pos=32, DQT0[32]=1
+    heartbeat[10]: delta=3, start=3, pos=33, DQT0[33]=1
+    heartbeat[10]: delta=3, start=4, pos=34, DQT0[34]=1
+    heartbeat[10]: delta=3, start=5, pos=35, DQT0[35]=2
+    heartbeat[10]: delta=3, start=6, pos=36, DQT0[36]=2
+    heartbeat[10]: delta=3, start=7, pos=37, DQT0[37]=2
+    heartbeat[11]: delta=2, start=0, pos=22, DQT0[22]=1
+    heartbeat[11]: delta=2, start=1, pos=23, DQT0[23]=1
+    heartbeat[11]: delta=2, start=2, pos=24, DQT0[24]=1
+    heartbeat[11]: delta=2, start=3, pos=25, DQT0[25]=1
+    heartbeat[11]: delta=2, start=4, pos=26, DQT0[26]=1
+    heartbeat[11]: delta=2, start=5, pos=27, DQT0[27]=1
+    heartbeat[11]: delta=2, start=6, pos=28, DQT0[28]=2
+    heartbeat[11]: delta=2, start=7, pos=29, DQT0[29]=1
+    heartbeat[12]: delta=2, start=0, pos=24, DQT0[24]=1
+    heartbeat[12]: delta=2, start=1, pos=25, DQT0[25]=1
+    heartbeat[12]: delta=2, start=2, pos=26, DQT0[26]=1
+    heartbeat[12]: delta=2, start=3, pos=27, DQT0[27]=1
+    heartbeat[12]: delta=2, start=4, pos=28, DQT0[28]=2
+    heartbeat[12]: delta=2, start=5, pos=29, DQT0[29]=1
+    heartbeat[12]: delta=2, start=6, pos=30, DQT0[30]=1
+    heartbeat[12]: delta=2, start=7, pos=31, DQT0[31]=1
+    heartbeat[13]: delta=3, start=0, pos=39, DQT0[39]=2
+    heartbeat[13]: delta=3, start=1, pos=40, DQT0[40]=2
+    heartbeat[13]: delta=3, start=2, pos=41, DQT0[41]=2
+    heartbeat[13]: delta=3, start=3, pos=42, DQT0[42]=2
+    heartbeat[13]: delta=3, start=4, pos=43, DQT0[43]=2
+    heartbeat[13]: delta=3, start=5, pos=44, DQT0[44]=2
+    heartbeat[13]: delta=3, start=6, pos=45, DQT0[45]=2
+    heartbeat[13]: delta=3, start=7, pos=46, DQT0[46]=2
+    heartbeat[14]: delta=2, start=0, pos=28, DQT0[28]=2
+    heartbeat[14]: delta=2, start=1, pos=29, DQT0[29]=1
+    heartbeat[14]: delta=2, start=2, pos=30, DQT0[30]=1
+    heartbeat[14]: delta=2, start=3, pos=31, DQT0[31]=1
+    heartbeat[14]: delta=2, start=4, pos=32, DQT0[32]=1
+    heartbeat[14]: delta=2, start=5, pos=33, DQT0[33]=1
+    heartbeat[14]: delta=2, start=6, pos=34, DQT0[34]=1
+    heartbeat[14]: delta=2, start=7, pos=35, DQT0[35]=2
+
+--------------------------------------------------------------------------------
+12. KEY DERIVATION ATTEMPTS
+--------------------------------------------------------------------------------
+  IMG_00004 DQT0 as letters (A=1,B=2,C=3): AAAAAAAAAAAAAAAA
+  IMG_00004 DQT0 shift: [46106, 46109, 46111, 46114, 46116, 46119, 46121, 46124, 46126, 46129, 46131, 46134, 46136, 46138, 46141, 46143]
+  IMG_00004 DQT0 as delta predictor: 0/15 match
+  IMG_00004 DQT1 as delta predictor: 2/15 match
+  IMG_00004_1 DQT0 as letters (A=1,B=2,C=3): AAAAAAAAAAAAAAAA
+  IMG_00004_1 DQT0 shift: [46106, 46109, 46111, 46114, 46116, 46119, 46121, 46124, 46126, 46129, 46131, 46134, 46136, 46138, 46141, 46143]
+  IMG_00004_1 DQT0 as delta predictor: 0/15 match
+  IMG_00004_1 DQT1 as delta predictor: 2/15 match
+  TR4CE DQT0 as letters (A=1,B=2,C=3): AAAAAAAAAAAAAAAA
+  TR4CE DQT0 shift: [46106, 46109, 46111, 46114, 46116, 46119, 46121, 46124, 46126, 46129, 46131, 46134, 46136, 46138, 46141, 46143]
+  TR4CE DQT0 as delta predictor: 0/15 match
+  TR4CE DQT1 as delta predictor: 2/15 match
+  project-skyscraper DQT0 as letters (A=1,B=2,C=3): AAAAAAAAAAAAAAAA
+  project-skyscraper DQT0 shift: [46106, 46109, 46111, 46114, 46116, 46119, 46121, 46124, 46126, 46129, 46131, 46134, 46136, 46138, 46141, 46143]
+  project-skyscraper DQT0 as delta predictor: 0/15 match
+  project-skyscraper DQT1 as delta predictor: 4/15 match
+  project-skyscraper_media DQT0 as letters (A=1,B=2,C=3): AAAAAAAAAAAAAAAA
+  project-skyscraper_media DQT0 shift: [46106, 46109, 46111, 46114, 46116, 46119, 46121, 46124, 46126, 46129, 46131, 46134, 46136, 46138, 46141, 46143]
+  project-skyscraper_media DQT0 as delta predictor: 0/15 match
+  project-skyscraper_media DQT1 as delta predictor: 4/15 match
