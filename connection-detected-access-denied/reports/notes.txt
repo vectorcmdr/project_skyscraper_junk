@@ -1,0 +1,21 @@
+======================
+QUICK REPORT
+======================
+
+Positive Findings:
+- Blue channel is statistically distinct from R and G channels (low correlation).
+- LSB density of 0.8553 is highly non-random — this is the strongest indicator of hidden data in the image
+- The blue channel has high variance (std=63.80) compared to red (10.60) and green (53.04), indicating significant independent information
+- Bit-planes 0-1 show clear structure (non-random patterns visible)
+
+Negative Findings:
+- No morse code message could be reliably decoded from any of the 76 rotated variants or thousands of threshold/signal combinations tested
+- The "morse-like" patterns detected are consistent with natural image structure rather than intentional morse encoding
+- Timing ratios do not match proper morse code — gap lengths are too inconsistent (ratios of 2, 5, 10, 32, 22, 3, etc., rather than clustering around 1, 3, and 7)
+- All automatic decodes produced gibberish rather than coherent English text
+
+Other Notes:
+- The LSB anomaly (85.5% set) warrants further investigation and is a promising lead. Need to run stegsolve, zsteg and steghide again.
+- Try different color spaces (HSV, YCbCr, Lab) on the blue channel.
+
+The raw CSV data in raw_CW_bottom*.csv and raw_CCW_bottom*.csv is available for manual or alternative steg tool analysis.

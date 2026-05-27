@@ -1,0 +1,374 @@
+======================================================================
+FORENSIC BLUE-CHANNEL SPECTROGRAM ANALYSIS #1
+Source: connection-detected-access-denied-v0-8c7atk6y141h1.png
+======================================================================
+Image shape: (1000, 1600, 3), dtype: uint8, range: [4, 230]
+Channels: R G B (shape last dim = 3)
+Saved individual channel images.
+Red channel - min: 17.0, max: 199.0, mean: 22.77, std: 10.60
+Green channel - min: 16.0, max: 230.0, mean: 36.73, std: 53.04
+Blue channel - min: 4.0, max: 230.0, mean: 59.95, std: 63.80
+Mean abs diff R-B: 37.73, G-B: 42.58
+
+------------------------------------------------------------
+STEP 2: Generating blue-channel processing variants
+------------------------------------------------------------
+Saved blue_only_rgb.png (R=0, G=0, B=blue)
+Generated 7 blue-channel variants for analysis.
+Saved: blue_variants.png
+
+------------------------------------------------------------
+STEP 3: Applying 90-degree rotations
+------------------------------------------------------------
+Generated 14 rotated variants (7 variants x 2 rotations)
+
+------------------------------------------------------------
+STEP 4: Extracting 1D signals from rotated variants
+------------------------------------------------------------
+  blue_raw_rotCW: (1600, 1000) -> 12 signals
+  blue_raw_rotCCW: (1600, 1000) -> 12 signals
+  blue_normalized_rotCW: (1600, 1000) -> 12 signals
+  blue_normalized_rotCCW: (1600, 1000) -> 12 signals
+  blue_binary_mean_rotCW: (1600, 1000) -> 12 signals
+  blue_binary_mean_rotCCW: (1600, 1000) -> 12 signals
+  blue_binary_median_rotCW: (1600, 1000) -> 12 signals
+  blue_binary_median_rotCCW: (1600, 1000) -> 12 signals
+  blue_highpass_rotCW: (1600, 1000) -> 12 signals
+  blue_highpass_rotCCW: (1600, 1000) -> 12 signals
+  blue_stretched_rotCW: (1600, 1000) -> 12 signals
+  blue_stretched_rotCCW: (1600, 1000) -> 12 signals
+  blue_edges_rotCW: (1600, 1000) -> 12 signals
+  blue_edges_rotCCW: (1600, 1000) -> 12 signals
+Total 1D signals generated: 168
+
+------------------------------------------------------------
+STEP 5: Computing spectrograms and searching for morse patterns
+------------------------------------------------------------
+Approach A: Treating rotated images as spectrograms...
+  Processed blue_raw_rotCW as spectrogram -> 10 traces
+  Processed blue_raw_rotCCW as spectrogram -> 10 traces
+  Processed blue_normalized_rotCW as spectrogram -> 10 traces
+  Processed blue_normalized_rotCCW as spectrogram -> 10 traces
+  Processed blue_stretched_rotCW as spectrogram -> 10 traces
+  Processed blue_stretched_rotCCW as spectrogram -> 10 traces
+Saved: spectrogram_as_image_traces.png
+Approach B: Computing STFT spectrograms of 1D signals...
+Saved: spect_blue_raw_rotCW_rowmeans.png
+  Spectrogram computed: blue_raw_rotCW_rowmeans (len=1600)
+Saved: spect_blue_raw_rotCCW_rowmeans.png
+  Spectrogram computed: blue_raw_rotCCW_rowmeans (len=1600)
+Saved: spect_blue_normalized_rotCW_rowmeans.png
+  Spectrogram computed: blue_normalized_rotCW_rowmeans (len=1600)
+Saved: spect_blue_normalized_rotCCW_rowmeans.png
+  Spectrogram computed: blue_normalized_rotCCW_rowmeans (len=1600)
+Saved: spect_blue_stretched_rotCW_rowmeans.png
+  Spectrogram computed: blue_stretched_rotCW_rowmeans (len=1600)
+Saved: spect_blue_stretched_rotCCW_rowmeans.png
+  Spectrogram computed: blue_stretched_rotCCW_rowmeans (len=1600)
+Saved: spect_blue_raw_rotCW_bottom_rows_mean.png
+  Spectrogram computed: blue_raw_rotCW_bottom_rows_mean (len=1000)
+Saved: spect_blue_raw_rotCCW_bottom_rows_mean.png
+  Spectrogram computed: blue_raw_rotCCW_bottom_rows_mean (len=1000)
+Saved: spect_blue_normalized_rotCW_bottom_rows_mean.png
+  Spectrogram computed: blue_normalized_rotCW_bottom_rows_mean (len=1000)
+Saved: spect_blue_normalized_rotCCW_bottom_rows_mean.png
+  Spectrogram computed: blue_normalized_rotCCW_bottom_rows_mean (len=1000)
+Saved: spect_blue_stretched_rotCW_bottom_rows_mean.png
+  Spectrogram computed: blue_stretched_rotCW_bottom_rows_mean (len=1000)
+Saved: spect_blue_stretched_rotCCW_bottom_rows_mean.png
+  Spectrogram computed: blue_stretched_rotCCW_bottom_rows_mean (len=1000)
+Saved: spect_blue_raw_rotCW_bottom_rows_flat.png
+  Spectrogram computed: blue_raw_rotCW_bottom_rows_flat (len=160000)
+Saved: spect_blue_raw_rotCCW_bottom_rows_flat.png
+  Spectrogram computed: blue_raw_rotCCW_bottom_rows_flat (len=160000)
+Saved: spect_blue_binary_mean_rotCW_rowmeans.png
+  Spectrogram computed: blue_binary_mean_rotCW_rowmeans (len=1600)
+Saved: spect_blue_binary_mean_rotCCW_rowmeans.png
+  Spectrogram computed: blue_binary_mean_rotCCW_rowmeans (len=1600)
+Saved: spect_blue_binary_median_rotCW_rowmeans.png
+  Spectrogram computed: blue_binary_median_rotCW_rowmeans (len=1600)
+Saved: spect_blue_binary_median_rotCCW_rowmeans.png
+  Spectrogram computed: blue_binary_median_rotCCW_rowmeans (len=1600)
+Approach B2: Batch spectrograms for ALL signals...
+Saved: batch_all_spectrograms.png
+
+------------------------------------------------------------
+STEP 6: Morse code detection and decoding
+------------------------------------------------------------
+  MORSE CANDIDATE: blue_raw_rotCW_rowmeans @ thresh_30 - 6 dits, 4 dahs, ratio=1.50
+  MORSE CANDIDATE: blue_raw_rotCW_rowmeans @ thresh_40 - 7 dits, 3 dahs, ratio=2.33
+  MORSE CANDIDATE: blue_raw_rotCW_rowmeans @ thresh_50 - 7 dits, 6 dahs, ratio=1.17
+  MORSE CANDIDATE: blue_raw_rotCW_rowmeans @ thresh_60 - 7 dits, 4 dahs, ratio=1.75
+  MORSE CANDIDATE: blue_raw_rotCW_rowmeans @ thresh_70 - 9 dits, 7 dahs, ratio=1.29
+  MORSE CANDIDATE: blue_raw_rotCW_rowmeans @ thresh_80 - 13 dits, 9 dahs, ratio=1.44
+  MORSE CANDIDATE: blue_raw_rotCW_bottom_rows_mean @ thresh_30 - 52 dits, 48 dahs, ratio=1.08
+  MORSE CANDIDATE: blue_raw_rotCW_bottom_rows_mean @ thresh_40 - 53 dits, 28 dahs, ratio=1.89
+  MORSE CANDIDATE: blue_raw_rotCW_bottom_rows_mean @ thresh_50 - 18 dits, 10 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_raw_rotCW_bottom_rows_mean @ thresh_60 - 34 dits, 19 dahs, ratio=1.79
+  MORSE CANDIDATE: blue_raw_rotCW_bottom_rows_mean @ thresh_70 - 27 dits, 17 dahs, ratio=1.59
+  MORSE CANDIDATE: blue_raw_rotCW_bottom_rows_mean @ thresh_80 - 18 dits, 13 dahs, ratio=1.38
+  MORSE CANDIDATE: blue_raw_rotCW_bottom_rows_flat @ thresh_30 - 25328 dits, 9563 dahs, ratio=2.65
+  MORSE CANDIDATE: blue_raw_rotCW_bottom_rows_flat @ thresh_40 - 27835 dits, 8464 dahs, ratio=3.29
+  MORSE CANDIDATE: blue_raw_rotCW_bottom_rows_flat @ thresh_50 - 9046 dits, 5014 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_raw_rotCW_bottom_rows_flat @ thresh_60 - 9046 dits, 5014 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_raw_rotCW_bottom_rows_flat @ thresh_70 - 9046 dits, 5014 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_raw_rotCW_bottom_rows_flat @ thresh_80 - 9046 dits, 5014 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_raw_rotCCW_rowmeans @ thresh_30 - 6 dits, 4 dahs, ratio=1.50
+  MORSE CANDIDATE: blue_raw_rotCCW_rowmeans @ thresh_40 - 7 dits, 3 dahs, ratio=2.33
+  MORSE CANDIDATE: blue_raw_rotCCW_rowmeans @ thresh_50 - 7 dits, 6 dahs, ratio=1.17
+  MORSE CANDIDATE: blue_raw_rotCCW_rowmeans @ thresh_60 - 7 dits, 4 dahs, ratio=1.75
+  MORSE CANDIDATE: blue_raw_rotCCW_rowmeans @ thresh_70 - 9 dits, 7 dahs, ratio=1.29
+  MORSE CANDIDATE: blue_raw_rotCCW_rowmeans @ thresh_80 - 13 dits, 9 dahs, ratio=1.44
+  MORSE CANDIDATE: blue_raw_rotCCW_bottom_rows_mean @ thresh_30 - 68 dits, 36 dahs, ratio=1.89
+  MORSE CANDIDATE: blue_raw_rotCCW_bottom_rows_mean @ thresh_40 - 97 dits, 25 dahs, ratio=3.88
+  MORSE CANDIDATE: blue_raw_rotCCW_bottom_rows_mean @ thresh_50 - 55 dits, 38 dahs, ratio=1.45
+  MORSE CANDIDATE: blue_raw_rotCCW_bottom_rows_mean @ thresh_60 - 17 dits, 16 dahs, ratio=1.06
+  MORSE CANDIDATE: blue_raw_rotCCW_bottom_rows_mean @ thresh_70 - 27 dits, 18 dahs, ratio=1.50
+  MORSE CANDIDATE: blue_raw_rotCCW_bottom_rows_mean @ thresh_80 - 13 dits, 12 dahs, ratio=1.08
+  MORSE CANDIDATE: blue_raw_rotCCW_bottom_rows_flat @ thresh_30 - 23059 dits, 9114 dahs, ratio=2.53
+  MORSE CANDIDATE: blue_raw_rotCCW_bottom_rows_flat @ thresh_40 - 25535 dits, 8157 dahs, ratio=3.13
+  MORSE CANDIDATE: blue_raw_rotCCW_bottom_rows_flat @ thresh_50 - 5255 dits, 2916 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_raw_rotCCW_bottom_rows_flat @ thresh_60 - 5255 dits, 2916 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_raw_rotCCW_bottom_rows_flat @ thresh_70 - 5255 dits, 2916 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_raw_rotCCW_bottom_rows_flat @ thresh_80 - 5255 dits, 2916 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_normalized_rotCW_rowmeans @ thresh_30 - 6 dits, 4 dahs, ratio=1.50
+  MORSE CANDIDATE: blue_normalized_rotCW_rowmeans @ thresh_40 - 7 dits, 3 dahs, ratio=2.33
+  MORSE CANDIDATE: blue_normalized_rotCW_rowmeans @ thresh_50 - 7 dits, 6 dahs, ratio=1.17
+  MORSE CANDIDATE: blue_normalized_rotCW_rowmeans @ thresh_60 - 7 dits, 4 dahs, ratio=1.75
+  MORSE CANDIDATE: blue_normalized_rotCW_rowmeans @ thresh_70 - 9 dits, 7 dahs, ratio=1.29
+  MORSE CANDIDATE: blue_normalized_rotCW_rowmeans @ thresh_80 - 13 dits, 9 dahs, ratio=1.44
+  MORSE CANDIDATE: blue_normalized_rotCW_bottom_rows_mean @ thresh_30 - 52 dits, 48 dahs, ratio=1.08
+  MORSE CANDIDATE: blue_normalized_rotCW_bottom_rows_mean @ thresh_40 - 53 dits, 28 dahs, ratio=1.89
+  MORSE CANDIDATE: blue_normalized_rotCW_bottom_rows_mean @ thresh_50 - 18 dits, 10 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_normalized_rotCW_bottom_rows_mean @ thresh_60 - 34 dits, 19 dahs, ratio=1.79
+  MORSE CANDIDATE: blue_normalized_rotCW_bottom_rows_mean @ thresh_70 - 27 dits, 17 dahs, ratio=1.59
+  MORSE CANDIDATE: blue_normalized_rotCW_bottom_rows_mean @ thresh_80 - 18 dits, 13 dahs, ratio=1.38
+  MORSE CANDIDATE: blue_normalized_rotCW_bottom_rows_flat @ thresh_30 - 25328 dits, 9563 dahs, ratio=2.65
+  MORSE CANDIDATE: blue_normalized_rotCW_bottom_rows_flat @ thresh_40 - 27835 dits, 8464 dahs, ratio=3.29
+  MORSE CANDIDATE: blue_normalized_rotCW_bottom_rows_flat @ thresh_50 - 9046 dits, 5014 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_normalized_rotCW_bottom_rows_flat @ thresh_60 - 9046 dits, 5014 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_normalized_rotCW_bottom_rows_flat @ thresh_70 - 9046 dits, 5014 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_normalized_rotCW_bottom_rows_flat @ thresh_80 - 9046 dits, 5014 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_normalized_rotCCW_rowmeans @ thresh_30 - 6 dits, 4 dahs, ratio=1.50
+  MORSE CANDIDATE: blue_normalized_rotCCW_rowmeans @ thresh_40 - 7 dits, 3 dahs, ratio=2.33
+  MORSE CANDIDATE: blue_normalized_rotCCW_rowmeans @ thresh_50 - 7 dits, 6 dahs, ratio=1.17
+  MORSE CANDIDATE: blue_normalized_rotCCW_rowmeans @ thresh_60 - 7 dits, 4 dahs, ratio=1.75
+  MORSE CANDIDATE: blue_normalized_rotCCW_rowmeans @ thresh_70 - 9 dits, 7 dahs, ratio=1.29
+  MORSE CANDIDATE: blue_normalized_rotCCW_rowmeans @ thresh_80 - 13 dits, 9 dahs, ratio=1.44
+  MORSE CANDIDATE: blue_normalized_rotCCW_bottom_rows_mean @ thresh_30 - 68 dits, 36 dahs, ratio=1.89
+  MORSE CANDIDATE: blue_normalized_rotCCW_bottom_rows_mean @ thresh_40 - 97 dits, 25 dahs, ratio=3.88
+  MORSE CANDIDATE: blue_normalized_rotCCW_bottom_rows_mean @ thresh_50 - 56 dits, 38 dahs, ratio=1.47
+  MORSE CANDIDATE: blue_normalized_rotCCW_bottom_rows_mean @ thresh_60 - 17 dits, 16 dahs, ratio=1.06
+  MORSE CANDIDATE: blue_normalized_rotCCW_bottom_rows_mean @ thresh_70 - 27 dits, 18 dahs, ratio=1.50
+  MORSE CANDIDATE: blue_normalized_rotCCW_bottom_rows_mean @ thresh_80 - 13 dits, 12 dahs, ratio=1.08
+  MORSE CANDIDATE: blue_normalized_rotCCW_bottom_rows_flat @ thresh_30 - 23059 dits, 9114 dahs, ratio=2.53
+  MORSE CANDIDATE: blue_normalized_rotCCW_bottom_rows_flat @ thresh_40 - 25535 dits, 8157 dahs, ratio=3.13
+  MORSE CANDIDATE: blue_normalized_rotCCW_bottom_rows_flat @ thresh_50 - 5255 dits, 2916 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_normalized_rotCCW_bottom_rows_flat @ thresh_60 - 5255 dits, 2916 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_normalized_rotCCW_bottom_rows_flat @ thresh_70 - 5255 dits, 2916 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_normalized_rotCCW_bottom_rows_flat @ thresh_80 - 5255 dits, 2916 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_binary_mean_rotCW_rowmeans @ thresh_30 - 6 dits, 4 dahs, ratio=1.50
+  MORSE CANDIDATE: blue_binary_mean_rotCW_rowmeans @ thresh_40 - 8 dits, 4 dahs, ratio=2.00
+  MORSE CANDIDATE: blue_binary_mean_rotCW_rowmeans @ thresh_50 - 8 dits, 4 dahs, ratio=2.00
+  MORSE CANDIDATE: blue_binary_mean_rotCW_rowmeans @ thresh_60 - 8 dits, 5 dahs, ratio=1.60
+  MORSE CANDIDATE: blue_binary_mean_rotCW_rowmeans @ thresh_70 - 11 dits, 9 dahs, ratio=1.22
+  MORSE CANDIDATE: blue_binary_mean_rotCW_rowmeans @ thresh_80 - 12 dits, 5 dahs, ratio=2.40
+  MORSE CANDIDATE: blue_binary_mean_rotCW_bottom_rows_mean @ thresh_30 - 13 dits, 9 dahs, ratio=1.44
+  MORSE CANDIDATE: blue_binary_mean_rotCW_bottom_rows_mean @ thresh_40 - 13 dits, 9 dahs, ratio=1.44
+  MORSE CANDIDATE: blue_binary_mean_rotCW_bottom_rows_mean @ thresh_50 - 21 dits, 10 dahs, ratio=2.10
+  MORSE CANDIDATE: blue_binary_mean_rotCW_bottom_rows_mean @ thresh_60 - 29 dits, 17 dahs, ratio=1.71
+  MORSE CANDIDATE: blue_binary_mean_rotCW_bottom_rows_mean @ thresh_70 - 28 dits, 15 dahs, ratio=1.87
+  MORSE CANDIDATE: blue_binary_mean_rotCW_bottom_rows_mean @ thresh_80 - 18 dits, 16 dahs, ratio=1.12
+  MORSE CANDIDATE: blue_binary_mean_rotCW_bottom_rows_flat @ thresh_30 - 8820 dits, 4571 dahs, ratio=1.93
+  MORSE CANDIDATE: blue_binary_mean_rotCW_bottom_rows_flat @ thresh_40 - 8820 dits, 4571 dahs, ratio=1.93
+  MORSE CANDIDATE: blue_binary_mean_rotCW_bottom_rows_flat @ thresh_50 - 8820 dits, 4571 dahs, ratio=1.93
+  MORSE CANDIDATE: blue_binary_mean_rotCW_bottom_rows_flat @ thresh_60 - 8820 dits, 4571 dahs, ratio=1.93
+  MORSE CANDIDATE: blue_binary_mean_rotCW_bottom_rows_flat @ thresh_70 - 8820 dits, 4571 dahs, ratio=1.93
+  MORSE CANDIDATE: blue_binary_mean_rotCW_bottom_rows_flat @ thresh_80 - 8820 dits, 4571 dahs, ratio=1.93
+  MORSE CANDIDATE: blue_binary_mean_rotCCW_rowmeans @ thresh_30 - 6 dits, 4 dahs, ratio=1.50
+  MORSE CANDIDATE: blue_binary_mean_rotCCW_rowmeans @ thresh_40 - 8 dits, 5 dahs, ratio=1.60
+  MORSE CANDIDATE: blue_binary_mean_rotCCW_rowmeans @ thresh_50 - 8 dits, 4 dahs, ratio=2.00
+  MORSE CANDIDATE: blue_binary_mean_rotCCW_rowmeans @ thresh_60 - 8 dits, 5 dahs, ratio=1.60
+  MORSE CANDIDATE: blue_binary_mean_rotCCW_rowmeans @ thresh_70 - 11 dits, 9 dahs, ratio=1.22
+  MORSE CANDIDATE: blue_binary_mean_rotCCW_rowmeans @ thresh_80 - 12 dits, 5 dahs, ratio=2.40
+  MORSE CANDIDATE: blue_binary_mean_rotCCW_bottom_rows_mean @ thresh_30 - 17 dits, 9 dahs, ratio=1.89
+  MORSE CANDIDATE: blue_binary_mean_rotCCW_bottom_rows_mean @ thresh_40 - 17 dits, 9 dahs, ratio=1.89
+  MORSE CANDIDATE: blue_binary_mean_rotCCW_bottom_rows_mean @ thresh_50 - 17 dits, 9 dahs, ratio=1.89
+  MORSE CANDIDATE: blue_binary_mean_rotCCW_bottom_rows_mean @ thresh_60 - 17 dits, 9 dahs, ratio=1.89
+  MORSE CANDIDATE: blue_binary_mean_rotCCW_bottom_rows_mean @ thresh_70 - 34 dits, 17 dahs, ratio=2.00
+  MORSE CANDIDATE: blue_binary_mean_rotCCW_bottom_rows_mean @ thresh_80 - 16 dits, 14 dahs, ratio=1.14
+  MORSE CANDIDATE: blue_binary_mean_rotCCW_bottom_rows_flat @ thresh_30 - 5148 dits, 2614 dahs, ratio=1.97
+  MORSE CANDIDATE: blue_binary_mean_rotCCW_bottom_rows_flat @ thresh_40 - 5148 dits, 2614 dahs, ratio=1.97
+  MORSE CANDIDATE: blue_binary_mean_rotCCW_bottom_rows_flat @ thresh_50 - 5148 dits, 2614 dahs, ratio=1.97
+  MORSE CANDIDATE: blue_binary_mean_rotCCW_bottom_rows_flat @ thresh_60 - 5148 dits, 2614 dahs, ratio=1.97
+  MORSE CANDIDATE: blue_binary_mean_rotCCW_bottom_rows_flat @ thresh_70 - 5148 dits, 2614 dahs, ratio=1.97
+  MORSE CANDIDATE: blue_binary_mean_rotCCW_bottom_rows_flat @ thresh_80 - 5148 dits, 2614 dahs, ratio=1.97
+  MORSE CANDIDATE: blue_binary_median_rotCW_rowmeans @ thresh_30 - 7 dits, 3 dahs, ratio=2.33
+  MORSE CANDIDATE: blue_binary_median_rotCW_rowmeans @ thresh_40 - 10 dits, 6 dahs, ratio=1.67
+  MORSE CANDIDATE: blue_binary_median_rotCW_rowmeans @ thresh_50 - 9 dits, 7 dahs, ratio=1.29
+  MORSE CANDIDATE: blue_binary_median_rotCW_rowmeans @ thresh_60 - 9 dits, 4 dahs, ratio=2.25
+  MORSE CANDIDATE: blue_binary_median_rotCW_rowmeans @ thresh_70 - 19 dits, 10 dahs, ratio=1.90
+  MORSE CANDIDATE: blue_binary_median_rotCW_rowmeans @ thresh_80 - 12 dits, 8 dahs, ratio=1.50
+  MORSE CANDIDATE: blue_binary_median_rotCW_bottom_rows_mean @ thresh_30 - 13 dits, 9 dahs, ratio=1.44
+  MORSE CANDIDATE: blue_binary_median_rotCW_bottom_rows_mean @ thresh_40 - 13 dits, 9 dahs, ratio=1.44
+  MORSE CANDIDATE: blue_binary_median_rotCW_bottom_rows_mean @ thresh_50 - 22 dits, 15 dahs, ratio=1.47
+  MORSE CANDIDATE: blue_binary_median_rotCW_bottom_rows_mean @ thresh_60 - 29 dits, 19 dahs, ratio=1.53
+  MORSE CANDIDATE: blue_binary_median_rotCW_bottom_rows_mean @ thresh_70 - 26 dits, 15 dahs, ratio=1.73
+  MORSE CANDIDATE: blue_binary_median_rotCW_bottom_rows_mean @ thresh_80 - 18 dits, 16 dahs, ratio=1.12
+  MORSE CANDIDATE: blue_binary_median_rotCW_bottom_rows_flat @ thresh_30 - 9046 dits, 5014 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_binary_median_rotCW_bottom_rows_flat @ thresh_40 - 9046 dits, 5014 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_binary_median_rotCW_bottom_rows_flat @ thresh_50 - 9046 dits, 5014 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_binary_median_rotCW_bottom_rows_flat @ thresh_60 - 9046 dits, 5014 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_binary_median_rotCW_bottom_rows_flat @ thresh_70 - 9046 dits, 5014 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_binary_median_rotCW_bottom_rows_flat @ thresh_80 - 9046 dits, 5014 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_binary_median_rotCCW_rowmeans @ thresh_30 - 7 dits, 3 dahs, ratio=2.33
+  MORSE CANDIDATE: blue_binary_median_rotCCW_rowmeans @ thresh_40 - 9 dits, 8 dahs, ratio=1.12
+  MORSE CANDIDATE: blue_binary_median_rotCCW_rowmeans @ thresh_50 - 10 dits, 7 dahs, ratio=1.43
+  MORSE CANDIDATE: blue_binary_median_rotCCW_rowmeans @ thresh_60 - 9 dits, 4 dahs, ratio=2.25
+  MORSE CANDIDATE: blue_binary_median_rotCCW_rowmeans @ thresh_70 - 19 dits, 10 dahs, ratio=1.90
+  MORSE CANDIDATE: blue_binary_median_rotCCW_rowmeans @ thresh_80 - 12 dits, 8 dahs, ratio=1.50
+  MORSE CANDIDATE: blue_binary_median_rotCCW_bottom_rows_mean @ thresh_30 - 17 dits, 9 dahs, ratio=1.89
+  MORSE CANDIDATE: blue_binary_median_rotCCW_bottom_rows_mean @ thresh_40 - 17 dits, 9 dahs, ratio=1.89
+  MORSE CANDIDATE: blue_binary_median_rotCCW_bottom_rows_mean @ thresh_50 - 17 dits, 9 dahs, ratio=1.89
+  MORSE CANDIDATE: blue_binary_median_rotCCW_bottom_rows_mean @ thresh_60 - 17 dits, 9 dahs, ratio=1.89
+  MORSE CANDIDATE: blue_binary_median_rotCCW_bottom_rows_mean @ thresh_70 - 31 dits, 13 dahs, ratio=2.38
+  MORSE CANDIDATE: blue_binary_median_rotCCW_bottom_rows_mean @ thresh_80 - 12 dits, 11 dahs, ratio=1.09
+  MORSE CANDIDATE: blue_binary_median_rotCCW_bottom_rows_flat @ thresh_30 - 5255 dits, 2916 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_binary_median_rotCCW_bottom_rows_flat @ thresh_40 - 5255 dits, 2916 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_binary_median_rotCCW_bottom_rows_flat @ thresh_50 - 5255 dits, 2916 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_binary_median_rotCCW_bottom_rows_flat @ thresh_60 - 5255 dits, 2916 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_binary_median_rotCCW_bottom_rows_flat @ thresh_70 - 5255 dits, 2916 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_binary_median_rotCCW_bottom_rows_flat @ thresh_80 - 5255 dits, 2916 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_highpass_rotCW_rowmeans @ thresh_30 - 6 dits, 5 dahs, ratio=1.20
+  MORSE CANDIDATE: blue_highpass_rotCW_rowmeans @ thresh_40 - 8 dits, 6 dahs, ratio=1.33
+  MORSE CANDIDATE: blue_highpass_rotCW_rowmeans @ thresh_50 - 10 dits, 5 dahs, ratio=2.00
+  MORSE CANDIDATE: blue_highpass_rotCW_rowmeans @ thresh_60 - 8 dits, 7 dahs, ratio=1.14
+  MORSE CANDIDATE: blue_highpass_rotCW_rowmeans @ thresh_70 - 13 dits, 6 dahs, ratio=2.17
+  MORSE CANDIDATE: blue_highpass_rotCW_rowmeans @ thresh_80 - 14 dits, 5 dahs, ratio=2.80
+  MORSE CANDIDATE: blue_highpass_rotCW_bottom_rows_mean @ thresh_30 - 13 dits, 9 dahs, ratio=1.44
+  MORSE CANDIDATE: blue_highpass_rotCW_bottom_rows_mean @ thresh_40 - 13 dits, 9 dahs, ratio=1.44
+  MORSE CANDIDATE: blue_highpass_rotCW_bottom_rows_mean @ thresh_50 - 13 dits, 9 dahs, ratio=1.44
+  MORSE CANDIDATE: blue_highpass_rotCW_bottom_rows_mean @ thresh_60 - 31 dits, 20 dahs, ratio=1.55
+  MORSE CANDIDATE: blue_highpass_rotCW_bottom_rows_mean @ thresh_70 - 25 dits, 17 dahs, ratio=1.47
+  MORSE CANDIDATE: blue_highpass_rotCW_bottom_rows_mean @ thresh_80 - 15 dits, 13 dahs, ratio=1.15
+  MORSE CANDIDATE: blue_highpass_rotCW_bottom_rows_flat @ thresh_30 - 8307 dits, 3795 dahs, ratio=2.19
+  MORSE CANDIDATE: blue_highpass_rotCW_bottom_rows_flat @ thresh_40 - 8307 dits, 3795 dahs, ratio=2.19
+  MORSE CANDIDATE: blue_highpass_rotCW_bottom_rows_flat @ thresh_50 - 8307 dits, 3795 dahs, ratio=2.19
+  MORSE CANDIDATE: blue_highpass_rotCW_bottom_rows_flat @ thresh_60 - 8307 dits, 3795 dahs, ratio=2.19
+  MORSE CANDIDATE: blue_highpass_rotCW_bottom_rows_flat @ thresh_70 - 8307 dits, 3795 dahs, ratio=2.19
+  MORSE CANDIDATE: blue_highpass_rotCW_bottom_rows_flat @ thresh_80 - 8307 dits, 3795 dahs, ratio=2.19
+  MORSE CANDIDATE: blue_highpass_rotCCW_rowmeans @ thresh_30 - 6 dits, 4 dahs, ratio=1.50
+  MORSE CANDIDATE: blue_highpass_rotCCW_rowmeans @ thresh_40 - 8 dits, 6 dahs, ratio=1.33
+  MORSE CANDIDATE: blue_highpass_rotCCW_rowmeans @ thresh_50 - 10 dits, 5 dahs, ratio=2.00
+  MORSE CANDIDATE: blue_highpass_rotCCW_rowmeans @ thresh_60 - 8 dits, 7 dahs, ratio=1.14
+  MORSE CANDIDATE: blue_highpass_rotCCW_rowmeans @ thresh_70 - 13 dits, 6 dahs, ratio=2.17
+  MORSE CANDIDATE: blue_highpass_rotCCW_rowmeans @ thresh_80 - 14 dits, 5 dahs, ratio=2.80
+  MORSE CANDIDATE: blue_highpass_rotCCW_bottom_rows_mean @ thresh_30 - 16 dits, 9 dahs, ratio=1.78
+  MORSE CANDIDATE: blue_highpass_rotCCW_bottom_rows_mean @ thresh_40 - 16 dits, 9 dahs, ratio=1.78
+  MORSE CANDIDATE: blue_highpass_rotCCW_bottom_rows_mean @ thresh_50 - 16 dits, 9 dahs, ratio=1.78
+  MORSE CANDIDATE: blue_highpass_rotCCW_bottom_rows_mean @ thresh_60 - 16 dits, 9 dahs, ratio=1.78
+  MORSE CANDIDATE: blue_highpass_rotCCW_bottom_rows_mean @ thresh_70 - 29 dits, 16 dahs, ratio=1.81
+  MORSE CANDIDATE: blue_highpass_rotCCW_bottom_rows_mean @ thresh_80 - 13 dits, 11 dahs, ratio=1.18
+  MORSE CANDIDATE: blue_highpass_rotCCW_bottom_rows_flat @ thresh_30 - 4784 dits, 2176 dahs, ratio=2.20
+  MORSE CANDIDATE: blue_highpass_rotCCW_bottom_rows_flat @ thresh_40 - 4784 dits, 2176 dahs, ratio=2.20
+  MORSE CANDIDATE: blue_highpass_rotCCW_bottom_rows_flat @ thresh_50 - 4784 dits, 2176 dahs, ratio=2.20
+  MORSE CANDIDATE: blue_highpass_rotCCW_bottom_rows_flat @ thresh_60 - 4784 dits, 2176 dahs, ratio=2.20
+  MORSE CANDIDATE: blue_highpass_rotCCW_bottom_rows_flat @ thresh_70 - 4784 dits, 2176 dahs, ratio=2.20
+  MORSE CANDIDATE: blue_highpass_rotCCW_bottom_rows_flat @ thresh_80 - 4784 dits, 2176 dahs, ratio=2.20
+  MORSE CANDIDATE: blue_stretched_rotCW_rowmeans @ thresh_30 - 6 dits, 5 dahs, ratio=1.20
+  MORSE CANDIDATE: blue_stretched_rotCW_rowmeans @ thresh_40 - 6 dits, 5 dahs, ratio=1.20
+  MORSE CANDIDATE: blue_stretched_rotCW_rowmeans @ thresh_50 - 7 dits, 6 dahs, ratio=1.17
+  MORSE CANDIDATE: blue_stretched_rotCW_rowmeans @ thresh_60 - 6 dits, 4 dahs, ratio=1.50
+  MORSE CANDIDATE: blue_stretched_rotCW_rowmeans @ thresh_70 - 9 dits, 7 dahs, ratio=1.29
+  MORSE CANDIDATE: blue_stretched_rotCW_rowmeans @ thresh_80 - 13 dits, 9 dahs, ratio=1.44
+  MORSE CANDIDATE: blue_stretched_rotCW_bottom_rows_mean @ thresh_30 - 52 dits, 48 dahs, ratio=1.08
+  MORSE CANDIDATE: blue_stretched_rotCW_bottom_rows_mean @ thresh_40 - 53 dits, 28 dahs, ratio=1.89
+  MORSE CANDIDATE: blue_stretched_rotCW_bottom_rows_mean @ thresh_50 - 18 dits, 10 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_stretched_rotCW_bottom_rows_mean @ thresh_60 - 34 dits, 19 dahs, ratio=1.79
+  MORSE CANDIDATE: blue_stretched_rotCW_bottom_rows_mean @ thresh_70 - 27 dits, 17 dahs, ratio=1.59
+  MORSE CANDIDATE: blue_stretched_rotCW_bottom_rows_mean @ thresh_80 - 18 dits, 13 dahs, ratio=1.38
+  MORSE CANDIDATE: blue_stretched_rotCW_bottom_rows_flat @ thresh_30 - 25328 dits, 9563 dahs, ratio=2.65
+  MORSE CANDIDATE: blue_stretched_rotCW_bottom_rows_flat @ thresh_40 - 27835 dits, 8464 dahs, ratio=3.29
+  MORSE CANDIDATE: blue_stretched_rotCW_bottom_rows_flat @ thresh_50 - 9046 dits, 5014 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_stretched_rotCW_bottom_rows_flat @ thresh_60 - 9046 dits, 5014 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_stretched_rotCW_bottom_rows_flat @ thresh_70 - 9046 dits, 5014 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_stretched_rotCW_bottom_rows_flat @ thresh_80 - 9046 dits, 5014 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_stretched_rotCCW_rowmeans @ thresh_30 - 6 dits, 5 dahs, ratio=1.20
+  MORSE CANDIDATE: blue_stretched_rotCCW_rowmeans @ thresh_40 - 6 dits, 5 dahs, ratio=1.20
+  MORSE CANDIDATE: blue_stretched_rotCCW_rowmeans @ thresh_50 - 7 dits, 6 dahs, ratio=1.17
+  MORSE CANDIDATE: blue_stretched_rotCCW_rowmeans @ thresh_60 - 6 dits, 4 dahs, ratio=1.50
+  MORSE CANDIDATE: blue_stretched_rotCCW_rowmeans @ thresh_70 - 9 dits, 7 dahs, ratio=1.29
+  MORSE CANDIDATE: blue_stretched_rotCCW_rowmeans @ thresh_80 - 13 dits, 9 dahs, ratio=1.44
+  MORSE CANDIDATE: blue_stretched_rotCCW_bottom_rows_mean @ thresh_30 - 68 dits, 36 dahs, ratio=1.89
+  MORSE CANDIDATE: blue_stretched_rotCCW_bottom_rows_mean @ thresh_40 - 97 dits, 25 dahs, ratio=3.88
+  MORSE CANDIDATE: blue_stretched_rotCCW_bottom_rows_mean @ thresh_50 - 55 dits, 39 dahs, ratio=1.41
+  MORSE CANDIDATE: blue_stretched_rotCCW_bottom_rows_mean @ thresh_60 - 17 dits, 16 dahs, ratio=1.06
+  MORSE CANDIDATE: blue_stretched_rotCCW_bottom_rows_mean @ thresh_70 - 27 dits, 18 dahs, ratio=1.50
+  MORSE CANDIDATE: blue_stretched_rotCCW_bottom_rows_mean @ thresh_80 - 13 dits, 12 dahs, ratio=1.08
+  MORSE CANDIDATE: blue_stretched_rotCCW_bottom_rows_flat @ thresh_30 - 23059 dits, 9114 dahs, ratio=2.53
+  MORSE CANDIDATE: blue_stretched_rotCCW_bottom_rows_flat @ thresh_40 - 25535 dits, 8157 dahs, ratio=3.13
+  MORSE CANDIDATE: blue_stretched_rotCCW_bottom_rows_flat @ thresh_50 - 5255 dits, 2916 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_stretched_rotCCW_bottom_rows_flat @ thresh_60 - 5255 dits, 2916 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_stretched_rotCCW_bottom_rows_flat @ thresh_70 - 5255 dits, 2916 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_stretched_rotCCW_bottom_rows_flat @ thresh_80 - 5255 dits, 2916 dahs, ratio=1.80
+  MORSE CANDIDATE: blue_edges_rotCW_rowmeans @ thresh_30 - 111 dits, 56 dahs, ratio=1.98
+  MORSE CANDIDATE: blue_edges_rotCW_rowmeans @ thresh_40 - 111 dits, 66 dahs, ratio=1.68
+  MORSE CANDIDATE: blue_edges_rotCW_rowmeans @ thresh_50 - 127 dits, 58 dahs, ratio=2.19
+  MORSE CANDIDATE: blue_edges_rotCW_rowmeans @ thresh_60 - 125 dits, 43 dahs, ratio=2.91
+  MORSE CANDIDATE: blue_edges_rotCW_rowmeans @ thresh_70 - 105 dits, 47 dahs, ratio=2.23
+  MORSE CANDIDATE: blue_edges_rotCW_rowmeans @ thresh_80 - 105 dits, 25 dahs, ratio=4.20
+  MORSE CANDIDATE: blue_edges_rotCW_bottom_rows_mean @ thresh_30 - 75 dits, 30 dahs, ratio=2.50
+  MORSE CANDIDATE: blue_edges_rotCW_bottom_rows_mean @ thresh_40 - 74 dits, 47 dahs, ratio=1.57
+  MORSE CANDIDATE: blue_edges_rotCW_bottom_rows_mean @ thresh_50 - 86 dits, 35 dahs, ratio=2.46
+  MORSE CANDIDATE: blue_edges_rotCW_bottom_rows_mean @ thresh_60 - 93 dits, 19 dahs, ratio=4.89
+  MORSE CANDIDATE: blue_edges_rotCW_bottom_rows_mean @ thresh_70 - 79 dits, 22 dahs, ratio=3.59
+  MORSE CANDIDATE: blue_edges_rotCW_bottom_rows_mean @ thresh_80 - 53 dits, 16 dahs, ratio=3.31
+  MORSE CANDIDATE: blue_edges_rotCW_bottom_rows_flat @ thresh_30 - 10216 dits, 2273 dahs, ratio=4.49
+  MORSE CANDIDATE: blue_edges_rotCW_bottom_rows_flat @ thresh_40 - 10216 dits, 2273 dahs, ratio=4.49
+  MORSE CANDIDATE: blue_edges_rotCW_bottom_rows_flat @ thresh_50 - 10216 dits, 2273 dahs, ratio=4.49
+  MORSE CANDIDATE: blue_edges_rotCW_bottom_rows_flat @ thresh_60 - 10216 dits, 2273 dahs, ratio=4.49
+  MORSE CANDIDATE: blue_edges_rotCW_bottom_rows_flat @ thresh_70 - 10216 dits, 2273 dahs, ratio=4.49
+  MORSE CANDIDATE: blue_edges_rotCW_bottom_rows_flat @ thresh_80 - 9325 dits, 1209 dahs, ratio=7.71
+  MORSE CANDIDATE: blue_edges_rotCCW_rowmeans @ thresh_30 - 111 dits, 56 dahs, ratio=1.98
+  MORSE CANDIDATE: blue_edges_rotCCW_rowmeans @ thresh_40 - 111 dits, 66 dahs, ratio=1.68
+  MORSE CANDIDATE: blue_edges_rotCCW_rowmeans @ thresh_50 - 127 dits, 58 dahs, ratio=2.19
+  MORSE CANDIDATE: blue_edges_rotCCW_rowmeans @ thresh_60 - 125 dits, 43 dahs, ratio=2.91
+  MORSE CANDIDATE: blue_edges_rotCCW_rowmeans @ thresh_70 - 105 dits, 47 dahs, ratio=2.23
+  MORSE CANDIDATE: blue_edges_rotCCW_rowmeans @ thresh_80 - 105 dits, 25 dahs, ratio=4.20
+  MORSE CANDIDATE: blue_edges_rotCCW_bottom_rows_mean @ thresh_30 - 55 dits, 30 dahs, ratio=1.83
+  MORSE CANDIDATE: blue_edges_rotCCW_bottom_rows_mean @ thresh_40 - 62 dits, 40 dahs, ratio=1.55
+  MORSE CANDIDATE: blue_edges_rotCCW_bottom_rows_mean @ thresh_50 - 69 dits, 33 dahs, ratio=2.09
+  MORSE CANDIDATE: blue_edges_rotCCW_bottom_rows_mean @ thresh_60 - 84 dits, 24 dahs, ratio=3.50
+  MORSE CANDIDATE: blue_edges_rotCCW_bottom_rows_mean @ thresh_70 - 65 dits, 24 dahs, ratio=2.71
+  MORSE CANDIDATE: blue_edges_rotCCW_bottom_rows_mean @ thresh_80 - 54 dits, 18 dahs, ratio=3.00
+  MORSE CANDIDATE: blue_edges_rotCCW_bottom_rows_flat @ thresh_30 - 9099 dits, 1845 dahs, ratio=4.93
+  MORSE CANDIDATE: blue_edges_rotCCW_bottom_rows_flat @ thresh_40 - 9099 dits, 1845 dahs, ratio=4.93
+  MORSE CANDIDATE: blue_edges_rotCCW_bottom_rows_flat @ thresh_50 - 9099 dits, 1845 dahs, ratio=4.93
+  MORSE CANDIDATE: blue_edges_rotCCW_bottom_rows_flat @ thresh_60 - 9099 dits, 1845 dahs, ratio=4.93
+  MORSE CANDIDATE: blue_edges_rotCCW_bottom_rows_flat @ thresh_70 - 9099 dits, 1845 dahs, ratio=4.93
+  MORSE CANDIDATE: blue_edges_rotCCW_bottom_rows_flat @ thresh_80 - 8589 dits, 1287 dahs, ratio=6.67
+
+------------------------------------------------------------
+STEP 7: Direct examination of rotated blue as spectrogram image
+------------------------------------------------------------
+Saved: spectrogram_view_blue_raw_rotCW.png
+Saved: spectrogram_view_blue_raw_rotCCW.png
+Saved: spectrogram_view_blue_normalized_rotCW.png
+Saved: spectrogram_view_blue_normalized_rotCCW.png
+Saved: spectrogram_view_blue_stretched_rotCW.png
+Saved: spectrogram_view_blue_stretched_rotCCW.png
+
+------------------------------------------------------------
+STEP 8: Additional forensic analyses
+------------------------------------------------------------
+Blue LSB density: 0.8553 (random ~0.5, pattern -> 0.8553)
+Saved: blue_bitplanes.png
+Saved blue bit-plane analysis.
+Saved: blue_fft_spectrum.png
+Saved 2D FFT of blue channel.
+Correlation R-B: 0.0306, G-B: 0.1713
+Saved: histograms.png
+Saved: autocorr_blue_raw_rotCW.png
+Autocorrelation computed for blue_raw_rotCW bottom rows
+Saved: autocorr_blue_raw_rotCCW.png
+Autocorrelation computed for blue_raw_rotCCW bottom rows
