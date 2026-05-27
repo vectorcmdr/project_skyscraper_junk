@@ -1,0 +1,64 @@
+=== JPEG STRUCTURE COMPARISON ===
+Marker count A: 21
+Marker count B: 22
+
+Diff at marker index 1:
+  A: 0x00000002 0xFFE0 len=16 name=APP0
+  B: 0x00000002 0xFFEE len=14 name=APP14
+
+Diff at marker index 2:
+  A: 0x00000014 0xFFE1 len=4409 name=APP1
+  B: 0x00000012 0xFFE1 len=5756 name=APP1
+
+Diff at marker index 3:
+  A: 0x0000114F 0xFFEE len=14 name=APP14
+  B: 0x00001690 0xFFED len=7340 name=APP13
+
+Diff at marker index 4:
+  A: 0x0000115F 0xFFE2 len=3160 name=APP2
+  B: 0x0000333E 0xFFE1 len=2016 name=APP1
+
+Diff at marker index 5:
+  A: 0x00001DB9 0xFFDB len=67 name=DQT
+  B: 0x00003B20 0xFFE2 len=3160 name=APP2
+
+Diff at marker index 7:
+  A: 0x00001E43 0xFFC2 len=17 name=SOF2
+  B: 0x000047BF 0xFFDB len=67 name=DQT
+
+Diff at marker index 8:
+  A: 0x00001E56 0xFFC4 len=30 name=DHT
+  B: 0x00004804 0xFFC2 len=17 name=SOF2
+
+Diff at marker index 9:
+  A: 0x00001E76 0xFFC4 len=52 name=DHT
+  B: 0x00004817 0xFFC4 len=31 name=DHT
+
+Diff at marker index 10:
+  A: 0x00001EAC 0xFFC4 len=28 name=DHT
+  B: 0x00004838 0xFFC4 len=55 name=DHT
+
+Diff at marker index 11:
+  A: 0x00001ECA 0xFFC4 len=78 name=DHT
+  B: 0x00004871 0xFFC4 len=29 name=DHT
+
+Diff at marker index 12:
+  A: 0x00001F1A 0xFFC4 len=74 name=DHT
+  B: 0x00004890 0xFFC4 len=76 name=DHT
+
+Diff at marker index 13:
+  A: 0x00001F66 0xFFDA len=12 name=SOS
+  B: 0x000048DE 0xFFC4 len=69 name=DHT
+
+Diff at marker index 14:
+  A: 0x00009C83 0xFFDA len=8 name=SOS
+  B: 0x00004925 0xFFDA len=12 name=SOS
+
+Diff at marker index 20:
+  A: 0x00077787 0xFFD9 len=0 name=EOI
+  B: 0x00049873 0xFFDA len=8 name=SOS
+
+Extra markers in B (from index 21):
+  0x000C37A4 0xFFD9 len=0 name=EOI
+
+Total structural differences: 15

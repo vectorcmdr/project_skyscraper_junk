@@ -1,0 +1,11 @@
+=== DQT TABLE COMPARISON ===
+
+Table ID 0:
+  A: offset=0x00001DB9, precision=0, data_len=64
+  B: offset=0x0000477A, precision=0, data_len=64
+  Match: YES
+
+Table ID 1:
+  A: offset=0x00001DFE, precision=0, data_len=64
+  B: offset=0x000047BF, precision=0, data_len=64
+  Match: YES

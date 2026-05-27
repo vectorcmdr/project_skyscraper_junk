@@ -1,0 +1,42 @@
+================================================================================
+COMPREHENSIVE FORENSIC COMPARISON REPORT
+Files: IMG_00004.jpg (original/glitched) vs IMG_00004_1.jpg (replacement)
+================================================================================
+
+1. BINARY OVERVIEW
+   A size: 489,353 bytes
+   B size: 800,678 bytes
+   Size delta: 311,325 bytes
+   First diff: 0x00000003
+   Last diff: 0x000C37A5
+   Differing ranges: 2130
+
+2. JPEG STRUCTURE OVERVIEW
+   Markers in A: 21
+   Markers in B: 22
+   Marker sequence A: SOI -> APP0 -> APP1 -> APP14 -> APP2 -> DQT -> DQT -> SOF2 -> DHT -> DHT -> DHT -> DHT -> DHT -> SOS -> SOS -> SOS -> SOS -> SOS -> SOS -> SOS -> EOI
+   Marker sequence B: SOI -> APP14 -> APP1 -> APP13 -> APP1 -> APP2 -> DQT -> DQT -> SOF2 -> DHT -> DHT -> DHT -> DHT -> DHT -> SOS -> SOS -> SOS -> SOS -> SOS -> SOS -> SOS -> EOI
+
+3. DQT TABLES
+   Table 0: A=YES B=YES Match=YES
+   Table 1: A=YES B=YES Match=YES
+
+4. TRAILING DATA
+   A trailing: 0 bytes after EOI
+   B trailing: 0 bytes after EOI
+
+5. PIXEL COMPARISON
+   Compared pixels: 899,304
+   Differing pixels: 899,298
+   Identical pixels: 6
+   Difference %: 99.9993%
+
+6. GLITCH ANALYSIS CONCLUSION
+   The replacement is SUBSTANTIALLY DIFFERENT, though some regions may align.
+
+7. CARVED DATA SUMMARY
+   See carved_data.txt for details.
+   Note: Most magic bytes found inside entropy data are random false positives.
+
+================================================================================
+END OF REPORT

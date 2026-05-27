@@ -1,0 +1,76 @@
+=== CARVED DATA / HIDDEN FILES ANALYSIS ===
+Scanning full file contents for known file signatures...
+NOTE: Signatures found inside entropy-coded scan data are likely random false positives.
+Only signatures outside entropy regions or at known metadata offsets are likely real.
+
+
+=== CARVED DATA SCAN (IMG_00004.jpg (original)) ===
+Found 24 potential embedded files/signatures:
+  Offset 0x00000000: JPEG (magic=b'\xff\xd8\xff')
+  Offset 0x000001EE: JPEG (magic=b'\xff\xd8\xff')
+  Offset 0x00018845: DOS/Windows executable (magic=b'MZ')
+  Offset 0x00019227: BZIP2 (magic=b'BZ')
+  Offset 0x0001C4EF: DOS/Windows executable (magic=b'MZ')
+  Offset 0x000237C9: BZIP2 (magic=b'BZ')
+  Offset 0x00025A02: DOS/Windows executable (magic=b'MZ')
+  Offset 0x0002637E: DOS/Windows executable (magic=b'MZ')
+  Offset 0x0002F672: GZIP (magic=b'\x1f\x8b')
+  Offset 0x00031F22: GZIP (magic=b'\x1f\x8b')
+  Offset 0x0003EA18: DOS/Windows executable (magic=b'MZ')
+  Offset 0x0003F72E: GZIP (magic=b'\x1f\x8b')
+  Offset 0x00048AC9: DOS/Windows executable (magic=b'MZ') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x0005631A: DOS/Windows executable (magic=b'MZ') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x0005695E: BZIP2 (magic=b'BZ') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x0005AAF2: BZIP2 (magic=b'BZ') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x0005C3C9: DOS/Windows executable (magic=b'MZ') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x00063E0B: DOS/Windows executable (magic=b'MZ') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x00068B99: DOS/Windows executable (magic=b'MZ') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x0006905D: BZIP2 (magic=b'BZ') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x0006DA77: GZIP (magic=b'\x1f\x8b') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x000733C8: DOS/Windows executable (magic=b'MZ') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x00074017: BZIP2 (magic=b'BZ') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x000749BF: DOS/Windows executable (magic=b'MZ') [INSIDE ENTROPY DATA - likely false positive]
+
+=== CARVED DATA SCAN (IMG_00004_1.jpg (replacement)) ===
+Found 35 potential embedded files/signatures:
+  Offset 0x00000000: JPEG (magic=b'\xff\xd8\xff')
+  Offset 0x000003F6: JPEG (magic=b'\xff\xd8\xff')
+  Offset 0x00001FCE: JPEG (magic=b'\xff\xd8\xff')
+  Offset 0x00007228: DOS/Windows executable (magic=b'MZ')
+  Offset 0x0001513C: GZIP (magic=b'\x1f\x8b')
+  Offset 0x00020476: DOS/Windows executable (magic=b'MZ')
+  Offset 0x00025BC5: BZIP2 (magic=b'BZ')
+  Offset 0x00030715: BZIP2 (magic=b'BZ')
+  Offset 0x0003440C: BZIP2 (magic=b'BZ')
+  Offset 0x0003687E: BZIP2 (magic=b'BZ')
+  Offset 0x0003EE25: BZIP2 (magic=b'BZ')
+  Offset 0x00048EDE: BZIP2 (magic=b'BZ')
+  Offset 0x0004E822: BZIP2 (magic=b'BZ') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x00051109: DOS/Windows executable (magic=b'MZ') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x000639D1: DOS/Windows executable (magic=b'MZ') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x00063B89: GZIP (magic=b'\x1f\x8b') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x0006C6AC: GZIP (magic=b'\x1f\x8b') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x0006FFFC: GZIP (magic=b'\x1f\x8b') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x000737D6: GZIP (magic=b'\x1f\x8b') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x00074A49: DOS/Windows executable (magic=b'MZ') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x0007634B: GZIP (magic=b'\x1f\x8b') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x00088FB3: DOS/Windows executable (magic=b'MZ') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x0008A21D: DOS/Windows executable (magic=b'MZ') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x0008BD85: DOS/Windows executable (magic=b'MZ') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x0009B3B0: DOS/Windows executable (magic=b'MZ') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x0009E42C: DOS/Windows executable (magic=b'MZ') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x000A2950: GZIP (magic=b'\x1f\x8b') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x000A5089: DOS/Windows executable (magic=b'MZ') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x000A63E9: DOS/Windows executable (magic=b'MZ') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x000A8EFE: GZIP (magic=b'\x1f\x8b') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x000B1332: DOS/Windows executable (magic=b'MZ') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x000B216A: DOS/Windows executable (magic=b'MZ') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x000B23A9: GZIP (magic=b'\x1f\x8b') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x000B3D6B: DOS/Windows executable (magic=b'MZ') [INSIDE ENTROPY DATA - likely false positive]
+  Offset 0x000B3E58: DOS/Windows executable (magic=b'MZ') [INSIDE ENTROPY DATA - likely false positive]
+
+--- Scanning trailing data only ---
+
+No trailing data for A trailing
+
+No trailing data for B trailing

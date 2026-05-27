@@ -1,0 +1,6 @@
+=== TRAILING DATA COMPARISON ===
+EOI offset A: 0x00077789 (file size 489,353)
+EOI offset B: 0x000C37A6 (file size 800,678)
+Trailing bytes A: 0
+Trailing bytes B: 0
+No trailing data in either file.

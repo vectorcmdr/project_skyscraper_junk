@@ -1,0 +1,65 @@
+=== EXIF/METADATA COMPARISON ===
+
+0th:Artist:
+  A: A
+  B: <MISSING>
+
+0th:BitsPerSample:
+  A: <MISSING>
+  B: (8, 8, 8)
+
+0th:DateTime:
+  A: 2005:04:13 11:28:19
+  B: 2026:05:25 19:36:36
+
+0th:ExifTag:
+  A: 4079
+  B: 468
+
+0th:ImageLength:
+  A: <MISSING>
+  B: 742
+
+0th:ImageWidth:
+  A: <MISSING>
+  B: 1212
+
+0th:PhotometricInterpretation:
+  A: <MISSING>
+  B: 2
+
+0th:SamplesPerPixel:
+  A: <MISSING>
+  B: 3
+
+0th:XPAuthor:
+  A: (65, 0, 0, 0)
+  B: <MISSING>
+
+1st:JPEGInterchangeFormat:
+  A: 464
+  B: 986
+
+1st:JPEGInterchangeFormatLength:
+  A: 3599
+  B: 4761
+
+Exif:ExifVersion:
+  A: <MISSING>
+  B: 0231
+
+Total differing EXIF tags: 12
+Tags present in A only: 2
+Tags present in B only: 6
+
+PIL Properties A:
+  Format: JPEG
+  Mode: RGB
+  Size: (1212, 742)
+  Info keys: ['jfif', 'jfif_version', 'dpi', 'jfif_unit', 'jfif_density', 'exif', 'adobe', 'adobe_transform', 'progressive', 'progression', 'icc_profile']
+
+PIL Properties B:
+  Format: JPEG
+  Mode: RGB
+  Size: (1212, 742)
+  Info keys: ['adobe', 'adobe_transform', 'exif', 'photoshop', 'xmp', 'progressive', 'progression', 'icc_profile', 'dpi']
