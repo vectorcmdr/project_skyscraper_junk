@@ -1,0 +1,7 @@
+JSTEG EXTRACTION: project-skyscraper
+============================================================
+  [FOUND] Q0 bit0: BMP at byte 67671
+  [FOUND] Q0 bit1: BMP at byte 26528
+  [FOUND] Q1 bit0: JPEG at byte 29582
+  [FOUND] Q1 bit1: BMP at byte 27744
+  [FOUND] Q1 bit2: BMP at byte 122952

@@ -1,0 +1,14 @@
+STEGHIDE ON HIDDEN EMBEDDED JPEGs
+============================================================
+
+=== TR4CE_hidden (1977 bytes) ===
+  [FAIL] password='arg.txt'
+
+=== IMG_00004_hidden (3599 bytes) ===
+  [FAIL] password='arg.txt'
+
+=== IMG_00004_1_hidden1 (4761 bytes) ===
+  [FAIL] password='arg.txt'
+
+=== IMG_00004_1_hidden2 (4855 bytes) ===
+  [FAIL] password='arg.txt'

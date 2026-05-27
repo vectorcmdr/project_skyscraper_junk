@@ -1,0 +1,72 @@
+PROJECT-SKYSCRAPER.JPG BRUTE FORCE REPORT
+============================================================
+File size: 3,578,047 bytes
+
+--- Archive/Container Signatures ---
+  GZ signature 1f8b at offset 9905
+  PE signature 4d5a at offset 59917
+  BMP signature 424d at offset 394423
+  JPEG signature ffd8ff at offset 0
+
+--- EOI Position ---
+  EOI at offset: 3578045
+  Trailing bytes: 0
+
+--- ECS Segment Analysis ---
+  ECS 0: offset=241, length=183194
+    Signature: GZ at +9650
+    Signature: PE at +59662
+  ECS 1: offset=183508, length=147159
+  ECS 2: offset=330791, length=416666
+    Signature: GZ at +108557
+    Signature: PE at +255809
+    Signature: BMP at +63622
+  ECS 3: offset=747580, length=353632
+    Signature: GZ at +30964
+    Signature: PE at +42582
+    Signature: BMP at +43894
+  ECS 4: offset=1101332, length=420564
+    Signature: GZ at +68617
+    Signature: PE at +35819
+    Signature: BMP at +1142
+  ECS 5: offset=1521948, length=387412
+    Signature: GZ at +45185
+    Signature: PE at +48152
+    Signature: BMP at +48833
+  ECS 6: offset=1909370, length=33863
+    Signature: GZ at +5341
+    Signature: PE at +20097
+    Signature: BMP at +16480
+  ECS 7: offset=1943288, length=515068
+    Signature: GZ at +160877
+    Signature: PE at +56374
+    Signature: BMP at +17986
+  ECS 8: offset=2458406, length=467228
+    Signature: GZ at +165956
+    Signature: PE at +929
+    Signature: BMP at +197570
+  ECS 9: offset=2925684, length=652352
+    Signature: GZ at +1349
+    Signature: PE at +239253
+    Signature: BMP at +10176
+
+--- XOR Brute Force (first 2048 bytes) ---
+
+--- AES Brute Force (first 1024 bytes, MD5 16-byte key) ---
+
+--- Entropy Analysis ---
+  ECS length=183194 entropy=7.9742
+  ECS length=147159 entropy=7.9526
+  ECS length=416666 entropy=7.9862
+  ECS length=353632 entropy=7.9845
+  ECS length=420564 entropy=7.9811
+  ECS length=387412 entropy=7.9158
+  ECS length=33863 entropy=7.9924
+  ECS length=515068 entropy=7.9607
+  ECS length=467228 entropy=7.9727
+  ECS length=652352 entropy=7.9592
+  Whole file entropy=7.9922
+
+--- Known Encryption Headers ---
+  PGP header at offset 142114
+  DER-encoded PKCS header at offset 12965

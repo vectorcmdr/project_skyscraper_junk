@@ -1,0 +1,46 @@
+DCT ANALYSIS: IMG_00004
+============================================================
+Total 8x8 blocks: 14136
+
+DQT tables found: 4
+  Table 0: min=5, max=61, unique=[5, 6, 7, 8, 9, 10, 11, 12, 13, 15]...
+  Table 1: min=9, max=50, unique=[9, 11, 12, 13, 24, 28, 33, 50]...
+  Table 0: min=1, max=3, unique=[1, 2, 3]...
+  Table 1: min=1, max=3, unique=[1, 2, 3]...
+
+--- LSB Analysis (excluding DC coefficient) ---
+Total non-zero AC coefficients: 243749
+LSB ones: 177344 (72.76%)
+LSB zeros: 66405 (27.24%)
+Chi-square statistic: 50492.3578
+Uniform distribution p-value approx: 0.000000
+
+--- First 200 LSB bytes as hex ---
+ef4fff7bff7edff6ffbe9ebfacffdfbbfeb3f1f7bcffbff4ff9f9e6fee7ffbffdfbbdfeffedfbfdffaffbd3d5afb76af7ecf27fe7fdffd7fdd7fdeed8f8dbdfbfdfedf7f3d6fd7ffb377f6def7ef9dd7f7fe7e7bdfa5fedff7dfbffeebbbffdffbe65dedf8ff97fb9dcf7bdffdbdcfbef5fbfd9fbdffffffcffffefdddfffffefd7fcf65f7fffff57d7fe7ffefd3fbfaf7fbfdef9f9bbfe73ecff9edfcefff77f8fdf5fbebfdffdcdffffff7fdeffbdbbdf7ffa7ff6bf7f3f7ffefbfff1bb7f77f2f9f79b7fbf9cb
+
+--- First 200 LSB bytes as ASCII ---
+.O.{.~.....................o...............=Z.v.~.'.................=o...w........~{..............].......{........................e....}...............>......w.....................k.........../.y....
+
+Printable ratio in LSB bytes: 0.21
+
+--- Coefficient Distribution Analysis ---
+Total coefficients: 904704
+Non-zero coefficients: 257858 (28.50%)
+Value range: -901 to 487
+Mean: -10.82
+Std: 83.83
+Even coefficients: 73771 (28.61%)
+Odd coefficients: 184087 (71.39%)
+
+--- OutGuess Pair Analysis ---
+Most common non-zero pairs:
+  (np.int32(-1), np.int32(1)): 10780
+  (np.int32(1), np.int32(-1)): 10713
+  (np.int32(1), np.int32(1)): 10409
+  (np.int32(-1), np.int32(-1)): 10165
+  (np.int32(2), np.int32(-1)): 2881
+  (np.int32(-2), np.int32(1)): 2859
+  (np.int32(-2), np.int32(-1)): 2712
+  (np.int32(2), np.int32(1)): 2685
+  (np.int32(1), np.int32(-2)): 1860
+  (np.int32(-1), np.int32(2)): 1821

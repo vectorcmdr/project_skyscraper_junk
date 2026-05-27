@@ -1,0 +1,38 @@
+APP SEGMENT DEEP ANALYSIS
+============================================================
+
+=== TR4CE ===
+  APP0x00 at 0x000002, length=16, entropy=2.5495
+  APP0x01 at 0x000014, length=2803, entropy=6.5218
+    Valid base64 decode: 390 bytes
+  APP0x0e at 0x000b09, length=14, entropy=2.4508
+    High printable after XOR 0x55: 11/12
+    Sample: b'\x141:70U1UUUUT'
+  APP0x02 at 0x000b19, length=3160, entropy=7.0281
+  Total APP segments: 4
+
+=== IMG_00004 ===
+  APP0x00 at 0x000002, length=16, entropy=2.5495
+  APP0x01 at 0x000014, length=4409, entropy=7.3054
+  APP0x0e at 0x00114f, length=14, entropy=2.4508
+    High printable after XOR 0x55: 11/12
+    Sample: b'\x141:70U1UUUUT'
+  APP0x02 at 0x00115f, length=3160, entropy=7.0281
+  Total APP segments: 4
+
+=== IMG_00004_1 ===
+  APP0x0e at 0x000002, length=14, entropy=2.4508
+    High printable after XOR 0x55: 11/12
+    Sample: b'\x141:70U1UUUUT'
+  APP0x01 at 0x000012, length=5756, entropy=7.3602
+  APP0x0d at 0x001690, length=7340, entropy=7.1760
+    Valid base64 decode: 1614 bytes
+  APP0x01 at 0x00333e, length=2016, entropy=5.3427
+    High printable after XOR 0x55: 1890/2014
+    Sample: b'=!!%ozz;&{41:70{6:8z-4%zd{ezUij-%46>0!u702<;hw\xba\xee\xeaw'
+  APP0x02 at 0x003b20, length=3160, entropy=7.0281
+  Total APP segments: 5
+
+=== project-skyscraper ===
+  APP0x00 at 0x000002, length=16, entropy=2.5495
+  Total APP segments: 1

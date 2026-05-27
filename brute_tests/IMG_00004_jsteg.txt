@@ -1,0 +1,5 @@
+JSTEG EXTRACTION: IMG_00004
+============================================================
+  [FOUND] Q0 bit0: JPEG at byte 754
+  [FOUND] Q2 bit0: JPEG at byte 12220
+  [FOUND] Q2 bit2: BMP at byte 30794

@@ -1,0 +1,36 @@
+ADVANCED BRUTE FORCE REPORT
+============================================================
+
+--- Decompression Attempts at GZ Signatures ---
+
+--- VeraCrypt/TrueCrypt Detection ---
+  ('entropy_uniformity', 7.969948188440528, 0.016783000658403966, 10)
+
+--- Additional Cipher Brute Force ---
+
+--- Suspicious Offset Analysis ---
+  Offset 142114: hex=a8032ed551065e2c5951104418a975c7b531edad
+    ASCII: ....Q.^,YQ.D..u..1...P*bY...&=.x.....[N3"..K,..|.o
+  Offset 12965: hex=3082146b1064b2c304636804ad96379600d6002d
+    ASCII: 0..k.d...ch...7....-....A."C..Pk.Y....... Y$...aX.
+
+--- F5/OutGuess Signature Hunt ---
+  ECS 0: zeros=1553 (0.85%), ones=800 (0.44%)
+    Repeating pattern ff00 (2-byte): 189 times
+  ECS 1: zeros=926 (0.63%), ones=512 (0.35%)
+    Repeating pattern ff00 (2-byte): 240 times
+  ECS 2: zeros=2708 (0.65%), ones=1138 (0.27%)
+    Repeating pattern ff00 (2-byte): 815 times
+  ECS 3: zeros=2214 (0.63%), ones=942 (0.27%)
+    Repeating pattern ff00 (2-byte): 648 times
+  ECS 4: zeros=2641 (0.63%), ones=1170 (0.28%)
+    Repeating pattern ff00 (2-byte): 731 times
+  ECS 5: zeros=5633 (1.45%), ones=3384 (0.87%)
+    Repeating pattern ff00 (2-byte): 531 times
+  ECS 6: zeros=237 (0.70%), ones=124 (0.37%)
+  ECS 7: zeros=3231 (0.63%), ones=1915 (0.37%)
+    Repeating pattern ff00 (2-byte): 580 times
+  ECS 8: zeros=3611 (0.77%), ones=1695 (0.36%)
+    Repeating pattern ff00 (2-byte): 899 times
+  ECS 9: zeros=5710 (0.88%), ones=3103 (0.48%)
+    Repeating pattern ff00 (2-byte): 1172 times

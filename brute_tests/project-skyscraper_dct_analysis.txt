@@ -1,0 +1,46 @@
+DCT ANALYSIS: project-skyscraper
+============================================================
+Total 8x8 blocks: 90000
+
+DQT tables found: 2
+  Table 0: min=1, max=3, unique=[1, 2, 3]...
+  Table 1: min=1, max=3, unique=[1, 2, 3]...
+
+--- LSB Analysis (excluding DC coefficient) ---
+Total non-zero AC coefficients: 1615680
+LSB ones: 1124143 (69.58%)
+LSB zeros: 491537 (30.42%)
+Chi-square statistic: 247691.5919
+Uniform distribution p-value approx: 0.000000
+
+--- First 200 LSB bytes as hex ---
+f4a6df5fb6cf5f2ebe55cbf5be67ded7f79bbffe5cbef67f3d4af871e2eadb7eccfdefedfd4ffbd7cf5daae9e76fc6d50df56e8fc66bb87386fdeeab3fe7c7749176eb1fc5ffb69e19ba7eedf7776fbaefc7336f3bd65feffde97e7b5ff2d56b76d4e8f275defb696bf7de7366eec900db277d7e9522b5becddeb97e0ee2d475ba9f7eff50f7f6ffc7bfff95efbeebdeefefffdffffbbffeff1ffdf097e7dbffffb6e77fb3ffee9bfff9ef77fd3ff97937ff36d6fdbd7ffdfcffbfbff6e56eb9ddbfedf7bdffef77
+
+--- First 200 LSB bytes as ASCII ---
+..._.._..U...g......\...=J.q...~.....O...]...o....n..k.s....?..t.v........~..wo...3o;._...~{_..kv...u..ik..sf....'}~.".....~...u..~.P......................................w.?.y7.6...........n........w
+
+Printable ratio in LSB bytes: 0.24
+  Found JPEG signature in LSB stream at byte 29582
+  Found ZIP signature in LSB stream at byte 73265
+
+--- Coefficient Distribution Analysis ---
+Total coefficients: 5760000
+Non-zero coefficients: 1705592 (29.61%)
+Value range: -989 to 770
+Mean: 7.85
+Std: 95.47
+Even coefficients: 538760 (31.59%)
+Odd coefficients: 1166832 (68.41%)
+
+--- OutGuess Pair Analysis ---
+Most common non-zero pairs:
+  (np.int32(-1), np.int32(1)): 63413
+  (np.int32(1), np.int32(-1)): 63278
+  (np.int32(1), np.int32(1)): 63111
+  (np.int32(-1), np.int32(-1)): 63087
+  (np.int32(-2), np.int32(1)): 21081
+  (np.int32(2), np.int32(-1)): 20722
+  (np.int32(-2), np.int32(-1)): 20311
+  (np.int32(2), np.int32(1)): 20280
+  (np.int32(1), np.int32(-2)): 18450
+  (np.int32(-1), np.int32(2)): 18384

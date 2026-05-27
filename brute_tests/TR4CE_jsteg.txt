@@ -1,0 +1,3 @@
+JSTEG EXTRACTION: TR4CE
+============================================================
+  [FOUND] Q2 bit1: BMP at byte 355

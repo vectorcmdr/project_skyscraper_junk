@@ -1,0 +1,705 @@
+STEGHIDE ADDITIONAL KEYS BRUTE FORCE REPORT
+============================================================
+
+--- Quick Note ---
+No suprise here; all fails.
+
+
+=== ADDITIONAL PASSES ===
+
+=== TR4CE (71,865 bytes) ===
+  [?] password='' -> Enter passphrase: steghide: could not get terminal attributes.
+  [FAIL] password='REALITY'
+  [FAIL] password='validated'
+  [FAIL] password='20050413'
+  [FAIL] password='112819'
+  [FAIL] password='20050413112819'
+  [FAIL] password='skyscraper'
+  [FAIL] password='project-skyscraper'
+  [FAIL] password='TR4CE'
+  [FAIL] password='cavitated'
+  [FAIL] password='activated'
+  [FAIL] password='memory'
+  [FAIL] password='bloc'
+  [FAIL] password='tower'
+  [FAIL] password='swallow'
+  [FAIL] password='april'
+  [FAIL] password='atlas'
+  [FAIL] password='shadowcheck'
+  [FAIL] password='shadowcheck-1912'
+  [FAIL] password='Project_Skyscraper'
+  [FAIL] password='Connection'
+  [FAIL] password='Access'
+  [FAIL] password='denied'
+  [FAIL] password='HELLO'
+  [FAIL] password='WORLD'
+  [FAIL] password='origin'
+  [FAIL] password='no/value'
+  [FAIL] password='sleeping'
+  [FAIL] password='security'
+  [FAIL] password='breached'
+  [FAIL] password='critical'
+  [FAIL] password='external'
+  [FAIL] password='unauthorized'
+  [FAIL] password='178879468'
+  [FAIL] password='1113391699'
+  [FAIL] password='1779708960'
+  [FAIL] password='1778779680'
+  [FAIL] password='1779139140'
+  [FAIL] password='1779383141'
+  [FAIL] password='1113384720'
+  [FAIL] password='password'
+  [FAIL] password='secret'
+  [FAIL] password='hidden'
+  [FAIL] password='key'
+  [FAIL] password='admin'
+  [FAIL] password='123456'
+  [FAIL] password='password1'
+  [FAIL] password='2005-04-13'
+  [FAIL] password='04-13-2005'
+  [FAIL] password='13-04-2005'
+  [FAIL] password='Apr132005'
+  [FAIL] password='April132005'
+  [FAIL] password='11:28:19'
+  [FAIL] password='1128'
+  [FAIL] password='2819'
+  [FAIL] password='11:28'
+  [FAIL] password='28:19'
+  [FAIL] password='the_architect'
+  [FAIL] password='TheArchitect'
+  [FAIL] password='ProjectSkyscraper'
+  [FAIL] password='projectskyscraper'
+  [FAIL] password='NoMansSky'
+  [FAIL] password='NoMansSkyTheGame'
+  [FAIL] password='nomanssky'
+  [FAIL] password='NMS'
+  [FAIL] password='Atlas'
+  [FAIL] password='Atlas65'
+  [FAIL] password='atlas-65'
+  [FAIL] password='shadowcheck1912'
+  [FAIL] password='shadowcheck_1912'
+  [FAIL] password='security_breach'
+  [FAIL] password='securitybreach'
+  [FAIL] password='SECURITY_BREACH_CONFIRMED'
+  [FAIL] password='CRITICAL'
+  [FAIL] password='External_unauthorized'
+  [FAIL] password='connection_detected'
+  [FAIL] password='access_denied'
+  [FAIL] password='ConnectionDetected'
+  [FAIL] password='AccessDenied'
+  [FAIL] password='ACCESS_DENIED'
+  [FAIL] password='CONNECTION_DETECTED'
+  [FAIL] password='Access_Denied'
+  [FAIL] password='Connection_Detected'
+  [FAIL] password='memory_bloc'
+  [FAIL] password='memorybloc'
+  [FAIL] password='sleep_mode'
+  [FAIL] password='sleepmode'
+  [FAIL] password='SLEEP_MODE'
+  [FAIL] password='security_log'
+  [FAIL] password='securitylog'
+  [FAIL] password='TRACE'
+  [FAIL] password='trace_on_hold'
+  [FAIL] password='trust_level'
+  [FAIL] password='BYPASSED'
+  [FAIL] password='bypassed'
+  [FAIL] password='bypass'
+  [FAIL] password='trustlevel'
+  [FAIL] password='determine_security_status'
+  [FAIL] password='shadow_integrity'
+  [FAIL] password='multiple_uncoordinated'
+  [FAIL] password='brute_force'
+  [FAIL] password='haphazard'
+  [FAIL] password='coherent_pattern'
+  [FAIL] password='distributed_sources'
+  [FAIL] password='us-gb-es-fr-mx-de-ca-ie-be-au'
+  [FAIL] password='USGBESFRMXDECAIEBEAU'
+  [FAIL] password='They can see the tower but not the one inside'
+  [FAIL] password='theycanseethetower'
+  [FAIL] password='nottheoneinside'
+  [FAIL] password='towerinside'
+  [FAIL] password='inside'
+  [FAIL] password='tower'
+  [FAIL] password='swallow'
+  [FAIL] password='swallows'
+  [FAIL] password='wings'
+  [FAIL] password='consummation'
+  [FAIL] password='awakened'
+  [FAIL] password='birds'
+  [FAIL] password='desire'
+  [FAIL] password='evening'
+  [FAIL] password='june'
+  [FAIL] password='endures'
+  [FAIL] password='green'
+  [FAIL] password='sunday_morning'
+  [FAIL] password='sundaymorning'
+  [FAIL] password='wallace_stevens'
+  [FAIL] password='wallacestevens'
+  [FAIL] password='stevens'
+  [FAIL] password='REALITY20050413'
+  [FAIL] password='REALITY112819'
+  [FAIL] password='20050413REALITY'
+  [FAIL] password='112819REALITY'
+  [FAIL] password='validatedREALITY'
+  [FAIL] password='REALITYvalidated'
+  [FAIL] password='skyscraperREALITY'
+  [FAIL] password='project-skyscraperREALITY'
+  [FAIL] password='TR4CEREALITY'
+  [FAIL] password='REALITYTR4CE'
+
+=== IMG_00004 (489,353 bytes) ===
+  [?] password='' -> Enter passphrase: steghide: could not get terminal attributes.
+  [FAIL] password='REALITY'
+  [FAIL] password='validated'
+  [FAIL] password='20050413'
+  [FAIL] password='112819'
+  [FAIL] password='20050413112819'
+  [FAIL] password='skyscraper'
+  [FAIL] password='project-skyscraper'
+  [FAIL] password='TR4CE'
+  [FAIL] password='cavitated'
+  [FAIL] password='activated'
+  [FAIL] password='memory'
+  [FAIL] password='bloc'
+  [FAIL] password='tower'
+  [FAIL] password='swallow'
+  [FAIL] password='april'
+  [FAIL] password='atlas'
+  [FAIL] password='shadowcheck'
+  [FAIL] password='shadowcheck-1912'
+  [FAIL] password='Project_Skyscraper'
+  [FAIL] password='Connection'
+  [FAIL] password='Access'
+  [FAIL] password='denied'
+  [FAIL] password='HELLO'
+  [FAIL] password='WORLD'
+  [FAIL] password='origin'
+  [FAIL] password='no/value'
+  [FAIL] password='sleeping'
+  [FAIL] password='security'
+  [FAIL] password='breached'
+  [FAIL] password='critical'
+  [FAIL] password='external'
+  [FAIL] password='unauthorized'
+  [FAIL] password='178879468'
+  [FAIL] password='1113391699'
+  [FAIL] password='1779708960'
+  [FAIL] password='1778779680'
+  [FAIL] password='1779139140'
+  [FAIL] password='1779383141'
+  [FAIL] password='1113384720'
+  [FAIL] password='password'
+  [FAIL] password='secret'
+  [FAIL] password='hidden'
+  [FAIL] password='key'
+  [FAIL] password='admin'
+  [FAIL] password='123456'
+  [FAIL] password='password1'
+  [FAIL] password='2005-04-13'
+  [FAIL] password='04-13-2005'
+  [FAIL] password='13-04-2005'
+  [FAIL] password='Apr132005'
+  [FAIL] password='April132005'
+  [FAIL] password='11:28:19'
+  [FAIL] password='1128'
+  [FAIL] password='2819'
+  [FAIL] password='11:28'
+  [FAIL] password='28:19'
+  [FAIL] password='the_architect'
+  [FAIL] password='TheArchitect'
+  [FAIL] password='ProjectSkyscraper'
+  [FAIL] password='projectskyscraper'
+  [FAIL] password='NoMansSky'
+  [FAIL] password='NoMansSkyTheGame'
+  [FAIL] password='nomanssky'
+  [FAIL] password='NMS'
+  [FAIL] password='Atlas'
+  [FAIL] password='Atlas65'
+  [FAIL] password='atlas-65'
+  [FAIL] password='shadowcheck1912'
+  [FAIL] password='shadowcheck_1912'
+  [FAIL] password='security_breach'
+  [FAIL] password='securitybreach'
+  [FAIL] password='SECURITY_BREACH_CONFIRMED'
+  [FAIL] password='CRITICAL'
+  [FAIL] password='External_unauthorized'
+  [FAIL] password='connection_detected'
+  [FAIL] password='access_denied'
+  [FAIL] password='ConnectionDetected'
+  [FAIL] password='AccessDenied'
+  [FAIL] password='ACCESS_DENIED'
+  [FAIL] password='CONNECTION_DETECTED'
+  [FAIL] password='Access_Denied'
+  [FAIL] password='Connection_Detected'
+  [FAIL] password='memory_bloc'
+  [FAIL] password='memorybloc'
+  [FAIL] password='sleep_mode'
+  [FAIL] password='sleepmode'
+  [FAIL] password='SLEEP_MODE'
+  [FAIL] password='security_log'
+  [FAIL] password='securitylog'
+  [FAIL] password='TRACE'
+  [FAIL] password='trace_on_hold'
+  [FAIL] password='trust_level'
+  [FAIL] password='BYPASSED'
+  [FAIL] password='bypassed'
+  [FAIL] password='bypass'
+  [FAIL] password='trustlevel'
+  [FAIL] password='determine_security_status'
+  [FAIL] password='shadow_integrity'
+  [FAIL] password='multiple_uncoordinated'
+  [FAIL] password='brute_force'
+  [FAIL] password='haphazard'
+  [FAIL] password='coherent_pattern'
+  [FAIL] password='distributed_sources'
+  [FAIL] password='us-gb-es-fr-mx-de-ca-ie-be-au'
+  [FAIL] password='USGBESFRMXDECAIEBEAU'
+  [FAIL] password='They can see the tower but not the one inside'
+  [FAIL] password='theycanseethetower'
+  [FAIL] password='nottheoneinside'
+  [FAIL] password='towerinside'
+  [FAIL] password='inside'
+  [FAIL] password='tower'
+  [FAIL] password='swallow'
+  [FAIL] password='swallows'
+  [FAIL] password='wings'
+  [FAIL] password='consummation'
+  [FAIL] password='awakened'
+  [FAIL] password='birds'
+  [FAIL] password='desire'
+  [FAIL] password='evening'
+  [FAIL] password='june'
+  [FAIL] password='endures'
+  [FAIL] password='green'
+  [FAIL] password='sunday_morning'
+  [FAIL] password='sundaymorning'
+  [FAIL] password='wallace_stevens'
+  [FAIL] password='wallacestevens'
+  [FAIL] password='stevens'
+  [FAIL] password='REALITY20050413'
+  [FAIL] password='REALITY112819'
+  [FAIL] password='20050413REALITY'
+  [FAIL] password='112819REALITY'
+  [FAIL] password='validatedREALITY'
+  [FAIL] password='REALITYvalidated'
+  [FAIL] password='skyscraperREALITY'
+  [FAIL] password='project-skyscraperREALITY'
+  [FAIL] password='TR4CEREALITY'
+  [FAIL] password='REALITYTR4CE'
+
+=== IMG_00004_1 (800,678 bytes) ===
+  [?] password='' -> Enter passphrase: steghide: could not get terminal attributes.
+  [FAIL] password='REALITY'
+  [FAIL] password='validated'
+  [FAIL] password='20050413'
+  [FAIL] password='112819'
+  [FAIL] password='20050413112819'
+  [FAIL] password='skyscraper'
+  [FAIL] password='project-skyscraper'
+  [FAIL] password='TR4CE'
+  [FAIL] password='cavitated'
+  [FAIL] password='activated'
+  [FAIL] password='memory'
+  [FAIL] password='bloc'
+  [FAIL] password='tower'
+  [FAIL] password='swallow'
+  [FAIL] password='april'
+  [FAIL] password='atlas'
+  [FAIL] password='shadowcheck'
+  [FAIL] password='shadowcheck-1912'
+  [FAIL] password='Project_Skyscraper'
+  [FAIL] password='Connection'
+  [FAIL] password='Access'
+  [FAIL] password='denied'
+  [FAIL] password='HELLO'
+  [FAIL] password='WORLD'
+  [FAIL] password='origin'
+  [FAIL] password='no/value'
+  [FAIL] password='sleeping'
+  [FAIL] password='security'
+  [FAIL] password='breached'
+  [FAIL] password='critical'
+  [FAIL] password='external'
+  [FAIL] password='unauthorized'
+  [FAIL] password='178879468'
+  [FAIL] password='1113391699'
+  [FAIL] password='1779708960'
+  [FAIL] password='1778779680'
+  [FAIL] password='1779139140'
+  [FAIL] password='1779383141'
+  [FAIL] password='1113384720'
+  [FAIL] password='password'
+  [FAIL] password='secret'
+  [FAIL] password='hidden'
+  [FAIL] password='key'
+  [FAIL] password='admin'
+  [FAIL] password='123456'
+  [FAIL] password='password1'
+  [FAIL] password='2005-04-13'
+  [FAIL] password='04-13-2005'
+  [FAIL] password='13-04-2005'
+  [FAIL] password='Apr132005'
+  [FAIL] password='April132005'
+  [FAIL] password='11:28:19'
+  [FAIL] password='1128'
+  [FAIL] password='2819'
+  [FAIL] password='11:28'
+  [FAIL] password='28:19'
+  [FAIL] password='the_architect'
+  [FAIL] password='TheArchitect'
+  [FAIL] password='ProjectSkyscraper'
+  [FAIL] password='projectskyscraper'
+  [FAIL] password='NoMansSky'
+  [FAIL] password='NoMansSkyTheGame'
+  [FAIL] password='nomanssky'
+  [FAIL] password='NMS'
+  [FAIL] password='Atlas'
+  [FAIL] password='Atlas65'
+  [FAIL] password='atlas-65'
+  [FAIL] password='shadowcheck1912'
+  [FAIL] password='shadowcheck_1912'
+  [FAIL] password='security_breach'
+  [FAIL] password='securitybreach'
+  [FAIL] password='SECURITY_BREACH_CONFIRMED'
+  [FAIL] password='CRITICAL'
+  [FAIL] password='External_unauthorized'
+  [FAIL] password='connection_detected'
+  [FAIL] password='access_denied'
+  [FAIL] password='ConnectionDetected'
+  [FAIL] password='AccessDenied'
+  [FAIL] password='ACCESS_DENIED'
+  [FAIL] password='CONNECTION_DETECTED'
+  [FAIL] password='Access_Denied'
+  [FAIL] password='Connection_Detected'
+  [FAIL] password='memory_bloc'
+  [FAIL] password='memorybloc'
+  [FAIL] password='sleep_mode'
+  [FAIL] password='sleepmode'
+  [FAIL] password='SLEEP_MODE'
+  [FAIL] password='security_log'
+  [FAIL] password='securitylog'
+  [FAIL] password='TRACE'
+  [FAIL] password='trace_on_hold'
+  [FAIL] password='trust_level'
+  [FAIL] password='BYPASSED'
+  [FAIL] password='bypassed'
+  [FAIL] password='bypass'
+  [FAIL] password='trustlevel'
+  [FAIL] password='determine_security_status'
+  [FAIL] password='shadow_integrity'
+  [FAIL] password='multiple_uncoordinated'
+  [FAIL] password='brute_force'
+  [FAIL] password='haphazard'
+  [FAIL] password='coherent_pattern'
+  [FAIL] password='distributed_sources'
+  [FAIL] password='us-gb-es-fr-mx-de-ca-ie-be-au'
+  [FAIL] password='USGBESFRMXDECAIEBEAU'
+  [FAIL] password='They can see the tower but not the one inside'
+  [FAIL] password='theycanseethetower'
+  [FAIL] password='nottheoneinside'
+  [FAIL] password='towerinside'
+  [FAIL] password='inside'
+  [FAIL] password='tower'
+  [FAIL] password='swallow'
+  [FAIL] password='swallows'
+  [FAIL] password='wings'
+  [FAIL] password='consummation'
+  [FAIL] password='awakened'
+  [FAIL] password='birds'
+  [FAIL] password='desire'
+  [FAIL] password='evening'
+  [FAIL] password='june'
+  [FAIL] password='endures'
+  [FAIL] password='green'
+  [FAIL] password='sunday_morning'
+  [FAIL] password='sundaymorning'
+  [FAIL] password='wallace_stevens'
+  [FAIL] password='wallacestevens'
+  [FAIL] password='stevens'
+  [FAIL] password='REALITY20050413'
+  [FAIL] password='REALITY112819'
+  [FAIL] password='20050413REALITY'
+  [FAIL] password='112819REALITY'
+  [FAIL] password='validatedREALITY'
+  [FAIL] password='REALITYvalidated'
+  [FAIL] password='skyscraperREALITY'
+  [FAIL] password='project-skyscraperREALITY'
+  [FAIL] password='TR4CEREALITY'
+  [FAIL] password='REALITYTR4CE'
+
+=== project-skyscraper (3,578,047 bytes) ===
+  [?] password='' -> Enter passphrase: steghide: could not get terminal attributes.
+  [?] password='REALITY' -> 2 [main] steghide 2400 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    882 [main] steghide
+  [?] password='validated' -> 3 [main] steghide 6104 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    726 [main] steghide
+  [?] password='20050413' -> 3 [main] steghide 8560 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    700 [main] steghide
+  [?] password='112819' -> 3 [main] steghide 12580 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    639 [main] steghide
+  [?] password='20050413112819' -> 3 [main] steghide 1360 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    646 [main] steghide
+  [?] password='skyscraper' -> 2 [main] steghide 3720 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    610 [main] steghide
+  [?] password='project-skyscraper' -> 3 [main] steghide 8652 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    711 [main] steghide
+  [?] password='TR4CE' -> 2 [main] steghide 13992 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    644 [main] steghide
+  [?] password='cavitated' -> 3 [main] steghide 14188 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    632 [main] steghide
+  [?] password='activated' -> 3 [main] steghide 2272 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    651 [main] steghide
+  [?] password='memory' -> 3 [main] steghide 11536 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    617 [main] steghide
+  [?] password='bloc' -> 3 [main] steghide 11612 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    620 [main] steghide
+  [?] password='tower' -> 3 [main] steghide 13020 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    737 [main] steghide
+  [?] password='swallow' -> 3 [main] steghide 3540 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    623 [main] steghide
+  [?] password='april' -> 3 [main] steghide 5016 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    691 [main] steghide
+  [?] password='atlas' -> 3 [main] steghide 13320 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    635 [main] steghide
+  [?] password='shadowcheck' -> 3 [main] steghide 9540 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    756 [main] steghide
+  [?] password='shadowcheck-1912' -> 3 [main] steghide 10840 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    777 [main] steghide
+  [?] password='Project_Skyscraper' -> 4 [main] steghide 3316 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    750 [main] steghide
+  [?] password='Connection' -> 3 [main] steghide 1356 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    704 [main] steghide
+  [?] password='Access' -> 3 [main] steghide 13476 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    618 [main] steghide
+  [?] password='denied' -> 2 [main] steghide 9860 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    634 [main] steghide
+  [?] password='HELLO' -> 3 [main] steghide 5460 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    665 [main] steghide
+  [?] password='WORLD' -> 4 [main] steghide 9572 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    609 [main] steghide
+  [?] password='origin' -> 3 [main] steghide 5876 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    646 [main] steghide
+  [?] password='no/value' -> 3 [main] steghide 8304 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    692 [main] steghide
+  [?] password='sleeping' -> 3 [main] steghide 6512 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    693 [main] steghide
+  [?] password='security' -> 3 [main] steghide 2700 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    729 [main] steghide
+  [?] password='breached' -> 3 [main] steghide 9984 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    648 [main] steghide
+  [?] password='critical' -> 2 [main] steghide 3024 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    740 [main] steghide
+  [?] password='external' -> 3 [main] steghide 2732 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    606 [main] steghide
+  [?] password='unauthorized' -> 3 [main] steghide 356 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    853 [main] steghide 
+  [?] password='178879468' -> 3 [main] steghide 5796 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    734 [main] steghide
+  [?] password='1113391699' -> 3 [main] steghide 10744 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    597 [main] steghide
+  [?] password='1779708960' -> 3 [main] steghide 1500 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    682 [main] steghide
+  [?] password='1778779680' -> 3 [main] steghide 11396 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    674 [main] steghide
+  [?] password='1779139140' -> 3 [main] steghide 1016 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    613 [main] steghide
+  [?] password='1779383141' -> 3 [main] steghide 11256 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    908 [main] steghide
+  [?] password='1113384720' -> 2 [main] steghide 14200 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    625 [main] steghide
+  [?] password='password' -> 2 [main] steghide 10916 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    671 [main] steghide
+  [?] password='secret' -> 2 [main] steghide 4592 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    652 [main] steghide
+  [?] password='hidden' -> 3 [main] steghide 5820 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    619 [main] steghide
+  [?] password='key' -> 3 [main] steghide 13708 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    774 [main] steghide
+  [?] password='admin' -> 2 [main] steghide 2720 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    638 [main] steghide
+  [?] password='123456' -> 3 [main] steghide 2288 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    682 [main] steghide
+  [?] password='password1' -> 3 [main] steghide 12476 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    633 [main] steghide
+  [?] password='2005-04-13' -> 3 [main] steghide 10876 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    749 [main] steghide
+  [?] password='04-13-2005' -> 3 [main] steghide 4672 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    795 [main] steghide
+  [?] password='13-04-2005' -> 3 [main] steghide 13784 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    735 [main] steghide
+  [?] password='Apr132005' -> 3 [main] steghide 14176 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    878 [main] steghide
+  [?] password='April132005' -> 3 [main] steghide 13116 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    620 [main] steghide
+  [?] password='11:28:19' -> 3 [main] steghide 5960 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    671 [main] steghide
+  [?] password='1128' -> 3 [main] steghide 9464 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    722 [main] steghide
+  [?] password='2819' -> 3 [main] steghide 8108 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    676 [main] steghide
+  [?] password='11:28' -> 3 [main] steghide 11364 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    895 [main] steghide
+  [?] password='28:19' -> 3 [main] steghide 4352 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    692 [main] steghide
+  [?] password='the_architect' -> 3 [main] steghide 12172 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    724 [main] steghide
+  [?] password='TheArchitect' -> 3 [main] steghide 13408 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    616 [main] steghide
+  [?] password='ProjectSkyscraper' -> 3 [main] steghide 14312 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    620 [main] steghide
+  [?] password='projectskyscraper' -> 3 [main] steghide 7364 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    651 [main] steghide
+  [?] password='NoMansSky' -> 3 [main] steghide 2792 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    739 [main] steghide
+  [?] password='NoMansSkyTheGame' -> 3 [main] steghide 7956 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    731 [main] steghide
+  [?] password='nomanssky' -> 3 [main] steghide 11208 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    647 [main] steghide
+  [?] password='NMS' -> 3 [main] steghide 9884 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    710 [main] steghide
+  [?] password='Atlas' -> 3 [main] steghide 1068 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    703 [main] steghide
+  [?] password='Atlas65' -> 2 [main] steghide 10232 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    740 [main] steghide
+  [?] password='atlas-65' -> 3 [main] steghide 11872 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    934 [main] steghide
+  [?] password='shadowcheck1912' -> 3 [main] steghide 10424 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    644 [main] steghide
+  [?] password='shadowcheck_1912' -> 2 [main] steghide 12964 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    874 [main] steghide
+  [?] password='security_breach' -> 3 [main] steghide 2084 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    658 [main] steghide
+  [?] password='securitybreach' -> 3 [main] steghide 5364 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    729 [main] steghide
+  [?] password='SECURITY_BREACH_CONFIRMED' -> 3 [main] steghide 800 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    912 [main] steghide 
+  [?] password='CRITICAL' -> 3 [main] steghide 14216 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    679 [main] steghide
+  [?] password='External_unauthorized' -> 3 [main] steghide 2156 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    719 [main] steghide
+  [?] password='connection_detected' -> 3 [main] steghide 13244 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    700 [main] steghide
+  [?] password='access_denied' -> 3 [main] steghide 6392 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    635 [main] steghide
+  [?] password='ConnectionDetected' -> 3 [main] steghide 6676 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    670 [main] steghide
+  [?] password='AccessDenied' -> 2 [main] steghide 7140 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    608 [main] steghide
+  [?] password='ACCESS_DENIED' -> 3 [main] steghide 11628 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    648 [main] steghide
+  [?] password='CONNECTION_DETECTED' -> 3 [main] steghide 2180 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    637 [main] steghide
+  [?] password='Access_Denied' -> 3 [main] steghide 9812 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    647 [main] steghide
+  [?] password='Connection_Detected' -> 3 [main] steghide 9740 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    691 [main] steghide
+  [?] password='memory_bloc' -> 3 [main] steghide 10740 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    631 [main] steghide
+  [?] password='memorybloc' -> 3 [main] steghide 7812 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    980 [main] steghide
+  [?] password='sleep_mode' -> 3 [main] steghide 7216 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    717 [main] steghide
+  [?] password='sleepmode' -> 2 [main] steghide 3196 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    634 [main] steghide
+  [?] password='SLEEP_MODE' -> 3 [main] steghide 10572 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    805 [main] steghide
+  [?] password='security_log' -> 3 [main] steghide 13596 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    658 [main] steghide
+  [?] password='securitylog' -> 4 [main] steghide 12980 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    774 [main] steghide
+  [?] password='TRACE' -> 3 [main] steghide 9064 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    634 [main] steghide
+  [?] password='trace_on_hold' -> 3 [main] steghide 6848 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    647 [main] steghide
+  [?] password='trust_level' -> 2 [main] steghide 13980 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    670 [main] steghide
+  [?] password='BYPASSED' -> 3 [main] steghide 13316 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    613 [main] steghide
+  [?] password='bypassed' -> 3 [main] steghide 10344 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    670 [main] steghide
+  [?] password='bypass' -> 3 [main] steghide 13428 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    693 [main] steghide
+  [?] password='trustlevel' -> 3 [main] steghide 9264 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    619 [main] steghide
+  [?] password='determine_security_status' -> 2 [main] steghide 976 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    733 [main] steghide 
+  [?] password='shadow_integrity' -> 3 [main] steghide 13092 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    599 [main] steghide
+  [?] password='multiple_uncoordinated' -> 3 [main] steghide 4604 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    737 [main] steghide
+  [?] password='brute_force' -> 3 [main] steghide 2468 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    830 [main] steghide
+  [?] password='haphazard' -> 3 [main] steghide 224 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    601 [main] steghide 
+  [?] password='coherent_pattern' -> 3 [main] steghide 11288 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    846 [main] steghide
+  [?] password='distributed_sources' -> 3 [main] steghide 1464 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    723 [main] steghide
+  [?] password='us-gb-es-fr-mx-de-ca-ie-be-au' -> 3 [main] steghide 8640 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    746 [main] steghide
+  [?] password='USGBESFRMXDECAIEBEAU' -> 3 [main] steghide 12660 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    675 [main] steghide
+  [?] password='They can see the tower but not the one inside' -> 2 [main] steghide 10472 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    826 [main] steghide
+  [?] password='theycanseethetower' -> 3 [main] steghide 1852 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    727 [main] steghide
+  [?] password='nottheoneinside' -> 2 [main] steghide 8544 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    658 [main] steghide
+  [?] password='towerinside' -> 2 [main] steghide 4700 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    708 [main] steghide
+  [?] password='inside' -> 3 [main] steghide 2076 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    739 [main] steghide
+  [?] password='tower' -> 3 [main] steghide 7972 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    659 [main] steghide
+  [?] password='swallow' -> 4 [main] steghide 12088 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    764 [main] steghide
+  [?] password='swallows' -> 3 [main] steghide 12036 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    750 [main] steghide
+  [?] password='wings' -> 2 [main] steghide 11760 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    682 [main] steghide
+  [?] password='consummation' -> 3 [main] steghide 10468 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    756 [main] steghide
+  [?] password='awakened' -> 2 [main] steghide 11980 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    688 [main] steghide
+  [?] password='birds' -> 3 [main] steghide 11632 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    833 [main] steghide
+  [?] password='desire' -> 3 [main] steghide 10336 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    795 [main] steghide
+  [?] password='evening' -> 3 [main] steghide 1280 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    658 [main] steghide
+  [?] password='june' -> 3 [main] steghide 11664 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    623 [main] steghide
+  [?] password='endures' -> 2 [main] steghide 7940 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    694 [main] steghide
+  [?] password='green' -> 2 [main] steghide 1204 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    603 [main] steghide
+  [?] password='sunday_morning' -> 3 [main] steghide 11824 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    700 [main] steghide
+  [?] password='sundaymorning' -> 3 [main] steghide 8708 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    719 [main] steghide
+  [?] password='wallace_stevens' -> 3 [main] steghide 2964 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    758 [main] steghide
+  [?] password='wallacestevens' -> 3 [main] steghide 6248 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    641 [main] steghide
+  [?] password='stevens' -> 3 [main] steghide 10364 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    773 [main] steghide
+  [?] password='REALITY20050413' -> 3 [main] steghide 11448 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    668 [main] steghide
+  [?] password='REALITY112819' -> 3 [main] steghide 2104 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    668 [main] steghide
+  [?] password='20050413REALITY' -> 3 [main] steghide 10248 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    663 [main] steghide
+  [?] password='112819REALITY' -> 3 [main] steghide 6260 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    706 [main] steghide
+  [?] password='validatedREALITY' -> 3 [main] steghide 6372 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    621 [main] steghide
+  [?] password='REALITYvalidated' -> 3 [main] steghide 1604 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    656 [main] steghide
+  [?] password='skyscraperREALITY' -> 3 [main] steghide 900 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    762 [main] steghide 
+  [?] password='project-skyscraperREALITY' -> 3 [main] steghide 604 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    631 [main] steghide 
+  [?] password='TR4CEREALITY' -> 3 [main] steghide 13052 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    661 [main] steghide
+  [?] password='REALITYTR4CE' -> 3 [main] steghide 13944 handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+    831 [main] steghide

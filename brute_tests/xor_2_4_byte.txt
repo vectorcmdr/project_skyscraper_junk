@@ -1,0 +1,9 @@
+2-BYTE AND 4-BYTE XOR BRUTE FORCE
+============================================================
+
+--- 2-byte XOR with printable characters ---
+Total 2-byte findings: 0
+
+--- 4-byte XOR with password-derived keys ---
+
+-
