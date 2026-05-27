@@ -1,0 +1,147 @@
+[
+  {
+    "marker": "0xD8",
+    "pos": 0,
+    "len": 0,
+    "type": "standalone"
+  },
+  {
+    "marker": "0xE0",
+    "pos": 2,
+    "len": 16,
+    "data_preview": "4a46494600010201004800480000",
+    "type": "segment"
+  },
+  {
+    "marker": "0xE1",
+    "pos": 20,
+    "len": 4409,
+    "data_preview": "4578696600004d4d002a000000080009011200030000000100010000011a0005",
+    "type": "segment"
+  },
+  {
+    "marker": "0xEE",
+    "pos": 4431,
+    "len": 14,
+    "data_preview": "41646f626500640000000001",
+    "type": "segment"
+  },
+  {
+    "marker": "0xE2",
+    "pos": 4447,
+    "len": 3160,
+    "data_preview": "4943435f50524f46494c4500010100000c484c696e6f021000006d6e74725247",
+    "type": "segment"
+  },
+  {
+    "marker": "0xDB",
+    "pos": 7609,
+    "len": 67,
+    "data_preview": "0001010101010101010101010101010101010101010101010101010101010101",
+    "type": "segment"
+  },
+  {
+    "marker": "0xDB",
+    "pos": 7678,
+    "len": 67,
+    "data_preview": "0101010101010101010101020201020203030303030303030303030303030303",
+    "type": "segment"
+  },
+  {
+    "marker": "0xC2",
+    "pos": 7747,
+    "len": 17,
+    "data_preview": "0802e604bc03011100021101031101",
+    "type": "segment"
+  },
+  {
+    "marker": "0xC4",
+    "pos": 7766,
+    "len": 30,
+    "data_preview": "0000020203010101010000000000000000040503060102070008090a",
+    "type": "segment"
+  },
+  {
+    "marker": "0xC4",
+    "pos": 7798,
+    "len": 52,
+    "data_preview": "1000020202020203000202020202010207010203040005111213062114072215",
+    "type": "segment"
+  },
+  {
+    "marker": "0xC4",
+    "pos": 7852,
+    "len": 28,
+    "data_preview": "0100020301010101000000000000000000020301040500060708",
+    "type": "segment"
+  },
+  {
+    "marker": "0xC4",
+    "pos": 7882,
+    "len": 78,
+    "data_preview": "1100020103030204050302040405000213010211210304003112410551612213",
+    "type": "segment"
+  },
+  {
+    "marker": "0xC4",
+    "pos": 7962,
+    "len": 74,
+    "data_preview": "1200010303020403050702050302040407010011022131034112516122047181",
+    "type": "segment"
+  },
+  {
+    "marker": "0xDA",
+    "pos": 8038,
+    "len": 12,
+    "data_preview": "03010002100310000000",
+    "type": "segment"
+  },
+  {
+    "marker": "0xDA",
+    "pos": 40067,
+    "len": 8,
+    "data_preview": "010200010500",
+    "type": "segment"
+  },
+  {
+    "marker": "0xDA",
+    "pos": 76429,
+    "len": 8,
+    "data_preview": "010300010500",
+    "type": "segment"
+  },
+  {
+    "marker": "0xDA",
+    "pos": 113747,
+    "len": 8,
+    "data_preview": "010100010500",
+    "type": "segment"
+  },
+  {
+    "marker": "0xDA",
+    "pos": 165060,
+    "len": 8,
+    "data_preview": "010202063f00",
+    "type": "segment"
+  },
+  {
+    "marker": "0xDA",
+    "pos": 225016,
+    "len": 8,
+    "data_preview": "010302063f00",
+    "type": "segment"
+  },
+  {
+    "marker": "0xDA",
+    "pos": 287656,
+    "len": 8,
+    "data_preview": "010101063f00",
+    "type": "segment"
+  },
+  {
+    "marker": "0xD9",
+    "pos": 489351,
+    "len": 0,
+    "type": "EOI"
+  }
+]
