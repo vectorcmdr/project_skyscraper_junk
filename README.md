@@ -4,7 +4,7 @@
 
 Shared findings and other junk for the No Man's Sky 'Project Skyscraper' ARG.
 
-Contains static site mirror for file and source refence, original images, image forensics (and outputs) and various other reports.
+Contains static site mirror for file and source reference, original images, image forensics (and outputs) and various other reports.
 
 ### Layout:
 
