@@ -1,30 +1,123 @@
-SPECTROGRAM / AUDIO ANALYSIS REPORT
-======================================================================
-Source: connection-detected-access-denied-v0-8c7atk6y141h1.png
-Dimensions: 1600x1000, channels: 3
+================================================================================
+SPECTROGRAM ANALYSIS REPORT
+Sample rate: 44100 Hz
+================================================================================
 
---- METHOD 1: Image-as-Spectrogram (time=X, freq=Y) ---
-  Method 1a (normal orientation): 3196800 samples, saved as method1a_normal.wav
-  Method 1b (flipped, low-freq-at-bottom): 3196800 samples
+--- Orientation: original ---
+Grayscale shape: 1000x1600
 
---- METHOD 2: Griffin-Lim Iterative Phase Reconstruction ---
-  Griffin-Lim (50 iter, downsampled 4x): 199200 samples
+[Row-by-row scan] original_row_scan.wav -> original_row_scan_spectrogram.png
+  Duration: 36.28s | Mean: 35.2 | Std: 33.6
+  Mean spectral centroid: 1423.9 Hz | Dominant freq: 775.2 Hz
 
---- METHOD 3: Raw Pixel Data as Audio ---
-  3a: Raw grayscale as audio, 1600000 samples
-  3b: Row average as audio @ 8kHz, 1000 samples
-  3c: Column average as audio @ 8kHz, 1600 samples
-  3d: R-G stereo interleaved, 1600000 frames
+[Column-by-column scan] original_col_scan.wav -> original_col_scan_spectrogram.png
+  Duration: 36.28s | Mean: 35.2 | Std: 33.6
+  Mean spectral centroid: 7829.8 Hz | Dominant freq: 516.8 Hz
 
---- METHOD 4: Color-Encoded Spectrogram ---
-  4a: Channel R as spectrogram, 3196800 samples
-  4a: Channel G as spectrogram, 3196800 samples
-  4a: Channel B as spectrogram, 3196800 samples
+[Main diagonal scan] original_diag_main_scan.wav -> original_diag_main_scan_spectrogram.png
+  Duration: 36.28s | Mean: 35.2 | Std: 33.6
+  Mean spectral centroid: 7782.7 Hz | Dominant freq: 516.8 Hz
 
---- METHOD 5: Alternative Scan Patterns ---
-  5a: Diagonal scan audio, 1600000 samples
-  5b: Snake scan audio, 1600000 samples
+[Anti-diagonal scan] original_diag_anti_scan.wav -> original_diag_anti_scan_spectrogram.png
+  Duration: 36.28s | Mean: 35.2 | Std: 33.6
+  Mean spectral centroid: 7884.1 Hz | Dominant freq: 602.9 Hz
 
---- METHOD 6: 2D FFT Analysis ---
-  6: 2D FFT magnitude spectrum saved
-  6: Autocorrelation saved
+[Zigzag diagonal scan] original_zigzag_scan.wav -> original_zigzag_scan_spectrogram.png
+  Duration: 36.28s | Mean: 35.2 | Std: 33.6
+  Mean spectral centroid: 8008.6 Hz | Dominant freq: 516.8 Hz
+
+[Griffin-Lim (rows=freq)] original_griffinlim_rowsfreq.wav -> original_griffinlim_rowsfreq_spectrogram.png
+  Duration: 18.09s | Mean: 127.0 | Std: 22.9
+  Mean spectral centroid: 13171.1 Hz | Dominant freq: 21963.9 Hz
+
+[Griffin-Lim (cols=freq)] original_griffinlim_colsfreq.wav -> original_griffinlim_colsfreq_spectrogram.png
+  Duration: 18.10s | Mean: 127.0 | Std: 11.5
+  Mean spectral centroid: 11108.7 Hz | Dominant freq: 10852.7 Hz
+
+--- Orientation: rotated_90cw ---
+Grayscale shape: 1600x1000
+
+[Row-by-row scan] rotated_90cw_row_scan.wav -> rotated_90cw_row_scan_spectrogram.png
+  Duration: 36.28s | Mean: 35.2 | Std: 33.6
+  Mean spectral centroid: 7828.6 Hz | Dominant freq: 516.8 Hz
+
+[Column-by-column scan] rotated_90cw_col_scan.wav -> rotated_90cw_col_scan_spectrogram.png
+  Duration: 36.28s | Mean: 35.2 | Std: 33.6
+  Mean spectral centroid: 1422.8 Hz | Dominant freq: 775.2 Hz
+
+[Main diagonal scan] rotated_90cw_diag_main_scan.wav -> rotated_90cw_diag_main_scan_spectrogram.png
+  Duration: 36.28s | Mean: 35.2 | Std: 33.6
+  Mean spectral centroid: 7883.5 Hz | Dominant freq: 602.9 Hz
+
+[Anti-diagonal scan] rotated_90cw_diag_anti_scan.wav -> rotated_90cw_diag_anti_scan_spectrogram.png
+  Duration: 36.28s | Mean: 35.2 | Std: 33.6
+  Mean spectral centroid: 7782.1 Hz | Dominant freq: 516.8 Hz
+
+[Zigzag diagonal scan] rotated_90cw_zigzag_scan.wav -> rotated_90cw_zigzag_scan_spectrogram.png
+  Duration: 36.28s | Mean: 35.2 | Std: 33.6
+  Mean spectral centroid: 8023.5 Hz | Dominant freq: 516.8 Hz
+
+[Griffin-Lim (rows=freq)] rotated_90cw_griffinlim_rowsfreq.wav -> rotated_90cw_griffinlim_rowsfreq_spectrogram.png
+  Duration: 18.10s | Mean: 127.0 | Std: 11.0
+  Mean spectral centroid: 10973.1 Hz | Dominant freq: 11197.3 Hz
+
+[Griffin-Lim (cols=freq)] rotated_90cw_griffinlim_colsfreq.wav -> rotated_90cw_griffinlim_colsfreq_spectrogram.png
+  Duration: 18.09s | Mean: 127.0 | Std: 24.6
+  Mean spectral centroid: 13175.7 Hz | Dominant freq: 21963.9 Hz
+
+--- Orientation: rotated_90ccw ---
+Grayscale shape: 1600x1000
+
+[Row-by-row scan] rotated_90ccw_row_scan.wav -> rotated_90ccw_row_scan_spectrogram.png
+  Duration: 36.28s | Mean: 35.2 | Std: 33.6
+  Mean spectral centroid: 7828.5 Hz | Dominant freq: 516.8 Hz
+
+[Column-by-column scan] rotated_90ccw_col_scan.wav -> rotated_90ccw_col_scan_spectrogram.png
+  Duration: 36.28s | Mean: 35.2 | Std: 33.6
+  Mean spectral centroid: 1422.9 Hz | Dominant freq: 775.2 Hz
+
+[Main diagonal scan] rotated_90ccw_diag_main_scan.wav -> rotated_90ccw_diag_main_scan_spectrogram.png
+  Duration: 36.28s | Mean: 35.2 | Std: 33.6
+  Mean spectral centroid: 7883.7 Hz | Dominant freq: 602.9 Hz
+
+[Anti-diagonal scan] rotated_90ccw_diag_anti_scan.wav -> rotated_90ccw_diag_anti_scan_spectrogram.png
+  Duration: 36.28s | Mean: 35.2 | Std: 33.6
+  Mean spectral centroid: 7781.9 Hz | Dominant freq: 516.8 Hz
+
+[Zigzag diagonal scan] rotated_90ccw_zigzag_scan.wav -> rotated_90ccw_zigzag_scan_spectrogram.png
+  Duration: 36.28s | Mean: 35.2 | Std: 33.6
+  Mean spectral centroid: 8023.5 Hz | Dominant freq: 516.8 Hz
+
+[Griffin-Lim (rows=freq)] rotated_90ccw_griffinlim_rowsfreq.wav -> rotated_90ccw_griffinlim_rowsfreq_spectrogram.png
+  Duration: 18.10s | Mean: 127.0 | Std: 12.0
+  Mean spectral centroid: 11117.4 Hz | Dominant freq: 10852.7 Hz
+
+[Griffin-Lim (cols=freq)] rotated_90ccw_griffinlim_colsfreq.wav -> rotated_90ccw_griffinlim_colsfreq_spectrogram.png
+  Duration: 18.09s | Mean: 127.1 | Std: 22.3
+  Mean spectral centroid: 8977.3 Hz | Dominant freq: 1894.9 Hz
+
+================================================================================
+QUALITATIVE OBSERVATIONS
+================================================================================
+
+1. Row and column scans produce the longest audio (~36 s) because every pixel
+   is used exactly once. The spectrograms reveal strong horizontal or vertical
+   stripe artifacts corresponding to the image's spatial periodicity.
+
+2. Diagonal and zigzag scans also use all pixels once but reorder them,
+   which tends to smear spatial periodicity into broadband noise in the
+   spectrogram, lowering the dominance of discrete harmonic structures.
+
+3. Griffin-Lim reconstructions are shorter (~18 s) because the STFT overlap
+   reduces the effective sample count relative to frame count.
+   They attempt to recover a coherent time-domain signal from the image's
+   magnitude structure; the resulting spectrograms show energy concentrated
+   in bands that mirror the original image's luminance gradients.
+
+4. Rotating the image swaps the roles of rows and columns. Consequently,
+   row-scan spectrograms of the rotated images resemble column-scan
+   spectrograms of the original, and vice-versa.
+
+5. Because the source image contains sharp edges, the raw pixel scans contain
+   many abrupt 0->255 transitions. These create broad-spectrum impulsive noise
+   in the resulting audio and spectrograms. Pop-rocks for your ears!
