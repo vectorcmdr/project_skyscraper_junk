@@ -1,0 +1,29 @@
+=== Metadata for connection-detected-access-denied-v0-8c7atk6y141h1 ===
+Format: PNG
+Mode: RGB
+Size: (1600, 1000)
+No EXIF data.
+--- Raw PNG Chunks ---
+Chunk 'IHDR', length 13, offset 8
+Chunk 'IDAT', length 32768, offset 33
+Chunk 'IDAT', length 32768, offset 32813
+Chunk 'IDAT', length 32768, offset 65593
+Chunk 'IDAT', length 32768, offset 98373
+Chunk 'IDAT', length 32768, offset 131153
+Chunk 'IDAT', length 32768, offset 163933
+Chunk 'IDAT', length 32768, offset 196713
+Chunk 'IDAT', length 32768, offset 229493
+Chunk 'IDAT', length 32768, offset 262273
+Chunk 'IDAT', length 32768, offset 295053
+Chunk 'IDAT', length 32768, offset 327833
+Chunk 'IDAT', length 32768, offset 360613
+Chunk 'IDAT', length 32768, offset 393393
+Chunk 'IDAT', length 32768, offset 426173
+Chunk 'IDAT', length 32768, offset 458953
+Chunk 'IDAT', length 32768, offset 491733
+Chunk 'IDAT', length 32768, offset 524513
+Chunk 'IDAT', length 32768, offset 557293
+Chunk 'IDAT', length 32768, offset 590073
+Chunk 'IDAT', length 32768, offset 622853
+Chunk 'IDAT', length 26348, offset 655633
+Chunk 'IEND', length 0, offset 681993
