@@ -1,0 +1,48 @@
+project-skyscraper.jpg (root)
+File: 3,578,047 bytes Entropy: 7.9699 (uniform, ~full random) Std dev: 0.0168 (consistent with encrypted container)
+
+Tests performed:
+
+AES (all modes): ECB, CBC, CTR, CFB, OFB with keys derived from ARG-related words/phrases
+Blowfish, 3DES, DES: No valid decryption
+RC4, ChaCha20, Salsa20: No valid decryption
+Single-byte XOR: All 256 keys — no valid result
+2-byte XOR: All printable pairs — no valid result
+4-byte XOR: Password-derived keys — no valid result
+Archive signature scan: ZIP (PK), RAR, 7z, GZ, BZ2, XZ — found at ~30 offsets but all invalid
+VeraCrypt volume check: High entropy, uniform distribution, but no boot sector signatures
+
+File is either strongly encrypted with an unknown key, or it's a container format we haven't identified. No successful decryption.
+
+All other container files tested with same methods. No successful decryptions.
+
+
+DCT Coefficient LSB Analysis
+Forward 2D DCT applied to decoded pixels, LSB of each coefficient analyzed:
+
+File			LSB % Ones	X2 	p-value	Verdict
+TR4CE			62.59%		~0	Confirmed steganography
+IMG_00004		~65%		~0	Confirmed steganography
+IMG_00004_1		62.59%		~0	Confirmed steganography
+project-skyscraper	69.58%		~0	Confirmed steganography
+Normal JPEG		~50%		>0.05	Random (expected)
+
+All 4 container files have DCT coefficients whose LSBs are biased toward 1, a classic signature of DCT-domain steganography (JSteg, F5, nsF5, OutGuess, etc.).
+The payload is confirmed to exist but cannot be extracted without the proper decoder.
+
+
+Two versions of project-skyscraper.jpg issue:
+
+Property	Root Version			Media Version
+Path		~\project-skyscraper.jpg	~\site_27_5_n2\media\project-skyscraper.jpg
+Size		3,578,047 bytes			3,588,117 bytes
+DQT		Anomalous (1-3) only		Standard + anomalous
+EXIF metadata	None				Present (APP1, 6858 bytes)
+Steghide	CRASHES (access violation)	Fails normally
+
+Note: The media version contains a standard EXIF thumbnail (160×160) embedded inside the APP1 segment at offset 0x394.
+This is normal metadata behavior and not a hidden secret image. The root version has been stripped of all EXIF metadata.
+
+Next actions:
+
+Additional passes on media version project-skyscraper.jpg -> write custom extractor: progressive Huffman decoder + stego algorithm implementation?
