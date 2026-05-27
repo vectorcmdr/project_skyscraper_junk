@@ -1,0 +1,16 @@
+{
+  "size": 71865,
+  "md5": "e4ea3849fcc69a3cb14989386efebc4a",
+  "sha256": "9d489851b4166fc9cfb8176c3d68c6849d58fb368b86d80bbbaedad5e63cb501",
+  "first_16_hex": "ffd8ffe000104a464946000102010048",
+  "last_16_hex": "6db7e3fa83eeb6ce9db61c7ab1b7ffd9",
+  "format": "JPEG",
+  "mode": "RGB",
+  "width": 624,
+  "height": 181,
+  "dpi": [
+    72,
+    72
+  ],
+  "compression": null
+}
