@@ -1,0 +1,24 @@
+# Diff: https://project-skyscraper.com/tr4ce/
+# File: html/tr4ce.html
+# Timestamp: 2026-05-28 14:15:43 UTC
+# Lines: 459 old -> 459 new
+# Beautified: yes
+--- old/html/tr4ce.html
++++ new/html/tr4ce.html
+@@ -331,7 +331,7 @@
+         "isWpConsentApiActive": false
+     },
+     "isLegacyEventLoaded": "",
+-    "customEventAjaxUrl": "https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=bdcd5525ad",
++    "customEventAjaxUrl": "https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=29a88caf91",
+     "onlineParams": {
+         "wp_statistics_hit": 1,
+         "source_type": "post_type_attachment",
+@@ -454,6 +454,6 @@
+ </body>
+ </html>
+ <!--
+-	generated in 0.260 seconds
++	generated in 0.385 seconds
+ 	62335 bytes batcached for 300 seconds
+ -->

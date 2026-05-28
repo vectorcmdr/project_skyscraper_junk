@@ -1,6 +1,6 @@
 {
   "Server": "nginx",
-  "Date": "Thu, 28 May 2026 01:13:01 GMT",
+  "Date": "Thu, 28 May 2026 14:24:16 GMT",
   "Content-Type": "text/html; charset=UTF-8",
   "Transfer-Encoding": "chunked",
   "Connection": "close",
@@ -12,5 +12,5 @@
   "Link": "<https://wp.me/phdnFZ-4l>; rel=shortlink",
   "X-ac": "1.syd _atomic_bur STALE",
   "Alt-Svc": "clear",
-  "Server-Timing": "a8c-cdn, dc;desc=syd, cache;desc=STALE;dur=4.0"
+  "Server-Timing": "a8c-cdn, dc;desc=syd, cache;desc=STALE;dur=1.0"
 }

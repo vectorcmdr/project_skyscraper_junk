@@ -1,0 +1,13 @@
+# Diff: https://project-skyscraper.com/sitemap-1.xml
+# File: discovery/sitemap-1.xml
+# Timestamp: 2026-05-28 14:15:39 UTC
+# Lines: 174 old -> 174 new
+# Beautified: yes
+--- old/discovery/sitemap-1.xml
++++ new/discovery/sitemap-1.xml
+@@ -171,4 +171,4 @@
+   <loc>https://project-skyscraper.com/2026/05/27/sec-log-reboot/</loc>
+   <lastmod>2026-05-27T22:00:03Z</lastmod>
+  </url>
+-</urlset>+</urlset>
++</urlset>

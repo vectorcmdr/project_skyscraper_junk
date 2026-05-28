@@ -1,0 +1,12 @@
+# Diff: https://project-skyscraper.com/image-sitemap-1.xml
+# File: discovery/image-sitemap-1.xml
+# Timestamp: 2026-05-28 10:00:34 UTC
+# Lines: 55 old -> 55 new
+--- old/discovery/image-sitemap-1.xml
++++ new/discovery/image-sitemap-1.xml
+@@ -52,4 +52,4 @@
+    <image:loc>https://project-skyscraper.com/wp-content/uploads/2005/04/IMG_00004_1.jpg</image:loc>
+   </image:image>
+  </url>
+-</urlset>
++</urlset>

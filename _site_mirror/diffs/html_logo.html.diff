@@ -1,0 +1,27 @@
+# Diff: https://project-skyscraper.com/logo/
+# File: html/logo.html
+# Timestamp: 2026-05-28 14:15:43 UTC
+# Lines: 463 old -> 459 new
+# Beautified: yes
+--- old/html/logo.html
++++ new/html/logo.html
+@@ -331,7 +331,7 @@
+         "isWpConsentApiActive": false
+     },
+     "isLegacyEventLoaded": "",
+-    "customEventAjaxUrl": "https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=bdcd5525ad",
++    "customEventAjaxUrl": "https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=29a88caf91",
+     "onlineParams": {
+         "wp_statistics_hit": 1,
+         "source_type": "post_type_attachment",
+@@ -454,10 +454,6 @@
+ </body>
+ </html>
+ <!--
+-	generated in 0.276 seconds
+-	62058 bytes batcached for 300 seconds
+--->
+-<!--
+ 	generated in 0.350 seconds
+ 	62058 bytes batcached for 300 seconds
+ -->
