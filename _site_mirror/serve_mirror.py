@@ -1,6 +1,6 @@
 ﻿#!/usr/bin/env python3
 """
-serve_mirror.py — Local HTTP server for the project-skyscraper.com mirror.
+serve_mirror.py - Local HTTP server for the project-skyscraper.com mirror.
 
 Rewrites all live URLs -> local paths on-the-fly so the site works fully
 offline. No mirror files are modified.
@@ -117,7 +117,7 @@ def resolve_path(request_path: str) -> Path | None:
                     if f.is_file() and f.name.startswith(last_seg):
                         return f
 
-    # .unresolved marker file — for endpoints that can't be fetched
+    # .unresolved marker file - for endpoints that can't be fetched
     # (API namespace roots, etc.) but should return a description
     for sub in SUBDIRS:
         for try_rel in (rel, rel.rstrip("/")):
@@ -133,11 +133,11 @@ def rewrite_text(text: str) -> str:
     text = text.replace(BASE_URL, "")
     text = text.replace(f"//{BASE_DOMAIN}", "")
 
-    # 2) Strip i0.wp.com (Photon CDN) — these reference project-skyscraper content
+    # 2) Strip i0.wp.com (Photon CDN) - these reference project-skyscraper content
     text = text.replace(f"https://i0.wp.com/{BASE_DOMAIN}", "")
     text = text.replace(f"//i0.wp.com/{BASE_DOMAIN}", "")
 
-    # 3) Strip other CDN hosts — they're stored under third_party/
+    # 3) Strip other CDN hosts - they're stored under third_party/
     for host in CDN_HOSTS:
         text = text.replace(f"https://{host}", "")
         text = text.replace(f"//{host}", "")
@@ -179,7 +179,7 @@ def rewrite_text(text: str) -> str:
 # --- HTTP handler ---
 
 class MirrorHandler(http.server.BaseHTTPRequestHandler):
-    # Don't log every request by default — too noisy
+    # Don't log every request by default - too noisy
     quiet = False
 
     def do_GET(self):
@@ -200,7 +200,7 @@ class MirrorHandler(http.server.BaseHTTPRequestHandler):
         except Exception as e:
             self.send_response(500)
             self.end_headers()
-            self.wfile.write(f"500 — {e}".encode())
+            self.wfile.write(f"500 - {e}".encode())
             return
 
         ext = local_path.suffix.lower()
@@ -276,7 +276,7 @@ def main():
 
     server = http.server.HTTPServer(("", port), MirrorHandler)
     print()
-    print(f"  project-skyscraper.com — Local Mirror Server")
+    print(f"  project-skyscraper.com - Local Mirror Server")
     print(f"  {MIRROR_DIR}")
     print(f"  Serving at http://localhost:{port}")
     print()

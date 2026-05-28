@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """
 project-skyscraper.com - Complete Mirror Update Script
+-vector_cmdr
 ======================================================
 Fully self-discovering. No hardcoded IDs, no hardcoded URL lists.
 Run:  python update_mirror.py
 
 Re-run anytime to check for updates. Diffs saved to diffs/.
+Change history accumulated in diffs/CHANGELOG.md.
 """
 
+import difflib
 import hashlib
 import json
 import os
@@ -22,6 +25,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 
+import jsbeautifier
+
 BASE_URL = "https://project-skyscraper.com"
 MIRROR_DIR = Path(__file__).parent.resolve()
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 project-skyscraper-mirror/1.0"
@@ -34,6 +39,61 @@ def log(msg):
     print(f"[{datetime.now().strftime('%H:%M:%S')}] {msg}")
 
 
+def _save_diff(url: str, path: Path, old_bytes: bytes, new_bytes: bytes, binary: bool = False):
+    """Generate unified diff between old and new content, save to diffs/."""
+    diff_dir = MIRROR_DIR / "diffs"
+    diff_dir.mkdir(parents=True, exist_ok=True)
+    rel = str(path.relative_to(MIRROR_DIR)).replace("\\", "/")
+    safe_name = re.sub(r'[^a-zA-Z0-9_\-.]', '_', rel) + ".diff"
+
+    if binary:
+        header = [
+            f"# Diff: {url}",
+            f"# File: {rel}",
+            f"# Timestamp: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')}",
+            f"# Binary: size changed",
+            "",
+            f"--- old/{rel}",
+            f"+++ new/{rel}",
+            f"-{_fmt_size(len(old_bytes))}",
+            f"+{_fmt_size(len(new_bytes))}",
+        ]
+        diff_path = diff_dir / f"{safe_name}"
+        diff_path.write_text("\n".join(header) + "\n", encoding="utf-8")
+        log(f"    DIFF saved: {safe_name} (size change)")
+        return
+
+    try:
+        old_text = old_bytes.decode("utf-8", errors="replace")
+        new_text = new_bytes.decode("utf-8", errors="replace")
+    except Exception:
+        return
+    old_text = _beautify_content(old_text, path)
+    new_text = _beautify_content(new_text, path)
+    old_lines = old_text.splitlines(keepends=True)
+    new_lines = new_text.splitlines(keepends=True)
+    diff_lines = list(difflib.unified_diff(
+        old_lines, new_lines,
+        fromfile=f"old/{rel}", tofile=f"new/{rel}",
+        n=3
+    ))
+    if not diff_lines:
+        return
+    if not _diff_has_real_changes("".join(diff_lines)):
+        return
+    header = [
+        f"# Diff: {url}",
+        f"# File: {rel}",
+        f"# Timestamp: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')}",
+        f"# Lines: {len(old_lines)} old -> {len(new_lines)} new",
+        "# Beautified: yes",
+        "",
+    ]
+    diff_path = diff_dir / f"{safe_name}"
+    diff_path.write_text("\n".join(header) + "".join(diff_lines), encoding="utf-8")
+    log(f"    DIFF saved: {safe_name}")
+
+
 def _fmt_size(bytes_val):
     for unit in ("B", "KB", "MB", "GB"):
         if bytes_val < 1024:
@@ -44,6 +104,70 @@ def _fmt_size(bytes_val):
 
 def _hash_bytes(data):
     return hashlib.md5(data).hexdigest()
+
+
+def _beautify_content(text: str, path: Path) -> str:
+    """Beautify minified content before diffing to avoid massive single-line diffs."""
+    ext = path.suffix.lower()
+    if ext == '.json':
+        try:
+            obj = json.loads(text)
+            return json.dumps(obj, indent=2, ensure_ascii=False) + "\n"
+        except (json.JSONDecodeError, ValueError):
+            pass
+    if ext == '.js' or ext == '.mjs':
+        try:
+            return jsbeautifier.beautify(text) + "\n"
+        except Exception:
+            pass
+    if ext == '.html':
+        try:
+            return _beautify_html_scripts(text)
+        except Exception:
+            pass
+    return text
+
+
+def _beautify_html_scripts(html: str) -> str:
+    """Find <script> blocks in HTML and beautify their JS content."""
+    def _replacer(m):
+        attrs = (m.group(1) or "").strip()
+        content = m.group(2) or ""
+        if not content.strip():
+            return m.group(0)
+        attrs_lower = attrs.lower()
+        if re.search(r'\bsrc\s*=', attrs_lower):
+            return m.group(0)
+        if 'application/json' in attrs_lower or 'application/ld+json' in attrs_lower:
+            return m.group(0)
+        try:
+            beautified = jsbeautifier.beautify(content)
+            return f'<script {attrs}>{beautified}</script>' if attrs else f'<script>{beautified}</script>'
+        except Exception:
+            return m.group(0)
+    return re.sub(
+        r'<script([^>]*?)>([\s\S]*?)</script>',
+        _replacer,
+        html,
+        flags=re.IGNORECASE
+    )
+
+
+_NOISE_RE = [
+    re.compile(r'^[ +-]\tgenerated in \d+\.\d+ seconds$'),
+    re.compile(r'^[ +-]\t\d+ bytes batcached for \d+ seconds$'),
+    re.compile(r'^[ +-]\tgenerated \d+ seconds ago$'),
+    re.compile(r'^[ +-]\tserved from batcache in \d+\.\d+ seconds$'),
+    re.compile(r'^[ +-]\texpires in \d+ seconds$'),
+    re.compile(r'^[ +-]<!--$'),
+    re.compile(r'^[ +-]-->$'),
+]
+
+def _is_noise_line(line: str) -> bool:
+    return any(r.match(line) for r in _NOISE_RE)
+
+def _filter_noise_diff_lines(lines: list) -> list:
+    return [l for l in lines if not _is_noise_line(l)]
 
 
 # --- URL -> path mapping ---
@@ -80,7 +204,8 @@ def fetch(url: str, subdir: str = "", binary: bool = False,
     path = url_to_path(url, subdir=subdir)
     path.parent.mkdir(parents=True, exist_ok=True)
 
-    old_hash = _hash_bytes(path.read_bytes()) if path.is_file() else None
+    old_bytes = path.read_bytes() if path.is_file() else None
+    old_hash = _hash_bytes(old_bytes) if old_bytes is not None else None
 
     req = urllib.request.Request(url, headers={
         "User-Agent": USER_AGENT, "Accept": "*/*", **(headers_extra or {}),
@@ -109,6 +234,9 @@ def fetch(url: str, subdir: str = "", binary: bool = False,
         stats["skipped"] += 1
         return ("skipped", path, code, content)
 
+    if old_hash is not None:
+        _save_diff(url, path, old_bytes, content, binary)
+
     path.write_bytes(content)
     if old_hash is None:
         stats["new"] += 1
@@ -129,11 +257,12 @@ _probe_lock = threading.Lock()
 
 
 def _probe_fetch(url, subdir=""):
-    """Thread-safe fetch for probe phase — minimal side effects, locked stats."""
+    """Thread-safe fetch for probe phase - minimal side effects, locked stats."""
     path = url_to_path(url, subdir=subdir)
     path.parent.mkdir(parents=True, exist_ok=True)
 
-    old_hash = _hash_bytes(path.read_bytes()) if path.is_file() else None
+    old_bytes = path.read_bytes() if path.is_file() else None
+    old_hash = _hash_bytes(old_bytes) if old_bytes is not None else None
 
     req = urllib.request.Request(url, headers={
         "User-Agent": USER_AGENT, "Accept": "*/*",
@@ -151,6 +280,10 @@ def _probe_fetch(url, subdir=""):
         with _probe_lock:
             stats["skipped"] += 1
         return ("skipped", path, code, content)
+
+    if old_hash is not None:
+        with _probe_lock:
+            _save_diff(url, path, old_bytes, content)
 
     path.write_bytes(content)
     with _probe_lock:
@@ -875,24 +1008,444 @@ def generate_manifest():
     log(f"  Manifest written: {manifest_path} ({total_files} files, {_fmt_size(total_size)})")
 
 
+def _diff_has_real_changes(diff_text):
+    """Check if a unified diff contains changes beyond WordPress auto-generated noise."""
+    changed = []
+    for line in diff_text.splitlines():
+        if line.startswith(('--- ', '+++ ', '@@', '#', 'diff --git')):
+            continue
+        if line.startswith(('-', '+')):
+            changed.append(line)
+    if not changed:
+        return False
+    for line in changed:
+        if _is_noise_line(line):
+            continue
+        if line.startswith('-') and '+' in line:
+            parts = line[1:].split('+', 1)
+            if len(parts) == 2 and parts[0].rstrip() == parts[1].rstrip():
+                continue
+        prefix = line[0]
+        other = '-' if prefix == '+' else '+'
+        stripped = line[1:].rstrip()
+        paired = any(
+            l[0] == other and l[1:].rstrip() == stripped
+            for l in changed
+        )
+        if not paired:
+            return True
+    return False
+
+
+def _reverse_patch(new_text: str, diff_content: str) -> str:
+    """Apply unified diff hunks in reverse to reconstruct the original (old) content."""
+    lines = new_text.splitlines(keepends=True)
+    hunks = []
+    diff_lines = diff_content.splitlines(keepends=True)
+    for i, line in enumerate(diff_lines):
+        ls = line.rstrip('\n\r')
+        m = re.match(r'^@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@', ls)
+        if not m:
+            continue
+        new_start = int(m.group(3)) - 1
+        new_count = int(m.group(4)) if m.group(4) else 1
+        old_hunk = []
+        j = i + 1
+        while j < len(diff_lines):
+            dl = diff_lines[j].rstrip('\n\r')
+            if re.match(r'^@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@', dl):
+                break
+            if dl and dl[0] in ('-', ' '):
+                old_hunk.append(dl[1:] + '\n')
+            j += 1
+        hunks.append((new_start, new_count, old_hunk))
+    for new_start, new_count, old_hunk in reversed(hunks):
+        lines[new_start:new_start + new_count] = old_hunk
+    return "".join(lines)
+
+
+def _forward_patch(old_text: str, diff_content: str) -> str:
+    """Apply unified diff to reconstruct the new content from old."""
+    lines = old_text.splitlines(keepends=True)
+    hunks = []
+    diff_lines = diff_content.splitlines(keepends=True)
+    for i, line in enumerate(diff_lines):
+        ls = line.rstrip('\n\r')
+        m = re.match(r'^@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@', ls)
+        if not m:
+            continue
+        old_start = int(m.group(1)) - 1
+        old_count = int(m.group(2)) if m.group(2) else 1
+        new_hunk = []
+        j = i + 1
+        while j < len(diff_lines):
+            dl = diff_lines[j].rstrip('\n\r')
+            if re.match(r'^@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@', dl):
+                break
+            if dl and dl[0] in ('+', ' '):
+                new_hunk.append(dl[1:] + '\n')
+            j += 1
+        hunks.append((old_start, old_count, new_hunk))
+    for old_start, old_count, new_hunk in reversed(hunks):
+        lines[old_start:old_start + old_count] = new_hunk
+    return "".join(lines)
+
+
+def _rebuild_diff(url: str, path: Path, old_raw: bytes, new_raw: bytes) -> str:
+    """Generate a beautified diff between old and new raw content."""
+    rel = str(path.relative_to(MIRROR_DIR)).replace("\\", "/")
+    old_text = old_raw.decode("utf-8", errors="replace")
+    new_text = new_raw.decode("utf-8", errors="replace")
+    old_text = _beautify_content(old_text, path)
+    new_text = _beautify_content(new_text, path)
+    old_lines = old_text.splitlines(keepends=True)
+    new_lines = new_text.splitlines(keepends=True)
+    diff_lines = list(difflib.unified_diff(
+        old_lines, new_lines,
+        fromfile=f"old/{rel}", tofile=f"new/{rel}", n=3
+    ))
+    header = [
+        f"# Diff: {url}", f"# File: {rel}",
+        f"# Timestamp: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')}",
+        f"# Lines: {len(old_lines)} old -> {len(new_lines)} new",
+        "# Beautified: yes", "",
+    ]
+    return "\n".join(header) + "".join(diff_lines)
+
+
+def _migrate_diffs():
+    """Rebuild all existing .diff files with beautification (one-time migration)."""
+    diff_dir = MIRROR_DIR / "diffs"
+    if not diff_dir.exists():
+        return
+    migrated = 0
+    errors = 0
+    for diff_file in sorted(diff_dir.glob("*.diff")):
+        content = diff_file.read_text(encoding="utf-8")
+        if "# Beautified: yes" in content:
+            continue
+        if "# Binary:" in content:
+            continue
+        try:
+            url_m = re.search(r'^# Diff: (.+)', content, re.MULTILINE)
+            rel_m = re.search(r'^# File: (.+)', content, re.MULTILINE)
+            if not url_m or not rel_m:
+                continue
+            url = url_m.group(1)
+            rel = rel_m.group(1)
+            content_path = MIRROR_DIR / rel
+            if not content_path.is_file():
+                continue
+            new_raw = content_path.read_bytes()
+            if len(new_raw) < 20:
+                continue
+            new_text = new_raw.decode("utf-8", errors="replace")
+            old_text = _reverse_patch(new_text, content)
+            if old_text == new_text or len(old_text) < 20:
+                # Reverse patch failed; try forward patch (current file as old)
+                old_text = new_text
+                new_text = _forward_patch(old_text, content)
+                if new_text == old_text or len(new_text) < 20:
+                    continue
+                old_raw = old_text.encode("utf-8")
+                new_raw = new_text.encode("utf-8")
+            else:
+                old_raw = old_text.encode("utf-8")
+            new_diff = _rebuild_diff(url, content_path, old_raw, new_raw)
+            if not _diff_has_real_changes(new_diff):
+                diff_file.unlink()
+                log(f"  MIGRATED (removed): {diff_file.name}")
+                migrated += 1
+                continue
+            diff_file.write_text(new_diff, encoding="utf-8")
+            migrated += 1
+            log(f"  MIGRATED: {diff_file.name} ({len(new_diff)} bytes)")
+        except Exception as e:
+            log(f"  MIGRATE ERR {diff_file.name}: {e}")
+            errors += 1
+    if migrated or errors:
+        log(f"  Diff migration complete: {migrated} rebuilt, {errors} errors")
+
+
+def _parse_changelog(path: Path) -> dict:
+    """Parse existing CHANGELOG.md into a dict of {url: {rel, size, history}}.
+
+    Each history entry is a dict with keys: timestamp, is_binary, lines.
+    Lines are raw diff content without ``` markers or HTML wrappers.
+    """
+    if not path.is_file():
+        return {}
+    text = path.read_text(encoding="utf-8")
+    entries = {}
+    current = None
+    history_lines = None
+    in_details = False
+    in_details_diff = False
+    details_lines = None
+
+    for line in text.splitlines():
+        if line.startswith("### "):
+            if current is not None:
+                if history_lines is not None:
+                    _finalize_history(current, history_lines)
+                entries[current["url"]] = current
+            url = line[4:].strip()
+            current = {"url": url, "rel": "", "size": "", "history": []}
+            history_lines = None
+            in_details = False
+            in_details_diff = False
+            details_lines = None
+        elif current is not None:
+            if current["rel"] == "" and re.match(r'^`[^`]+`\s*\(', line):
+                m = re.match(r'^`([^`]+)`\s*\(([^)]+)\)', line)
+                if m:
+                    current["rel"] = m.group(1)
+                    current["size"] = m.group(2)
+            elif line.startswith("<details>"):
+                in_details = True
+                in_details_diff = False
+                details_lines = []
+            elif line.startswith("</details>"):
+                if details_lines is not None and current is not None:
+                    ts = _extract_details_timestamp(details_lines)
+                    current["history"].append({
+                        "timestamp": ts,
+                        "lines": details_lines[:],
+                    })
+                in_details = False
+                in_details_diff = False
+                details_lines = None
+            elif in_details:
+                if line.startswith("```diff"):
+                    in_details_diff = True
+                elif line.startswith("```") and in_details_diff:
+                    in_details_diff = False
+                elif in_details_diff:
+                    if not line.startswith("<"):
+                        details_lines.append(line)
+            elif line.startswith("```diff"):
+                history_lines = []
+            elif line.startswith("```"):
+                if history_lines is not None:
+                    _finalize_history(current, history_lines)
+                    history_lines = None
+            else:
+                if history_lines is not None:
+                    history_lines.append(line)
+
+    if current is not None:
+        if history_lines is not None:
+            _finalize_history(current, history_lines)
+        entries[current["url"]] = current
+
+    return entries
+
+
+def _finalize_history(current: dict, lines: list):
+    """Store current diff lines into history (or set as current primary)."""
+    entry = {"timestamp": "", "is_binary": False, "lines": lines[:]}
+    for l in lines:
+        m = re.match(r"^# Timestamp: (.+)", l)
+        if m:
+            entry["timestamp"] = m.group(1)
+            break
+    current.setdefault("history", []).append(entry)
+
+
+def _extract_details_timestamp(lines: list) -> str:
+    """Extract timestamp from a <details> block's first diff header."""
+    for l in lines:
+        m = re.match(r"^# Timestamp: (.+)", l)
+        if m:
+            return m.group(1)
+    return ""
+
+
 def store_diff():
     if not changes:
         return
-    lines = [
-        f"# Change Report \u2014 {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')}",
-        "",
-        f"**{len(changes)} file(s) changed**",
-        "",
-    ]
+    diff_dir = MIRROR_DIR / "diffs"
+    changelog_path = diff_dir / "CHANGELOG.md"
+    meaningful = 0
+
+    old_entries = _parse_changelog(changelog_path)
+
+    new_entries = {}
     for url, path in changes:
         rel = str(path.relative_to(MIRROR_DIR)).replace("\\", "/")
         sz = _fmt_size(path.stat().st_size)
-        lines += [f"- `{url}`", f"  \u2192 `{rel}` ({sz})", ""]
 
-    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-    diff_path = MIRROR_DIR / "diffs" / f"change_{ts}.md"
-    diff_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    log(f"  Diff saved: {diff_path}")
+        safe_name = re.sub(r'[^a-zA-Z0-9_\-.]', '_', rel) + ".diff"
+        diff_file = diff_dir / safe_name
+        is_real = False
+        if diff_file.is_file():
+            content = diff_file.read_text(encoding="utf-8")
+            is_real = _diff_has_real_changes(content)
+        else:
+            is_real = True
+
+        if not is_real:
+            continue
+
+        meaningful += 1
+
+        old_entry = old_entries.get(url)
+        history = []
+        if old_entry:
+            for h in old_entry.get("history", []):
+                history.append(h)
+
+        if diff_file.is_file():
+            content = diff_file.read_text(encoding="utf-8")
+            current_lines = _filter_noise_diff_lines(content.splitlines())
+        else:
+            current_lines = None
+
+        new_entries[url] = {
+            "rel": rel,
+            "size": sz,
+            "current_diff": current_lines,
+            "history": history,
+        }
+
+    if meaningful == 0:
+        return
+
+    lines = [
+        "# Change Report",
+        "",
+        f"Last updated: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')}",
+        "",
+        f"**{meaningful} file(s) with meaningful changes**",
+        "",
+    ]
+
+    for url in sorted(new_entries.keys()):
+        entry = new_entries[url]
+        lines += [f"### {url}", f"`{entry['rel']}` ({entry['size']})", ""]
+
+        if entry["current_diff"] is not None:
+            lines.append("```diff")
+            lines += entry["current_diff"]
+            lines.append("```")
+            lines.append("")
+        else:
+            lines.append("*No line-level diff available (binary or probe fetch)*")
+            lines.append("")
+
+        for h in entry["history"]:
+            ts = h["timestamp"]
+            label = f"Previous diff ({ts})" if ts else "Previous diff"
+            hist_lines = _filter_noise_diff_lines(h["lines"])
+            lines.append("<details>")
+            lines.append(f"<summary>{label}</summary>")
+            lines.append("")
+            lines.append("```diff")
+            if hist_lines and hist_lines[-1] == "```":
+                lines += hist_lines[:-1]
+            else:
+                lines += hist_lines
+            lines.append("```")
+            lines.append("")
+            lines.append("</details>")
+            lines.append("")
+
+    lines.append("*Auto-generated by update_mirror.py*")
+    lines.append("")
+
+    changelog_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    log(f"  Change report saved: {changelog_path} ({meaningful} files)")
+
+
+def _parse_old_report(text: str) -> dict:
+    """Parse a dated change_*.md report into {url: {lines, timestamp}}."""
+    entries = {}
+    current = None
+    current_lines = None
+    header_match = re.search(r'([\d-]+ [\d:]+ UTC)', text.splitlines()[0] if text.splitlines() else "")
+    report_ts = header_match.group(1) if header_match else ""
+
+    for line in text.splitlines():
+        if line.startswith("### "):
+            if current is not None and current_lines is not None:
+                entries[current] = {"timestamp": report_ts, "lines": current_lines}
+            current = line[4:].strip()
+            current_lines = None
+        elif current is not None:
+            if current_lines is None and line.startswith("```diff"):
+                current_lines = []
+            elif current_lines is not None:
+                current_lines.append(line)
+                if line.startswith("```") and not line.startswith("```diff"):
+                    entries[current] = {"timestamp": report_ts, "lines": current_lines}
+                    current = None
+                    current_lines = None
+
+    if current is not None and current_lines is not None:
+        entries[current] = {"timestamp": report_ts, "lines": current_lines}
+
+    return entries
+
+
+def _migrate_old_reports(diff_dir: Path):
+    """Migrate old change_*.md reports into CHANGELOG.md if it doesn't exist."""
+    changelog_path = diff_dir / "CHANGELOG.md"
+    if changelog_path.is_file():
+        return
+
+    old_reports = sorted(diff_dir.glob("change_*.md"))
+    if not old_reports:
+        return
+
+    per_file = {}
+    for report_path in old_reports:
+        text = report_path.read_text(encoding="utf-8")
+        entries = _parse_old_report(text)
+        for url, data in entries.items():
+            per_file.setdefault(url, []).append(data)
+
+    lines = [
+        "# Change Report",
+        "",
+        "*Migrated from historical change reports*",
+        "",
+    ]
+
+    for url in sorted(per_file.keys()):
+        history = per_file[url]
+        recent = history[-1]
+        older = history[:-1]
+
+        path = url_to_path(url)
+        mig_rel = str(path.relative_to(MIRROR_DIR)).replace("\\", "/")
+        lines += [f"### {url}", f"`{mig_rel}`", "", "```diff"]
+        if recent["lines"] and recent["lines"][-1] == "```":
+            lines += recent["lines"][:-1]
+        else:
+            lines += recent["lines"]
+        lines += ["```", ""]
+
+        for old_entry in reversed(older):
+            ts = old_entry["timestamp"]
+            label = f"Previous diff ({ts})" if ts else "Previous diff"
+            lines.append("<details>")
+            lines.append(f"<summary>{label}</summary>")
+            lines.append("")
+            lines.append("```diff")
+            if old_entry["lines"] and old_entry["lines"][-1] == "```":
+                lines += old_entry["lines"][:-1]
+            else:
+                lines += old_entry["lines"]
+            lines.append("```")
+            lines.append("")
+            lines.append("</details>")
+            lines.append("")
+
+    lines.append("*Migrated from historical reports by update_mirror.py*")
+    lines.append("")
+
+    changelog_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    log(f"  MIGRATED {len(old_reports)} old report(s) into CHANGELOG.md")
 
 
 # --- Unresolved Marker Files ---
@@ -1072,6 +1625,208 @@ def generate_id_series_analysis():
     log(f"  ID series written: {out_path}")
 
 
+# --- Time Reference Table ---
+
+def _parse_visible_date(html_text):
+    """Extract the visible <time datetime> from post/page HTML."""
+    m = re.search(r'<time\s+datetime="([^"]+)"', html_text)
+    if m:
+        return m.group(1)
+    return None
+
+
+def _parse_meta_time(html_text, prop):
+    """Extract meta tag content by property, e.g. article:published_time."""
+    m = re.search(r'<meta\s+property="' + re.escape(prop) + r'"\s+content="([^"]+)"', html_text)
+    if m:
+        return m.group(1)
+    m = re.search(r'<meta\s+content="([^"]+)"\s+property="' + re.escape(prop) + r'"', html_text)
+    if m:
+        return m.group(1)
+    return None
+
+
+def _extract_epoch_timestamps(html_text):
+    """Extract Unix epoch timestamps from post content (e.g. 'memory bloc 1113384720:')."""
+    epochs = []
+    for m in re.finditer(r'memory\s+bloc\s+(\d{9,10})', html_text, re.IGNORECASE):
+        ts = int(m.group(1))
+        if 1000000000 < ts < 2000000000:
+            epochs.append(("memory_bloc", ts))
+    # Handle both raw quotes and HTML-encoded &quot; entities
+    for m in re.finditer(r'created_timestamp(?:[":\s]|&quot;)+(\d{9,10})', html_text):
+        ts = int(m.group(1))
+        if 1000000000 < ts < 2000000000:
+            epochs.append(("exif_created", ts))
+    return epochs
+
+
+def _epoch_to_str(epoch_sec):
+    return datetime.fromtimestamp(epoch_sec, tz=timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+
+
+def _parse_url_date(link):
+    """Extract the date segment from a WordPress post permalink like /2026/05/03/slug/."""
+    m = re.search(r'/(\d{4})/(\d{2})/(\d{2})/', link)
+    if m:
+        return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+    return None
+
+
+def _find_html_for_post(link, slug):
+    """Given a post link and slug, find the matching saved HTML page."""
+    html_dir = MIRROR_DIR / "html"
+    slug_clean = slug.replace("/", "_")
+
+    # Direct flat match
+    candidates = sorted(html_dir.glob(f"{slug_clean}.html"))
+    if candidates:
+        return candidates[0]
+
+    # Derive path from link URL
+    if link:
+        from urllib.parse import urlparse
+        parsed = urlparse(link)
+        path_str = parsed.path.rstrip("/") or "/"
+        # Try derived path
+        rel = path_str.lstrip("/")
+        candidate = html_dir / f"{rel}.html"
+        if candidate.is_file():
+            return candidate
+        # Try nested from link segments
+        leaf = link.rstrip("/").rsplit("/", 1)[-1]
+        candidates = sorted(list(html_dir.rglob(f"{leaf}.html")))
+        if candidates:
+            return candidates[0]
+
+    # Fallback: recursive glob
+    candidates = sorted(html_dir.rglob(f"{slug_clean}.html"))
+    if candidates:
+        return candidates[0]
+    candidates = sorted(html_dir.rglob(f"{slug_clean}*.html"))
+    return candidates[0] if candidates else None
+
+
+def generate_time_reference_table():
+    """Build a comprehensive time reference table for all published posts/pages."""
+    api_base = MIRROR_DIR / "api" / "wp-json" / "wp" / "v2"
+    rows = []
+
+    def collect(endpoint_dir, content_type):
+        d = api_base / endpoint_dir
+        if not d.is_dir():
+            return
+        for jf in sorted(d.glob("*.json")):
+            try:
+                data = json.loads(jf.read_bytes())
+            except (json.JSONDecodeError, ValueError):
+                continue
+            if not isinstance(data, dict) or "id" not in data:
+                continue
+            pid = data["id"]
+            slug = data.get("slug", "")
+            link = data.get("link", "")
+            api_date = data.get("date", "")
+            api_date_gmt = data.get("date_gmt", "")
+            api_modified = data.get("modified", "")
+            api_modified_gmt = data.get("modified_gmt", "")
+
+            url_date = _parse_url_date(link)
+
+            # Attempt to parse the HTML page for additional timestamps
+            html_path = _find_html_for_post(link, slug)
+            html_text = html_path.read_text(encoding="utf-8", errors="replace") if html_path else ""
+
+            visible_date = _parse_visible_date(html_text)
+            meta_published = _parse_meta_time(html_text, "article:published_time")
+            meta_modified = _parse_meta_time(html_text, "article:modified_time")
+            epochs = _extract_epoch_timestamps(html_text)
+            epoch_strs = "; ".join(
+                f"{kind}={_epoch_to_str(ts)}" for kind, ts in sorted(set(epochs))
+            ) if epochs else ""
+
+            rows.append({
+                "id": pid,
+                "type": content_type,
+                "slug": slug,
+                "url_date": url_date or "",
+                "api_date": api_date,
+                "api_date_gmt": api_date_gmt,
+                "api_modified": api_modified,
+                "api_modified_gmt": api_modified_gmt,
+                "visible_date": visible_date or "",
+                "meta_published": meta_published or "",
+                "meta_modified": meta_modified or "",
+                "epochs": epoch_strs,
+            })
+
+    collect("posts", "post")
+    collect("pages", "page")
+
+    if not rows:
+        return ""
+
+    # Sort by the time a viewer would have seen it: use date_gmt (publish time)
+    def sort_key(r):
+        for field in ["api_date_gmt", "meta_published", "visible_date", "api_date", "url_date"]:
+            v = r.get(field, "")
+            if v:
+                return v
+        return ""
+
+    rows.sort(key=sort_key)
+
+    # Build the table
+    lines = [
+        "",
+        "---",
+        "",
+        "# Post/Page Time Reference Analysis",
+        "",
+        "**Generated:** " + datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC"),
+        "**Source:** " + BASE_URL + "/wp-json/wp/v2/{posts,pages}",
+        "",
+        "Every available time reference for each published post/page, sorted by the time",
+        "a viewer would have first seen it on the website (publish date).",
+        "",
+        "### Key",
+        "",
+        "| Column | Source | Description |",
+        "|--------|--------|-------------|",
+        "| **ID** | REST API | Post/page numeric ID |",
+        "| **Type** | REST API | `post` or `page` |",
+        "| **Slug** | REST API | URL slug |",
+        "| **URL-date** | Permalink | Date extracted from the post URL |",
+        "| **API date** | REST API `date` | Creation date (site timezone) |",
+        "| **API date (GMT)** | REST API `date_gmt` | Creation date (UTC) - **canonical publish time** |",
+        "| **API modified** | REST API `modified` | Last modified (site timezone) |",
+        "| **API modified (GMT)** | REST API `modified_gmt` | Last modified (UTC) |",
+        "| **Visible date** | HTML `<time>` | Date shown to visitors on the page |",
+        "| **Meta published** | HTML `<meta property>` | Open Graph published_time |",
+        "| **Meta modified** | HTML `<meta property>` | Open Graph modified_time |",
+        "| **Epoch timestamps** | Page content | Unix epoch timestamps embedded in log content (memory_bloc / exif_created) |",
+        "",
+        "### Time Reference Table",
+        "",
+        "| ID | Type | Slug | URL-date | API date | API date (GMT) | API modified | API modified (GMT) | Visible date | Meta published | Meta modified | Epoch timestamps |",
+        "|----|------|------|----------|----------|----------------|--------------|--------------------|--------------|----------------|---------------|------------------|",
+    ]
+
+    for r in rows:
+        lines.append(
+            f"| {r['id']} | {r['type']} | {r['slug']} "
+            f"| {r['url_date']} | {r['api_date']} | {r['api_date_gmt']} "
+            f"| {r['api_modified']} | {r['api_modified_gmt']} "
+            f"| {r['visible_date']} | {r['meta_published']} | {r['meta_modified']} "
+            f"| {r['epochs']} |"
+        )
+
+    lines.append("")
+    lines.append("*Auto-generated by update_mirror.py*")
+    lines.append("")
+    return "\n".join(lines)
+
+
 # --- Main ---
 
 def clean_stale_paths():
@@ -1100,7 +1855,7 @@ def clean_stale_paths():
             # Build the nested equivalent path
             nested = html_dir / (name.replace("_", "/") + ".html")
             if nested.is_file() and nested.stat().st_size >= f.stat().st_size * 0.9:
-                # Nested copy exists and is roughly same size — remove flat stale
+                # Nested copy exists and is roughly same size - remove flat stale
                 f.unlink()
                 hdr = f.parent / (f.name + ".headers.json")
                 if hdr.is_file():
@@ -1112,12 +1867,13 @@ def main():
     log("=" * 60)
     log("  project-skyscraper.com - Complete Mirror Update")
     log(f"  {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')}")
-    log("  Fully self-discovering — no hardcoded values")
+    log("  Fully self-discovering - no hardcoded values")
     log("=" * 60)
     log("")
 
     clean_stale_paths()
     generate_unresolved_markers()
+    _migrate_old_reports(MIRROR_DIR / "diffs")
 
     # Phase 1: Discovery
     log("PHASE 1: Discovery")
@@ -1179,8 +1935,23 @@ def main():
     log("PHASE 12: Manifest & Diff")
     generate_manifest()
     generate_id_series_analysis()
+    time_table = generate_time_reference_table()
+    if time_table:
+        series_path = MIRROR_DIR / "POST_ID_SERIES.md"
+        existing = series_path.read_text(encoding="utf-8") if series_path.is_file() else ""
+        series_path.write_text(existing.rstrip() + "\n\n" + time_table, encoding="utf-8")
+        log(f"  Time reference table appended to POST_ID_SERIES.md")
     generate_unpublished_report(unpublished_posts, unpublished_pages)
+    _migrate_diffs()
     store_diff()
+    # Clean up old dated change reports - now using single CHANGELOG.md
+    diff_dir = MIRROR_DIR / "diffs"
+    for old_report in diff_dir.glob("change_*.md"):
+        try:
+            old_report.unlink()
+            log(f"  CLEANED old report: {old_report.name}")
+        except OSError:
+            pass
     log("")
 
     # Cleanup: remove __pycache__ directories
@@ -1195,7 +1966,7 @@ def main():
     log(f"  Fetched: {stats['fetched']}  |  New: {stats['new']}  |  Changed: {stats['changed']}")
     log(f"  Skipped (unchanged): {stats['skipped']}  |  Failed: {stats['failed']}")
     if changes:
-        log(f"  Changes detected: {len(changes)} file(s) — diff saved to diffs/")
+        log(f"  Changes detected: {len(changes)} file(s) - see diffs/CHANGELOG.md")
     log("=" * 60)
 
 
