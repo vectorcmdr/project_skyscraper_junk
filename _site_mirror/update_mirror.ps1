@@ -26,7 +26,7 @@ $ScriptDir = Split-Path -Parent $PSCommandPath
 
 # Check Python availability
 $pythonCmd = $null
-foreach ($cmd in @("python3", "python")) {
+foreach ($cmd in @("python", "python3")) {
     $ver = & $cmd --version 2>$null
     if ($LASTEXITCODE -eq 0) {
         $pythonCmd = $cmd

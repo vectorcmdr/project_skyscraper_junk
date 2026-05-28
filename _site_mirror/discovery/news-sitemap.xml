@@ -1,8 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--generator='jetpack-15.9-a.3'-->
+<!--generator='jetpack-15.9-a.5'-->
 <!--Jetpack_Sitemap_Buffer_News_XMLWriter-->
 <?xml-stylesheet type="text/xsl" href="//project-skyscraper.com/news-sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+ <url>
+  <loc>https://project-skyscraper.com/2026/05/27/sec-log-reboot/</loc>
+  <lastmod>2026-05-27T22:00:03Z</lastmod>
+  <news:news>
+   <news:publication>
+    <news:name>project-skyscraper</news:name>
+    <news:language>en</news:language>
+   </news:publication>
+   <news:title>SECURITY LOG</news:title>
+   <news:publication_date>2026-05-27T22:00:02Z</news:publication_date>
+   <news:genres>Blog</news:genres>
+  </news:news>
+ </url>
+ <url>
+  <loc>https://project-skyscraper.com/2026/05/27/sec-log-access-granted/</loc>
+  <lastmod>2026-05-27T22:23:08Z</lastmod>
+  <news:news>
+   <news:publication>
+    <news:name>project-skyscraper</news:name>
+    <news:language>en</news:language>
+   </news:publication>
+   <news:title>SECURITY LOG</news:title>
+   <news:publication_date>2026-05-27T21:39:00Z</news:publication_date>
+   <news:genres>Blog</news:genres>
+  </news:news>
+ </url>
+ <url>
+  <loc>https://project-skyscraper.com/2026/05/27/sec-log-185027/</loc>
+  <lastmod>2026-05-27T17:50:25Z</lastmod>
+  <news:news>
+   <news:publication>
+    <news:name>project-skyscraper</news:name>
+    <news:language>en</news:language>
+   </news:publication>
+   <news:title>SECURITY LOG</news:title>
+   <news:publication_date>2026-05-27T17:50:24Z</news:publication_date>
+   <news:genres>Blog</news:genres>
+  </news:news>
+ </url>
  <url>
   <loc>https://project-skyscraper.com/2026/05/25/sec-log-113610/</loc>
   <lastmod>2026-05-26T21:56:59Z</lastmod>

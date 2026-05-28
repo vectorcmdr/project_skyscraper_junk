@@ -13,10 +13,12 @@ import json
 import os
 import re
 import time
+import threading
 import urllib.parse
 import urllib.request
 import urllib.error
 import xml.etree.ElementTree as ET
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -121,6 +123,44 @@ def fetch(url: str, subdir: str = "", binary: bool = False,
         hdr = path.parent / (path.name + ".headers.json")
         hdr.write_text(json.dumps(dict(resp.headers.items()), indent=2, default=str))
     return ("ok", path, code, content)
+
+
+_probe_lock = threading.Lock()
+
+
+def _probe_fetch(url, subdir=""):
+    """Thread-safe fetch for probe phase — minimal side effects, locked stats."""
+    path = url_to_path(url, subdir=subdir)
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+    old_hash = _hash_bytes(path.read_bytes()) if path.is_file() else None
+
+    req = urllib.request.Request(url, headers={
+        "User-Agent": USER_AGENT, "Accept": "*/*",
+    })
+    try:
+        resp = urllib.request.urlopen(req, timeout=30)
+        content = resp.read()
+        code = resp.status
+    except urllib.error.HTTPError as e:
+        code = e.code
+        content = e.read()
+
+    new_hash = _hash_bytes(content)
+    if old_hash and old_hash == new_hash:
+        with _probe_lock:
+            stats["skipped"] += 1
+        return ("skipped", path, code, content)
+
+    path.write_bytes(content)
+    with _probe_lock:
+        if old_hash is None:
+            stats["new"] += 1
+        else:
+            stats["changed"] += 1
+        stats["fetched"] += 1
+
+    return ("ok" if code < 400 else "error", path, code, content)
 
 
 def _json_fetch(endpoint: str):
@@ -336,14 +376,7 @@ def fetch_api_endpoints():
 
     log(f"    Posts: {len(post_ids)}  Pages: {len(page_ids)}  Media: {len(media_ids)}")
 
-    # Also probe for new IDs just past the known range
-    all_known_ids = set(post_ids + page_ids + media_ids)
-    if all_known_ids:
-        max_id = max(all_known_ids)
-        for probe_id in range(max_id + 1, max_id + 11):
-            for kind in ["posts", "pages", "media"]:
-                fetch(f"{BASE_URL}/wp-json/wp/v2/{kind}/{probe_id}", subdir="api")
-                time.sleep(0.05)
+    unpublished_posts, unpublished_pages = probe_unpublished_ids(post_ids, page_ids, media_ids)
 
     # 5) Jetpack sub-endpoints
     log("  --- Jetpack Sub-endpoints ---")
@@ -401,7 +434,104 @@ def fetch_api_endpoints():
     fetch(f"{BASE_URL}/?rest_route=/", subdir="api")
     fetch(f"{BASE_URL}/?rest_route=/wp/v2", subdir="api")
 
-    return post_ids, page_ids, media_ids, post_links, page_links
+    return post_ids, page_ids, media_ids, post_links, page_links, unpublished_posts, unpublished_pages
+
+
+def probe_unpublished_ids(post_ids, page_ids, media_ids):
+    """Broadly probe for unpublished/restricted post and page IDs (401/403)."""
+    all_known = set(post_ids + page_ids + media_ids)
+    if not all_known:
+        return [], []
+
+    max_id = max(all_known)
+    scan_max = max_id + 300
+
+    published_posts = set(post_ids)
+    published_pages = set(page_ids)
+
+    probe_ids = sorted(
+        pid for pid in range(1, scan_max + 1)
+        if pid not in published_posts and pid not in published_pages
+    )
+
+    log(f"  Probing {len(probe_ids)} IDs (1-{scan_max}) for unpublished/restricted content...")
+
+    unpublished_posts = []
+    unpublished_pages = []
+    _up_lock = threading.Lock()
+
+    def check_one(pid):
+        result = _probe_fetch(f"{BASE_URL}/wp-json/wp/v2/posts/{pid}", subdir="api")
+        if result[0] == "ok":
+            return
+        if result[2] in (401, 403):
+            with _up_lock:
+                unpublished_posts.append((pid, result[2]))
+            return
+        result2 = _probe_fetch(f"{BASE_URL}/wp-json/wp/v2/pages/{pid}", subdir="api")
+        if result2[2] in (401, 403):
+            with _up_lock:
+                unpublished_pages.append((pid, result2[2]))
+
+    done_count = 0
+    _progress_lock = threading.Lock()
+
+    def on_done(_):
+        nonlocal done_count
+        with _progress_lock:
+            done_count += 1
+            if done_count % 200 == 0 or done_count == len(probe_ids):
+                log(f"    Progress: {done_count}/{len(probe_ids)} ...")
+
+    with ThreadPoolExecutor(max_workers=5) as ex:
+        futs = {ex.submit(check_one, pid): pid for pid in probe_ids}
+        for f in as_completed(futs):
+            on_done(f)
+
+    log(f"    Found {len(unpublished_posts)} unpublished posts, {len(unpublished_pages)} unpublished pages")
+    return unpublished_posts, unpublished_pages
+
+
+def generate_unpublished_report(unpublished_posts, unpublished_pages):
+    """Write a report of unpublished/restricted IDs to UNPUBLISHED_IDS.md."""
+    if not unpublished_posts and not unpublished_pages:
+        log("  No unpublished items found, skipping report")
+        return
+
+    total = len(unpublished_posts) + len(unpublished_pages)
+    lines = [
+        "# Unpublished / Restricted IDs Report",
+        "",
+        f"**Generated:** {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')}",
+        f"**Source:** {BASE_URL}/wp-json/wp/v2/{{posts,pages}}/{{id}}",
+        "",
+        "IDs returning 401 (Unauthorized) or 403 (Forbidden) indicate content",
+        "that exists but is not publicly accessible (drafts, private, etc.).",
+        "",
+        "## Summary",
+        "",
+        "| Type | Count |",
+        "|------|-------|",
+        f"| **Posts** | {len(unpublished_posts)} |",
+        f"| **Pages** | {len(unpublished_pages)} |",
+        f"| **Total** | {total} |",
+        "",
+    ]
+
+    for kind_name, entries in [("Posts", unpublished_posts), ("Pages", unpublished_pages)]:
+        if entries:
+            lines += ["", f"## Unpublished {kind_name}", "", "| ID | Status |", "|----|--------|"]
+            for iid, status in sorted(entries):
+                lines.append(f"| {iid} | {status} |")
+            lines.append("")
+
+    lines.append("")
+    lines.append("*Auto-generated by update_mirror.py*")
+    lines.append("")
+
+    out_path = MIRROR_DIR / "UNPUBLISHED_IDS.md"
+    out_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    log(f"  Unpublished IDs report: {out_path}")
 
 
 # --- Phase 4: Media ---
@@ -1002,7 +1132,7 @@ def main():
 
     # Phase 3: REST API (returns discovered IDs and links)
     log("PHASE 3: REST API")
-    post_ids, page_ids, media_ids, post_links, page_links = fetch_api_endpoints()
+    post_ids, page_ids, media_ids, post_links, page_links, unpublished_posts, unpublished_pages = fetch_api_endpoints()
     log("")
 
     # Phase 4: Media
@@ -1049,6 +1179,7 @@ def main():
     log("PHASE 12: Manifest & Diff")
     generate_manifest()
     generate_id_series_analysis()
+    generate_unpublished_report(unpublished_posts, unpublished_pages)
     store_diff()
     log("")
 
