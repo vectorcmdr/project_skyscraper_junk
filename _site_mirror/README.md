@@ -1,15 +1,25 @@
-# project-skyscraper.com -- Local Mirror
+# project-skyscraper.com - Local Mirror
 
-Offline mirror of the Project Skyscraper ARG website. Fully
-self-discovering: no hardcoded IDs or URL lists.
+Offline mirror of the Project Skyscraper ARG website. Fully self-discovering: no hardcoded IDs or URL lists. <br />
+Additional small records and diffs.
 
-## Usage
+The mirror you are seeing is a static, manually updated copy. Update delays will occur.
 
-```
-.\update_mirror.ps1            # Update mirror from live site
-.\update_mirror.ps1 -Serve     # Update then start local server
-python serve_mirror.py         # Serve existing mirror on :8080
-```
+This is a stripped down public version of a private runner script - hopefully error free after removing other stuff - but if not, let me know.
+
+### Please look through these files before asking about who has seen what and if 'x' file is known.
+### If you notice a file that is truly missing, let me know on ETARC or Discord.
+
+## Static Files Usage
+
+| File | Purpose |
+|------|---------|
+| `update_mirror.py` | Main update script (12 phases) |
+| `update_mirror.ps1` | PowerShell wrapper |
+| `serve_mirror.py` | Local HTTP server with URL rewriting |
+| `MIRROR_MANIFEST.md` | Full file listing (auto-generated) |
+| `POST_ID_SERIES.md` | Post/page/media ID analysis |
+| `diffs/` | Change reports between runs |
 
 ## What's Mirrored
 
@@ -22,26 +32,19 @@ python serve_mirror.py         # Serve existing mirror on :8080
 - Third-party CDN assets
 - External references (Reddit, forums)
 
-## Files
-
-| File | Purpose |
-|------|---------|
-| `update_mirror.py` | Main update script (12 phases) |
-| `update_mirror.ps1` | PowerShell wrapper |
-| `serve_mirror.py` | Local HTTP server with URL rewriting |
-| `MIRROR_MANIFEST.md` | Full file listing (auto-generated) |
-| `POST_ID_SERIES.md` | Post/page/media ID analysis |
-| `diffs/` | Change reports between runs |
-
 ## Key Features
 
-- **Self-discovering** -- sitemap -> API -> HTML scanning -> derived
+- **Self-discovering** - sitemap -> API -> HTML scanning -> derived
   assets. New posts, pages, media found automatically.
-- **Idempotent** -- MD5 hash cache skips unchanged files.
-- **Diffs** -- changed files listed in diffs/ after each run.
-- **Offline browsing** -- serve_mirror.py rewrites all live URLs to
+- **Idempotent** - MD5 hash cache skips unchanged files.
+- **Diffs** - changed files listed in diffs/ after each run.
+- **Offline browsing** - serve_mirror.py rewrites all live URLs to
   local paths on-the-fly. No files modified.
 
-## Stats
+## Local Script Usage
 
-696 files, 22.9 MB (last run: 2026-05-27).
+```
+.\update_mirror.ps1            # Update mirror from live site
+.\update_mirror.ps1 -Serve     # Update then start local server
+python serve_mirror.py         # Serve existing mirror on :8080
+```
