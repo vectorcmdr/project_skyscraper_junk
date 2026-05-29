@@ -24,13 +24,10 @@ This was part of the "/code" puzzle "When_we_were_17" image.
 
 ### Explainer:
 
-It is a monoalphabetic position based cipher flavoured after da vinci's writing style as a left-hander in the time of ink (da Vinci often wrote letters in a (non-cipher) mirror writing style to avoid smudging ink).
+It is a monoalphabetic position based cipher using the key `MINDFAGEBJRLHCVPQSKYUWOXTZ`:
 
 1. For each ciphertext letter, use its A=0...Z=25 value as an index into the
    key text. The key letter at that position is the plaintext.
-
-3. The ciphertext `BNCBO HD DKFCWHL` decodes to `ICNIV ED DRANOEL` (read right
-   to left in French: LÉONARD DE VINCI).
 
 ```
 Position:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
