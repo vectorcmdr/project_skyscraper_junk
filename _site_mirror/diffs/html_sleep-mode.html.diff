@@ -1,7 +1,7 @@
 # Diff: https://project-skyscraper.com/sleep-mode/
 # File: html/sleep-mode.html
-# Timestamp: 2026-05-28 14:15:43 UTC
-# Lines: 437 old -> 437 new
+# Timestamp: 2026-05-29 14:18:08 UTC
+# Lines: 437 old -> 441 new
 # Beautified: yes
 --- old/html/sleep-mode.html
 +++ new/html/sleep-mode.html
@@ -9,8 +9,16 @@
          "isWpConsentApiActive": false
      },
      "isLegacyEventLoaded": "",
--    "customEventAjaxUrl": "https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=bdcd5525ad",
-+    "customEventAjaxUrl": "https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=29a88caf91",
+-    "customEventAjaxUrl": "https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=ebd2ab5daa",
++    "customEventAjaxUrl": "https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=e4e64b15c1",
      "onlineParams": {
          "wp_statistics_hit": 1,
          "source_type": "page",
+@@ -435,3 +435,7 @@
+ //# sourceURL=https://project-skyscraper.com/wp-includes/js/wp-emoji-loader.min.js</script>
+ </body>
+ </html>
++<!--
++	generated in 0.368 seconds
++	57609 bytes batcached for 300 seconds
++-->

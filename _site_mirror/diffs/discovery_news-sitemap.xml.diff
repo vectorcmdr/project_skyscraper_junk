@@ -1,26 +1,30 @@
 # Diff: https://project-skyscraper.com/news-sitemap.xml
 # File: discovery/news-sitemap.xml
-# Timestamp: 2026-05-28 14:15:39 UTC
-# Lines: 58 old -> 45 new
+# Timestamp: 2026-05-29 14:42:47 UTC
+# Lines: 58 old -> 71 new
 # Beautified: yes
 --- old/discovery/news-sitemap.xml
 +++ new/discovery/news-sitemap.xml
-@@ -42,17 +42,4 @@
-    <news:genres>Blog</news:genres>
-   </news:news>
-  </url>
-- <url>
--  <loc>https://project-skyscraper.com/2026/05/25/sec-log-113610/</loc>
--  <lastmod>2026-05-26T21:56:59Z</lastmod>
--  <news:news>
--   <news:publication>
--    <news:name>project-skyscraper</news:name>
--    <news:language>en</news:language>
--   </news:publication>
--   <news:title>SECURITY LOG</news:title>
--   <news:publication_date>2026-05-25T10:36:00Z</news:publication_date>
--   <news:genres>Blog</news:genres>
--  </news:news>
-- </url>
--</urlset>
-+</urlset>
+@@ -4,8 +4,21 @@
+ <?xml-stylesheet type="text/xsl" href="//project-skyscraper.com/news-sitemap.xsl"?>
+ <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
++  <loc>https://project-skyscraper.com/2026/05/29/sec-log-114327/</loc>
++  <lastmod>2026-05-29T09:17:39Z</lastmod>
++  <news:news>
++   <news:publication>
++    <news:name>project-skyscraper</news:name>
++    <news:language>en</news:language>
++   </news:publication>
++   <news:title>SECURITY LOG</news:title>
++   <news:publication_date>2026-05-29T10:43:00Z</news:publication_date>
++   <news:genres>Blog</news:genres>
++  </news:news>
++ </url>
++ <url>
+   <loc>https://project-skyscraper.com/inbox/</loc>
+-  <lastmod>2026-05-28T17:54:09Z</lastmod>
++  <lastmod>2026-05-29T10:16:42Z</lastmod>
+   <news:news>
+    <news:publication>
+     <news:name>project-skyscraper</news:name>

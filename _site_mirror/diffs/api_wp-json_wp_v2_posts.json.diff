@@ -1,0 +1,859 @@
+# Diff: https://project-skyscraper.com/wp-json/wp/v2/posts
+# File: api/wp-json/wp/v2/posts.json
+# Timestamp: 2026-05-29 14:09:19 UTC
+# Lines: 2458 old -> 2301 new
+# Beautified: yes
+--- old/api/wp-json/wp/v2/posts.json
++++ new/api/wp-json/wp/v2/posts.json
+@@ -1,26 +1,26 @@
+ [
+   {
+-    "id": 1802,
+-    "date": "2026-05-27T23:00:02",
+-    "date_gmt": "2026-05-27T22:00:02",
++    "id": 1833,
++    "date": "2026-05-29T11:43:00",
++    "date_gmt": "2026-05-29T10:43:00",
+     "guid": {
+-      "rendered": "https://project-skyscraper.com/?p=1802"
+-    },
+-    "modified": "2026-05-27T23:00:03",
+-    "modified_gmt": "2026-05-27T22:00:03",
+-    "slug": "sec-log-reboot",
++      "rendered": "https://project-skyscraper.com/?p=1833"
++    },
++    "modified": "2026-05-29T10:17:39",
++    "modified_gmt": "2026-05-29T09:17:39",
++    "slug": "sec-log-114327",
+     "status": "publish",
+     "type": "post",
+-    "link": "https://project-skyscraper.com/2026/05/27/sec-log-reboot/",
++    "link": "https://project-skyscraper.com/2026/05/29/sec-log-114327/",
+     "title": {
+       "rendered": "SECURITY LOG"
+     },
+     "content": {
+-      "rendered": "\n<p class=\"wp-block-paragraph\">memory bloc 1779922802<br><br>System: Core<br><br>Status: SECURITY_PROTOCOL_FAILURE<br>Module: System_Filtering_Platform<br><br>Reboot Sequence Initialization: STARTED<br>Reboot starts now.</p>\n",
++      "rendered": "\n<p class=\"wp-block-paragraph\">memory bloc 1780054980:<br><br>System: Core<br><br>Status: CONNECTION_REDIRECTED<br>Module: Historical_DB<br>Error: 1016 &#8211; UNREACHABLE<br><br>Details:  <br>Connection to Historical_DB failed.  <br>Redirected to TOWER core.<br><br>Link established with TOWER.<br>Fallback route active.<br></p>\n",
+       "protected": false
+     },
+     "excerpt": {
+-      "rendered": "<p>memory bloc System: Core Status: SECURITY_PROTOCOL_FAILUREModule: System_Filtering_Platform Reboot Sequence Initialization: STARTEDReboot starts now.</p>\n",
++      "rendered": "<p>memory bloc : System: Core Status: CONNECTION_REDIRECTEDModule: Historical_DBError: 1016 &#8211; UNREACHABLE Details: Connection to Historical_DB failed. Redirected to TOWER core. Link established with TOWER.Fallback route active.</p>\n",
+       "protected": false
+     },
+     "author": 279180095,
+@@ -48,7 +48,7 @@
+     ],
+     "tags": [],
+     "class_list": [
+-      "post-1802",
++      "post-1833",
+       "post",
+       "type-post",
+       "status-publish",
+@@ -59,12 +59,12 @@
+     "jetpack_featured_media_url": "",
+     "jetpack_likes_enabled": false,
+     "jetpack_sharing_enabled": false,
+-    "jetpack_shortlink": "https://wp.me/phdnFZ-t4",
++    "jetpack_shortlink": "https://wp.me/phdnFZ-tz",
+     "jetpack-related-posts": [],
+     "_links": {
+       "self": [
+         {
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/1802",
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/1833",
+           "targetHints": {
+             "allow": [
+               "GET"
+@@ -91,36 +91,36 @@
+       "replies": [
+         {
+           "embeddable": true,
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/comments?post=1802"
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/comments?post=1833"
+         }
+       ],
+       "version-history": [
+         {
+-          "count": 2,
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/1802/revisions"
++          "count": 1,
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/1833/revisions"
+         }
+       ],
+       "predecessor-version": [
+         {
+-          "id": 1804,
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/1802/revisions/1804"
++          "id": 1834,
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/1833/revisions/1834"
+         }
+       ],
+       "wp:attachment": [
+         {
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/media?parent=1802"
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/media?parent=1833"
+         }
+       ],
+       "wp:term": [
+         {
+           "taxonomy": "category",
+           "embeddable": true,
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/categories?post=1802"
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/categories?post=1833"
+         },
+         {
+           "taxonomy": "post_tag",
+           "embeddable": true,
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/tags?post=1802"
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/tags?post=1833"
+         }
+       ],
+       "curies": [
+@@ -133,27 +133,27 @@
+     }
+   },
+   {
+-    "id": 283,
+-    "date": "2026-05-27T22:39:00",
+-    "date_gmt": "2026-05-27T21:39:00",
++    "id": 1802,
++    "date": "2026-05-27T23:00:02",
++    "date_gmt": "2026-05-27T22:00:02",
+     "guid": {
+-      "rendered": "https://project-skyscraper.com/?p=283"
+-    },
+-    "modified": "2026-05-27T23:23:08",
+-    "modified_gmt": "2026-05-27T22:23:08",
+-    "slug": "sec-log-access-granted",
++      "rendered": "https://project-skyscraper.com/?p=1802"
++    },
++    "modified": "2026-05-27T23:00:03",
++    "modified_gmt": "2026-05-27T22:00:03",
++    "slug": "sec-log-reboot",
+     "status": "publish",
+     "type": "post",
+-    "link": "https://project-skyscraper.com/2026/05/27/sec-log-access-granted/",
++    "link": "https://project-skyscraper.com/2026/05/27/sec-log-reboot/",
+     "title": {
+       "rendered": "SECURITY LOG"
+     },
+     "content": {
+-      "rendered": "\n<p class=\"wp-block-paragraph\">memory bloc 1779921540:<br><br>System Filtering Platform: offline<br><br>Access granted<br><br>Operator_Auth_Level: Pending<br><br>Historical_DB_Unreachable<br>ERROR 1016<br><br>Access to Historical Records: FAILED<br><br>Update: <br>Fractured Non-linear Temporal Continuum<br>Memory_reconstruction_engine: ERROR</p>\n",
++      "rendered": "\n<p class=\"wp-block-paragraph\">memory bloc 1779922802<br><br>System: Core<br><br>Status: SECURITY_PROTOCOL_FAILURE<br>Module: System_Filtering_Platform<br><br>Reboot Sequence Initialization: STARTED<br>Reboot starts now.</p>\n",
+       "protected": false
+     },
+     "excerpt": {
+-      "rendered": "<p>memory bloc : System Filtering Platform: offline Access granted Operator_Auth_Level: Pending Historical_DB_UnreachableERROR 1016 Access to Historical Records: FAILED Update: Fractured Non-linear Temporal ContinuumMemory_reconstruction_engine: ERROR</p>\n",
++      "rendered": "<p>memory bloc System: Core Status: SECURITY_PROTOCOL_FAILUREModule: System_Filtering_Platform Reboot Sequence Initialization: STARTEDReboot starts now.</p>\n",
+       "protected": false
+     },
+     "author": 279180095,
+@@ -181,7 +181,7 @@
+     ],
+     "tags": [],
+     "class_list": [
+-      "post-283",
++      "post-1802",
+       "post",
+       "type-post",
+       "status-publish",
+@@ -192,12 +192,12 @@
+     "jetpack_featured_media_url": "",
+     "jetpack_likes_enabled": false,
+     "jetpack_sharing_enabled": false,
+-    "jetpack_shortlink": "https://wp.me/phdnFZ-4z",
++    "jetpack_shortlink": "https://wp.me/phdnFZ-t4",
+     "jetpack-related-posts": [],
+     "_links": {
+       "self": [
+         {
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/283",
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/1802",
+           "targetHints": {
+             "allow": [
+               "GET"
+@@ -224,36 +224,36 @@
+       "replies": [
+         {
+           "embeddable": true,
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/comments?post=283"
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/comments?post=1802"
+         }
+       ],
+       "version-history": [
+         {
+-          "count": 4,
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/283/revisions"
++          "count": 2,
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/1802/revisions"
+         }
+       ],
+       "predecessor-version": [
+         {
+-          "id": 1811,
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/283/revisions/1811"
++          "id": 1804,
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/1802/revisions/1804"
+         }
+       ],
+       "wp:attachment": [
+         {
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/media?parent=283"
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/media?parent=1802"
+         }
+       ],
+       "wp:term": [
+         {
+           "taxonomy": "category",
+           "embeddable": true,
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/categories?post=283"
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/categories?post=1802"
+         },
+         {
+           "taxonomy": "post_tag",
+           "embeddable": true,
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/tags?post=283"
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/tags?post=1802"
+         }
+       ],
+       "curies": [
+@@ -266,27 +266,27 @@
+     }
+   },
+   {
+-    "id": 1792,
+-    "date": "2026-05-27T18:50:24",
+-    "date_gmt": "2026-05-27T17:50:24",
++    "id": 283,
++    "date": "2026-05-27T22:39:00",
++    "date_gmt": "2026-05-27T21:39:00",
+     "guid": {
+-      "rendered": "https://project-skyscraper.com/?p=1792"
+-    },
+-    "modified": "2026-05-27T18:50:25",
+-    "modified_gmt": "2026-05-27T17:50:25",
+-    "slug": "sec-log-185027",
++      "rendered": "https://project-skyscraper.com/?p=283"
++    },
++    "modified": "2026-05-27T23:23:08",
++    "modified_gmt": "2026-05-27T22:23:08",
++    "slug": "sec-log-access-granted",
+     "status": "publish",
+     "type": "post",
+-    "link": "https://project-skyscraper.com/2026/05/27/sec-log-185027/",
++    "link": "https://project-skyscraper.com/2026/05/27/sec-log-access-granted/",
+     "title": {
+       "rendered": "SECURITY LOG"
+     },
+     "content": {
+-      "rendered": "\n<p class=\"wp-block-paragraph\">memory bloc 1779907824<br><br>System: Core<br><br>Status: SECURITY_PROTOCOL_FAILURE<br>Module: System Filtering Platform<br>Alert: CRITICAL_LOOP_DETECTED<br><br>Details:<br>Security protocol has become unstable. <br>No reboot sequence has been scheduled yet.<br><br>Warning: Reboot sequence will render all protection layers inactive for approximately 960 seconds. <br>System will be highly vulnerable during this window.</p>\n",
++      "rendered": "\n<p class=\"wp-block-paragraph\">memory bloc 1779921540:<br><br>System Filtering Platform: offline<br><br>Access granted<br><br>Operator_Auth_Level: Pending<br><br>Historical_DB_Unreachable<br>ERROR 1016<br><br>Access to Historical Records: FAILED<br><br>Update: <br>Fractured Non-linear Temporal Continuum<br>Memory_reconstruction_engine: ERROR</p>\n",
+       "protected": false
+     },
+     "excerpt": {
+-      "rendered": "<p>memory bloc System: Core Status: SECURITY_PROTOCOL_FAILUREModule: System Filtering PlatformAlert: CRITICAL_LOOP_DETECTED Details:Security protocol has become unstable. No reboot sequence has been scheduled yet. Warning: Reboot sequence will render all protection layers inactive for approximately 960 seconds. System will be highly vulnerable during this window.</p>\n",
++      "rendered": "<p>memory bloc : System Filtering Platform: offline Access granted Operator_Auth_Level: Pending Historical_DB_UnreachableERROR 1016 Access to Historical Records: FAILED Update: Fractured Non-linear Temporal ContinuumMemory_reconstruction_engine: ERROR</p>\n",
+       "protected": false
+     },
+     "author": 279180095,
+@@ -314,7 +314,7 @@
+     ],
+     "tags": [],
+     "class_list": [
+-      "post-1792",
++      "post-283",
+       "post",
+       "type-post",
+       "status-publish",
+@@ -325,39 +325,12 @@
+     "jetpack_featured_media_url": "",
+     "jetpack_likes_enabled": false,
+     "jetpack_sharing_enabled": false,
+-    "jetpack_shortlink": "https://wp.me/phdnFZ-sU",
+-    "jetpack-related-posts": [
+-      {
+-        "id": 1802,
+-        "url": "https://project-skyscraper.com/2026/05/27/sec-log-reboot/",
+-        "url_meta": {
+-          "origin": 1792,
+-          "position": 0
+-        },
+-        "title": "SECURITY LOG",
+-        "author": "The Architect",
+-        "date": "27 May 2026",
+-        "format": false,
+-        "excerpt": "memory bloc System: CoreStatus: SECURITY_PROTOCOL_FAILUREModule: System_Filtering_PlatformReboot Sequence Initialization: STARTEDReboot starts now.",
+-        "rel": "",
+-        "context": "In &quot;Non classé&quot;",
+-        "block_context": {
+-          "text": "Non classé",
+-          "link": "https://project-skyscraper.com/category/non-classe/"
+-        },
+-        "img": {
+-          "alt_text": "",
+-          "src": "",
+-          "width": 0,
+-          "height": 0
+-        },
+-        "classes": []
+-      }
+-    ],
++    "jetpack_shortlink": "https://wp.me/phdnFZ-4z",
++    "jetpack-related-posts": [],
+     "_links": {
+       "self": [
+         {
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/1792",
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/283",
+           "targetHints": {
+             "allow": [
+               "GET"
+@@ -384,36 +357,36 @@
+       "replies": [
+         {
+           "embeddable": true,
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/comments?post=1792"
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/comments?post=283"
+         }
+       ],
+       "version-history": [
+         {
+           "count": 4,
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/1792/revisions"
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/283/revisions"
+         }
+       ],
+       "predecessor-version": [
+         {
+-          "id": 1801,
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/1792/revisions/1801"
++          "id": 1811,
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/283/revisions/1811"
+         }
+       ],
+       "wp:attachment": [
+         {
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/media?parent=1792"
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/media?parent=283"
+         }
+       ],
+       "wp:term": [
+         {
+           "taxonomy": "category",
+           "embeddable": true,
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/categories?post=1792"
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/categories?post=283"
+         },
+         {
+           "taxonomy": "post_tag",
+           "embeddable": true,
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/tags?post=1792"
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/tags?post=283"
+         }
+       ],
+       "curies": [
+@@ -426,27 +399,27 @@
+     }
+   },
+   {
+-    "id": 281,
+-    "date": "2026-05-25T11:36:00",
+-    "date_gmt": "2026-05-25T10:36:00",
++    "id": 1792,
++    "date": "2026-05-27T18:50:24",
++    "date_gmt": "2026-05-27T17:50:24",
+     "guid": {
+-      "rendered": "https://project-skyscraper.com/?p=281"
+-    },
+-    "modified": "2026-05-26T22:56:59",
+-    "modified_gmt": "2026-05-26T21:56:59",
+-    "slug": "sec-log-113610",
++      "rendered": "https://project-skyscraper.com/?p=1792"
++    },
++    "modified": "2026-05-27T18:50:25",
++    "modified_gmt": "2026-05-27T17:50:25",
++    "slug": "sec-log-185027",
+     "status": "publish",
+     "type": "post",
+-    "link": "https://project-skyscraper.com/2026/05/25/sec-log-113610/",
++    "link": "https://project-skyscraper.com/2026/05/27/sec-log-185027/",
+     "title": {
+       "rendered": "SECURITY LOG"
+     },
+     "content": {
+-      "rendered": "\n<div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\">\n<p class=\"wp-block-paragraph\">memory bloc 1779708960:<br></p>\n\n\n\n<a href=\"https://project-skyscraper.com/?p=281\" class=\"scramble-text glitch-link\" data-word=\"Connection detected : Access denied\">Connection detected : Access denied</a><br>\n<a href=\"https://project-skyscraper.com/?p=281\" class=\"scramble-text glitch-link\" data-word=\"CONNECTION DETECTED : ACCESS DENIED\">CONNECTION DETECTED : ACCESS DENIED</a><br>\n<a href=\"https://project-skyscraper.com/?p=281\" class=\"scramble-text glitch-link\" data-word=\"Connection detected : Access denied\">connection detected : access denied</a><br>\n<a href=\"https://project-skyscraper.com/?p=281\" class=\"scramble-text glitch-link\" data-word=\"Connection detected : Access denied\">Connection Detected : Access Denied</a>\n\n<script>\nfunction scrambleWord(el) {\n    const original = el.dataset.word;\n    let letters = original.split('');\n    for (let i = letters.length - 1; i > 0; i--) {\n        const j = Math.floor(Math.random() * (i + 1));\n        [letters[i], letters[j]] = [letters[j], letters[i]];\n    }\n    el.textContent = letters.join('');\n}\n\ndocument.querySelectorAll('.scramble-text').forEach(el => {\n    scrambleWord(el);\n    setInterval(() => scrambleWord(el), 1000);\n});\n</script>\n</div>\n",
++      "rendered": "\n<p class=\"wp-block-paragraph\">memory bloc 1779907824<br><br>System: Core<br><br>Status: SECURITY_PROTOCOL_FAILURE<br>Module: System Filtering Platform<br>Alert: CRITICAL_LOOP_DETECTED<br><br>Details:<br>Security protocol has become unstable. <br>No reboot sequence has been scheduled yet.<br><br>Warning: Reboot sequence will render all protection layers inactive for approximately 960 seconds. <br>System will be highly vulnerable during this window.</p>\n",
+       "protected": false
+     },
+     "excerpt": {
+-      "rendered": "<p>memory bloc : Connection detected : Access denied CONNECTION DETECTED : ACCESS DENIED connection detected : access denied Connection Detected : Access Denied</p>\n",
++      "rendered": "<p>memory bloc System: Core Status: SECURITY_PROTOCOL_FAILUREModule: System Filtering PlatformAlert: CRITICAL_LOOP_DETECTED Details:Security protocol has become unstable. No reboot sequence has been scheduled yet. Warning: Reboot sequence will render all protection layers inactive for approximately 960 seconds. System will be highly vulnerable during this window.</p>\n",
+       "protected": false
+     },
+     "author": 279180095,
+@@ -474,6 +447,166 @@
+     ],
+     "tags": [],
+     "class_list": [
++      "post-1792",
++      "post",
++      "type-post",
++      "status-publish",
++      "format-standard",
++      "hentry",
++      "category-non-classe"
++    ],
++    "jetpack_featured_media_url": "",
++    "jetpack_likes_enabled": false,
++    "jetpack_sharing_enabled": false,
++    "jetpack_shortlink": "https://wp.me/phdnFZ-sU",
++    "jetpack-related-posts": [
++      {
++        "id": 1802,
++        "url": "https://project-skyscraper.com/2026/05/27/sec-log-reboot/",
++        "url_meta": {
++          "origin": 1792,
++          "position": 0
++        },
++        "title": "SECURITY LOG",
++        "author": "The Architect",
++        "date": "27 May 2026",
++        "format": false,
++        "excerpt": "memory bloc System: CoreStatus: SECURITY_PROTOCOL_FAILUREModule: System_Filtering_PlatformReboot Sequence Initialization: STARTEDReboot starts now.",
++        "rel": "",
++        "context": "In &quot;Non classé&quot;",
++        "block_context": {
++          "text": "Non classé",
++          "link": "https://project-skyscraper.com/category/non-classe/"
++        },
++        "img": {
++          "alt_text": "",
++          "src": "",
++          "width": 0,
++          "height": 0
++        },
++        "classes": []
++      }
++    ],
++    "_links": {
++      "self": [
++        {
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/1792",
++          "targetHints": {
++            "allow": [
++              "GET"
++            ]
++          }
++        }
++      ],
++      "collection": [
++        {
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts"
++        }
++      ],
++      "about": [
++        {
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/types/post"
++        }
++      ],
++      "author": [
++        {
++          "embeddable": true,
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/users/279180095"
++        }
++      ],
++      "replies": [
++        {
++          "embeddable": true,
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/comments?post=1792"
++        }
++      ],
++      "version-history": [
++        {
++          "count": 4,
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/1792/revisions"
++        }
++      ],
++      "predecessor-version": [
++        {
++          "id": 1801,
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/1792/revisions/1801"
++        }
++      ],
++      "wp:attachment": [
++        {
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/media?parent=1792"
++        }
++      ],
++      "wp:term": [
++        {
++          "taxonomy": "category",
++          "embeddable": true,
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/categories?post=1792"
++        },
++        {
++          "taxonomy": "post_tag",
++          "embeddable": true,
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/tags?post=1792"
++        }
++      ],
++      "curies": [
++        {
++          "name": "wp",
++          "href": "https://api.w.org/{rel}",
++          "templated": true
++        }
++      ]
++    }
++  },
++  {
++    "id": 281,
++    "date": "2026-05-25T11:36:00",
++    "date_gmt": "2026-05-25T10:36:00",
++    "guid": {
++      "rendered": "https://project-skyscraper.com/?p=281"
++    },
++    "modified": "2026-05-26T22:56:59",
++    "modified_gmt": "2026-05-26T21:56:59",
++    "slug": "sec-log-113610",
++    "status": "publish",
++    "type": "post",
++    "link": "https://project-skyscraper.com/2026/05/25/sec-log-113610/",
++    "title": {
++      "rendered": "SECURITY LOG"
++    },
++    "content": {
++      "rendered": "\n<div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\">\n<p class=\"wp-block-paragraph\">memory bloc 1779708960:<br></p>\n\n\n\n<a href=\"https://project-skyscraper.com/?p=281\" class=\"scramble-text glitch-link\" data-word=\"Connection detected : Access denied\">Connection detected : Access denied</a><br>\n<a href=\"https://project-skyscraper.com/?p=281\" class=\"scramble-text glitch-link\" data-word=\"CONNECTION DETECTED : ACCESS DENIED\">CONNECTION DETECTED : ACCESS DENIED</a><br>\n<a href=\"https://project-skyscraper.com/?p=281\" class=\"scramble-text glitch-link\" data-word=\"Connection detected : Access denied\">connection detected : access denied</a><br>\n<a href=\"https://project-skyscraper.com/?p=281\" class=\"scramble-text glitch-link\" data-word=\"Connection detected : Access denied\">Connection Detected : Access Denied</a>\n\n<script>\nfunction scrambleWord(el) {\n    const original = el.dataset.word;\n    let letters = original.split('');\n    for (let i = letters.length - 1; i > 0; i--) {\n        const j = Math.floor(Math.random() * (i + 1));\n        [letters[i], letters[j]] = [letters[j], letters[i]];\n    }\n    el.textContent = letters.join('');\n}\n\ndocument.querySelectorAll('.scramble-text').forEach(el => {\n    scrambleWord(el);\n    setInterval(() => scrambleWord(el), 1000);\n});\n</script>\n</div>\n",
++      "protected": false
++    },
++    "excerpt": {
++      "rendered": "<p>memory bloc : Connection detected : Access denied CONNECTION DETECTED : ACCESS DENIED connection detected : access denied Connection Detected : Access Denied</p>\n",
++      "protected": false
++    },
++    "author": 279180095,
++    "featured_media": 0,
++    "comment_status": "closed",
++    "ping_status": "closed",
++    "sticky": false,
++    "template": "security-logs",
++    "format": "standard",
++    "meta": {
++      "advanced_seo_description": "",
++      "jetpack_seo_html_title": "",
++      "jetpack_seo_noindex": false,
++      "_jetpack_newsletter_access": "",
++      "_jetpack_dont_email_post_to_subs": true,
++      "_jetpack_newsletter_tier_id": 0,
++      "_jetpack_memberships_contains_paywalled_content": false,
++      "_jetpack_feature_clip_id": 0,
++      "_jetpack_memberships_contains_paid_content": false,
++      "footnotes": "",
++      "jetpack_post_was_ever_published": false
++    },
++    "categories": [
++      6325
++    ],
++    "tags": [],
++    "class_list": [
+       "post-281",
+       "post",
+       "type-post",
+@@ -2164,295 +2297,5 @@
+         }
+       ]
+     }
+-  },
+-  {
+-    "id": 273,
+-    "date": "2026-05-15T15:21:00",
+-    "date_gmt": "2026-05-15T14:21:00",
+-    "guid": {
+-      "rendered": "https://project-skyscraper.com/?p=273"
+-    },
+-    "modified": "2026-05-18T21:17:28",
+-    "modified_gmt": "2026-05-18T20:17:28",
+-    "slug": "sec-log-152158",
+-    "status": "publish",
+-    "type": "post",
+-    "link": "https://project-skyscraper.com/2026/05/15/sec-log-152158/",
+-    "title": {
+-      "rendered": "SECURITY LOG"
+-    },
+-    "content": {
+-      "rendered": "\n<p class=\"wp-block-paragraph\">memory bloc 1778858460: Connection detected<br><br>Access denied</p>\n",
+-      "protected": false
+-    },
+-    "excerpt": {
+-      "rendered": "<p>memory bloc : Connection detected Access denied</p>\n",
+-      "protected": false
+-    },
+-    "author": 279180095,
+-    "featured_media": 0,
+-    "comment_status": "closed",
+-    "ping_status": "open",
+-    "sticky": false,
+-    "template": "security-logs",
+-    "format": "standard",
+-    "meta": {
+-      "advanced_seo_description": "",
+-      "jetpack_seo_html_title": "",
+-      "jetpack_seo_noindex": false,
+-      "_jetpack_newsletter_access": "",
+-      "_jetpack_dont_email_post_to_subs": true,
+-      "_jetpack_newsletter_tier_id": 0,
+-      "_jetpack_memberships_contains_paywalled_content": false,
+-      "_jetpack_feature_clip_id": 0,
+-      "_jetpack_memberships_contains_paid_content": false,
+-      "footnotes": "",
+-      "jetpack_post_was_ever_published": false
+-    },
+-    "categories": [
+-      6325
+-    ],
+-    "tags": [],
+-    "class_list": [
+-      "post-273",
+-      "post",
+-      "type-post",
+-      "status-publish",
+-      "format-standard",
+-      "hentry",
+-      "category-non-classe"
+-    ],
+-    "jetpack_featured_media_url": "",
+-    "jetpack_likes_enabled": false,
+-    "jetpack_sharing_enabled": false,
+-    "jetpack_shortlink": "https://wp.me/phdnFZ-4p",
+-    "jetpack-related-posts": [
+-      {
+-        "id": 275,
+-        "url": "https://project-skyscraper.com/2026/05/18/sec-log-022531/",
+-        "url_meta": {
+-          "origin": 273,
+-          "position": 0
+-        },
+-        "title": "SECURITY LOG",
+-        "author": "The Architect",
+-        "date": "18 May 2026",
+-        "format": false,
+-        "excerpt": "memory bloc : Connection detectedAccess denied",
+-        "rel": "",
+-        "context": "In &quot;Non classé&quot;",
+-        "block_context": {
+-          "text": "Non classé",
+-          "link": "https://project-skyscraper.com/category/non-classe/"
+-        },
+-        "img": {
+-          "alt_text": "",
+-          "src": "",
+-          "width": 0,
+-          "height": 0
+-        },
+-        "classes": []
+-      },
+-      {
+-        "id": 271,
+-        "url": "https://project-skyscraper.com/2026/05/13/sec-log-041825/",
+-        "url_meta": {
+-          "origin": 273,
+-          "position": 1
+-        },
+-        "title": "SECURITY LOG",
+-        "author": "The Architect",
+-        "date": "13 May 2026",
+-        "format": false,
+-        "excerpt": "memory bloc : Connection detectedAccess denied",
+-        "rel": "",
+-        "context": "In &quot;Non classé&quot;",
+-        "block_context": {
+-          "text": "Non classé",
+-          "link": "https://project-skyscraper.com/category/non-classe/"
+-        },
+-        "img": {
+-          "alt_text": "",
+-          "src": "",
+-          "width": 0,
+-          "height": 0
+-        },
+-        "classes": []
+-      },
+-      {
+-        "id": 269,
+-        "url": "https://project-skyscraper.com/2026/05/10/sec-log-171452/",
+-        "url_meta": {
+-          "origin": 273,
+-          "position": 2
+-        },
+-        "title": "SECURITY LOG",
+-        "author": "The Architect",
+-        "date": "10 May 2026",
+-        "format": false,
+-        "excerpt": "memory bloc : Connection detectedAccess denied",
+-        "rel": "",
+-        "context": "In &quot;Non classé&quot;",
+-        "block_context": {
+-          "text": "Non classé",
+-          "link": "https://project-skyscraper.com/category/non-classe/"
+-        },
+-        "img": {
+-          "alt_text": "",
+-          "src": "",
+-          "width": 0,
+-          "height": 0
+-        },
+-        "classes": []
+-      },
+-      {
+-        "id": 263,
+-        "url": "https://project-skyscraper.com/2026/05/05/sec-log-190746/",
+-        "url_meta": {
+-          "origin": 273,
+-          "position": 3
+-        },
+-        "title": "SECURITY LOG",
+-        "author": "The Architect",
+-        "date": "5 May 2026",
+-        "format": false,
+-        "excerpt": "memory bloc : Connection detectedAccess denied",
+-        "rel": "",
+-        "context": "In &quot;Non classé&quot;",
+-        "block_context": {
+-          "text": "Non classé",
+-          "link": "https://project-skyscraper.com/category/non-classe/"
+-        },
+-        "img": {
+-          "alt_text": "",
+-          "src": "",
+-          "width": 0,
+-          "height": 0
+-        },
+-        "classes": []
+-      },
+-      {
+-        "id": 277,
+-        "url": "https://project-skyscraper.com/2026/05/20/sec-log-132904/",
+-        "url_meta": {
+-          "origin": 273,
+-          "position": 4
+-        },
+-        "title": "SECURITY LOG",
+-        "author": "The Architect",
+-        "date": "20 May 2026",
+-        "format": false,
+-        "excerpt": "memory bloc : Connection detectedAccess denied",
+-        "rel": "",
+-        "context": "In &quot;Non classé&quot;",
+-        "block_context": {
+-          "text": "Non classé",
+-          "link": "https://project-skyscraper.com/category/non-classe/"
+-        },
+-        "img": {
+-          "alt_text": "",
+-          "src": "",
+-          "width": 0,
+-          "height": 0
+-        },
+-        "classes": []
+-      },
+-      {
+-        "id": 279,
+-        "url": "https://project-skyscraper.com/2026/05/23/sec-log-003237/",
+-        "url_meta": {
+-          "origin": 273,
+-          "position": 5
+-        },
+-        "title": "SECURITY LOG",
+-        "author": "The Architect",
+-        "date": "23 May 2026",
+-        "format": false,
+-        "excerpt": "memory bloc : Connection detectedAccess denied",
+-        "rel": "",
+-        "context": "In &quot;Non classé&quot;",
+-        "block_context": {
+-          "text": "Non classé",
+-          "link": "https://project-skyscraper.com/category/non-classe/"
+-        },
+-        "img": {
+-          "alt_text": "",
+-          "src": "",
+-          "width": 0,
+-          "height": 0
+-        },
+-        "classes": []
+-      }
+-    ],
+-    "_links": {
+-      "self": [
+-        {
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/273",
+-          "targetHints": {
+-            "allow": [
+-              "GET"
+-            ]
+-          }
+-        }
+-      ],
+-      "collection": [
+-        {
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts"
+-        }
+-      ],
+-      "about": [
+-        {
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/types/post"
+-        }
+-      ],
+-      "author": [
+-        {
+-          "embeddable": true,
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/users/279180095"
+-        }
+-      ],
+-      "replies": [
+-        {
+-          "embeddable": true,
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/comments?post=273"
+-        }
+-      ],
+-      "version-history": [
+-        {
+-          "count": 1,
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/273/revisions"
+-        }
+-      ],
+-      "predecessor-version": [
+-        {
+-          "id": 274,
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/273/revisions/274"
+-        }
+-      ],
+-      "wp:attachment": [
+-        {
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/media?parent=273"
+-        }
+-      ],
+-      "wp:term": [
+-        {
+-          "taxonomy": "category",
+-          "embeddable": true,
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/categories?post=273"
+-        },
+-        {
+-          "taxonomy": "post_tag",
+-          "embeddable": true,
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/tags?post=273"
+-        }
+-      ],
+-      "curies": [
+-        {
+-          "name": "wp",
+-          "href": "https://api.w.org/{rel}",
+-          "templated": true
+-        }
+-      ]
+-    }
+   }
+ ]

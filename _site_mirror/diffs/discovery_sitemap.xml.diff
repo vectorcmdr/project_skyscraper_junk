@@ -1,13 +1,21 @@
 # Diff: https://project-skyscraper.com/sitemap.xml
 # File: discovery/sitemap.xml
-# Timestamp: 2026-05-28 14:15:39 UTC
+# Timestamp: 2026-05-29 14:18:07 UTC
 # Lines: 14 old -> 14 new
 # Beautified: yes
 --- old/discovery/sitemap.xml
 +++ new/discovery/sitemap.xml
-@@ -11,4 +11,4 @@
-   <loc>https://project-skyscraper.com/image-sitemap-1.xml</loc>
-   <lastmod>2026-05-25T17:55:20Z</lastmod>
+@@ -5,10 +5,10 @@
+ <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+   <loc>https://project-skyscraper.com/sitemap-1.xml</loc>
+-  <lastmod>2026-05-28T17:54:09Z</lastmod>
++  <lastmod>2026-05-29T10:26:00Z</lastmod>
   </sitemap>
--</sitemapindex>+</sitemapindex>
+  <sitemap>
+   <loc>https://project-skyscraper.com/image-sitemap-1.xml</loc>
+-  <lastmod>2026-05-25T17:55:20Z</lastmod>
++  <lastmod>2026-05-29T10:25:34Z</lastmod>
+  </sitemap>
+-</sitemapindex>
 +</sitemapindex>

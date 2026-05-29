@@ -1,6 +1,6 @@
 # Unpublished / Restricted IDs Report
 
-**Generated:** 2026-05-28 14:28:01 UTC
+**Generated:** 2026-05-29 15:41:57 UTC
 **Source:** https://project-skyscraper.com/wp-json/wp/v2/{posts,pages}/{id}
 
 IDs returning 401 (Unauthorized) or 403 (Forbidden) indicate content
@@ -10,9 +10,9 @@ that exists but is not publicly accessible (drafts, private, etc.).
 
 | Type | Count |
 |------|-------|
-| **Posts** | 383 |
+| **Posts** | 378 |
 | **Pages** | 11 |
-| **Total** | 394 |
+| **Total** | 389 |
 
 
 ## Unpublished Posts
@@ -41,7 +41,6 @@ that exists but is not publicly accessible (drafts, private, etc.).
 | 340 | 401 |
 | 342 | 401 |
 | 375 | 401 |
-| 377 | 401 |
 | 379 | 401 |
 | 381 | 401 |
 | 383 | 401 |
@@ -264,7 +263,6 @@ that exists but is not publicly accessible (drafts, private, etc.).
 | 941 | 401 |
 | 943 | 401 |
 | 945 | 401 |
-| 951 | 401 |
 | 953 | 401 |
 | 955 | 401 |
 | 957 | 401 |
@@ -389,7 +387,6 @@ that exists but is not publicly accessible (drafts, private, etc.).
 | 1226 | 401 |
 | 1231 | 401 |
 | 1233 | 401 |
-| 1238 | 401 |
 | 1241 | 401 |
 | 1243 | 401 |
 | 1245 | 401 |
@@ -398,10 +395,8 @@ that exists but is not publicly accessible (drafts, private, etc.).
 | 1437 | 401 |
 | 1440 | 401 |
 | 1442 | 401 |
-| 1600 | 401 |
 | 1616 | 401 |
 | 1644 | 401 |
-| 1794 | 401 |
 
 
 ## Unpublished Pages

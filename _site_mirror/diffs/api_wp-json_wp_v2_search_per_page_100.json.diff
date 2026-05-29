@@ -1,0 +1,109 @@
+# Diff: https://project-skyscraper.com/wp-json/wp/v2/search?per_page=100
+# File: api/wp-json/wp/v2/search_per_page_100.json
+# Timestamp: 2026-05-29 14:09:44 UTC
+# Lines: 1262 old -> 1352 new
+# Beautified: yes
+--- old/api/wp-json/wp/v2/search_per_page_100.json
++++ new/api/wp-json/wp/v2/search_per_page_100.json
+@@ -1,4 +1,64 @@
+ [
++  {
++    "id": 1833,
++    "title": "SECURITY LOG",
++    "url": "https://project-skyscraper.com/2026/05/29/sec-log-114327/",
++    "type": "post",
++    "subtype": "post",
++    "_links": {
++      "self": [
++        {
++          "embeddable": true,
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/1833",
++          "targetHints": {
++            "allow": [
++              "GET"
++            ]
++          }
++        }
++      ],
++      "about": [
++        {
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/types/post"
++        }
++      ],
++      "collection": [
++        {
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/search"
++        }
++      ]
++    }
++  },
++  {
++    "id": 1812,
++    "title": "Inbox",
++    "url": "https://project-skyscraper.com/inbox/",
++    "type": "post",
++    "subtype": "page",
++    "_links": {
++      "self": [
++        {
++          "embeddable": true,
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/pages/1812",
++          "targetHints": {
++            "allow": [
++              "GET"
++            ]
++          }
++        }
++      ],
++      "about": [
++        {
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/types/page"
++        }
++      ],
++      "collection": [
++        {
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/search"
++        }
++      ]
++    }
++  },
+   {
+     "id": 1802,
+     "title": "SECURITY LOG",
+@@ -1200,6 +1260,36 @@
+     }
+   },
+   {
++    "id": 1837,
++    "title": "Code",
++    "url": "https://project-skyscraper.com/2002/05/12/code/",
++    "type": "post",
++    "subtype": "post",
++    "_links": {
++      "self": [
++        {
++          "embeddable": true,
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/1837",
++          "targetHints": {
++            "allow": [
++              "GET"
++            ]
++          }
++        }
++      ],
++      "about": [
++        {
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/types/post"
++        }
++      ],
++      "collection": [
++        {
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/search"
++        }
++      ]
++    }
++  },
++  {
+     "id": 1,
+     "title": "About",
+     "url": "https://project-skyscraper.com/about/",

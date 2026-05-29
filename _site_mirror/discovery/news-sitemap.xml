@@ -4,6 +4,32 @@
 <?xml-stylesheet type="text/xsl" href="//project-skyscraper.com/news-sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
+  <loc>https://project-skyscraper.com/2026/05/29/sec-log-114327/</loc>
+  <lastmod>2026-05-29T09:17:39Z</lastmod>
+  <news:news>
+   <news:publication>
+    <news:name>project-skyscraper</news:name>
+    <news:language>en</news:language>
+   </news:publication>
+   <news:title>SECURITY LOG</news:title>
+   <news:publication_date>2026-05-29T10:43:00Z</news:publication_date>
+   <news:genres>Blog</news:genres>
+  </news:news>
+ </url>
+ <url>
+  <loc>https://project-skyscraper.com/inbox/</loc>
+  <lastmod>2026-05-29T10:16:42Z</lastmod>
+  <news:news>
+   <news:publication>
+    <news:name>project-skyscraper</news:name>
+    <news:language>en</news:language>
+   </news:publication>
+   <news:title>Inbox</news:title>
+   <news:publication_date>2026-05-28T17:00:20Z</news:publication_date>
+   <news:genres>Blog</news:genres>
+  </news:news>
+ </url>
+ <url>
   <loc>https://project-skyscraper.com/2026/05/27/sec-log-reboot/</loc>
   <lastmod>2026-05-27T22:00:03Z</lastmod>
   <news:news>
