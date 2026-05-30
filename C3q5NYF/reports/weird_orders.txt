@@ -1,0 +1,204 @@
+=== WEIRD READ ORDERS ===
+Trying every possible bit order within 8x5 blocks to break the ERROR pattern
+
+
+============================================================
+ORDER: row_major
+============================================================
+  B1: ERROR ERROR ERROR ERROR ERROR ERROR ERROR QSRSV ERR.R ERROR  [2 non-ERROR]
+  B4: ERROR ERROR ERROR ERROR ERROR ERROR ERVOR ERROR ERROR ERROR  [1 non-ERROR]
+  B9: ERROR ERROR ERROR ERROR ERROR ERROR E.ROR ERROR ERROR ERROR  [1 non-ERROR]
+  Printable: 'ERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORQSRSVERRRERRORERRORERRORERRORERRORE'
+  Vinci: 'FSSVSFSSVSFSSVSFSSVSFSSVSFSSVSFSSVSFSSVSFSSVSFSSVSFSSVSFSSVSFSSVSFSSVSFSSVSFSSVSFSSVSQKSKWFSSSFSSVSFSSVSFSSVSFSSVSFSSVSF'
+
+============================================================
+ORDER: col_major
+============================================================
+  B0: ...I. ...I. ...I. ...I. ...I. ...I. ...I. ...I. ...I. ...I.  [10 non-ERROR]
+  B1: ...I. ...I. ...I. ...I. ...I. ...I. ...I. ..... .@.I. ...I.  [9 non-ERROR]
+  B2: ...I. ...I. ...I. ...I. ...I. ...I. ...I. ...I. ...I. ...I.  [10 non-ERROR]
+  B3: ...I. ...I. ...I. ...I. ...I. ...I. ...I. ...I. ...I. ...I.  [10 non-ERROR]
+  B4: ...I. ...I. ...I. ...I. ...I. ...I. ...Y. ...I. ...I. ...I.  [10 non-ERROR]
+  B5: ...I. ...I. ...I. ...I. ...I. ...I. ...I. ...I. ...I. ...I.  [10 non-ERROR]
+  B6: ...I. ...I. ...I. ...I. ...I. ...I. ...I. ...I. ...I. ...I.  [10 non-ERROR]
+  B7: ...I. ...I. ...I. ...I. ...I. ...I. ...I. ...I. ...I. ...I.  [10 non-ERROR]
+  B8: ...I. ...I. ...I. ...I. ...I. ...I. ...I. ...I. ...I. ...I.  [10 non-ERROR]
+  B9: ...I. ...I. ...I. ...I. ...I. ...I. G..I. ...I. ...I. ...I.  [10 non-ERROR]
+  Printable: 'IIIIIIIIIIIIIIIII@IIIIIIIIIIIIIIIIIIIIIIIIIIIIYIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIGIIII'
+  Vinci: 'BBBBBBBBBBBBBBBBB@BBBBBBBBBBBBBBBBBBBBBBBBBBBBTBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBGBBBB'
+
+============================================================
+ORDER: row_rev
+============================================================
+  B0: .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J  [10 non-ERROR]
+  B1: .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J ..J.j .JJ.J .JJ.J  [10 non-ERROR]
+  B2: .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J  [10 non-ERROR]
+  B3: .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J  [10 non-ERROR]
+  B4: .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .Jj.J .JJ.J .JJ.J .JJ.J  [10 non-ERROR]
+  B5: .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J  [10 non-ERROR]
+  B6: .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J  [10 non-ERROR]
+  B7: .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J  [10 non-ERROR]
+  B8: .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J  [10 non-ERROR]
+  B9: .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .JJ.J .KJ.J .JJ.J .JJ.J .JJ.J  [10 non-ERROR]
+  Printable: 'JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJjJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ'
+  Vinci: 'JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJjJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ'
+
+============================================================
+ORDER: col_rev
+============================================================
+  B0: O.... O.... O.... O.... O.... O.... O.... O.... O.... O....  [10 non-ERROR]
+  B1: O.... O.... O.... O.... O.... O.... O.... _.... O.... O....  [10 non-ERROR]
+  B2: O.... O.... O.... O.... O.... O.... O.... O.... O.... O....  [10 non-ERROR]
+  B3: O.... O.... O.... O.... O.... O.... O.... O.... O.... O....  [10 non-ERROR]
+  B4: O.... O.... O.... O.... O.... O.... O.... O.... O.... O....  [10 non-ERROR]
+  B5: O.... O.... O.... O.... O.... O.... O.... O.... O.... O....  [10 non-ERROR]
+  B6: O.... O.... O.... O.... O.... O.... O.... O.... O.... O....  [10 non-ERROR]
+  B7: O.... O.... O.... O.... O.... O.... O.... O.... O.... O....  [10 non-ERROR]
+  B8: O.... O.... O.... O.... O.... O.... O.... O.... O.... O....  [10 non-ERROR]
+  B9: O.... O.... O.... O.... O.... O.... O.... O.... O.... O....  [10 non-ERROR]
+  Printable: 'OOOOOOOOOOOOOOOOO_OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO'
+  Vinci: 'VVVVVVVVVVVVVVVVV_VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV'
+
+============================================================
+ORDER: snake_row
+============================================================
+  B0: EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R  [10 non-ERROR]
+  B1: EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R Q.R.V EJR.R EJR.R  [10 non-ERROR]
+  B2: EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R  [10 non-ERROR]
+  B3: EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R  [10 non-ERROR]
+  B4: EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJV.R EJR.R EJR.R EJR.R  [10 non-ERROR]
+  B5: EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R  [10 non-ERROR]
+  B6: EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R  [10 non-ERROR]
+  B7: EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R  [10 non-ERROR]
+  B8: EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R  [10 non-ERROR]
+  B9: EJR.R EJR.R EJR.R EJR.R EJR.R EJR.R EKR.R EJR.R EJR.R EJR.R  [10 non-ERROR]
+  Printable: 'EJRREJRREJRREJRREJRREJRREJRREJRREJRREJRREJRREJRREJRREJRREJRREJRREJRRQRVEJRREJRREJRREJRREJRREJRREJRREJRREJRREJRREJRREJRRE'
+  Vinci: 'FJSSFJSSFJSSFJSSFJSSFJSSFJSSFJSSFJSSFJSSFJSSFJSSFJSSFJSSFJSSFJSSFJSSQSWFJSSFJSSFJSSFJSSFJSSFJSSFJSSFJSSFJSSFJSSFJSSFJSSF'
+
+============================================================
+ORDER: snake_col
+============================================================
+  B0: ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%.  [10 non-ERROR]
+  B1: ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ...A. ..a%. ..a%.  [10 non-ERROR]
+  B2: ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%.  [10 non-ERROR]
+  B3: ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%.  [10 non-ERROR]
+  B4: ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a5. ..a%. ..a%. ..a%.  [10 non-ERROR]
+  B5: ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%.  [10 non-ERROR]
+  B6: ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%.  [10 non-ERROR]
+  B7: ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%.  [10 non-ERROR]
+  B8: ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. ..a%.  [10 non-ERROR]
+  B9: ..a%. ..a%. ..a%. ..a%. ..a%. ..a%. G.a%. ..a%. ..a%. ..a%.  [10 non-ERROR]
+  Printable: 'a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%Aa%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a5a%a%a%a%a%a%a%a%a%a%a%a%a%a'
+  Vinci: 'a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%Ma%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a5a%a%a%a%a%a%a%a%a%a%a%a%a%a'
+
+============================================================
+ORDER: diagonal
+============================================================
+  B0: H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm.  [10 non-ERROR]
+  B1: H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. J.Qg. H.Pm. H.Pm.  [10 non-ERROR]
+  B2: H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm.  [10 non-ERROR]
+  B3: H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm.  [10 non-ERROR]
+  B4: H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.P}. H.Pm. H.Pm. H.Pm.  [10 non-ERROR]
+  B5: H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm.  [10 non-ERROR]
+  B6: H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm.  [10 non-ERROR]
+  B7: H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm.  [10 non-ERROR]
+  B8: H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm.  [10 non-ERROR]
+  B9: H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. H.Pm. h.Pm. H.Pm. H.Pm. H.Pm.  [10 non-ERROR]
+  Printable: 'HPmHPmHPmHPmHPmHPmHPmHPmHPmHPmHPmHPmHPmHPmHPmHPmHPmJQgHPmHPmHPmHPmHPmHPmHPmHPmHPmHPmHPmHPmHPmHPmHPmHPmHPmHPmHPmHPmHPmHPm'
+  Vinci: 'EPmEPmEPmEPmEPmEPmEPmEPmEPmEPmEPmEPmEPmEPmEPmEPmEPmJQgEPmEPmEPmEPmEPmEPmEPmEPmEPmEPmEPmEPmEPmEPmEPmEPmEPmEPmEPmEPmEPmEPm'
+
+============================================================
+ORDER: anti_diagonal
+============================================================
+  B0: )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe..  [10 non-ERROR]
+  B1: )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )UT.. !Qe.. )Qe..  [10 non-ERROR]
+  B2: )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe..  [10 non-ERROR]
+  B3: )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe..  [10 non-ERROR]
+  B4: )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe..  [10 non-ERROR]
+  B5: )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe..  [10 non-ERROR]
+  B6: )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe..  [10 non-ERROR]
+  B7: )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe..  [10 non-ERROR]
+  B8: )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe..  [10 non-ERROR]
+  B9: )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. )Qe.. +Qe.. )Qe.. )Qe.. )Qe..  [10 non-ERROR]
+  Printable: ')Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)UT!Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe'
+  Vinci: ')Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)UY!Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe)Qe'
+
+============================================================
+ORDER: spiral
+============================================================
+  B0: E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4  [10 non-ERROR]
+  B1: E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 Q.B.. E)B.. E)B.4  [10 non-ERROR]
+  B2: E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4  [10 non-ERROR]
+  B3: E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4  [10 non-ERROR]
+  B4: E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.5 E)B.4 E)B.4 E)B.4  [10 non-ERROR]
+  B5: E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4  [10 non-ERROR]
+  B6: E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4  [10 non-ERROR]
+  B7: E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4  [10 non-ERROR]
+  B8: E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4  [10 non-ERROR]
+  B9: E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)B.4 E)F.4 E)B.4 E)B.4 E)B.4  [10 non-ERROR]
+  Printable: 'E)B4E)B4E)B4E)B4E)B4E)B4E)B4E)B4E)B4E)B4E)B4E)B4E)B4E)B4E)B4E)B4E)B4QBE)BE)B4E)B4E)B4E)B4E)B4E)B4E)B4E)B4E)B4E)B4E)B4E)B'
+  Vinci: 'F)I4F)I4F)I4F)I4F)I4F)I4F)I4F)I4F)I4F)I4F)I4F)I4F)I4F)I4F)I4F)I4F)I4QIF)IF)I4F)I4F)I4F)I4F)I4F)I4F)I4F)I4F)I4F)I4F)I4F)I'
+
+============================================================
+ORDER: checkerboard
+============================================================
+  B0: ....< ....< ....< ....< ....< ....< ....< ....< ....< ....<  [10 non-ERROR]
+  B1: ....< ....< ....< ....< ....< ....< ....< ..... ....< ....<  [9 non-ERROR]
+  B2: ....< ....< ....< ....< ....< ....< ....< ....< ....< ....<  [10 non-ERROR]
+  B3: ....< ....< ....< ....< ....< ....< ....< ....< ....< ....<  [10 non-ERROR]
+  B4: ....< ....< ....< ....< ....< ....< ....< ....< ....< ....<  [10 non-ERROR]
+  B5: ....< ....< ....< ....< ....< ....< ....< ....< ....< ....<  [10 non-ERROR]
+  B6: ....< ....< ....< ....< ....< ....< ....< ....< ....< ....<  [10 non-ERROR]
+  B7: ....< ....< ....< ....< ....< ....< ....< ....< ....< ....<  [10 non-ERROR]
+  B8: ....< ....< ....< ....< ....< ....< ....< ....< ....< ....<  [10 non-ERROR]
+  B9: ....< ....< ....< ....< ....< ....< ....< ....< ....< ....<  [10 non-ERROR]
+  Printable: '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<'
+  Vinci: '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<'
+
+============================================================
+ORDER: interleave
+============================================================
+  B0: ETU". ETU". ETU". ETU". ETU". ETU". ETU". ETU". ETU". ETU".  [10 non-ERROR]
+  B1: ETU". ETU". ETU". ETU". ETU". ETU". ETU". UUQ26 EPU". ETU".  [10 non-ERROR]
+  B2: ETU". ETU". ETU". ETU". ETU". ETU". ETU". ETU". ETU". ETU".  [10 non-ERROR]
+  B3: ETU". ETU". ETU". ETU". ETU". ETU". ETU". ETU". ETU". ETU".  [10 non-ERROR]
+  B4: ETU". ETU". ETU". ETU". ETU". ETU". ETU&. ETU". ETU". ETU".  [10 non-ERROR]
+  B5: ETU". ETU". ETU". ETU". ETU". ETU". ETU". ETU". ETU". ETU".  [10 non-ERROR]
+  B6: ETU". ETU". ETU". ETU". ETU". ETU". ETU". ETU". ETU". ETU".  [10 non-ERROR]
+  B7: ETU". ETU". ETU". ETU". ETU". ETU". ETU". ETU". ETU". ETU".  [10 non-ERROR]
+  B8: ETU". ETU". ETU". ETU". ETU". ETU". ETU". ETU". ETU". ETU".  [10 non-ERROR]
+  B9: ETU". ETU". ETU". ETU". ETU". ETU". MTU". ETU". ETU". ETU".  [10 non-ERROR]
+  Printable: 'ETU"ETU"ETU"ETU"ETU"ETU"ETU"ETU"ETU"ETU"ETU"ETU"ETU"ETU"ETU"ETU"ETU"UUQ26EPU"ETU"ETU"ETU"ETU"ETU"ETU"ETU"ETU"ETU"ETU"ETU'
+  Vinci: 'FYU"FYU"FYU"FYU"FYU"FYU"FYU"FYU"FYU"FYU"FYU"FYU"FYU"FYU"FYU"FYU"FYU"UUQ26FPU"FYU"FYU"FYU"FYU"FYU"FYU"FYU"FYU"FYU"FYU"FYU'
+
+============================================================
+ORDER: zip
+============================================================
+  B0: d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2  [10 non-ERROR]
+  B1: d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 br2r6 d22U2 d22u2  [10 non-ERROR]
+  B2: d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2  [10 non-ERROR]
+  B3: d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2  [10 non-ERROR]
+  B4: d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d26u2 d22u2 d22u2 d22u2  [10 non-ERROR]
+  B5: d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2  [10 non-ERROR]
+  B6: d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2  [10 non-ERROR]
+  B7: d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2  [10 non-ERROR]
+  B8: d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d22u2  [10 non-ERROR]
+  B9: d22u2 d22u2 d22u2 d22u2 d22u2 d22u2 d.2u2 d22u2 d22u2 d22u2  [10 non-ERROR]
+  Printable: 'd22u2d22u2d22u2d22u2d22u2d22u2d22u2d22u2d22u2d22u2d22u2d22u2d22u2d22u2d22u2d22u2d22u2br2r6d22U2d22u2d22u2d22u2d22u2d22u2'
+  Vinci: 'd22u2d22u2d22u2d22u2d22u2d22u2d22u2d22u2d22u2d22u2d22u2d22u2d22u2d22u2d22u2d22u2d22u2br2r6d22U2d22u2d22u2d22u2d22u2d22u2'
+
+============================================================
+ORDER: negate_even
+============================================================
+  B9: ..... ..... ..... ..... ..... ..... .-... ..... ..... .....  [1 non-ERROR]
+  Printable: '-'
+  Vinci: '-'
+
+
+============================================================
+5-BIT COLUMN VALUES (each column = 5-bit value, A=0 mapping)
+============================================================
+normal: 'AANCSPSAANCSPSAANCSPSAANCSPSAANCSPSAANCSPSAANCSPSAANCSPSAANCSPSAANCSPSAANCSPSAANCSPSAANCSPSAANCSPSAANCSPSAANCSPSAANCSPSAAABP AANCSPSAANCSPSAANCSPSAANCSPSAANCSPSAANCSPSAANCSPSAANCSPSAANCSPSAANCSPSAANCS'
+  Vinci: 'MMCNKPKMMCNKPKMMCNKPKMMCNKPKMMCNKPKMMCNKPKMMCNKPKMMCNKPKMMCNKPKMMCNKPKMMCNKPKMMCNKPKMMCNKPKMMCNKPKMMCNKPKMMCNKPKMMCNKPKMMMIP MMCNKPKMMCNKPKMMCNKPKMMCNKPKMMCNKPKMMCNKPKMMCNKPKMMCNKPKMMCNKPKMMCNKPKMMCNK'
+reversed: 'AAWIJJAAWIJJAAWIJJAAWIJJAAWIJJAAWIJJAAWIJJAAWIJJAAWIJJAAWIJJAAWIJJAAWIJJAAWIJJAAWIJJAAWIJJAAWIJJAAWIJJAAAQLAXAWIJJAAWIJJAAWIJJAAWIJJAAWIJJAAWIJJAAWIJJAAWIJJAAWIJJAAWIJJAAWIJJAAWIJJAAWIJJAAWIJJAAWIJJAA'
+  Vinci: 'MMOBJJMMOBJJMMOBJJMMOBJJMMOBJJMMOBJJMMOBJJMMOBJJMMOBJJMMOBJJMMOBJJMMOBJJMMOBJJMMOBJJMMOBJJMMOBJJMMOBJJMMMQLMXMOBJJMMOBJJMMOBJJMMOBJJMMOBJJMMOBJJMMOBJJMMOBJJMMOBJJMMOBJJMMOBJJMMOBJJMMOBJJMMOBJJMMOBJJMM'
