@@ -1,0 +1,2016 @@
+=== REDACTION BRUTE-FORCE: ALL 100 BLOCKS ===
+Method: For each block, content dots try all 0/1 bit combos.
+Non-content dots fixed to ERROR background bit.
+
+
+============================================================
+BLOCK B0G0: 0 content dots
+============================================================
+  No content - fixed output: ERROR
+
+============================================================
+BLOCK B0G1: 3 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (3, 3), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=100  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=101  text='GRROS'  vinci='GSSVK'
+  Score=13  bits=010  text='ERR_R'  vinci='FSS_S'
+  Score=13  bits=011  text='ERR_S'  vinci='FSS_K'
+  Score=13  bits=110  text='GRR_R'  vinci='GSS_S'
+  Score=13  bits=111  text='GRR_S'  vinci='GSS_K'
+
+============================================================
+BLOCK B0G2: 4 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (3, 3), (4, 2), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=0000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=0001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=1000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=1001  text='GRROS'  vinci='GSSVK'
+  Score=14  bits=0010  text='ERROr'  vinci='FSSVr'
+  Score=14  bits=0011  text='ERROs'  vinci='FSSVs'
+  Score=14  bits=1010  text='GRROr'  vinci='GSSVr'
+  Score=14  bits=1011  text='GRROs'  vinci='GSSVs'
+  Score=13  bits=0100  text='ERR_R'  vinci='FSS_S'
+  Score=13  bits=0101  text='ERR_S'  vinci='FSS_K'
+  Score=13  bits=1100  text='GRR_R'  vinci='GSS_S'
+  Score=13  bits=1101  text='GRR_S'  vinci='GSS_K'
+  Score=12  bits=0110  text='ERR_r'  vinci='FSS_r'
+  Score=12  bits=0111  text='ERR_s'  vinci='FSS_s'
+  Score=12  bits=1110  text='GRR_r'  vinci='GSS_r'
+  Score=12  bits=1111  text='GRR_s'  vinci='GSS_s'
+
+============================================================
+BLOCK B0G3: 4 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (3, 3), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=0000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=0001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=0010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=0011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=1000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=1001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=1010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=1011  text='GRROW'  vinci='GSSVO'
+  Score=13  bits=0100  text='ERR_R'  vinci='FSS_S'
+  Score=13  bits=0101  text='ERR_S'  vinci='FSS_K'
+  Score=13  bits=0110  text='ERR_V'  vinci='FSS_W'
+  Score=13  bits=0111  text='ERR_W'  vinci='FSS_O'
+  Score=13  bits=1100  text='GRR_R'  vinci='GSS_S'
+  Score=13  bits=1101  text='GRR_S'  vinci='GSS_K'
+  Score=13  bits=1110  text='GRR_V'  vinci='GSS_W'
+  Score=13  bits=1111  text='GRR_W'  vinci='GSS_O'
+
+============================================================
+BLOCK B0G4: 7 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (3, 0), (3, 3), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=0000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=0000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=0000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=0000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=0000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=1000000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=1000001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=1000010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=1000011  text='GRROW'  vinci='GSSVO'
+  Score=20  bits=1000100  text='GRROZ'  vinci='GSSVZ'
+  Score=14  bits=0001000  text='ERROr'  vinci='FSSVr'
+  Score=14  bits=0001001  text='ERROs'  vinci='FSSVs'
+  Score=14  bits=0001010  text='ERROv'  vinci='FSSVv'
+  Score=14  bits=0001011  text='ERROw'  vinci='FSSVw'
+  Score=14  bits=0001100  text='ERROz'  vinci='FSSVz'
+  Score=14  bits=1001000  text='GRROr'  vinci='GSSVr'
+  Score=14  bits=1001001  text='GRROs'  vinci='GSSVs'
+  Score=14  bits=1001010  text='GRROv'  vinci='GSSVv'
+  Score=14  bits=1001011  text='GRROw'  vinci='GSSVw'
+  Score=14  bits=1001100  text='GRROz'  vinci='GSSVz'
+
+============================================================
+BLOCK B0G5: 8 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (3, 0), (3, 3), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=00000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=00000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=00000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=00000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=00000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=10000000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=10000001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=10000010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=10000011  text='GRROW'  vinci='GSSVO'
+  Score=20  bits=10000100  text='GRROZ'  vinci='GSSVZ'
+  Score=14  bits=00001000  text='ERROr'  vinci='FSSVr'
+  Score=14  bits=00001001  text='ERROs'  vinci='FSSVs'
+  Score=14  bits=00001010  text='ERROv'  vinci='FSSVv'
+  Score=14  bits=00001011  text='ERROw'  vinci='FSSVw'
+  Score=14  bits=00001100  text='ERROz'  vinci='FSSVz'
+  Score=14  bits=10001000  text='GRROr'  vinci='GSSVr'
+  Score=14  bits=10001001  text='GRROs'  vinci='GSSVs'
+  Score=14  bits=10001010  text='GRROv'  vinci='GSSVv'
+  Score=14  bits=10001011  text='GRROw'  vinci='GSSVw'
+  Score=14  bits=10001100  text='GRROz'  vinci='GSSVz'
+
+============================================================
+BLOCK B0G6: 6 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 6), (3, 0), (3, 3), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=001000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=001001  text='GRROS'  vinci='GSSVK'
+  Score=14  bits=010000  text='eRROR'  vinci='eSSVS'
+  Score=14  bits=010001  text='eRROS'  vinci='eSSVK'
+  Score=14  bits=011000  text='gRROR'  vinci='gSSVS'
+  Score=14  bits=011001  text='gRROS'  vinci='gSSVK'
+  Score=13  bits=000010  text='ERR_R'  vinci='FSS_S'
+  Score=13  bits=000011  text='ERR_S'  vinci='FSS_K'
+  Score=13  bits=000100  text='ERR.R'  vinci='FSS.S'
+  Score=13  bits=000101  text='ERR.S'  vinci='FSS.K'
+  Score=13  bits=000110  text='ERR.R'  vinci='FSS.S'
+  Score=13  bits=000111  text='ERR.S'  vinci='FSS.K'
+  Score=13  bits=001010  text='GRR_R'  vinci='GSS_S'
+  Score=13  bits=001011  text='GRR_S'  vinci='GSS_K'
+  Score=13  bits=001100  text='GRR.R'  vinci='GSS.S'
+  Score=13  bits=001101  text='GRR.S'  vinci='GSS.K'
+  Score=13  bits=001110  text='GRR.R'  vinci='GSS.S'
+  Score=13  bits=001111  text='GRR.S'  vinci='GSS.K'
+
+============================================================
+BLOCK B0G7: 4 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 6), (3, 0), (3, 3)]
+
+Top results (by readability score):
+  Score=20  bits=0000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=0100  text='GRROR'  vinci='GSSVS'
+  Score=13  bits=0001  text='ERR_R'  vinci='FSS_S'
+  Score=13  bits=0010  text='ERR.R'  vinci='FSS.S'
+  Score=13  bits=0011  text='ERR.R'  vinci='FSS.S'
+  Score=13  bits=0101  text='GRR_R'  vinci='GSS_S'
+  Score=13  bits=0110  text='GRR.R'  vinci='GSS.S'
+  Score=13  bits=0111  text='GRR.R'  vinci='GSS.S'
+  Score=13  bits=1000  text='.RROR'  vinci='.SSVS'
+  Score=13  bits=1100  text='.RROR'  vinci='.SSVS'
+  Score=11  bits=1001  text='.RR_R'  vinci='.SS_S'
+  Score=11  bits=1010  text='.RR.R'  vinci='.SS.S'
+  Score=11  bits=1011  text='.RR.R'  vinci='.SS.S'
+  Score=11  bits=1101  text='.RR_R'  vinci='.SS_S'
+  Score=11  bits=1110  text='.RR.R'  vinci='.SS.S'
+  Score=11  bits=1111  text='.RR.R'  vinci='.SS.S'
+
+============================================================
+BLOCK B0G8: 1 content dots
+============================================================
+Content dot positions (row,col): [(0, 6)]
+
+Top results (by readability score):
+  Score=20  bits=0  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=1  text='GRROR'  vinci='GSSVS'
+
+============================================================
+BLOCK B0G9: 0 content dots
+============================================================
+  No content - fixed output: ERROR
+
+============================================================
+BLOCK B1G0: 2 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=00  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=01  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=10  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=11  text='GRROS'  vinci='GSSVK'
+
+============================================================
+BLOCK B1G1: 4 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 6), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=0000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=0001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=0010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=0011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=0100  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=0101  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=0110  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=0111  text='GRROW'  vinci='GSSVO'
+  Score=13  bits=1000  text='.RROR'  vinci='.SSVS'
+  Score=13  bits=1001  text='.RROS'  vinci='.SSVK'
+  Score=13  bits=1010  text='.RROV'  vinci='.SSVW'
+  Score=13  bits=1011  text='.RROW'  vinci='.SSVO'
+  Score=13  bits=1100  text='.RROR'  vinci='.SSVS'
+  Score=13  bits=1101  text='.RROS'  vinci='.SSVK'
+  Score=13  bits=1110  text='.RROV'  vinci='.SSVW'
+  Score=13  bits=1111  text='.RROW'  vinci='.SSVO'
+
+============================================================
+BLOCK B1G2: 6 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 6), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=010000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=010001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=010010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=010011  text='GRROW'  vinci='GSSVO'
+  Score=20  bits=010100  text='GRROZ'  vinci='GSSVZ'
+  Score=14  bits=001000  text='ERROr'  vinci='FSSVr'
+  Score=14  bits=001001  text='ERROs'  vinci='FSSVs'
+  Score=14  bits=001010  text='ERROv'  vinci='FSSVv'
+  Score=14  bits=001011  text='ERROw'  vinci='FSSVw'
+  Score=14  bits=001100  text='ERROz'  vinci='FSSVz'
+  Score=14  bits=011000  text='GRROr'  vinci='GSSVr'
+  Score=14  bits=011001  text='GRROs'  vinci='GSSVs'
+  Score=14  bits=011010  text='GRROv'  vinci='GSSVv'
+  Score=14  bits=011011  text='GRROw'  vinci='GSSVw'
+  Score=14  bits=011100  text='GRROz'  vinci='GSSVz'
+
+============================================================
+BLOCK B1G3: 6 content dots
+============================================================
+Content dot positions (row,col): [(0, 3), (0, 6), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=010000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=010001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=010010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=010011  text='GRROW'  vinci='GSSVO'
+  Score=20  bits=010100  text='GRROZ'  vinci='GSSVZ'
+  Score=20  bits=100000  text='URROR'  vinci='USSVS'
+  Score=20  bits=100001  text='URROS'  vinci='USSVK'
+  Score=20  bits=100010  text='URROV'  vinci='USSVW'
+  Score=20  bits=100011  text='URROW'  vinci='USSVO'
+  Score=20  bits=100100  text='URROZ'  vinci='USSVZ'
+  Score=20  bits=110000  text='WRROR'  vinci='OSSVS'
+  Score=20  bits=110001  text='WRROS'  vinci='OSSVK'
+  Score=20  bits=110010  text='WRROV'  vinci='OSSVW'
+  Score=20  bits=110011  text='WRROW'  vinci='OSSVO'
+  Score=20  bits=110100  text='WRROZ'  vinci='OSSVZ'
+
+============================================================
+BLOCK B1G4: 6 content dots
+============================================================
+Content dot positions (row,col): [(0, 3), (0, 6), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=010000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=010001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=010010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=010011  text='GRROW'  vinci='GSSVO'
+  Score=20  bits=010100  text='GRROZ'  vinci='GSSVZ'
+  Score=20  bits=100000  text='URROR'  vinci='USSVS'
+  Score=20  bits=100001  text='URROS'  vinci='USSVK'
+  Score=20  bits=100010  text='URROV'  vinci='USSVW'
+  Score=20  bits=100011  text='URROW'  vinci='USSVO'
+  Score=20  bits=100100  text='URROZ'  vinci='USSVZ'
+  Score=20  bits=110000  text='WRROR'  vinci='OSSVS'
+  Score=20  bits=110001  text='WRROS'  vinci='OSSVK'
+  Score=20  bits=110010  text='WRROV'  vinci='OSSVW'
+  Score=20  bits=110011  text='WRROW'  vinci='OSSVO'
+  Score=20  bits=110100  text='WRROZ'  vinci='OSSVZ'
+
+============================================================
+BLOCK B1G5: 8 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 6), (1, 5), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=00000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=00000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=00000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=00000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=00000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=00100000  text='EVROR'  vinci='FWSVS'
+  Score=20  bits=00100001  text='EVROS'  vinci='FWSVK'
+  Score=20  bits=00100010  text='EVROV'  vinci='FWSVW'
+  Score=20  bits=00100011  text='EVROW'  vinci='FWSVO'
+  Score=20  bits=00100100  text='EVROZ'  vinci='FWSVZ'
+  Score=20  bits=01000000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=01000001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=01000010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=01000011  text='GRROW'  vinci='GSSVO'
+  Score=20  bits=01000100  text='GRROZ'  vinci='GSSVZ'
+  Score=20  bits=01100000  text='GVROR'  vinci='GWSVS'
+  Score=20  bits=01100001  text='GVROS'  vinci='GWSVK'
+  Score=20  bits=01100010  text='GVROV'  vinci='GWSVW'
+  Score=20  bits=01100011  text='GVROW'  vinci='GWSVO'
+  Score=20  bits=01100100  text='GVROZ'  vinci='GWSVZ'
+
+============================================================
+BLOCK B1G6: 4 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 6), (1, 7), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=0000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=0001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=0010  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=0011  text='ESROS'  vinci='FKSVK'
+  Score=20  bits=0100  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=0101  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=0110  text='GSROR'  vinci='GKSVS'
+  Score=20  bits=0111  text='GSROS'  vinci='GKSVK'
+  Score=13  bits=1000  text='.RROR'  vinci='.SSVS'
+  Score=13  bits=1001  text='.RROS'  vinci='.SSVK'
+  Score=13  bits=1010  text='.SROR'  vinci='.KSVS'
+  Score=13  bits=1011  text='.SROS'  vinci='.KSVK'
+  Score=13  bits=1100  text='.RROR'  vinci='.SSVS'
+  Score=13  bits=1101  text='.RROS'  vinci='.SSVK'
+  Score=13  bits=1110  text='.SROR'  vinci='.KSVS'
+  Score=13  bits=1111  text='.SROS'  vinci='.KSVK'
+
+============================================================
+BLOCK B1G7: 0 content dots
+============================================================
+  No content - fixed output: ERROR
+
+============================================================
+BLOCK B1G8: 1 content dots
+============================================================
+Content dot positions (row,col): [(0, 6)]
+
+Top results (by readability score):
+  Score=20  bits=0  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=1  text='GRROR'  vinci='GSSVS'
+
+============================================================
+BLOCK B1G9: 0 content dots
+============================================================
+  No content - fixed output: ERROR
+
+============================================================
+BLOCK B2G0: 4 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (3, 3), (4, 2), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=0000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=0001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=1000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=1001  text='GRROS'  vinci='GSSVK'
+  Score=14  bits=0010  text='ERROr'  vinci='FSSVr'
+  Score=14  bits=0011  text='ERROs'  vinci='FSSVs'
+  Score=14  bits=1010  text='GRROr'  vinci='GSSVr'
+  Score=14  bits=1011  text='GRROs'  vinci='GSSVs'
+  Score=13  bits=0100  text='ERR_R'  vinci='FSS_S'
+  Score=13  bits=0101  text='ERR_S'  vinci='FSS_K'
+  Score=13  bits=1100  text='GRR_R'  vinci='GSS_S'
+  Score=13  bits=1101  text='GRR_S'  vinci='GSS_K'
+  Score=12  bits=0110  text='ERR_r'  vinci='FSS_r'
+  Score=12  bits=0111  text='ERR_s'  vinci='FSS_s'
+  Score=12  bits=1110  text='GRR_r'  vinci='GSS_r'
+  Score=12  bits=1111  text='GRR_s'  vinci='GSS_s'
+
+============================================================
+BLOCK B2G1: 7 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (1, 7), (3, 3), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=0000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=0000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=0000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=0000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=0000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=0100000  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=0100001  text='ESROS'  vinci='FKSVK'
+  Score=20  bits=0100010  text='ESROV'  vinci='FKSVW'
+  Score=20  bits=0100011  text='ESROW'  vinci='FKSVO'
+  Score=20  bits=0100100  text='ESROZ'  vinci='FKSVZ'
+  Score=20  bits=1000000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=1000001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=1000010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=1000011  text='GRROW'  vinci='GSSVO'
+  Score=20  bits=1000100  text='GRROZ'  vinci='GSSVZ'
+  Score=20  bits=1100000  text='GSROR'  vinci='GKSVS'
+  Score=20  bits=1100001  text='GSROS'  vinci='GKSVK'
+  Score=20  bits=1100010  text='GSROV'  vinci='GKSVW'
+  Score=20  bits=1100011  text='GSROW'  vinci='GKSVO'
+  Score=20  bits=1100100  text='GSROZ'  vinci='GKSVZ'
+
+============================================================
+BLOCK B2G2: 5 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (3, 3), (4, 2), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=00000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=00001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=00010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=00011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=10000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=10001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=10010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=10011  text='GRROW'  vinci='GSSVO'
+  Score=14  bits=00100  text='ERROr'  vinci='FSSVr'
+  Score=14  bits=00101  text='ERROs'  vinci='FSSVs'
+  Score=14  bits=00110  text='ERROv'  vinci='FSSVv'
+  Score=14  bits=00111  text='ERROw'  vinci='FSSVw'
+  Score=14  bits=10100  text='GRROr'  vinci='GSSVr'
+  Score=14  bits=10101  text='GRROs'  vinci='GSSVs'
+  Score=14  bits=10110  text='GRROv'  vinci='GSSVv'
+  Score=14  bits=10111  text='GRROw'  vinci='GSSVw'
+  Score=13  bits=01000  text='ERR_R'  vinci='FSS_S'
+  Score=13  bits=01001  text='ERR_S'  vinci='FSS_K'
+  Score=13  bits=01010  text='ERR_V'  vinci='FSS_W'
+  Score=13  bits=01011  text='ERR_W'  vinci='FSS_O'
+
+============================================================
+BLOCK B2G3: 4 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (1, 2), (3, 3), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=0000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=0001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=1000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=1001  text='GRROS'  vinci='GSSVK'
+  Score=14  bits=0100  text='ErROR'  vinci='FrSVS'
+  Score=14  bits=0101  text='ErROS'  vinci='FrSVK'
+  Score=14  bits=1100  text='GrROR'  vinci='GrSVS'
+  Score=14  bits=1101  text='GrROS'  vinci='GrSVK'
+  Score=13  bits=0010  text='ERR_R'  vinci='FSS_S'
+  Score=13  bits=0011  text='ERR_S'  vinci='FSS_K'
+  Score=13  bits=1010  text='GRR_R'  vinci='GSS_S'
+  Score=13  bits=1011  text='GRR_S'  vinci='GSS_K'
+  Score=12  bits=0110  text='ErR_R'  vinci='FrS_S'
+  Score=12  bits=0111  text='ErR_S'  vinci='FrS_K'
+  Score=12  bits=1110  text='GrR_R'  vinci='GrS_S'
+  Score=12  bits=1111  text='GrR_S'  vinci='GrS_K'
+
+============================================================
+BLOCK B2G4: 12 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 6), (1, 2), (1, 7), (2, 4), (2, 7), (3, 3), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=000000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=000000000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=000000000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=000000000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=000000000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=000000100000  text='ERSOR'  vinci='FSKVS'
+  Score=20  bits=000000100001  text='ERSOS'  vinci='FSKVK'
+  Score=20  bits=000000100010  text='ERSOV'  vinci='FSKVW'
+  Score=20  bits=000000100011  text='ERSOW'  vinci='FSKVO'
+  Score=20  bits=000000100100  text='ERSOZ'  vinci='FSKVZ'
+  Score=20  bits=000001000000  text='ERZOR'  vinci='FSZVS'
+  Score=20  bits=000001000001  text='ERZOS'  vinci='FSZVK'
+  Score=20  bits=000001000010  text='ERZOV'  vinci='FSZVW'
+  Score=20  bits=000001000011  text='ERZOW'  vinci='FSZVO'
+  Score=20  bits=000001000100  text='ERZOZ'  vinci='FSZVZ'
+  Score=20  bits=000010000000  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=000010000001  text='ESROS'  vinci='FKSVK'
+  Score=20  bits=000010000010  text='ESROV'  vinci='FKSVW'
+  Score=20  bits=000010000011  text='ESROW'  vinci='FKSVO'
+  Score=20  bits=000010000100  text='ESROZ'  vinci='FKSVZ'
+
+============================================================
+BLOCK B2G5: 13 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (1, 5), (1, 7), (2, 2), (2, 4), (2, 5), (2, 7), (3, 3), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=0000000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=0000000000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=0000000000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=0000000000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=0000000000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=0000001000000  text='ERSOR'  vinci='FSKVS'
+  Score=20  bits=0000001000001  text='ERSOS'  vinci='FSKVK'
+  Score=20  bits=0000001000010  text='ERSOV'  vinci='FSKVW'
+  Score=20  bits=0000001000011  text='ERSOW'  vinci='FSKVO'
+  Score=20  bits=0000001000100  text='ERSOZ'  vinci='FSKVZ'
+  Score=20  bits=0000010000000  text='ERVOR'  vinci='FSWVS'
+  Score=20  bits=0000010000001  text='ERVOS'  vinci='FSWVK'
+  Score=20  bits=0000010000010  text='ERVOV'  vinci='FSWVW'
+  Score=20  bits=0000010000011  text='ERVOW'  vinci='FSWVO'
+  Score=20  bits=0000010000100  text='ERVOZ'  vinci='FSWVZ'
+  Score=20  bits=0000011000000  text='ERWOR'  vinci='FSOVS'
+  Score=20  bits=0000011000001  text='ERWOS'  vinci='FSOVK'
+  Score=20  bits=0000011000010  text='ERWOV'  vinci='FSOVW'
+  Score=20  bits=0000011000011  text='ERWOW'  vinci='FSOVO'
+  Score=20  bits=0000011000100  text='ERWOZ'  vinci='FSOVZ'
+
+============================================================
+BLOCK B2G6: 13 content dots
+============================================================
+Content dot positions (row,col): [(0, 2), (0, 3), (0, 6), (1, 2), (1, 7), (2, 2), (2, 4), (2, 7), (3, 3), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=0000000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=0000000000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=0000000000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=0000000000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=0000000000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=0000000100000  text='ERSOR'  vinci='FSKVS'
+  Score=20  bits=0000000100001  text='ERSOS'  vinci='FSKVK'
+  Score=20  bits=0000000100010  text='ERSOV'  vinci='FSKVW'
+  Score=20  bits=0000000100011  text='ERSOW'  vinci='FSKVO'
+  Score=20  bits=0000000100100  text='ERSOZ'  vinci='FSKVZ'
+  Score=20  bits=0000001000000  text='ERZOR'  vinci='FSZVS'
+  Score=20  bits=0000001000001  text='ERZOS'  vinci='FSZVK'
+  Score=20  bits=0000001000010  text='ERZOV'  vinci='FSZVW'
+  Score=20  bits=0000001000011  text='ERZOW'  vinci='FSZVO'
+  Score=20  bits=0000001000100  text='ERZOZ'  vinci='FSZVZ'
+  Score=20  bits=0000100000000  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=0000100000001  text='ESROS'  vinci='FKSVK'
+  Score=20  bits=0000100000010  text='ESROV'  vinci='FKSVW'
+  Score=20  bits=0000100000011  text='ESROW'  vinci='FKSVO'
+  Score=20  bits=0000100000100  text='ESROZ'  vinci='FKSVZ'
+
+============================================================
+BLOCK B2G7: 7 content dots
+============================================================
+Content dot positions (row,col): [(0, 3), (0, 6), (1, 2), (2, 2), (3, 3), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=0000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=0000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=0000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=0000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=0100000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=0100001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=0100010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=0100011  text='GRROW'  vinci='GSSVO'
+  Score=20  bits=1000000  text='URROR'  vinci='USSVS'
+  Score=20  bits=1000001  text='URROS'  vinci='USSVK'
+  Score=20  bits=1000010  text='URROV'  vinci='USSVW'
+  Score=20  bits=1000011  text='URROW'  vinci='USSVO'
+  Score=20  bits=1100000  text='WRROR'  vinci='OSSVS'
+  Score=20  bits=1100001  text='WRROS'  vinci='OSSVK'
+  Score=20  bits=1100010  text='WRROV'  vinci='OSSVW'
+  Score=20  bits=1100011  text='WRROW'  vinci='OSSVO'
+  Score=14  bits=0001000  text='ERrOR'  vinci='FSrVS'
+  Score=14  bits=0001001  text='ERrOS'  vinci='FSrVK'
+  Score=14  bits=0001010  text='ERrOV'  vinci='FSrVW'
+  Score=14  bits=0001011  text='ERrOW'  vinci='FSrVO'
+
+============================================================
+BLOCK B2G8: 5 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 6), (3, 3), (4, 2), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=00000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=00001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=01000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=01001  text='GRROS'  vinci='GSSVK'
+  Score=14  bits=00010  text='ERROr'  vinci='FSSVr'
+  Score=14  bits=00011  text='ERROs'  vinci='FSSVs'
+  Score=14  bits=01010  text='GRROr'  vinci='GSSVr'
+  Score=14  bits=01011  text='GRROs'  vinci='GSSVs'
+  Score=13  bits=00100  text='ERR_R'  vinci='FSS_S'
+  Score=13  bits=00101  text='ERR_S'  vinci='FSS_K'
+  Score=13  bits=01100  text='GRR_R'  vinci='GSS_S'
+  Score=13  bits=01101  text='GRR_S'  vinci='GSS_K'
+  Score=13  bits=10000  text='.RROR'  vinci='.SSVS'
+  Score=13  bits=10001  text='.RROS'  vinci='.SSVK'
+  Score=13  bits=11000  text='.RROR'  vinci='.SSVS'
+  Score=13  bits=11001  text='.RROS'  vinci='.SSVK'
+  Score=12  bits=00110  text='ERR_r'  vinci='FSS_r'
+  Score=12  bits=00111  text='ERR_s'  vinci='FSS_s'
+  Score=12  bits=01110  text='GRR_r'  vinci='GSS_r'
+  Score=12  bits=01111  text='GRR_s'  vinci='GSS_s'
+
+============================================================
+BLOCK B2G9: 2 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=00  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=01  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=10  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=11  text='GRROS'  vinci='GSSVK'
+
+============================================================
+BLOCK B3G0: 2 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (3, 3)]
+
+Top results (by readability score):
+  Score=20  bits=00  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=10  text='GRROR'  vinci='GSSVS'
+  Score=13  bits=01  text='ERR_R'  vinci='FSS_S'
+  Score=13  bits=11  text='GRR_R'  vinci='GSS_S'
+
+============================================================
+BLOCK B3G1: 6 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 6), (3, 0), (3, 3), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=010000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=010001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=010010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=010011  text='GRROW'  vinci='GSSVO'
+  Score=13  bits=000100  text='ERR_R'  vinci='FSS_S'
+  Score=13  bits=000101  text='ERR_S'  vinci='FSS_K'
+  Score=13  bits=000110  text='ERR_V'  vinci='FSS_W'
+  Score=13  bits=000111  text='ERR_W'  vinci='FSS_O'
+  Score=13  bits=001000  text='ERR.R'  vinci='FSS.S'
+  Score=13  bits=001001  text='ERR.S'  vinci='FSS.K'
+  Score=13  bits=001010  text='ERR.V'  vinci='FSS.W'
+  Score=13  bits=001011  text='ERR.W'  vinci='FSS.O'
+  Score=13  bits=001100  text='ERR.R'  vinci='FSS.S'
+  Score=13  bits=001101  text='ERR.S'  vinci='FSS.K'
+  Score=13  bits=001110  text='ERR.V'  vinci='FSS.W'
+  Score=13  bits=001111  text='ERR.W'  vinci='FSS.O'
+
+============================================================
+BLOCK B3G2: 13 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 3), (0, 6), (1, 7), (2, 4), (2, 7), (3, 0), (3, 2), (3, 3), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=0000000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=0000000000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=0000000000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=0000000000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=0000000000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=0000010000000  text='ERSOR'  vinci='FSKVS'
+  Score=20  bits=0000010000001  text='ERSOS'  vinci='FSKVK'
+  Score=20  bits=0000010000010  text='ERSOV'  vinci='FSKVW'
+  Score=20  bits=0000010000011  text='ERSOW'  vinci='FSKVO'
+  Score=20  bits=0000010000100  text='ERSOZ'  vinci='FSKVZ'
+  Score=20  bits=0000100000000  text='ERZOR'  vinci='FSZVS'
+  Score=20  bits=0000100000001  text='ERZOS'  vinci='FSZVK'
+  Score=20  bits=0000100000010  text='ERZOV'  vinci='FSZVW'
+  Score=20  bits=0000100000011  text='ERZOW'  vinci='FSZVO'
+  Score=20  bits=0000100000100  text='ERZOZ'  vinci='FSZVZ'
+  Score=20  bits=0001000000000  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=0001000000001  text='ESROS'  vinci='FKSVK'
+  Score=20  bits=0001000000010  text='ESROV'  vinci='FKSVW'
+  Score=20  bits=0001000000011  text='ESROW'  vinci='FKSVO'
+  Score=20  bits=0001000000100  text='ESROZ'  vinci='FKSVZ'
+
+============================================================
+BLOCK B3G3: 10 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 3), (0, 6), (3, 0), (3, 2), (3, 3), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=0000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=0000000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=0000000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=0000000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=0000000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=0010000000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=0010000001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=0010000010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=0010000011  text='GRROW'  vinci='GSSVO'
+  Score=20  bits=0010000100  text='GRROZ'  vinci='GSSVZ'
+  Score=20  bits=0100000000  text='URROR'  vinci='USSVS'
+  Score=20  bits=0100000001  text='URROS'  vinci='USSVK'
+  Score=20  bits=0100000010  text='URROV'  vinci='USSVW'
+  Score=20  bits=0100000011  text='URROW'  vinci='USSVO'
+  Score=20  bits=0100000100  text='URROZ'  vinci='USSVZ'
+  Score=20  bits=0110000000  text='WRROR'  vinci='OSSVS'
+  Score=20  bits=0110000001  text='WRROS'  vinci='OSSVK'
+  Score=20  bits=0110000010  text='WRROV'  vinci='OSSVW'
+  Score=20  bits=0110000011  text='WRROW'  vinci='OSSVO'
+  Score=20  bits=0110000100  text='WRROZ'  vinci='OSSVZ'
+
+============================================================
+BLOCK B3G4: 9 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 3), (0, 6), (3, 0), (3, 3), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=000000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=000000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=000000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=000000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=001000000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=001000001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=001000010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=001000011  text='GRROW'  vinci='GSSVO'
+  Score=20  bits=001000100  text='GRROZ'  vinci='GSSVZ'
+  Score=20  bits=010000000  text='URROR'  vinci='USSVS'
+  Score=20  bits=010000001  text='URROS'  vinci='USSVK'
+  Score=20  bits=010000010  text='URROV'  vinci='USSVW'
+  Score=20  bits=010000011  text='URROW'  vinci='USSVO'
+  Score=20  bits=010000100  text='URROZ'  vinci='USSVZ'
+  Score=20  bits=011000000  text='WRROR'  vinci='OSSVS'
+  Score=20  bits=011000001  text='WRROS'  vinci='OSSVK'
+  Score=20  bits=011000010  text='WRROV'  vinci='OSSVW'
+  Score=20  bits=011000011  text='WRROW'  vinci='OSSVO'
+  Score=20  bits=011000100  text='WRROZ'  vinci='OSSVZ'
+
+============================================================
+BLOCK B3G5: 15 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 3), (0, 4), (0, 6), (3, 0), (3, 2), (3, 3), (3, 7), (4, 0), (4, 1), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score=13  bits=n/a  text='ERRN.'  vinci='FSSC.'
+  Score= 9  bits=n/a  text='.RR..'  vinci='.SS..'
+  Score= 9  bits=n/a  text='.RR..'  vinci='.SS..'
+
+============================================================
+BLOCK B3G6: 11 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 3), (0, 6), (3, 0), (3, 2), (3, 3), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=00000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=00000000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=00000000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=00000000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=00000000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=00010000000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=00010000001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=00010000010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=00010000011  text='GRROW'  vinci='GSSVO'
+  Score=20  bits=00010000100  text='GRROZ'  vinci='GSSVZ'
+  Score=20  bits=00100000000  text='URROR'  vinci='USSVS'
+  Score=20  bits=00100000001  text='URROS'  vinci='USSVK'
+  Score=20  bits=00100000010  text='URROV'  vinci='USSVW'
+  Score=20  bits=00100000011  text='URROW'  vinci='USSVO'
+  Score=20  bits=00100000100  text='URROZ'  vinci='USSVZ'
+  Score=20  bits=00110000000  text='WRROR'  vinci='OSSVS'
+  Score=20  bits=00110000001  text='WRROS'  vinci='OSSVK'
+  Score=20  bits=00110000010  text='WRROV'  vinci='OSSVW'
+  Score=20  bits=00110000011  text='WRROW'  vinci='OSSVO'
+  Score=20  bits=00110000100  text='WRROZ'  vinci='OSSVZ'
+
+============================================================
+BLOCK B3G7: 8 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (3, 0), (3, 2), (3, 3), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=00000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=00000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=00000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=00000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=00000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=10000000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=10000001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=10000010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=10000011  text='GRROW'  vinci='GSSVO'
+  Score=20  bits=10000100  text='GRROZ'  vinci='GSSVZ'
+  Score=14  bits=00001000  text='ERROr'  vinci='FSSVr'
+  Score=14  bits=00001001  text='ERROs'  vinci='FSSVs'
+  Score=14  bits=00001010  text='ERROv'  vinci='FSSVv'
+  Score=14  bits=00001011  text='ERROw'  vinci='FSSVw'
+  Score=14  bits=00001100  text='ERROz'  vinci='FSSVz'
+  Score=14  bits=00100000  text='ERRoR'  vinci='FSSoS'
+  Score=14  bits=00100001  text='ERRoS'  vinci='FSSoK'
+  Score=14  bits=00100010  text='ERRoV'  vinci='FSSoW'
+  Score=14  bits=00100011  text='ERRoW'  vinci='FSSoO'
+  Score=14  bits=00100100  text='ERRoZ'  vinci='FSSoZ'
+
+============================================================
+BLOCK B3G8: 8 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (3, 0), (3, 2), (3, 3), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=00000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=00000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=00000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=00000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=00000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=10000000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=10000001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=10000010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=10000011  text='GRROW'  vinci='GSSVO'
+  Score=20  bits=10000100  text='GRROZ'  vinci='GSSVZ'
+  Score=14  bits=00001000  text='ERROr'  vinci='FSSVr'
+  Score=14  bits=00001001  text='ERROs'  vinci='FSSVs'
+  Score=14  bits=00001010  text='ERROv'  vinci='FSSVv'
+  Score=14  bits=00001011  text='ERROw'  vinci='FSSVw'
+  Score=14  bits=00001100  text='ERROz'  vinci='FSSVz'
+  Score=14  bits=00100000  text='ERRoR'  vinci='FSSoS'
+  Score=14  bits=00100001  text='ERRoS'  vinci='FSSoK'
+  Score=14  bits=00100010  text='ERRoV'  vinci='FSSoW'
+  Score=14  bits=00100011  text='ERRoW'  vinci='FSSoO'
+  Score=14  bits=00100100  text='ERRoZ'  vinci='FSSoZ'
+
+============================================================
+BLOCK B3G9: 5 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (3, 0), (3, 3), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=00000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=00001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=00010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=00011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=10000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=10001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=10010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=10011  text='GRROW'  vinci='GSSVO'
+  Score=13  bits=00100  text='ERR_R'  vinci='FSS_S'
+  Score=13  bits=00101  text='ERR_S'  vinci='FSS_K'
+  Score=13  bits=00110  text='ERR_V'  vinci='FSS_W'
+  Score=13  bits=00111  text='ERR_W'  vinci='FSS_O'
+  Score=13  bits=01000  text='ERR.R'  vinci='FSS.S'
+  Score=13  bits=01001  text='ERR.S'  vinci='FSS.K'
+  Score=13  bits=01010  text='ERR.V'  vinci='FSS.W'
+  Score=13  bits=01011  text='ERR.W'  vinci='FSS.O'
+  Score=13  bits=01100  text='ERR.R'  vinci='FSS.S'
+  Score=13  bits=01101  text='ERR.S'  vinci='FSS.K'
+  Score=13  bits=01110  text='ERR.V'  vinci='FSS.W'
+  Score=13  bits=01111  text='ERR.W'  vinci='FSS.O'
+
+============================================================
+BLOCK B4G0: 11 content dots
+============================================================
+Content dot positions (row,col): [(2, 2), (2, 4), (2, 7), (3, 2), (3, 3), (4, 0), (4, 2), (4, 4), (4, 5), (4, 6), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=00000000000  text='ERROP'  vinci='FSSVP'
+  Score=20  bits=00000000001  text='ERROQ'  vinci='FSSVQ'
+  Score=20  bits=00000000010  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=00000000011  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=00000000100  text='ERROT'  vinci='FSSVY'
+  Score=20  bits=00000000101  text='ERROU'  vinci='FSSVU'
+  Score=20  bits=00000000110  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=00000000111  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=00000001000  text='ERROX'  vinci='FSSVX'
+  Score=20  bits=00000001001  text='ERROY'  vinci='FSSVT'
+  Score=20  bits=00000001010  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=00100000000  text='ERSOP'  vinci='FSKVP'
+  Score=20  bits=00100000001  text='ERSOQ'  vinci='FSKVQ'
+  Score=20  bits=00100000010  text='ERSOR'  vinci='FSKVS'
+  Score=20  bits=00100000011  text='ERSOS'  vinci='FSKVK'
+  Score=20  bits=00100000100  text='ERSOT'  vinci='FSKVY'
+  Score=20  bits=00100000101  text='ERSOU'  vinci='FSKVU'
+  Score=20  bits=00100000110  text='ERSOV'  vinci='FSKVW'
+  Score=20  bits=00100000111  text='ERSOW'  vinci='FSKVO'
+  Score=20  bits=00100001000  text='ERSOX'  vinci='FSKVX'
+
+============================================================
+BLOCK B4G1: 16 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (1, 5), (1, 7), (2, 0), (2, 2), (2, 4), (2, 5), (2, 7), (3, 0), (3, 2), (3, 3), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score= 9  bits=n/a  text='GW...'  vinci='GO...'
+  Score= 9  bits=n/a  text='GW...'  vinci='GO...'
+
+============================================================
+BLOCK B4G2: 19 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (1, 0), (1, 2), (1, 4), (1, 5), (1, 7), (2, 0), (2, 2), (2, 4), (2, 5), (2, 7), (3, 0), (3, 2), (3, 3), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score= 7  bits=n/a  text='G....'
+  Score= 7  bits=n/a  text='G....'
+
+============================================================
+BLOCK B4G3: 20 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 6), (1, 0), (1, 2), (1, 4), (1, 5), (1, 7), (2, 0), (2, 2), (2, 4), (2, 5), (2, 7), (3, 0), (3, 2), (3, 3), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score= 5  bits=n/a  text='.....'
+  Score= 5  bits=n/a  text='.....'
+
+============================================================
+BLOCK B4G4: 19 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 6), (1, 0), (1, 2), (1, 4), (1, 5), (1, 7), (2, 0), (2, 2), (2, 4), (2, 5), (2, 7), (3, 0), (3, 2), (3, 3), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score= 5  bits=n/a  text='.....'
+  Score= 5  bits=n/a  text='.....'
+
+============================================================
+BLOCK B4G5: 24 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 6), (1, 0), (1, 2), (1, 4), (1, 5), (1, 6), (1, 7), (2, 0), (2, 2), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 0), (3, 2), (3, 3), (3, 7), (4, 0), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score=12  bits=n/a  text='EP@NR'  vinci='FP@CS'
+  Score= 5  bits=n/a  text='.....'
+  Score= 5  bits=n/a  text='.....'
+
+============================================================
+BLOCK B4G6: 19 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 6), (1, 0), (1, 2), (1, 4), (1, 5), (1, 7), (2, 0), (2, 2), (2, 4), (2, 5), (2, 7), (3, 0), (3, 2), (3, 3), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score= 5  bits=n/a  text='...._'
+  Score= 5  bits=n/a  text='...._'
+
+============================================================
+BLOCK B4G7: 16 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 6), (1, 0), (1, 1), (1, 2), (1, 4), (1, 5), (1, 7), (2, 0), (2, 2), (2, 4), (2, 5), (2, 7), (3, 0), (3, 3), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score=13  bits=n/a  text='E.ROR'  vinci='F.SVS'
+  Score= 7  bits=n/a  text='....S'  vinci='....K'
+  Score= 7  bits=n/a  text='....S'  vinci='....K'
+
+============================================================
+BLOCK B4G8: 12 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (1, 2), (1, 5), (1, 7), (2, 0), (2, 2), (2, 4), (2, 5), (2, 7), (3, 0), (3, 3), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=000000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=000000000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=000000001000  text='ERSOR'  vinci='FSKVS'
+  Score=20  bits=000000001001  text='ERSOS'  vinci='FSKVK'
+  Score=20  bits=000000010000  text='ERVOR'  vinci='FSWVS'
+  Score=20  bits=000000010001  text='ERVOS'  vinci='FSWVK'
+  Score=20  bits=000000011000  text='ERWOR'  vinci='FSOVS'
+  Score=20  bits=000000011001  text='ERWOS'  vinci='FSOVK'
+  Score=20  bits=000000100000  text='ERZOR'  vinci='FSZVS'
+  Score=20  bits=000000100001  text='ERZOS'  vinci='FSZVK'
+  Score=20  bits=000100000000  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=000100000001  text='ESROS'  vinci='FKSVK'
+  Score=20  bits=000100001000  text='ESSOR'  vinci='FKKVS'
+  Score=20  bits=000100001001  text='ESSOS'  vinci='FKKVK'
+  Score=20  bits=000100010000  text='ESVOR'  vinci='FKWVS'
+  Score=20  bits=000100010001  text='ESVOS'  vinci='FKWVK'
+  Score=20  bits=000100011000  text='ESWOR'  vinci='FKOVS'
+  Score=20  bits=000100011001  text='ESWOS'  vinci='FKOVK'
+  Score=20  bits=000100100000  text='ESZOR'  vinci='FKZVS'
+  Score=20  bits=000100100001  text='ESZOS'  vinci='FKZVK'
+
+============================================================
+BLOCK B4G9: 9 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (1, 2), (1, 5), (1, 7), (2, 2), (2, 4), (2, 7), (3, 0), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=000000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=000000100  text='ERSOR'  vinci='FSKVS'
+  Score=20  bits=000000101  text='ERSOS'  vinci='FSKVK'
+  Score=20  bits=000001000  text='ERZOR'  vinci='FSZVS'
+  Score=20  bits=000001001  text='ERZOS'  vinci='FSZVK'
+  Score=20  bits=000100000  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=000100001  text='ESROS'  vinci='FKSVK'
+  Score=20  bits=000100100  text='ESSOR'  vinci='FKKVS'
+  Score=20  bits=000100101  text='ESSOS'  vinci='FKKVK'
+  Score=20  bits=000101000  text='ESZOR'  vinci='FKZVS'
+  Score=20  bits=000101001  text='ESZOS'  vinci='FKZVK'
+  Score=20  bits=001000000  text='EVROR'  vinci='FWSVS'
+  Score=20  bits=001000001  text='EVROS'  vinci='FWSVK'
+  Score=20  bits=001000100  text='EVSOR'  vinci='FWKVS'
+  Score=20  bits=001000101  text='EVSOS'  vinci='FWKVK'
+  Score=20  bits=001001000  text='EVZOR'  vinci='FWZVS'
+  Score=20  bits=001001001  text='EVZOS'  vinci='FWZVK'
+  Score=20  bits=001100000  text='EWROR'  vinci='FOSVS'
+  Score=20  bits=001100001  text='EWROS'  vinci='FOSVK'
+
+============================================================
+BLOCK B5G0: 6 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (1, 7), (2, 2), (2, 4), (2, 7), (3, 3)]
+
+Top results (by readability score):
+  Score=20  bits=000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=000010  text='ERSOR'  vinci='FSKVS'
+  Score=20  bits=000100  text='ERZOR'  vinci='FSZVS'
+  Score=20  bits=010000  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=010010  text='ESSOR'  vinci='FKKVS'
+  Score=20  bits=010100  text='ESZOR'  vinci='FKZVS'
+  Score=20  bits=100000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=100010  text='GRSOR'  vinci='GSKVS'
+  Score=20  bits=100100  text='GRZOR'  vinci='GSZVS'
+  Score=20  bits=110000  text='GSROR'  vinci='GKSVS'
+  Score=20  bits=110010  text='GSSOR'  vinci='GKKVS'
+  Score=20  bits=110100  text='GSZOR'  vinci='GKZVS'
+  Score=14  bits=001000  text='ERrOR'  vinci='FSrVS'
+  Score=14  bits=001010  text='ERsOR'  vinci='FSsVS'
+  Score=14  bits=001100  text='ERzOR'  vinci='FSzVS'
+  Score=14  bits=011000  text='ESrOR'  vinci='FKrVS'
+  Score=14  bits=011010  text='ESsOR'  vinci='FKsVS'
+  Score=14  bits=011100  text='ESzOR'  vinci='FKzVS'
+  Score=14  bits=101000  text='GRrOR'  vinci='GSrVS'
+  Score=14  bits=101010  text='GRsOR'  vinci='GSsVS'
+
+============================================================
+BLOCK B5G1: 9 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (1, 2), (1, 5), (1, 7), (2, 0), (2, 2), (2, 4), (2, 5), (2, 7)]
+
+Top results (by readability score):
+  Score=20  bits=000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=000000001  text='ERSOR'  vinci='FSKVS'
+  Score=20  bits=000000010  text='ERVOR'  vinci='FSWVS'
+  Score=20  bits=000000011  text='ERWOR'  vinci='FSOVS'
+  Score=20  bits=000000100  text='ERZOR'  vinci='FSZVS'
+  Score=20  bits=000100000  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=000100001  text='ESSOR'  vinci='FKKVS'
+  Score=20  bits=000100010  text='ESVOR'  vinci='FKWVS'
+  Score=20  bits=000100011  text='ESWOR'  vinci='FKOVS'
+  Score=20  bits=000100100  text='ESZOR'  vinci='FKZVS'
+  Score=20  bits=001000000  text='EVROR'  vinci='FWSVS'
+  Score=20  bits=001000001  text='EVSOR'  vinci='FWKVS'
+  Score=20  bits=001000010  text='EVVOR'  vinci='FWWVS'
+  Score=20  bits=001000011  text='EVWOR'  vinci='FWOVS'
+  Score=20  bits=001000100  text='EVZOR'  vinci='FWZVS'
+  Score=20  bits=001100000  text='EWROR'  vinci='FOSVS'
+  Score=20  bits=001100001  text='EWSOR'  vinci='FOKVS'
+  Score=20  bits=001100010  text='EWVOR'  vinci='FOWVS'
+  Score=20  bits=001100011  text='EWWOR'  vinci='FOOVS'
+  Score=20  bits=001100100  text='EWZOR'  vinci='FOZVS'
+
+============================================================
+BLOCK B5G2: 10 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (1, 0), (1, 2), (1, 4), (1, 5), (1, 7), (2, 2), (2, 4), (2, 5), (2, 7)]
+
+Top results (by readability score):
+  Score=20  bits=0000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=0000000001  text='ERSOR'  vinci='FSKVS'
+  Score=20  bits=0000000010  text='ERVOR'  vinci='FSWVS'
+  Score=20  bits=0000000011  text='ERWOR'  vinci='FSOVS'
+  Score=20  bits=0000000100  text='ERZOR'  vinci='FSZVS'
+  Score=20  bits=0000010000  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=0000010001  text='ESSOR'  vinci='FKKVS'
+  Score=20  bits=0000010010  text='ESVOR'  vinci='FKWVS'
+  Score=20  bits=0000010011  text='ESWOR'  vinci='FKOVS'
+  Score=20  bits=0000010100  text='ESZOR'  vinci='FKZVS'
+  Score=20  bits=0000100000  text='EVROR'  vinci='FWSVS'
+  Score=20  bits=0000100001  text='EVSOR'  vinci='FWKVS'
+  Score=20  bits=0000100010  text='EVVOR'  vinci='FWWVS'
+  Score=20  bits=0000100011  text='EVWOR'  vinci='FWOVS'
+  Score=20  bits=0000100100  text='EVZOR'  vinci='FWZVS'
+  Score=20  bits=0000110000  text='EWROR'  vinci='FOSVS'
+  Score=20  bits=0000110001  text='EWSOR'  vinci='FOKVS'
+  Score=20  bits=0000110010  text='EWVOR'  vinci='FOWVS'
+  Score=20  bits=0000110011  text='EWWOR'  vinci='FOOVS'
+  Score=20  bits=0000110100  text='EWZOR'  vinci='FOZVS'
+
+============================================================
+BLOCK B5G3: 10 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (1, 0), (1, 2), (1, 4), (1, 5), (1, 7), (2, 2), (2, 4), (2, 5), (2, 7)]
+
+Top results (by readability score):
+  Score=20  bits=0000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=0000000001  text='ERSOR'  vinci='FSKVS'
+  Score=20  bits=0000000010  text='ERVOR'  vinci='FSWVS'
+  Score=20  bits=0000000011  text='ERWOR'  vinci='FSOVS'
+  Score=20  bits=0000000100  text='ERZOR'  vinci='FSZVS'
+  Score=20  bits=0000010000  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=0000010001  text='ESSOR'  vinci='FKKVS'
+  Score=20  bits=0000010010  text='ESVOR'  vinci='FKWVS'
+  Score=20  bits=0000010011  text='ESWOR'  vinci='FKOVS'
+  Score=20  bits=0000010100  text='ESZOR'  vinci='FKZVS'
+  Score=20  bits=0000100000  text='EVROR'  vinci='FWSVS'
+  Score=20  bits=0000100001  text='EVSOR'  vinci='FWKVS'
+  Score=20  bits=0000100010  text='EVVOR'  vinci='FWWVS'
+  Score=20  bits=0000100011  text='EVWOR'  vinci='FWOVS'
+  Score=20  bits=0000100100  text='EVZOR'  vinci='FWZVS'
+  Score=20  bits=0000110000  text='EWROR'  vinci='FOSVS'
+  Score=20  bits=0000110001  text='EWSOR'  vinci='FOKVS'
+  Score=20  bits=0000110010  text='EWVOR'  vinci='FOWVS'
+  Score=20  bits=0000110011  text='EWWOR'  vinci='FOOVS'
+  Score=20  bits=0000110100  text='EWZOR'  vinci='FOZVS'
+
+============================================================
+BLOCK B5G4: 14 content dots
+============================================================
+Content dot positions (row,col): [(0, 5), (0, 6), (1, 0), (1, 2), (1, 4), (1, 5), (1, 7), (2, 0), (2, 1), (2, 2), (2, 4), (2, 5), (2, 7), (3, 3)]
+
+Top results (by readability score):
+  Score=20  bits=00000000100000  text='ARROR'  vinci='MSSVS'
+  Score=20  bits=00000000100010  text='ARSOR'  vinci='MSKVS'
+  Score=20  bits=00000000100100  text='ARVOR'  vinci='MSWVS'
+  Score=20  bits=00000000100110  text='ARWOR'  vinci='MSOVS'
+  Score=20  bits=00000000101000  text='ARZOR'  vinci='MSZVS'
+  Score=20  bits=00000010100000  text='ASROR'  vinci='MKSVS'
+  Score=20  bits=00000010100010  text='ASSOR'  vinci='MKKVS'
+  Score=20  bits=00000010100100  text='ASVOR'  vinci='MKWVS'
+  Score=20  bits=00000010100110  text='ASWOR'  vinci='MKOVS'
+  Score=20  bits=00000010101000  text='ASZOR'  vinci='MKZVS'
+  Score=20  bits=00000100100000  text='AVROR'  vinci='MWSVS'
+  Score=20  bits=00000100100010  text='AVSOR'  vinci='MWKVS'
+  Score=20  bits=00000100100100  text='AVVOR'  vinci='MWWVS'
+  Score=20  bits=00000100100110  text='AVWOR'  vinci='MWOVS'
+  Score=20  bits=00000100101000  text='AVZOR'  vinci='MWZVS'
+  Score=20  bits=00000110100000  text='AWROR'  vinci='MOSVS'
+  Score=20  bits=00000110100010  text='AWSOR'  vinci='MOKVS'
+  Score=20  bits=00000110100100  text='AWVOR'  vinci='MOWVS'
+  Score=20  bits=00000110100110  text='AWWOR'  vinci='MOOVS'
+  Score=20  bits=00000110101000  text='AWZOR'  vinci='MOZVS'
+
+============================================================
+BLOCK B5G5: 15 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 3), (0, 5), (0, 6), (1, 0), (1, 1), (1, 2), (1, 4), (1, 5), (1, 7), (2, 0), (2, 2), (2, 4), (2, 5), (2, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score=13  bits=n/a  text='A.ROR'  vinci='M.SVS'
+  Score= 9  bits=n/a  text='...OR'  vinci='...VS'
+  Score= 9  bits=n/a  text='...OR'  vinci='...VS'
+
+============================================================
+BLOCK B5G6: 14 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 3), (0, 6), (1, 0), (1, 2), (1, 4), (1, 5), (1, 7), (2, 0), (2, 2), (2, 4), (2, 5), (2, 7)]
+
+Top results (by readability score):
+  Score=20  bits=00000000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=00000000000001  text='ERSOR'  vinci='FSKVS'
+  Score=20  bits=00000000000010  text='ERVOR'  vinci='FSWVS'
+  Score=20  bits=00000000000011  text='ERWOR'  vinci='FSOVS'
+  Score=20  bits=00000000000100  text='ERZOR'  vinci='FSZVS'
+  Score=20  bits=00000000100000  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=00000000100001  text='ESSOR'  vinci='FKKVS'
+  Score=20  bits=00000000100010  text='ESVOR'  vinci='FKWVS'
+  Score=20  bits=00000000100011  text='ESWOR'  vinci='FKOVS'
+  Score=20  bits=00000000100100  text='ESZOR'  vinci='FKZVS'
+  Score=20  bits=00000001000000  text='EVROR'  vinci='FWSVS'
+  Score=20  bits=00000001000001  text='EVSOR'  vinci='FWKVS'
+  Score=20  bits=00000001000010  text='EVVOR'  vinci='FWWVS'
+  Score=20  bits=00000001000011  text='EVWOR'  vinci='FWOVS'
+  Score=20  bits=00000001000100  text='EVZOR'  vinci='FWZVS'
+  Score=20  bits=00000001100000  text='EWROR'  vinci='FOSVS'
+  Score=20  bits=00000001100001  text='EWSOR'  vinci='FOKVS'
+  Score=20  bits=00000001100010  text='EWVOR'  vinci='FOWVS'
+  Score=20  bits=00000001100011  text='EWWOR'  vinci='FOOVS'
+  Score=20  bits=00000001100100  text='EWZOR'  vinci='FOZVS'
+
+============================================================
+BLOCK B5G7: 15 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 3), (0, 6), (1, 0), (1, 1), (1, 2), (1, 4), (1, 5), (1, 7), (2, 2), (2, 4), (2, 5), (2, 7), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score=13  bits=n/a  text='E.ROR'  vinci='F.SVS'
+  Score= 9  bits=n/a  text='...OS'  vinci='...VK'
+  Score= 9  bits=n/a  text='...OS'  vinci='...VK'
+
+============================================================
+BLOCK B5G8: 14 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 3), (0, 5), (0, 6), (1, 0), (1, 2), (1, 4), (1, 5), (1, 7), (2, 2), (2, 4), (2, 7), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=00000000000000  text='ARROR'  vinci='MSSVS'
+  Score=20  bits=00000000000001  text='ARROS'  vinci='MSSVK'
+  Score=20  bits=00000000000010  text='ARSOR'  vinci='MSKVS'
+  Score=20  bits=00000000000011  text='ARSOS'  vinci='MSKVK'
+  Score=20  bits=00000000000100  text='ARZOR'  vinci='MSZVS'
+  Score=20  bits=00000000000101  text='ARZOS'  vinci='MSZVK'
+  Score=20  bits=00000000010000  text='ASROR'  vinci='MKSVS'
+  Score=20  bits=00000000010001  text='ASROS'  vinci='MKSVK'
+  Score=20  bits=00000000010010  text='ASSOR'  vinci='MKKVS'
+  Score=20  bits=00000000010011  text='ASSOS'  vinci='MKKVK'
+  Score=20  bits=00000000010100  text='ASZOR'  vinci='MKZVS'
+  Score=20  bits=00000000010101  text='ASZOS'  vinci='MKZVK'
+  Score=20  bits=00000000100000  text='AVROR'  vinci='MWSVS'
+  Score=20  bits=00000000100001  text='AVROS'  vinci='MWSVK'
+  Score=20  bits=00000000100010  text='AVSOR'  vinci='MWKVS'
+  Score=20  bits=00000000100011  text='AVSOS'  vinci='MWKVK'
+  Score=20  bits=00000000100100  text='AVZOR'  vinci='MWZVS'
+  Score=20  bits=00000000100101  text='AVZOS'  vinci='MWZVK'
+  Score=20  bits=00000000110000  text='AWROR'  vinci='MOSVS'
+  Score=20  bits=00000000110001  text='AWROS'  vinci='MOSVK'
+
+============================================================
+BLOCK B5G9: 6 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 3), (0, 6), (1, 2), (2, 7), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=000010  text='ERSOR'  vinci='FSKVS'
+  Score=20  bits=000011  text='ERSOS'  vinci='FSKVK'
+  Score=20  bits=001000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=001001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=001010  text='GRSOR'  vinci='GSKVS'
+  Score=20  bits=001011  text='GRSOS'  vinci='GSKVK'
+  Score=20  bits=010000  text='URROR'  vinci='USSVS'
+  Score=20  bits=010001  text='URROS'  vinci='USSVK'
+  Score=20  bits=010010  text='URSOR'  vinci='USKVS'
+  Score=20  bits=010011  text='URSOS'  vinci='USKVK'
+  Score=20  bits=011000  text='WRROR'  vinci='OSSVS'
+  Score=20  bits=011001  text='WRROS'  vinci='OSSVK'
+  Score=20  bits=011010  text='WRSOR'  vinci='OSKVS'
+  Score=20  bits=011011  text='WRSOS'  vinci='OSKVK'
+  Score=14  bits=000100  text='ErROR'  vinci='FrSVS'
+  Score=14  bits=000101  text='ErROS'  vinci='FrSVK'
+  Score=14  bits=000110  text='ErSOR'  vinci='FrKVS'
+  Score=14  bits=000111  text='ErSOS'  vinci='FrKVK'
+
+============================================================
+BLOCK B6G0: 3 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (3, 3), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=100  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=101  text='GRROS'  vinci='GSSVK'
+  Score=13  bits=010  text='ERR_R'  vinci='FSS_S'
+  Score=13  bits=011  text='ERR_S'  vinci='FSS_K'
+  Score=13  bits=110  text='GRR_R'  vinci='GSS_S'
+  Score=13  bits=111  text='GRR_S'  vinci='GSS_K'
+
+============================================================
+BLOCK B6G1: 8 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (1, 2), (2, 2), (2, 4), (2, 7), (3, 3), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=00000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=00000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=00000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=00000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=00001000  text='ERSOR'  vinci='FSKVS'
+  Score=20  bits=00001001  text='ERSOS'  vinci='FSKVK'
+  Score=20  bits=00001010  text='ERSOV'  vinci='FSKVW'
+  Score=20  bits=00001011  text='ERSOW'  vinci='FSKVO'
+  Score=20  bits=00010000  text='ERZOR'  vinci='FSZVS'
+  Score=20  bits=00010001  text='ERZOS'  vinci='FSZVK'
+  Score=20  bits=00010010  text='ERZOV'  vinci='FSZVW'
+  Score=20  bits=00010011  text='ERZOW'  vinci='FSZVO'
+  Score=20  bits=10000000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=10000001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=10000010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=10000011  text='GRROW'  vinci='GSSVO'
+  Score=20  bits=10001000  text='GRSOR'  vinci='GSKVS'
+  Score=20  bits=10001001  text='GRSOS'  vinci='GSKVK'
+  Score=20  bits=10001010  text='GRSOV'  vinci='GSKVW'
+  Score=20  bits=10001011  text='GRSOW'  vinci='GSKVO'
+
+============================================================
+BLOCK B6G2: 10 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (1, 7), (2, 2), (2, 4), (2, 7), (3, 0), (3, 3), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=0000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=0000000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=0000000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=0000000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=0000000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=0000100000  text='ERSOR'  vinci='FSKVS'
+  Score=20  bits=0000100001  text='ERSOS'  vinci='FSKVK'
+  Score=20  bits=0000100010  text='ERSOV'  vinci='FSKVW'
+  Score=20  bits=0000100011  text='ERSOW'  vinci='FSKVO'
+  Score=20  bits=0000100100  text='ERSOZ'  vinci='FSKVZ'
+  Score=20  bits=0001000000  text='ERZOR'  vinci='FSZVS'
+  Score=20  bits=0001000001  text='ERZOS'  vinci='FSZVK'
+  Score=20  bits=0001000010  text='ERZOV'  vinci='FSZVW'
+  Score=20  bits=0001000011  text='ERZOW'  vinci='FSZVO'
+  Score=20  bits=0001000100  text='ERZOZ'  vinci='FSZVZ'
+  Score=20  bits=0100000000  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=0100000001  text='ESROS'  vinci='FKSVK'
+  Score=20  bits=0100000010  text='ESROV'  vinci='FKSVW'
+  Score=20  bits=0100000011  text='ESROW'  vinci='FKSVO'
+  Score=20  bits=0100000100  text='ESROZ'  vinci='FKSVZ'
+
+============================================================
+BLOCK B6G3: 12 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (1, 7), (2, 4), (2, 5), (2, 7), (3, 0), (3, 2), (3, 3), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=000000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=000000000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=000000000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=000000000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=000000000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=000010000000  text='ERSOR'  vinci='FSKVS'
+  Score=20  bits=000010000001  text='ERSOS'  vinci='FSKVK'
+  Score=20  bits=000010000010  text='ERSOV'  vinci='FSKVW'
+  Score=20  bits=000010000011  text='ERSOW'  vinci='FSKVO'
+  Score=20  bits=000010000100  text='ERSOZ'  vinci='FSKVZ'
+  Score=20  bits=000100000000  text='ERVOR'  vinci='FSWVS'
+  Score=20  bits=000100000001  text='ERVOS'  vinci='FSWVK'
+  Score=20  bits=000100000010  text='ERVOV'  vinci='FSWVW'
+  Score=20  bits=000100000011  text='ERVOW'  vinci='FSWVO'
+  Score=20  bits=000100000100  text='ERVOZ'  vinci='FSWVZ'
+  Score=20  bits=000110000000  text='ERWOR'  vinci='FSOVS'
+  Score=20  bits=000110000001  text='ERWOS'  vinci='FSOVK'
+  Score=20  bits=000110000010  text='ERWOV'  vinci='FSOVW'
+  Score=20  bits=000110000011  text='ERWOW'  vinci='FSOVO'
+  Score=20  bits=000110000100  text='ERWOZ'  vinci='FSOVZ'
+
+============================================================
+BLOCK B6G4: 18 content dots
+============================================================
+Content dot positions (row,col): [(0, 3), (0, 6), (1, 2), (1, 4), (1, 5), (1, 7), (2, 2), (2, 4), (2, 5), (2, 7), (3, 0), (3, 2), (3, 3), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score= 7  bits=n/a  text='W....'  vinci='O....'
+  Score= 7  bits=n/a  text='W....'  vinci='O....'
+
+============================================================
+BLOCK B6G5: 19 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (1, 0), (1, 2), (1, 5), (1, 7), (2, 0), (2, 2), (2, 4), (2, 5), (2, 7), (3, 0), (3, 2), (3, 3), (4, 0), (4, 1), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score=13  bits=n/a  text='ERRO.'  vinci='FSSV.'
+  Score= 7  bits=n/a  text='G....'
+  Score= 7  bits=n/a  text='G....'
+
+============================================================
+BLOCK B6G6: 14 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 6), (1, 2), (1, 7), (2, 2), (2, 4), (3, 0), (3, 2), (3, 3), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=00000000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=00000000000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=00000000000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=00000000000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=00000000000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=00000100000000  text='ERZOR'  vinci='FSZVS'
+  Score=20  bits=00000100000001  text='ERZOS'  vinci='FSZVK'
+  Score=20  bits=00000100000010  text='ERZOV'  vinci='FSZVW'
+  Score=20  bits=00000100000011  text='ERZOW'  vinci='FSZVO'
+  Score=20  bits=00000100000100  text='ERZOZ'  vinci='FSZVZ'
+  Score=20  bits=00010000000000  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=00010000000001  text='ESROS'  vinci='FKSVK'
+  Score=20  bits=00010000000010  text='ESROV'  vinci='FKSVW'
+  Score=20  bits=00010000000011  text='ESROW'  vinci='FKSVO'
+  Score=20  bits=00010000000100  text='ESROZ'  vinci='FKSVZ'
+  Score=20  bits=00010100000000  text='ESZOR'  vinci='FKZVS'
+  Score=20  bits=00010100000001  text='ESZOS'  vinci='FKZVK'
+  Score=20  bits=00010100000010  text='ESZOV'  vinci='FKZVW'
+  Score=20  bits=00010100000011  text='ESZOW'  vinci='FKZVO'
+  Score=20  bits=00010100000100  text='ESZOZ'  vinci='FKZVZ'
+
+============================================================
+BLOCK B6G7: 13 content dots
+============================================================
+Content dot positions (row,col): [(0, 3), (0, 6), (1, 2), (1, 4), (1, 7), (3, 0), (3, 2), (3, 3), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=0000000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=0000000000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=0000000000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=0000000000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=0000000000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=0000100000000  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=0000100000001  text='ESROS'  vinci='FKSVK'
+  Score=20  bits=0000100000010  text='ESROV'  vinci='FKSVW'
+  Score=20  bits=0000100000011  text='ESROW'  vinci='FKSVO'
+  Score=20  bits=0000100000100  text='ESROZ'  vinci='FKSVZ'
+  Score=20  bits=0001000000000  text='EZROR'  vinci='FZSVS'
+  Score=20  bits=0001000000001  text='EZROS'  vinci='FZSVK'
+  Score=20  bits=0001000000010  text='EZROV'  vinci='FZSVW'
+  Score=20  bits=0001000000011  text='EZROW'  vinci='FZSVO'
+  Score=20  bits=0001000000100  text='EZROZ'  vinci='FZSVZ'
+  Score=20  bits=0100000000000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=0100000000001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=0100000000010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=0100000000011  text='GRROW'  vinci='GSSVO'
+  Score=20  bits=0100000000100  text='GRROZ'  vinci='GSSVZ'
+
+============================================================
+BLOCK B6G8: 14 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 3), (0, 4), (0, 6), (1, 2), (1, 7), (3, 0), (3, 3), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=00000000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=00000000000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=00000000000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=00000000000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=00000000000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=00000010000000  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=00000010000001  text='ESROS'  vinci='FKSVK'
+  Score=20  bits=00000010000010  text='ESROV'  vinci='FKSVW'
+  Score=20  bits=00000010000011  text='ESROW'  vinci='FKSVO'
+  Score=20  bits=00000010000100  text='ESROZ'  vinci='FKSVZ'
+  Score=20  bits=00001000000000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=00001000000001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=00001000000010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=00001000000011  text='GRROW'  vinci='GSSVO'
+  Score=20  bits=00001000000100  text='GRROZ'  vinci='GSSVZ'
+  Score=20  bits=00001010000000  text='GSROR'  vinci='GKSVS'
+  Score=20  bits=00001010000001  text='GSROS'  vinci='GKSVK'
+  Score=20  bits=00001010000010  text='GSROV'  vinci='GKSVW'
+  Score=20  bits=00001010000011  text='GSROW'  vinci='GKSVO'
+  Score=20  bits=00001010000100  text='GSROZ'  vinci='GKSVZ'
+
+============================================================
+BLOCK B6G9: 12 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 3), (0, 6), (1, 2), (1, 7), (3, 0), (3, 3), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=000000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=000000000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=000000000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=000000000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=000000000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=000010000000  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=000010000001  text='ESROS'  vinci='FKSVK'
+  Score=20  bits=000010000010  text='ESROV'  vinci='FKSVW'
+  Score=20  bits=000010000011  text='ESROW'  vinci='FKSVO'
+  Score=20  bits=000010000100  text='ESROZ'  vinci='FKSVZ'
+  Score=20  bits=001000000000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=001000000001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=001000000010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=001000000011  text='GRROW'  vinci='GSSVO'
+  Score=20  bits=001000000100  text='GRROZ'  vinci='GSSVZ'
+  Score=20  bits=001010000000  text='GSROR'  vinci='GKSVS'
+  Score=20  bits=001010000001  text='GSROS'  vinci='GKSVK'
+  Score=20  bits=001010000010  text='GSROV'  vinci='GKSVW'
+  Score=20  bits=001010000011  text='GSROW'  vinci='GKSVO'
+  Score=20  bits=001010000100  text='GSROZ'  vinci='GKSVZ'
+
+============================================================
+BLOCK B7G0: 9 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (1, 0), (1, 2), (1, 4), (1, 5), (1, 7), (2, 7), (3, 3), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=000000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=000000100  text='ERSOR'  vinci='FSKVS'
+  Score=20  bits=000000101  text='ERSOS'  vinci='FSKVK'
+  Score=20  bits=000001000  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=000001001  text='ESROS'  vinci='FKSVK'
+  Score=20  bits=000001100  text='ESSOR'  vinci='FKKVS'
+  Score=20  bits=000001101  text='ESSOS'  vinci='FKKVK'
+  Score=20  bits=000010000  text='EVROR'  vinci='FWSVS'
+  Score=20  bits=000010001  text='EVROS'  vinci='FWSVK'
+  Score=20  bits=000010100  text='EVSOR'  vinci='FWKVS'
+  Score=20  bits=000010101  text='EVSOS'  vinci='FWKVK'
+  Score=20  bits=000011000  text='EWROR'  vinci='FOSVS'
+  Score=20  bits=000011001  text='EWROS'  vinci='FOSVK'
+  Score=20  bits=000011100  text='EWSOR'  vinci='FOKVS'
+  Score=20  bits=000011101  text='EWSOS'  vinci='FOKVK'
+  Score=20  bits=000100000  text='EZROR'  vinci='FZSVS'
+  Score=20  bits=000100001  text='EZROS'  vinci='FZSVK'
+  Score=20  bits=000100100  text='EZSOR'  vinci='FZKVS'
+  Score=20  bits=000100101  text='EZSOS'  vinci='FZKVK'
+
+============================================================
+BLOCK B7G1: 16 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (1, 2), (1, 4), (1, 5), (1, 7), (2, 2), (2, 4), (2, 5), (2, 7), (3, 0), (3, 2), (3, 3), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score= 7  bits=n/a  text='G....'
+  Score= 7  bits=n/a  text='G....'
+
+============================================================
+BLOCK B7G2: 19 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 3), (0, 4), (0, 6), (1, 2), (1, 4), (1, 5), (1, 7), (2, 0), (2, 2), (2, 4), (2, 5), (2, 7), (3, 0), (3, 2), (3, 3), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score= 5  bits=n/a  text='...._'
+  Score= 5  bits=n/a  text='...._'
+
+============================================================
+BLOCK B7G3: 20 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 3), (0, 4), (0, 6), (1, 0), (1, 2), (1, 4), (1, 5), (1, 7), (2, 2), (2, 4), (2, 5), (2, 7), (3, 0), (3, 2), (3, 3), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score= 5  bits=n/a  text='...._'
+  Score= 5  bits=n/a  text='...._'
+
+============================================================
+BLOCK B7G4: 22 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 3), (0, 4), (0, 6), (1, 0), (1, 2), (1, 4), (1, 5), (1, 7), (2, 0), (2, 2), (2, 4), (2, 5), (2, 7), (3, 0), (3, 2), (3, 3), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score= 5  bits=n/a  text='.....'
+  Score= 5  bits=n/a  text='.....'
+
+============================================================
+BLOCK B7G5: 23 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 3), (0, 4), (0, 6), (1, 0), (1, 2), (1, 4), (1, 5), (1, 7), (2, 0), (2, 2), (2, 4), (2, 5), (2, 7), (3, 0), (3, 2), (3, 3), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score= 5  bits=n/a  text='.....'
+  Score= 5  bits=n/a  text='.....'
+
+============================================================
+BLOCK B7G6: 23 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (1, 0), (1, 2), (1, 4), (1, 5), (1, 7), (2, 0), (2, 2), (2, 4), (2, 5), (2, 7), (3, 0), (3, 2), (3, 3), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ARROR'  vinci='MSSVS'
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score= 5  bits=n/a  text='.....'
+  Score= 5  bits=n/a  text='.....'
+
+============================================================
+BLOCK B7G7: 23 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 3), (0, 4), (0, 6), (1, 0), (1, 2), (1, 4), (1, 5), (1, 7), (2, 0), (2, 2), (2, 4), (2, 5), (2, 7), (3, 0), (3, 2), (3, 3), (3, 7), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERRNR'  vinci='FSSCS'
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score= 5  bits=n/a  text='.....'
+  Score= 5  bits=n/a  text='.....'
+
+============================================================
+BLOCK B7G8: 19 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 6), (1, 0), (1, 2), (1, 4), (1, 5), (1, 7), (2, 0), (2, 2), (2, 4), (2, 5), (2, 7), (3, 0), (3, 2), (3, 3), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score= 5  bits=n/a  text='...._'
+  Score= 5  bits=n/a  text='...._'
+
+============================================================
+BLOCK B7G9: 15 content dots
+============================================================
+Content dot positions (row,col): [(0, 2), (0, 6), (1, 2), (1, 5), (1, 7), (2, 0), (2, 2), (2, 3), (2, 4), (2, 5), (2, 7), (3, 0), (3, 2), (3, 3), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERBOR'  vinci='FSIVS'
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score= 9  bits=n/a  text='gw..S'  vinci='gw..K'
+  Score= 9  bits=n/a  text='gw..S'  vinci='gw..K'
+
+============================================================
+BLOCK B8G0: 15 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (1, 0), (1, 2), (1, 4), (1, 5), (1, 7), (2, 2), (2, 4), (2, 5), (2, 7), (3, 3), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score= 7  bits=n/a  text='G.._.'
+  Score= 7  bits=n/a  text='G.._.'
+
+============================================================
+BLOCK B8G1: 13 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (1, 0), (1, 2), (1, 7), (2, 2), (2, 4), (2, 7), (3, 3), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=0000000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=0000000000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=0000000000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=0000000000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=0000000000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=0000001000000  text='ERSOR'  vinci='FSKVS'
+  Score=20  bits=0000001000001  text='ERSOS'  vinci='FSKVK'
+  Score=20  bits=0000001000010  text='ERSOV'  vinci='FSKVW'
+  Score=20  bits=0000001000011  text='ERSOW'  vinci='FSKVO'
+  Score=20  bits=0000001000100  text='ERSOZ'  vinci='FSKVZ'
+  Score=20  bits=0000010000000  text='ERZOR'  vinci='FSZVS'
+  Score=20  bits=0000010000001  text='ERZOS'  vinci='FSZVK'
+  Score=20  bits=0000010000010  text='ERZOV'  vinci='FSZVW'
+  Score=20  bits=0000010000011  text='ERZOW'  vinci='FSZVO'
+  Score=20  bits=0000010000100  text='ERZOZ'  vinci='FSZVZ'
+  Score=20  bits=0001000000000  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=0001000000001  text='ESROS'  vinci='FKSVK'
+  Score=20  bits=0001000000010  text='ESROV'  vinci='FKSVW'
+  Score=20  bits=0001000000011  text='ESROW'  vinci='FKSVO'
+  Score=20  bits=0001000000100  text='ESROZ'  vinci='FKSVZ'
+
+============================================================
+BLOCK B8G2: 13 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (1, 2), (1, 7), (2, 2), (2, 4), (2, 7), (3, 0), (3, 3), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=0000000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=0000000000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=0000000000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=0000000000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=0000000000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=0000010000000  text='ERSOR'  vinci='FSKVS'
+  Score=20  bits=0000010000001  text='ERSOS'  vinci='FSKVK'
+  Score=20  bits=0000010000010  text='ERSOV'  vinci='FSKVW'
+  Score=20  bits=0000010000011  text='ERSOW'  vinci='FSKVO'
+  Score=20  bits=0000010000100  text='ERSOZ'  vinci='FSKVZ'
+  Score=20  bits=0000100000000  text='ERZOR'  vinci='FSZVS'
+  Score=20  bits=0000100000001  text='ERZOS'  vinci='FSZVK'
+  Score=20  bits=0000100000010  text='ERZOV'  vinci='FSZVW'
+  Score=20  bits=0000100000011  text='ERZOW'  vinci='FSZVO'
+  Score=20  bits=0000100000100  text='ERZOZ'  vinci='FSZVZ'
+  Score=20  bits=0010000000000  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=0010000000001  text='ESROS'  vinci='FKSVK'
+  Score=20  bits=0010000000010  text='ESROV'  vinci='FKSVW'
+  Score=20  bits=0010000000011  text='ESROW'  vinci='FKSVO'
+  Score=20  bits=0010000000100  text='ESROZ'  vinci='FKSVZ'
+
+============================================================
+BLOCK B8G3: 13 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (1, 2), (1, 7), (2, 2), (2, 4), (2, 7), (3, 0), (3, 3), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=0000000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=0000000000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=0000000000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=0000000000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=0000000000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=0000010000000  text='ERSOR'  vinci='FSKVS'
+  Score=20  bits=0000010000001  text='ERSOS'  vinci='FSKVK'
+  Score=20  bits=0000010000010  text='ERSOV'  vinci='FSKVW'
+  Score=20  bits=0000010000011  text='ERSOW'  vinci='FSKVO'
+  Score=20  bits=0000010000100  text='ERSOZ'  vinci='FSKVZ'
+  Score=20  bits=0000100000000  text='ERZOR'  vinci='FSZVS'
+  Score=20  bits=0000100000001  text='ERZOS'  vinci='FSZVK'
+  Score=20  bits=0000100000010  text='ERZOV'  vinci='FSZVW'
+  Score=20  bits=0000100000011  text='ERZOW'  vinci='FSZVO'
+  Score=20  bits=0000100000100  text='ERZOZ'  vinci='FSZVZ'
+  Score=20  bits=0010000000000  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=0010000000001  text='ESROS'  vinci='FKSVK'
+  Score=20  bits=0010000000010  text='ESROV'  vinci='FKSVW'
+  Score=20  bits=0010000000011  text='ESROW'  vinci='FKSVO'
+  Score=20  bits=0010000000100  text='ESROZ'  vinci='FKSVZ'
+
+============================================================
+BLOCK B8G4: 12 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (1, 2), (1, 5), (1, 7), (2, 2), (3, 0), (3, 3), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=000000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=000000000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=000000000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=000000000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=000000000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=000100000000  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=000100000001  text='ESROS'  vinci='FKSVK'
+  Score=20  bits=000100000010  text='ESROV'  vinci='FKSVW'
+  Score=20  bits=000100000011  text='ESROW'  vinci='FKSVO'
+  Score=20  bits=000100000100  text='ESROZ'  vinci='FKSVZ'
+  Score=20  bits=001000000000  text='EVROR'  vinci='FWSVS'
+  Score=20  bits=001000000001  text='EVROS'  vinci='FWSVK'
+  Score=20  bits=001000000010  text='EVROV'  vinci='FWSVW'
+  Score=20  bits=001000000011  text='EVROW'  vinci='FWSVO'
+  Score=20  bits=001000000100  text='EVROZ'  vinci='FWSVZ'
+  Score=20  bits=001100000000  text='EWROR'  vinci='FOSVS'
+  Score=20  bits=001100000001  text='EWROS'  vinci='FOSVK'
+  Score=20  bits=001100000010  text='EWROV'  vinci='FOSVW'
+  Score=20  bits=001100000011  text='EWROW'  vinci='FOSVO'
+  Score=20  bits=001100000100  text='EWROZ'  vinci='FOSVZ'
+
+============================================================
+BLOCK B8G5: 16 content dots
+============================================================
+Content dot positions (row,col): [(0, 6), (1, 0), (1, 2), (1, 5), (1, 7), (2, 0), (2, 2), (2, 5), (2, 7), (3, 0), (3, 3), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score= 7  bits=n/a  text='G....'
+  Score= 7  bits=n/a  text='G....'
+
+============================================================
+BLOCK B8G6: 18 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 3), (0, 6), (1, 0), (1, 2), (1, 4), (1, 5), (1, 7), (2, 7), (3, 0), (3, 2), (3, 3), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score= 7  bits=n/a  text='..S..'  vinci='..K..'
+  Score= 7  bits=n/a  text='..S..'  vinci='..K..'
+
+============================================================
+BLOCK B8G7: 17 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 6), (1, 0), (1, 2), (1, 4), (1, 5), (1, 7), (2, 2), (2, 4), (2, 5), (2, 7), (3, 3), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score= 5  bits=n/a  text='..._.'
+  Score= 5  bits=n/a  text='..._.'
+
+============================================================
+BLOCK B8G8: 13 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 3), (0, 6), (1, 0), (1, 2), (1, 4), (1, 5), (1, 7), (2, 2), (3, 3), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=0000000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=0000000000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=0000000000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=0000000000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=0000000010000  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=0000000010001  text='ESROS'  vinci='FKSVK'
+  Score=20  bits=0000000010010  text='ESROV'  vinci='FKSVW'
+  Score=20  bits=0000000010011  text='ESROW'  vinci='FKSVO'
+  Score=20  bits=0000000100000  text='EVROR'  vinci='FWSVS'
+  Score=20  bits=0000000100001  text='EVROS'  vinci='FWSVK'
+  Score=20  bits=0000000100010  text='EVROV'  vinci='FWSVW'
+  Score=20  bits=0000000100011  text='EVROW'  vinci='FWSVO'
+  Score=20  bits=0000000110000  text='EWROR'  vinci='FOSVS'
+  Score=20  bits=0000000110001  text='EWROS'  vinci='FOSVK'
+  Score=20  bits=0000000110010  text='EWROV'  vinci='FOSVW'
+  Score=20  bits=0000000110011  text='EWROW'  vinci='FOSVO'
+  Score=20  bits=0000001000000  text='EZROR'  vinci='FZSVS'
+  Score=20  bits=0000001000001  text='EZROS'  vinci='FZSVK'
+  Score=20  bits=0000001000010  text='EZROV'  vinci='FZSVW'
+  Score=20  bits=0000001000011  text='EZROW'  vinci='FZSVO'
+
+============================================================
+BLOCK B8G9: 9 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 3), (0, 6), (1, 2), (1, 7), (2, 7), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=000000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=000000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=000000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=000000100  text='ERSOR'  vinci='FSKVS'
+  Score=20  bits=000000101  text='ERSOS'  vinci='FSKVK'
+  Score=20  bits=000000110  text='ERSOV'  vinci='FSKVW'
+  Score=20  bits=000000111  text='ERSOW'  vinci='FSKVO'
+  Score=20  bits=000001000  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=000001001  text='ESROS'  vinci='FKSVK'
+  Score=20  bits=000001010  text='ESROV'  vinci='FKSVW'
+  Score=20  bits=000001011  text='ESROW'  vinci='FKSVO'
+  Score=20  bits=000001100  text='ESSOR'  vinci='FKKVS'
+  Score=20  bits=000001101  text='ESSOS'  vinci='FKKVK'
+  Score=20  bits=000001110  text='ESSOV'  vinci='FKKVW'
+  Score=20  bits=000001111  text='ESSOW'  vinci='FKKVO'
+  Score=20  bits=000100000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=000100001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=000100010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=000100011  text='GRROW'  vinci='GSSVO'
+
+============================================================
+BLOCK B9G0: 11 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 3), (0, 4), (0, 6), (1, 7), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=00000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=00000000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=00000000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=00000000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=00000000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=00000100000  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=00000100001  text='ESROS'  vinci='FKSVK'
+  Score=20  bits=00000100010  text='ESROV'  vinci='FKSVW'
+  Score=20  bits=00000100011  text='ESROW'  vinci='FKSVO'
+  Score=20  bits=00000100100  text='ESROZ'  vinci='FKSVZ'
+  Score=20  bits=00001000000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=00001000001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=00001000010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=00001000011  text='GRROW'  vinci='GSSVO'
+  Score=20  bits=00001000100  text='GRROZ'  vinci='GSSVZ'
+  Score=20  bits=00001100000  text='GSROR'  vinci='GKSVS'
+  Score=20  bits=00001100001  text='GSROS'  vinci='GKSVK'
+  Score=20  bits=00001100010  text='GSROV'  vinci='GKSVW'
+  Score=20  bits=00001100011  text='GSROW'  vinci='GKSVO'
+  Score=20  bits=00001100100  text='GSROZ'  vinci='GKSVZ'
+
+============================================================
+BLOCK B9G1: 15 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 3), (0, 4), (0, 6), (0, 7), (1, 2), (1, 4), (1, 5), (1, 7), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='DRROR'  vinci='DSSVS'
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score= 9  bits=n/a  text='..RO.'  vinci='..SV.'
+  Score= 9  bits=n/a  text='..RO.'  vinci='..SV.'
+
+============================================================
+BLOCK B9G2: 14 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 3), (0, 4), (0, 6), (1, 2), (1, 4), (1, 7), (3, 3), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=00000000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=00000000000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=00000000000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=00000000000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=00000000000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=00000001000000  text='ESROR'  vinci='FKSVS'
+  Score=20  bits=00000001000001  text='ESROS'  vinci='FKSVK'
+  Score=20  bits=00000001000010  text='ESROV'  vinci='FKSVW'
+  Score=20  bits=00000001000011  text='ESROW'  vinci='FKSVO'
+  Score=20  bits=00000001000100  text='ESROZ'  vinci='FKSVZ'
+  Score=20  bits=00000010000000  text='EZROR'  vinci='FZSVS'
+  Score=20  bits=00000010000001  text='EZROS'  vinci='FZSVK'
+  Score=20  bits=00000010000010  text='EZROV'  vinci='FZSVW'
+  Score=20  bits=00000010000011  text='EZROW'  vinci='FZSVO'
+  Score=20  bits=00000010000100  text='EZROZ'  vinci='FZSVZ'
+  Score=20  bits=00001000000000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=00001000000001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=00001000000010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=00001000000011  text='GRROW'  vinci='GSSVO'
+  Score=20  bits=00001000000100  text='GRROZ'  vinci='GSSVZ'
+
+============================================================
+BLOCK B9G3: 15 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 3), (0, 4), (0, 6), (1, 0), (1, 2), (1, 4), (1, 5), (1, 7), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score= 9  bits=n/a  text='..RO.'  vinci='..SV.'
+  Score= 9  bits=n/a  text='..RO.'  vinci='..SV.'
+
+============================================================
+BLOCK B9G4: 16 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 3), (0, 4), (0, 6), (1, 0), (1, 2), (1, 4), (1, 5), (1, 7), (4, 0), (4, 2), (4, 3), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERROB'  vinci='FSSVI'
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score= 9  bits=n/a  text='..RO.'  vinci='..SV.'
+  Score= 9  bits=n/a  text='..RO.'  vinci='..SV.'
+
+============================================================
+BLOCK B9G5: 16 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 3), (0, 4), (0, 6), (1, 0), (1, 2), (1, 4), (1, 5), (1, 7), (4, 0), (4, 2), (4, 3), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=n/a  text='ERROB'  vinci='FSSVI'
+  Score=20  bits=n/a  text='ERROR'  vinci='FSSVS'
+  Score= 9  bits=n/a  text='..RO.'  vinci='..SV.'
+  Score= 9  bits=n/a  text='..RO.'  vinci='..SV.'
+
+============================================================
+BLOCK B9G6: 14 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 3), (0, 4), (0, 6), (1, 0), (1, 2), (1, 4), (3, 3), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=00000000000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=00000000000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=00000000000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=00000000000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=00000000000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=00000001000000  text='EZROR'  vinci='FZSVS'
+  Score=20  bits=00000001000001  text='EZROS'  vinci='FZSVK'
+  Score=20  bits=00000001000010  text='EZROV'  vinci='FZSVW'
+  Score=20  bits=00000001000011  text='EZROW'  vinci='FZSVO'
+  Score=20  bits=00000001000100  text='EZROZ'  vinci='FZSVZ'
+  Score=20  bits=00001000000000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=00001000000001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=00001000000010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=00001000000011  text='GRROW'  vinci='GSSVO'
+  Score=20  bits=00001000000100  text='GRROZ'  vinci='GSSVZ'
+  Score=20  bits=00001001000000  text='GZROR'  vinci='GZSVS'
+  Score=20  bits=00001001000001  text='GZROS'  vinci='GZSVK'
+  Score=20  bits=00001001000010  text='GZROV'  vinci='GZSVW'
+  Score=20  bits=00001001000011  text='GZROW'  vinci='GZSVO'
+  Score=20  bits=00001001000100  text='GZROZ'  vinci='GZSVZ'
+
+============================================================
+BLOCK B9G7: 11 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=00000000000  text='ARROR'  vinci='MSSVS'
+  Score=20  bits=00000000001  text='ARROS'  vinci='MSSVK'
+  Score=20  bits=00000000010  text='ARROV'  vinci='MSSVW'
+  Score=20  bits=00000000011  text='ARROW'  vinci='MSSVO'
+  Score=20  bits=00000000100  text='ARROZ'  vinci='MSSVZ'
+  Score=20  bits=00000100000  text='CRROR'  vinci='NSSVS'
+  Score=20  bits=00000100001  text='CRROS'  vinci='NSSVK'
+  Score=20  bits=00000100010  text='CRROV'  vinci='NSSVW'
+  Score=20  bits=00000100011  text='CRROW'  vinci='NSSVO'
+  Score=20  bits=00000100100  text='CRROZ'  vinci='NSSVZ'
+  Score=20  bits=00001000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=00001000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=00001000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=00001000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=00001000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=00001100000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=00001100001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=00001100010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=00001100011  text='GRROW'  vinci='GSSVO'
+  Score=20  bits=00001100100  text='GRROZ'  vinci='GSSVZ'
+
+============================================================
+BLOCK B9G8: 9 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 3), (0, 5), (0, 6), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=000000000  text='ARROR'  vinci='MSSVS'
+  Score=20  bits=000000001  text='ARROS'  vinci='MSSVK'
+  Score=20  bits=000000010  text='ARROV'  vinci='MSSVW'
+  Score=20  bits=000000011  text='ARROW'  vinci='MSSVO'
+  Score=20  bits=000000100  text='ARROZ'  vinci='MSSVZ'
+  Score=20  bits=000100000  text='CRROR'  vinci='NSSVS'
+  Score=20  bits=000100001  text='CRROS'  vinci='NSSVK'
+  Score=20  bits=000100010  text='CRROV'  vinci='NSSVW'
+  Score=20  bits=000100011  text='CRROW'  vinci='NSSVO'
+  Score=20  bits=000100100  text='CRROZ'  vinci='NSSVZ'
+  Score=20  bits=001000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=001000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=001000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=001000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=001000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=001100000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=001100001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=001100010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=001100011  text='GRROW'  vinci='GSSVO'
+  Score=20  bits=001100100  text='GRROZ'  vinci='GSSVZ'
+
+============================================================
+BLOCK B9G9: 8 content dots
+============================================================
+Content dot positions (row,col): [(0, 0), (0, 3), (0, 6), (4, 0), (4, 2), (4, 4), (4, 5), (4, 7)]
+
+Top results (by readability score):
+  Score=20  bits=00000000  text='ERROR'  vinci='FSSVS'
+  Score=20  bits=00000001  text='ERROS'  vinci='FSSVK'
+  Score=20  bits=00000010  text='ERROV'  vinci='FSSVW'
+  Score=20  bits=00000011  text='ERROW'  vinci='FSSVO'
+  Score=20  bits=00000100  text='ERROZ'  vinci='FSSVZ'
+  Score=20  bits=00100000  text='GRROR'  vinci='GSSVS'
+  Score=20  bits=00100001  text='GRROS'  vinci='GSSVK'
+  Score=20  bits=00100010  text='GRROV'  vinci='GSSVW'
+  Score=20  bits=00100011  text='GRROW'  vinci='GSSVO'
+  Score=20  bits=00100100  text='GRROZ'  vinci='GSSVZ'
+  Score=20  bits=01000000  text='URROR'  vinci='USSVS'
+  Score=20  bits=01000001  text='URROS'  vinci='USSVK'
+  Score=20  bits=01000010  text='URROV'  vinci='USSVW'
+  Score=20  bits=01000011  text='URROW'  vinci='USSVO'
+  Score=20  bits=01000100  text='URROZ'  vinci='USSVZ'
+  Score=20  bits=01100000  text='WRROR'  vinci='OSSVS'
+  Score=20  bits=01100001  text='WRROS'  vinci='OSSVK'
+  Score=20  bits=01100010  text='WRROV'  vinci='OSSVW'
+  Score=20  bits=01100011  text='WRROW'  vinci='OSSVO'
+  Score=20  bits=01100100  text='WRROZ'  vinci='OSSVZ'

@@ -1,0 +1,1232 @@
+=== 4-BIT PER DOT (NIBBLE) DECODE ===
+Each 20x20 dot = 4 sub-blocks (10x10). Content blocks = 1/4 dot.
+Sub-blocks packed as nibbles (2 per byte) or as direct bits.
+
+
+bg_error - block B0G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B0G1:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B0G2:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B0G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B0G4:
+  nibbles: ...O...... ..........
+  printable: 'O'
+
+bg_error - block B0G5:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B0G6:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B0G7:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B0G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B0G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B1G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B1G1:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B1G2:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B1G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B1G4:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B1G5:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B1G6:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B1G7:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B1G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B1G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B2G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B2G1:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B2G2:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B2G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B2G4:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B2G5:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B2G6:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B2G7:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B2G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B2G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B3G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B3G1:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B3G2:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B3G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B3G4:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B3G5:
+  nibbles: ..._...... ..........
+  printable: '_'
+
+bg_error - block B3G6:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B3G7:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B3G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B3G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B4G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B4G1:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B4G2:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B4G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B4G4:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B4G5:
+  nibbles: ........O. @.........
+  printable: 'O@'
+
+bg_error - block B4G6:
+  nibbles: ...../.... ..........
+  printable: '/'
+
+bg_error - block B4G7:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B4G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B4G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B5G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B5G1:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B5G2:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B5G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B5G4:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B5G5:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B5G6:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B5G7:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B5G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B5G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B6G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B6G1:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B6G2:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B6G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B6G4:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B6G5:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B6G6:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B6G7:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B6G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B6G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B7G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B7G1:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B7G2:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B7G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B7G4:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B7G5:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B7G6:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B7G7:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B7G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B7G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B8G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B8G1:
+  nibbles: ....?/.... ..........
+  printable: '?/'
+
+bg_error - block B8G2:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B8G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B8G4:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B8G5:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B8G6:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B8G7:
+  nibbles: ...?...... ..........
+  printable: '?'
+
+bg_error - block B8G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B8G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B9G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B9G1:
+  nibbles: ......D... ..........
+  printable: 'D'
+
+bg_error - block B9G2:
+  nibbles: ..._..@... ..........
+  printable: '_@'
+
+bg_error - block B9G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B9G4:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B9G5:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B9G6:
+  nibbles: ......@... ..........
+  printable: '@'
+
+bg_error - block B9G7:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B9G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_error - block B9G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B0G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B0G1:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B0G2:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B0G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B0G4:
+  nibbles: ...@...... ..........
+  printable: '@'
+
+bg_zero - block B0G5:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B0G6:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B0G7:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B0G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B0G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B1G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B1G1:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B1G2:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B1G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B1G4:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B1G5:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B1G6:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B1G7:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B1G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B1G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B2G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B2G1:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B2G2:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B2G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B2G4:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B2G5:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B2G6:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B2G7:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B2G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B2G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B3G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B3G1:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B3G2:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B3G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B3G4:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B3G5:
+  nibbles: ...P...... ..........
+  printable: 'P'
+
+bg_zero - block B3G6:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B3G7:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B3G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B3G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B4G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B4G1:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B4G2:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B4G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B4G4:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B4G5:
+  nibbles: .......@@. @D........
+  printable: '@@@D'
+
+bg_zero - block B4G6:
+  nibbles: ..... .... ..........
+  printable: ' '
+
+bg_zero - block B4G7:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B4G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B4G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B5G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B5G1:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B5G2:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B5G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B5G4:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B5G5:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B5G6:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B5G7:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B5G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B5G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B6G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B6G1:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B6G2:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B6G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B6G4:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B6G5:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B6G6:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B6G7:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B6G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B6G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B7G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B7G1:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B7G2:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B7G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B7G4:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B7G5:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B7G6:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B7G7:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B7G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B7G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B8G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B8G1:
+  nibbles: ....0 .... ..........
+  printable: '0 '
+
+bg_zero - block B8G2:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B8G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B8G4:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B8G5:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B8G6:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B8G7:
+  nibbles: ...0...... ..........
+  printable: '0'
+
+bg_zero - block B8G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B8G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B9G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B9G1:
+  nibbles: ......D... ..........
+  printable: 'D'
+
+bg_zero - block B9G2:
+  nibbles: ...P..@... ..........
+  printable: 'P@'
+
+bg_zero - block B9G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B9G4:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B9G5:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B9G6:
+  nibbles: ......@... ..........
+  printable: '@'
+
+bg_zero - block B9G7:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B9G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_zero - block B9G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B0G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B0G1:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B0G2:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B0G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B0G4:
+  nibbles: ...o...... ..........
+  printable: 'o'
+
+bg_one - block B0G5:
+  nibbles: .../...... ..........
+  printable: '/'
+
+bg_one - block B0G6:
+  nibbles: .../...... ..........
+  printable: '/'
+
+bg_one - block B0G7:
+  nibbles: .../...... ..........
+  printable: '/'
+
+bg_one - block B0G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B0G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B1G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B1G1:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B1G2:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B1G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B1G4:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B1G5:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B1G6:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B1G7:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B1G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B1G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B2G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B2G1:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B2G2:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B2G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B2G4:
+  nibbles: .../...... ..........
+  printable: '/'
+
+bg_one - block B2G5:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B2G6:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B2G7:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B2G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B2G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B3G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B3G1:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B3G2:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B3G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B3G4:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B3G5:
+  nibbles: /.._...... ..........
+  printable: '/_'
+
+bg_one - block B3G6:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B3G7:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B3G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B3G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B4G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B4G1:
+  nibbles: .......... ../.......
+  printable: '/'
+
+bg_one - block B4G2:
+  nibbles: .......... ../.......
+  printable: '/'
+
+bg_one - block B4G3:
+  nibbles: .../O..... ..?.......
+  printable: '/O?'
+
+bg_one - block B4G4:
+  nibbles: .../...... ..?.......
+  printable: '/?'
+
+bg_one - block B4G5:
+  nibbles: .......... ..?.......
+  printable: '?'
+
+bg_one - block B4G6:
+  nibbles: ...?...... ..?.......
+  printable: '??'
+
+bg_one - block B4G7:
+  nibbles: ...?...... ..........
+  printable: '?'
+
+bg_one - block B4G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B4G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B5G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B5G1:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B5G2:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B5G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B5G4:
+  nibbles: ........_. ..........
+  printable: '_'
+
+bg_one - block B5G5:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B5G6:
+  nibbles: ...../.... !.........
+  printable: '/!'
+
+bg_one - block B5G7:
+  nibbles: ...../.... ..........
+  printable: '/'
+
+bg_one - block B5G8:
+  nibbles: ....?..... ..........
+  printable: '?'
+
+bg_one - block B5G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B6G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B6G1:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B6G2:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B6G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B6G4:
+  nibbles: .......... #.........
+  printable: '#'
+
+bg_one - block B6G5:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B6G6:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B6G7:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B6G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B6G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B7G0:
+  nibbles: ...._..... ..........
+  printable: '_'
+
+bg_one - block B7G1:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B7G2:
+  nibbles: ..?....... ..........
+  printable: '?'
+
+bg_one - block B7G3:
+  nibbles: ../....... ../.......
+  printable: '//'
+
+bg_one - block B7G4:
+  nibbles: ?.?....... ..?.......
+  printable: '???'
+
+bg_one - block B7G5:
+  nibbles: ?.?/...... ..?.......
+  printable: '??/?'
+
+bg_one - block B7G6:
+  nibbles: ?.?....... ..?.......
+  printable: '???'
+
+bg_one - block B7G7:
+  nibbles: ?../...... ..?.......
+  printable: '?/?'
+
+bg_one - block B7G8:
+  nibbles: .../...... ..?.......
+  printable: '/?'
+
+bg_one - block B7G9:
+  nibbles: .......... ..?.......
+  printable: '?'
+
+bg_one - block B8G0:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B8G1:
+  nibbles: .......... ......?...
+  printable: '?'
+
+bg_one - block B8G2:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B8G3:
+  nibbles: .......... ......./..
+  printable: '/'
+
+bg_one - block B8G4:
+  nibbles: .......... ......?/ .
+  printable: '?/ '
+
+bg_one - block B8G5:
+  nibbles: .......... ......//".
+  printable: '//"'
+
+bg_one - block B8G6:
+  nibbles: ....??.... ......?...
+  printable: '???'
+
+bg_one - block B8G7:
+  nibbles: ....?..... ..........
+  printable: '?'
+
+bg_one - block B8G8:
+  nibbles: ....?/.... ..........
+  printable: '?/'
+
+bg_one - block B8G9:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B9G0:
+  nibbles: O......... ..........
+  printable: 'O'
+
+bg_one - block B9G1:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B9G2:
+  nibbles: ..._...... ..........
+  printable: '_'
+
+bg_one - block B9G3:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B9G4:
+  nibbles: ....??.... ..........
+  printable: '??'
+
+bg_one - block B9G5:
+  nibbles: .....?.... ..........
+  printable: '?'
+
+bg_one - block B9G6:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B9G7:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B9G8:
+  nibbles: .......... ..........
+  printable: ''
+
+bg_one - block B9G9:
+  nibbles: .......... ..........
+  printable: ''
+
+PACKED_bg_error - block B0G0:
+  nibbles: .......... .......... .......... .......... .......... .......... .......... .......... ...O...... .......... .......... .......... .......... .......... .......... .......... .......... .......... .......... ..........
+  printable: 'O'
+
+PACKED_bg_zero - block B0G0:
+  nibbles: .......... .......... .......... .......... .......... .......... .......... .......... ...@...... .......... .......... .......... .......... .......... .......... .......... .......... .......... .......... ..........
+  printable: '@'
+
+PACKED_bg_one - block B0G0:
+  nibbles: .......... .......... .......... .......... .......... .......... .......... .......... ...o...... .......... .../...... .......... .../...... .......... .../...... .......... .......... .......... .......... ..........
+  printable: 'o///'
+
+
+=== NIBBLE GRID (bg_error, nibbles as bytes) ===
+  B0: .................... | .................... | .................... | .................... | ...O................ | .................... | .................... | .................... | .................... | ....................
+  B1: .................... | .................... | .................... | .................... | .................... | .................... | .................... | .................... | .................... | ....................
+  B2: .................... | .................... | .................... | .................... | .................... | .................... | .................... | .................... | .................... | ....................
+  B3: .................... | .................... | .................... | .................... | .................... | ..._................ | .................... | .................... | .................... | ....................
+  B4: .................... | .................... | .................... | .................... | .................... | ........O.@......... | ...../.............. | .................... | .................... | ....................
+  B5: .................... | .................... | .................... | .................... | .................... | .................... | .................... | .................... | .................... | ....................
+  B6: .................... | .................... | .................... | .................... | .................... | .................... | .................... | .................... | .................... | ....................
+  B7: .................... | .................... | .................... | .................... | .................... | .................... | .................... | .................... | .................... | ....................
+  B8: .................... | ....?/.............. | .................... | .................... | .................... | .................... | .................... | ...?................ | .................... | ....................
+  B9: .................... | ......D............. | ..._..@............. | .................... | .................... | .................... | ......@............. | .................... | .................... | ....................
+
+All concatenated: 'O_O@/?/?D_@@'
+Vinci: 'V_V@/?/?D_@@'

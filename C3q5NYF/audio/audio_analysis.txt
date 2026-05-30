@@ -1,0 +1,43 @@
+=== AUDIO/SPECTRAL ANALYSIS OF FRAGMENT ===
+
+=== CONTENT BLOCK TIMING (like radio bursts) ===
+Content blocks per row (1000 rows): min=0 max=970
+Burst lengths (rows): [20, 60, 10, 80, 50, 20, 220, 210, 50, 60]
+Gap lengths (rows): [40, 10, 40, 10, 10, 10, 10, 10, 10, 40]
+Burst Morse: -------------------
+
+=== BAND ANALYSIS (10 bands of 100 rows each) ===
+Content per band: [6500, 6400, 11900, 18300, 31800, 23300, 23200, 39600, 27800, 27200]
+Total: 216000
+
+=== COLUMN CONTENT PATTERNS ===
+Content per group (10 groups, 160px each):
+  G0: 11700 content pixels
+  G1: 19800 content pixels
+  G2: 22800 content pixels
+  G3: 24700 content pixels
+  G4: 27800 content pixels
+  G5: 31900 content pixels
+  G6: 27700 content pixels
+  G7: 22200 content pixels
+  G8: 17100 content pixels
+  G9: 10300 content pixels
+
+=== COLOR TIMING ANALYSIS ===
+  Color 1 ((21, 21, 27)): 2300 pixels
+  Color 2 ((23, 219, 4)): 2700 pixels
+  Color 4 ((26, 25, 229)): 88500 pixels
+  Color 5 ((26, 230, 230)): 116900 pixels
+  Color 6 ((199, 37, 205)): 5600 pixels
+
+=== BIT PATTERN ANALYSIS (content mask) ===
+Ones runs (top 10): [(10, 6291), (20, 2822), (30, 1558), (40, 1000), (50, 150), (60, 40)]
+Zeros runs (top 10): [(10, 530), (20, 2199), (30, 3360), (40, 930), (50, 1310), (80, 230), (90, 790), (100, 190), (140, 369), (150, 845)]
+All ones run lengths: [10, 20, 30, 40, 50, 60]
+Counts: [(10, 6291), (20, 2822), (30, 1558), (40, 1000), (50, 150), (60, 40)]
+
+=== CONTENT BLOCK BYTE PATTERNS ===
+Total bytes: 2000
+Non-zero bytes: 838
+Unique byte values: [0, 1, 2, 3, 4, 7, 12, 16, 17, 19, 20, 28, 33, 44, 49, 51, 64, 65, 66, 67, 68, 71, 76, 77, 80, 81, 85, 92, 97, 112, 113, 115, 128, 132, 140, 156, 164, 192, 196, 197, 199, 204, 205, 206, 207, 220, 241, 243, 247]
+ASCII text: 'D@DACCCC!qDs@@@@@1qsDQD@AQAQ111@!q!qDqq!@@D@AACGGACG@CG@CCGGCD1q\sq1D@DD@AD1qssss11AaDUqAqqACC@CC11sq@qqA,GC1\ssqp3sssLsss1qqDqACqqqDaA@GCDAqAAQDQ@@CCCBCGGCC1Dq!s!q\qAGDAL@PDssqsLssq1AADQqqqAsqGGCDqqq'
