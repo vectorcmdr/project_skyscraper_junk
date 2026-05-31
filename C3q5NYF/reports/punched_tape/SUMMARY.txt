@@ -1,0 +1,62 @@
+TAPE DECODE ANALYSIS SUMMARY
+Theme: Punched Tape (2010: The Year We Make Contact - HAL 9000)
+================================================================================
+
+Methods explored:
+  01: 8-Track Row-Major (standard ASCII per row)
+  02: 8-Track Column Tape (5-bit frames per column)
+  03: 7-Track + Sprocket (col 1 skipped, 7-bit ASCII)
+  04: 5-Track Baudot (various column track sets)
+  05: Baudot Column-Frame (Baudot decode of column frames)
+  06: Continuous Tape (no block boundaries, 160-bit rows)
+  07: Sprocket Stream (C1 bits extracted as data)
+  08: 8-Track LSB-first (reversed bit order)
+  09: 8-Track Bottom-to-top (reversed row order)
+  10: 8-Track Column-Major (block order: column-first)
+  11: Per-color Content Tape (individual color layers)
+  12: Multi-Layer Tape (combined, XOR)
+  13: IBM 7-Track (6-bit BCD + parity)
+  14: 40-Bit Wide Frame (entire block = 1 frame)
+  15: Serpentine Block Order (alternating direction)
+  16: Corrupted Block Frames (only the 4 non-ERROR blocks)
+  17: Reversed Tape (end-to-start frame order)
+
+Data sources: background_ERROR, content_all (5 colors), combined, xor
+
+Key findings:
+  - Background grids produce clean 'ERROR' pattern = pure 0x00 bytes at C0,C2,C3,C5
+  - Content grids are sparse (~13% filled) = mostly 0x00 frames
+  - Combined (bg OR content) gives ERROR with occasional bit flips
+  - XOR content vs bg = only the bit-flip positions
+
+Methods with most alpha letters (from all data sources):
+  01_8trk_row_content_all                      : 197 letters
+  06_continuous_content_all                    : 197 letters
+  09_8trk_row_rev_content_all                  : 197 letters
+  10_8trk_colmajor_content_all                 : 197 letters
+  15_serpentine_content_all                    : 197 letters
+  17_reversed_tape_content_all                 : 197 letters
+  03_7trk_sprocket1_content_all                : 192 letters
+  11_content_cyan_8trk                         : 141 letters
+  01_8trk_row_xor_bg_vs_content                : 134 letters
+  12_xor_8trk                                  : 134 letters
+  01_8trk_row_combined_bg+content              : 130 letters
+  12_combined_8trk                             : 130 letters
+  11_content_blue_8trk                         :  96 letters
+  03_7trk_sprocket1_combined_bg+content        :  69 letters
+  07_sprocket_stream_combined_bg+content       :  31 letters
+  07_sprocket_stream_content_all               :  31 letters
+  14_40bit_blockframe_content_all              :   6 letters
+  08_8trk_row_lsb_content_all                  :   2 letters
+  11_content_green_8trk                        :   2 letters
+  01_8trk_row_background_ERROR                 :   0 letters
+  02_8trk_col_background_ERROR                 :   0 letters
+  02_8trk_col_combined_bg+content              :   0 letters
+  02_8trk_col_content_all                      :   0 letters
+  02_8trk_col_xor_bg_vs_content                :   0 letters
+  03_7trk_sprocket1_background_ERROR           :   0 letters
+  06_continuous_background_ERROR               :   0 letters
+  07_sprocket_stream_background_ERROR          :   0 letters
+  08_8trk_row_lsb_background_ERROR             :   0 letters
+  09_8trk_row_rev_background_ERROR             :   0 letters
+  10_8trk_colmajor_background_ERROR            :   0 letters
