@@ -1,0 +1,46 @@
+# Diff: https://project-skyscraper.com/2002/05/12/code/
+# File: html/2002/05/12/code.html
+# Timestamp: 2026-05-31 06:29:52 UTC
+# Lines: 775 old -> 775 new
+# Beautified: yes
+--- old/html/2002/05/12/code.html
++++ new/html/2002/05/12/code.html
+@@ -395,7 +395,7 @@
+ 							<input type="hidden" name="app_source" value="atomic-subscription-modal-lo"/>
+ 							<input type="hidden" name="redirect_fragment" value="subscribe-blog"/>
+ 							<input type="hidden" name="lang" value="en_US"/>
+-							<input type="hidden" id="_wpnonce" name="_wpnonce" value="9da3b50086" /><input type="hidden" name="_wp_http_referer" value="/2002/05/12/code/" /><input type="hidden" name="post_id" value="1837"/>							<button type="submit"
++							<input type="hidden" id="_wpnonce" name="_wpnonce" value="59788c17ab" /><input type="hidden" name="_wp_http_referer" value="/2002/05/12/code/" /><input type="hidden" name="post_id" value="1837"/>							<button type="submit"
+ 																	class="wp-block-button__link"
+ 																									style="font-size: 16px;padding: 15px 23px 15px 23px;margin: 0; margin-left: 10px;border-radius: 50px;border-width: 1px;"
+ 																name="jetpack_subscriptions_widget"
+@@ -582,7 +582,7 @@
+     "is_logged_in": "",
+     "lang": "en",
+     "ajaxurl": "https://project-skyscraper.com/wp-admin/admin-ajax.php",
+-    "nonce": "bd418f4b36",
++    "nonce": "7c8126fadb",
+     "display_exif": "1",
+     "display_comments": "1",
+     "single_image_gallery": "1",
+@@ -641,7 +641,7 @@
+         "isWpConsentApiActive": false
+     },
+     "isLegacyEventLoaded": "",
+-    "customEventAjaxUrl": "https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=e4e64b15c1",
++    "customEventAjaxUrl": "https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=75e0bb2978",
+     "onlineParams": {
+         "wp_statistics_hit": 1,
+         "source_type": "post",
+@@ -768,8 +768,8 @@
+ </body>
+ </html>
+ <!--
+-	generated 190 seconds ago
+-	generated in 0.237 seconds
++	generated 112 seconds ago
++	generated in 0.246 seconds
+ 	served from batcache in 0.003 seconds
+-	expires in 110 seconds
++	expires in 188 seconds
+ -->

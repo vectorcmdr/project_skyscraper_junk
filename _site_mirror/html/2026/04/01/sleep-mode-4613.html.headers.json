@@ -1,19 +1,19 @@
 {
   "Server": "nginx",
-  "Date": "Fri, 29 May 2026 15:31:55 GMT",
+  "Date": "Mon, 01 Jun 2026 07:45:24 GMT",
   "Content-Type": "text/html; charset=UTF-8",
   "Transfer-Encoding": "chunked",
   "Connection": "close",
   "Strict-Transport-Security": "max-age=31536000",
   "Vary": "accept, content-type, cookie",
-  "Last-Modified": "Fri, 29 May 2026 14:54:18 GMT",
-  "Cache-Control": "max-age=38, must-revalidate",
-  "X-nananana": "Batcache-Hit",
   "X-hacker": "Want root?  Visit join.a8c.com and mention this header.",
   "Host-Header": "WordPress.com",
   "X-Pingback": "https://project-skyscraper.com/xmlrpc.php",
   "Link": "<https://wp.me/phdnFZ-2c>; rel=shortlink",
+  "Last-Modified": "Sun, 31 May 2026 06:56:29 GMT",
+  "Cache-Control": "max-age=300, must-revalidate",
+  "X-nananana": "Batcache-Set",
   "X-ac": "2.syd _atomic_bur STALE",
   "Alt-Svc": "clear",
-  "Server-Timing": "a8c-cdn, dc;desc=syd, cache;desc=STALE;dur=2.0"
+  "Server-Timing": "a8c-cdn, dc;desc=syd, cache;desc=STALE;dur=3.0"
 }

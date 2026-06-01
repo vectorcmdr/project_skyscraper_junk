@@ -4,6 +4,9 @@
 <?xml-stylesheet type="text/xsl" href="//project-skyscraper.com/sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
  <url>
+  <loc>https://project-skyscraper.com/</loc>
+ </url>
+ <url>
   <loc>https://project-skyscraper.com/about/</loc>
   <lastmod>2026-05-02T18:39:11Z</lastmod>
  </url>
@@ -128,7 +131,15 @@
   <lastmod>2026-05-27T22:23:08Z</lastmod>
  </url>
  <url>
-  <loc>https://project-skyscraper.com/</loc>
+  <loc>https://project-skyscraper.com/sec-log-094316-full/</loc>
+  <lastmod>2026-05-30T07:41:53Z</lastmod>
+ </url>
+ <url>
+  <loc>https://project-skyscraper.com/2026/05/30/sec-log-memory-sector-access/</loc>
+  <lastmod>2026-05-30T07:43:40Z</lastmod>
+ </url>
+ <url>
+  <loc>https://project-skyscraper.com/neural-network-status/</loc>
   <lastmod>2026-05-01T08:18:28Z</lastmod>
  </url>
  <url>
@@ -164,6 +175,10 @@
   <lastmod>2026-05-21T16:05:41Z</lastmod>
  </url>
  <url>
+  <loc>https://project-skyscraper.com/request-memory-timestamp-094317/</loc>
+  <lastmod>2026-05-30T07:42:26Z</lastmod>
+ </url>
+ <url>
   <loc>https://project-skyscraper.com/2026/05/27/sec-log-185027/</loc>
   <lastmod>2026-05-27T17:50:25Z</lastmod>
  </url>
@@ -173,7 +188,7 @@
  </url>
  <url>
   <loc>https://project-skyscraper.com/inbox/</loc>
-  <lastmod>2026-05-29T10:16:42Z</lastmod>
+  <lastmod>2026-05-31T18:56:08Z</lastmod>
  </url>
  <url>
   <loc>https://project-skyscraper.com/2026/05/29/sec-log-114327/</loc>
@@ -182,5 +197,9 @@
  <url>
   <loc>https://project-skyscraper.com/2002/05/12/code/</loc>
   <lastmod>2026-05-29T10:26:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://project-skyscraper.com/2026/05/31/sec-log-193727/</loc>
+  <lastmod>2026-05-31T18:35:48Z</lastmod>
  </url>
 </urlset>

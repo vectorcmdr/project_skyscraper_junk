@@ -1,7 +1,7 @@
 # Diff: https://project-skyscraper.com/about/
 # File: html/about.html
-# Timestamp: 2026-05-29 14:08:02 UTC
-# Lines: 416 old -> 416 new
+# Timestamp: 2026-05-31 06:28:50 UTC
+# Lines: 416 old -> 412 new
 # Beautified: yes
 --- old/html/about.html
 +++ new/html/about.html
@@ -9,16 +9,16 @@
          "isWpConsentApiActive": false
      },
      "isLegacyEventLoaded": "",
--    "customEventAjaxUrl": "https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=29a88caf91",
-+    "customEventAjaxUrl": "https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=e4e64b15c1",
+-    "customEventAjaxUrl": "https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=e4e64b15c1",
++    "customEventAjaxUrl": "https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=75e0bb2978",
      "onlineParams": {
          "wp_statistics_hit": 1,
          "source_type": "page",
-@@ -411,6 +411,6 @@
+@@ -410,7 +410,3 @@
+ //# sourceURL=https://project-skyscraper.com/wp-includes/js/wp-emoji-loader.min.js</script>
  </body>
  </html>
- <!--
--	generated in 0.276 seconds
-+	generated in 0.411 seconds
- 	57913 bytes batcached for 300 seconds
- -->
+-<!--
+-	generated in 0.238 seconds
+-	57913 bytes batcached for 300 seconds
+--->
