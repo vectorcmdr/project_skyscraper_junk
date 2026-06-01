@@ -47,6 +47,22 @@ Plain:    L  E  O  N  A  R  D     D  E     V  I  N  C  I
        =  LÉONARD DE VINCI
 ```
 
+### 20x20 "Pixel" 8x5 bit block puzzles (like the Fragment[C3q5NYF]):
+
+The ERROR carrier of layer 0/1 was confirmed early on.
+The hint that as given regarding offsets (though partial solved + WT knowledge beat it before the hint) was the pin for this one.
+
+Solve was to offset +2/-6 at the anomalous block position (QSRSV):
+```
+B1[7] -> BK=1:
+Row 0: cols 58-65: 0 1 0 0 0 1 0 1 = 45h = E
+Row 1: cols 58-65: 0 1 0 0 1 1 0 1 = 4Dh = M
+Row 2: cols 58-65: 0 1 0 0 1 0 0 1 = 49h = I
+Row 3: cols 58-65: 0 1 0 0 1 1 0 0 = 4Ch = L
+Row 4: cols 58-65: 0 1 0 1 1 0 0 1 = 59h = Y
+```
+This puzzle concept may get later re-use.
+
 ### Things of note for the image forensics:
 - Try to reference files here first before exploring the site endpoints, source, image forensics etc. to help reduce doubling up of work and flooding of cycling queries.
 
