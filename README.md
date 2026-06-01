@@ -46,6 +46,8 @@ Plain:    L  E  O  N  A  R  D     D  E     V  I  N  C  I
 
        =  LÉONARD DE VINCI
 ```
+It seems the Architect or the team within the SYSTEM communicate in the "school code" cipher, with line positions inverted:
+<img src="https://github.com/vectorcmdr/project_skyscraper_junk/blob/main/archived/email_archi.png" width="640">
 
 ## 20x20 "Pixel" 8x5 bit block puzzles (like the Fragment[C3q5NYF]):
 
