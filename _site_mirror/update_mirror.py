@@ -308,6 +308,145 @@ def _json_fetch(endpoint: str):
     return None
 
 
+# --- Cookie/Tools for password-unlock ---
+
+PAGE_PASSWORD = "EMILY"
+
+def _get_postpass_cookie() -> dict:
+    """POST password to wp-login.php?action=postpass, return {cookie_name: raw_value}.
+
+    Uses a custom opener that does NOT follow redirects so we can capture
+    the Set-Cookie header from the 302 response.
+    """
+    url = f"{BASE_URL}/wp-login.php?action=postpass"
+    data = urllib.parse.urlencode({
+        "post_password": PAGE_PASSWORD,
+        "Submit": "Enter",
+        "redirect_to": f"{BASE_URL}/request-memory-timestamp-094317/",
+    }).encode()
+
+    # Custom handler to suppress redirect following
+    class NoRedirectHandler(urllib.request.HTTPRedirectHandler):
+        def redirect_request(self, req, fp, code, msg, headers, newurl):
+            return None  # Don't follow
+
+    opener = urllib.request.build_opener(NoRedirectHandler)
+    req = urllib.request.Request(url, data=data, headers={
+        "User-Agent": USER_AGENT,
+        "Content-Type": "application/x-www-form-urlencoded",
+    })
+    try:
+        resp = opener.open(req, timeout=30)
+    except urllib.error.HTTPError as e:
+        resp = e
+
+    # Collect all Set-Cookie headers
+    cookies = {}
+    # urllib.response returns all headers with the same key joined by ', '
+    raw = resp.headers.get_all("Set-Cookie") if hasattr(resp.headers, "get_all") else None
+    if raw is None:
+        # Fallback: split by common delimiter patterns
+        set_cookie = resp.headers.get("Set-Cookie", "")
+        raw = re.split(r', (?=[a-zA-Z0-9_\-]+=)', set_cookie) if set_cookie else []
+    for part in raw:
+        part = part.strip()
+        m = re.search(r'(wp-postpass_[a-f0-9]+)=([^;]+)', part)
+        if m:
+            cooked = urllib.parse.unquote(m.group(2))
+            cookies[m.group(1)] = cooked
+            log(f"  Got postpass cookie: {m.group(1)}")
+    if not cookies:
+        # Debug: dump all Set-Cookie headers
+        all_headers = dict(resp.headers.items())
+        log(f"  WARN: No postpass cookie found. Headers: {json.dumps(all_headers, default=str)[:500]}")
+    return cookies
+
+
+def fetch_unlocked(url: str, subdir: str = "", binary: bool = False,
+                   headers_extra: dict = None) -> tuple:
+    """Fetch a password-protected page by first obtaining a postpass cookie."""
+    cookies = _get_postpass_cookie()
+    if not cookies:
+        log(f"  WARN: No postpass cookie obtained for {url}")
+        return ("error", None, 0, b"")
+
+    path = url_to_path(url, subdir=subdir)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    old_bytes = path.read_bytes() if path.is_file() else None
+    old_hash = _hash_bytes(old_bytes) if old_bytes is not None else None
+
+    # Build cookie header
+    cookie_parts = [f"{k}={v}" for k, v in cookies.items()]
+    cookie_header = "; ".join(cookie_parts)
+
+    req = urllib.request.Request(url, headers={
+        "User-Agent": USER_AGENT,
+        "Accept": "*/*",
+        "Cookie": cookie_header,
+        **(headers_extra or {}),
+    })
+    try:
+        resp = urllib.request.urlopen(req, timeout=30)
+        content = resp.read()
+        code = resp.status
+    except urllib.error.HTTPError as e:
+        stats["failed"] += 1
+        try:
+            content = e.read()
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(content)
+            log(f"  ERR  {url} -> {e.code}")
+        except Exception:
+            pass
+        return ("error", path, e.code, b"")
+    except Exception as e:
+        stats["failed"] += 1
+        log(f"  FAIL {url} -> {e}")
+        return ("error", path, 0, b"")
+
+    # Check if we got the password form back (still protected)
+    text = content.decode("utf-8", errors="replace")
+    if "post-password-form" in text or "This content is password-protected" in text:
+        log(f"  STILL LOCKED after password cookie: {url}")
+        if old_hash is None:
+            path.write_bytes(content)
+            stats["new"] += 1
+        return ("locked", path, code, content)
+
+    new_hash = _hash_bytes(content)
+    if old_hash == new_hash:
+        stats["skipped"] += 1
+        return ("skipped", path, code, content)
+
+    if old_hash is not None:
+        _save_diff(url, path, old_bytes, content, binary)
+
+    path.write_bytes(content)
+    if old_hash is None:
+        stats["new"] += 1
+        log(f"  NEW (unlocked) {url}")
+    else:
+        stats["changed"] += 1
+        log(f"  CHG (unlocked) {url}")
+        changes.append((url, path))
+    stats["fetched"] += 1
+    return ("ok", path, code, content)
+
+
+PASSWORD_PROTECTED_PAGES = [
+    "https://project-skyscraper.com/request-memory-timestamp-094317/",
+    "https://project-skyscraper.com/2026/05/31/sec-log-193727/",  # discovered but never fetched
+]
+
+
+def fetch_password_protected_pages():
+    """Fetch pages that require the EMILY password."""
+    log("=== FETCHING PASSWORD-PROTECTED PAGES ===")
+    for url in PASSWORD_PROTECTED_PAGES:
+        fetch_unlocked(url, subdir="html")
+        time.sleep(0.5)
+
+
 # --- Phase 1: Discovery ---
 
 def discover_sitemap_urls() -> dict:
@@ -1896,42 +2035,47 @@ def main():
     fetch_media(post_links, page_links, sitemap_urls)
     log("")
 
-    # Phase 5: Theme Assets
-    log("PHASE 5: Theme Assets")
+    # Phase 5: Password-protected pages
+    log("PHASE 5: Password-Protected Pages")
+    fetch_password_protected_pages()
+    log("")
+
+    # Phase 6: Theme Assets
+    log("PHASE 6: Theme Assets")
     fetch_theme_assets()
     log("")
 
-    # Phase 6: Plugin Assets
-    log("PHASE 6: Plugin Assets")
+    # Phase 7: Plugin Assets
+    log("PHASE 7: Plugin Assets")
     fetch_plugin_assets()
     log("")
 
-    # Phase 7: Discovery
-    log("PHASE 7: Discovery Documents")
+    # Phase 8: Discovery
+    log("PHASE 8: Discovery Documents")
     fetch_discovery()
     log("")
 
-    # Phase 8: Extras
-    log("PHASE 8: Extras")
+    # Phase 9: Extras
+    log("PHASE 9: Extras")
     fetch_extras()
     log("")
 
-    # Phase 9: Third-party CDN
-    log("PHASE 9: Third-party CDN")
+    # Phase 10: Third-party CDN
+    log("PHASE 10: Third-party CDN")
     fetch_third_party()
     log("")
 
-    # Phase 10: External references
-    log("PHASE 10: External References")
+    # Phase 11: External references
+    log("PHASE 11: External References")
     fetch_external_references()
     log("")
 
-    # Phase 11: Additional endpoint probes
-    log("PHASE 11: Additional Endpoints")
+    # Phase 12: Additional endpoint probes
+    log("PHASE 12: Additional Endpoints")
     fetch_additional_endpoints()
     log("")
 
-    # Phase 12: Manifest & Diff
+    # Phase 13: Manifest & Diff
     log("PHASE 12: Manifest & Diff")
     generate_manifest()
     generate_id_series_analysis()
