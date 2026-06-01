@@ -1,4 +1,4 @@
-## Project Skyscraper ARG Community Reference Files
+# Project Skyscraper ARG Community Reference Files
 
 <img src="https://github.com/vectorcmdr/project_skyscraper_junk/blob/main/archived/cropped-project-skyscraper.jpg" width="160">
 
@@ -6,7 +6,7 @@ Shared findings and other junk for the No Man's Sky 'Project Skyscraper' ARG.
 
 Contains static site mirror for file and source reference, original images, image forensics (and outputs) and various other reports.
 
-### Layout:
+## Layout:
 
 - Static site mirror + scripts live here: [/_site_mirror](https://github.com/vectorcmdr/project_skyscraper_junk/tree/main/_site_mirror)
 
@@ -19,7 +19,7 @@ I'll clean it up properly later (...probably) and do my best to keep it relative
 **⚠️ Warning for the audio files:** <br />
 - Some are like beautiful whale songs... others are like having your teeth jackhammered - make sure your headphones are not too loud.
 
-### Current known message cipher "Highschool Code":
+## Current known message cipher "Highschool Code":
 This was part of the "/code" puzzle "When_we_were_17" image.
 
 ### Explainer:
@@ -47,7 +47,7 @@ Plain:    L  E  O  N  A  R  D     D  E     V  I  N  C  I
        =  LÉONARD DE VINCI
 ```
 
-### 20x20 "Pixel" 8x5 bit block puzzles (like the Fragment[C3q5NYF]):
+## 20x20 "Pixel" 8x5 bit block puzzles (like the Fragment[C3q5NYF]):
 
 The ERROR carrier of layer 0/1 was confirmed early on.
 The hint that as given regarding offsets (though partial solved + WT knowledge beat it before the hint) was the pin for this one.
@@ -63,7 +63,7 @@ Row 4: cols 58-65: 0 1 0 1 1 0 0 1 = 59h = Y
 ```
 This puzzle concept may get later re-use.
 
-### Things of note for the image forensics:
-- Try to reference files here first before exploring the site endpoints, source, image forensics etc. to help reduce doubling up of work and flooding of cycling queries.
+- `connection-detected-access-denied-v0-8c7atk6y141h1.png` has been connected to the new `C3q5NYF.png`. `connection-fragment-solve-compressed.gif` offers visual insight. This was likely a (subtle?) clue about the offsets needing to be considered.
 
-- `connection-detected-access-denied-v0-8c7atk6y141h1.png` has been connected to the new `C3q5NYF.png`. `connection-fragment-solve-compressed.gif` offers visual insight.
+## Things of note for the image forensics:
+- Try to reference files here first before exploring the site endpoints, source, image forensics etc. to help reduce doubling up of work and flooding of cycling queries.
