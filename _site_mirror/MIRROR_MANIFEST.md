@@ -1,29 +1,29 @@
 # project-skyscraper.com — Complete Mirror Manifest
 
-**Generated:** 2026-06-01 08:13:27 UTC
+**Generated:** 2026-06-01 13:22:20 UTC
 **Source:** https://project-skyscraper.com
 
 ## Summary
 
 | Metric | Value |
 |--------|-------|
-| **Total files** | 7293 |
-| **Total size** | 38.0 MB |
+| **Total files** | 7285 |
+| **Total size** | 37.3 MB |
 
 ## Section Breakdown
 
 | Section | Files | Size |
 |---------|-------|------|
-| **POST_ID_SERIES.md/** | 1 | 17.7 KB |
+| **POST_ID_SERIES.md/** | 1 | 18.0 KB |
 | **README.md/** | 1 | 1.9 KB |
 | **UNPUBLISHED_IDS.md/** | 1 | 6.3 KB |
-| **api/** | 4295 | 5.9 MB |
-| **assets/** | 60 | 1.5 MB |
-| **diffs/** | 2646 | 7.3 MB |
+| **api/** | 4277 | 5.9 MB |
+| **assets/** | 65 | 1.6 MB |
+| **diffs/** | 2648 | 6.4 MB |
 | **discovery/** | 9 | 24.0 KB |
 | **endpoints/** | 19 | 654.7 KB |
 | **extras/** | 15 | 39.8 KB |
-| **html/** | 126 | 8.3 MB |
+| **html/** | 129 | 8.5 MB |
 | **media/** | 100 | 13.2 MB |
 | **serve_mirror.py/** | 1 | 10.2 KB |
 | **third_party/** | 16 | 585.1 KB |
@@ -32,18 +32,19 @@
 ## HTML Pages
 
 - `about` (55.7 KB)
-- `inbox` (68.6 KB)
+- `inbox` (68.5 KB)
 - `index` (80.2 KB)
 - `logo` (59.8 KB)
 - `neural-network-status` (53.7 KB)
 - `origin` (65.4 KB)
 - `page_2` (53.8 KB)
 - `page_3` (53.8 KB)
-- `project-skyscraper` (60.1 KB)
+- `project-skyscraper` (60.0 KB)
 - `quote` (89.2 KB)
+- `request-memory-timestamp-094317-unlocked` (80.2 KB)
 - `request-memory-timestamp-094317` (55.0 KB)
 - `sec-log-080413-full` (57.3 KB)
-- `sec-log-094127-full` (57.8 KB)
+- `sec-log-094127-full` (57.7 KB)
 - `sec-log-094316-full` (58.1 KB)
 - `sec-log-211927-full` (57.4 KB)
 - `sleep-mode` (55.5 KB)
@@ -55,51 +56,51 @@
 - `media/_p_117.html` (67.8 KB)
 - `media/_p_128.html` (63.7 KB)
 - `media/_p_132.html` (63.7 KB)
-- `media/_p_134.html` (63.6 KB)
+- `media/_p_134.html` (63.7 KB)
 - `media/_p_136.html` (63.7 KB)
-- `media/_p_138.html` (63.7 KB)
+- `media/_p_138.html` (63.6 KB)
 - `media/_p_140.html` (63.7 KB)
-- `media/_p_142.html` (63.6 KB)
-- `media/_p_144.html` (63.6 KB)
+- `media/_p_142.html` (63.7 KB)
+- `media/_p_144.html` (63.7 KB)
 - `media/_p_146.html` (63.7 KB)
 - `media/_p_148.html` (63.7 KB)
 - `media/_p_150.html` (63.7 KB)
-- `media/_p_152.html` (63.6 KB)
-- `media/_p_154.html` (63.6 KB)
+- `media/_p_152.html` (63.7 KB)
+- `media/_p_154.html` (63.7 KB)
 - `media/_p_156.html` (63.7 KB)
 - `media/_p_158.html` (63.6 KB)
-- `media/_p_160.html` (63.6 KB)
+- `media/_p_160.html` (63.7 KB)
 - `media/_p_1626.html` (63.9 KB)
 - `media/_p_1640.html` (63.9 KB)
 - `media/_p_1669.html` (64.6 KB)
 - `media/_p_1674.html` (91.4 KB)
 - `media/_p_1680.html` (64.3 KB)
 - `media/_p_1691.html` (64.6 KB)
-- `media/_p_1792.html` (64.6 KB)
+- `media/_p_1792.html` (64.7 KB)
 - `media/_p_1802.html` (64.2 KB)
 - `media/_p_1833.html` (64.4 KB)
 - `media/_p_1837.html` (91.2 KB)
-- `media/_p_1852.html` (64.3 KB)
+- `media/_p_1852.html` (64.2 KB)
 - `media/_p_259.html` (64.1 KB)
-- `media/_p_263.html` (63.9 KB)
+- `media/_p_263.html` (63.8 KB)
 - `media/_p_267.html` (63.9 KB)
 - `media/_p_269.html` (63.9 KB)
-- `media/_p_271.html` (63.8 KB)
-- `media/_p_273.html` (63.8 KB)
+- `media/_p_271.html` (63.9 KB)
+- `media/_p_273.html` (63.9 KB)
 - `media/_p_275.html` (63.9 KB)
 - `media/_p_277.html` (63.8 KB)
 - `media/_p_279.html` (63.9 KB)
-- `media/_p_281.html` (65.2 KB)
-- `media/_p_283.html` (64.4 KB)
-- `media/_p_291.html` (64.1 KB)
-- `media/_page_id_1628.html` (57.8 KB)
+- `media/_p_281.html` (65.3 KB)
+- `media/_p_283.html` (64.5 KB)
+- `media/_p_291.html` (64.2 KB)
+- `media/_page_id_1628.html` (57.7 KB)
 - `media/_page_id_1682.html` (57.5 KB)
 - `media/_page_id_1776.html` (55.1 KB)
-- `media/_page_id_1812.html` (68.6 KB)
+- `media/_page_id_1812.html` (68.5 KB)
 - `media/_page_id_252.html` (57.3 KB)
-- `media/_page_id_288.html` (58.0 KB)
-- `media/_page_id_551.html` (53.6 KB)
-- `media/_page_id_75.html` (55.4 KB)
+- `media/_page_id_288.html` (58.1 KB)
+- `media/_page_id_551.html` (53.7 KB)
+- `media/_page_id_75.html` (55.5 KB)
 - `media/project-skyscraper.com/wp-content/uploads/2005/04/IMG_00004_1.jpg` (146.0 B)
 - `media/project-skyscraper.com/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg` (146.0 B)
 - `media/project-skyscraper.com/wp-content/uploads/2026/04/logo.png` (146.0 B)
@@ -379,24 +380,6 @@
 - `api/wp-json/oembed/1.0/embed_url_https3A2F2Fproject-skyscraper.com2Fsleep-mode2F_format_xml` (2.3 KB)
 - `api/wp-json/oembed/1.0/embed_url_https3A2F2Fproject-skyscraper.com2Ftr4ce2F` (2.3 KB)
 - `api/wp-json/oembed/1.0/embed_url_https3A2F2Fproject-skyscraper.com2Ftr4ce2F_format_xml` (2.5 KB)
-- `api/wp-json/oembed/1.0/embed_url_https3A2F2Fproject-skyscraper.com2Fwp-content2Fuploads2F20052F042FIMG_00004_1.jpg` (73.0 B)
-- `api/wp-json/oembed/1.0/embed_url_https3A2F2Fproject-skyscraper.com2Fwp-content2Fuploads2F20052F042FIMG_00004_1.jpg_format_xml` (132.0 B)
-- `api/wp-json/oembed/1.0/embed_url_https3A2F2Fproject-skyscraper.com2Fwp-content2Fuploads2F20262F042Fcropped-project-skyscraper.jpg` (73.0 B)
-- `api/wp-json/oembed/1.0/embed_url_https3A2F2Fproject-skyscraper.com2Fwp-content2Fuploads2F20262F042Fcropped-project-skyscraper.jpg_format_xml` (132.0 B)
-- `api/wp-json/oembed/1.0/embed_url_https3A2F2Fproject-skyscraper.com2Fwp-content2Fuploads2F20262F042Flogo.png` (73.0 B)
-- `api/wp-json/oembed/1.0/embed_url_https3A2F2Fproject-skyscraper.com2Fwp-content2Fuploads2F20262F042Flogo.png_format_xml` (132.0 B)
-- `api/wp-json/oembed/1.0/embed_url_https3A2F2Fproject-skyscraper.com2Fwp-content2Fuploads2F20262F042Fproject-skyscraper.jpg` (73.0 B)
-- `api/wp-json/oembed/1.0/embed_url_https3A2F2Fproject-skyscraper.com2Fwp-content2Fuploads2F20262F042Fproject-skyscraper.jpg_format_xml` (132.0 B)
-- `api/wp-json/oembed/1.0/embed_url_https3A2F2Fproject-skyscraper.com2Fwp-content2Fuploads2F20262F052FIMG_00004.jpg` (73.0 B)
-- `api/wp-json/oembed/1.0/embed_url_https3A2F2Fproject-skyscraper.com2Fwp-content2Fuploads2F20262F052FIMG_00004.jpg_format_xml` (132.0 B)
-- `api/wp-json/oembed/1.0/embed_url_https3A2F2Fproject-skyscraper.com2Fwp-content2Fuploads2F20262F052FTR4CE.jpg` (73.0 B)
-- `api/wp-json/oembed/1.0/embed_url_https3A2F2Fproject-skyscraper.com2Fwp-content2Fuploads2F20262F052FTR4CE.jpg_format_xml` (132.0 B)
-- `api/wp-json/oembed/1.0/embed_url_https3A2F2Fproject-skyscraper.com2Fwp-content2Fuploads2F20262F052FUnknown.jpg` (73.0 B)
-- `api/wp-json/oembed/1.0/embed_url_https3A2F2Fproject-skyscraper.com2Fwp-content2Fuploads2F20262F052FUnknown.jpg_format_xml` (132.0 B)
-- `api/wp-json/oembed/1.0/embed_url_https3A2F2Fproject-skyscraper.com2Fwp-content2Fuploads2F20262F052FWallace-Stevens.jpg` (73.0 B)
-- `api/wp-json/oembed/1.0/embed_url_https3A2F2Fproject-skyscraper.com2Fwp-content2Fuploads2F20262F052FWallace-Stevens.jpg_format_xml` (132.0 B)
-- `api/wp-json/oembed/1.0/embed_url_https3A2F2Fproject-skyscraper.com2Fwp-content2Fuploads2F20262F052FWhen_we_were_17.png` (73.0 B)
-- `api/wp-json/oembed/1.0/embed_url_https3A2F2Fproject-skyscraper.com2Fwp-content2Fuploads2F20262F052FWhen_we_were_17.png_format_xml` (132.0 B)
 - `api/wp-json/oembed/1.0/embed_url_https3A2F2Fproject-skyscraper.com_format_xml` (132.0 B)
 - `api/wp-json/oembed/1.0.unresolved` (335.0 B)
 - `api/wp-json/videopress/v1.json` (2.1 KB)
@@ -2254,7 +2237,7 @@
 - `api/wp-json/wp/v2/pages/994.json` (82.0 B)
 - `api/wp-json/wp/v2/pages/996.json` (82.0 B)
 - `api/wp-json/wp/v2/pages/998.json` (82.0 B)
-- `api/wp-json/wp/v2/pages.json` (54.7 KB)
+- `api/wp-json/wp/v2/pages.json` (58.6 KB)
 - `api/wp-json/wp/v2/pages_per_page_100.json` (58.6 KB)
 - `api/wp-json/wp/v2/pages_per_page_50.json` (54.7 KB)
 - `api/wp-json/wp/v2/plugins.json` (129.0 B)
@@ -4408,7 +4391,7 @@
 - `api/wp-json/wp/v2/posts_per_page_100.json` (212.6 KB)
 - `api/wp-json/wp/v2/posts_per_page_50.json` (206.7 KB)
 - `api/wp-json/wp/v2/search.json` (4.4 KB)
-- `api/wp-json/wp/v2/search_per_page_100.json` (21.0 KB)
+- `api/wp-json/wp/v2/search_per_page_100.json` (21.4 KB)
 - `api/wp-json/wp/v2/settings.json` (98.0 B)
 - `api/wp-json/wp/v2/sidebars.json` (130.0 B)
 - `api/wp-json/wp/v2/statuses.json` (194.0 B)

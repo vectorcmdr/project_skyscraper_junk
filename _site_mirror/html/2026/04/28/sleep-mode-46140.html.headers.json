@@ -1,6 +1,6 @@
 {
   "Server": "nginx",
-  "Date": "Mon, 01 Jun 2026 07:45:37 GMT",
+  "Date": "Mon, 01 Jun 2026 13:19:12 GMT",
   "Content-Type": "text/html; charset=UTF-8",
   "Transfer-Encoding": "chunked",
   "Connection": "close",
@@ -10,10 +10,10 @@
   "Host-Header": "WordPress.com",
   "X-Pingback": "https://project-skyscraper.com/xmlrpc.php",
   "Link": "<https://wp.me/phdnFZ-2y>; rel=shortlink",
-  "Last-Modified": "Sun, 31 May 2026 06:56:40 GMT",
+  "Last-Modified": "Mon, 01 Jun 2026 08:11:45 GMT",
   "Cache-Control": "max-age=300, must-revalidate",
   "X-nananana": "Batcache-Set",
   "X-ac": "1.syd _atomic_bur STALE",
   "Alt-Svc": "clear",
-  "Server-Timing": "a8c-cdn, dc;desc=syd, cache;desc=STALE;dur=4.0"
+  "Server-Timing": "a8c-cdn, dc;desc=syd, cache;desc=STALE;dur=2.0"
 }
