@@ -50,7 +50,7 @@ Plain:    L  E  O  N  A  R  D     D  E     V  I  N  C  I
 ## 20x20 "Pixel" 8x5 bit block puzzles (like the Fragment[C3q5NYF]):
 
 The ERROR carrier of layer 0/1 was confirmed early on.
-The hint that as given regarding offsets (though partial solved + WT knowledge beat it before the hint) was the pin for this one.
+The hint that was given regarding offsets (though partial solved + WT knowledge beat it before the hint) was the pin for this one.
 
 Solve was to offset +2/-6 at the anomalous block position (QSRSV):
 ```
