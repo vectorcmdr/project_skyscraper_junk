@@ -1,14 +1,21 @@
+<div align="center">
+   
 # Project Skyscraper ARG Community Reference Files
 
-<img src="https://github.com/vectorcmdr/project_skyscraper_junk/blob/main/archived/cropped-project-skyscraper.jpg" width="160">
+</div>
 
-Shared findings and other junk for the No Man's Sky 'Project Skyscraper' ARG.
+<div align="center"><img src="https://github.com/vectorcmdr/project_skyscraper_junk/blob/main/archived/cropped-project-skyscraper.jpg" width="160"></div>
 
-Contains static site mirror for file and source reference, original images, image forensics (and outputs) and various other reports.
+<div align="center">
+Shared findings and other stuff for the No Man's Sky 'Project Skyscraper' ARG.<br/>
+Contains original images, image forensics (and outputs) and various other reports.
+
+## A static site mirror and site monitor can be found below:
+## [[website]](https://project-skyscraper.vectorcmdr.xyz/) [[code]](https://github.com/vectorcmdr/project-skyscraper)
+   
+</div>
 
 ## Layout:
-
-- Static site mirror + scripts live here: [/_site_mirror](https://github.com/vectorcmdr/project_skyscraper_junk/tree/main/_site_mirror)
 
 - Root files are scripts, general reports and base images for analysis - by file name or purpose.
 - Folders matching file names are analysis output folders -> img / bin / audio / report / etc.
