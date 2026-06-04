@@ -1,0 +1,790 @@
+======================================================================
+FORENSIC AUDIO ANALYSIS REPORT
+Target: self_introduction_memory_dump.mp3
+Duration: 16.068s  SR: 44100 Hz  Channels: 2
+======================================================================
+Saved stereo low-freq spectrogram: C:\stack\arg\tapes_man_2\spectrogram_stereo_0_1200.png
+Saved mono high-res spectrogram: C:\stack\arg\tapes_man_2\spectrogram_mono_0_1000_hires.png
+Saved mono log spectrogram: C:\stack\arg\tapes_man_2\spectrogram_mono_log_50_4000.png
+
+--- LEFT channel sustained tones (50-1200 Hz) ---
+Count: 23
+  #  0  t=3.344-3.518s  f=1052.44 Hz  MIDI= 84 (84.1)  dur=0.174s
+  #  1  t=6.560-6.629s  f=635.23 Hz  MIDI= 75 (75.4)  dur=0.070s
+  #  2  t=8.580-8.707s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.128s
+  #  3  t=9.520-9.776s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.255s
+  #  4  t=10.484-10.809s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.325s
+  #  5  t=10.820-10.879s  f=118.43 Hz  MIDI= 46 (46.3)  dur=0.058s
+  #  6  t=11.389-11.807s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.418s
+  #  7  t=11.819-11.900s  f=118.43 Hz  MIDI= 46 (46.3)  dur=0.081s
+  #  8  t=12.341-12.806s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.464s
+  #  9  t=12.817-12.910s  f=118.43 Hz  MIDI= 46 (46.3)  dur=0.093s
+  # 10  t=12.980-13.119s  f=148.04 Hz  MIDI= 50 (50.1)  dur=0.139s
+  # 11  t=13.154-13.317s  f=134.58 Hz  MIDI= 48 (48.5)  dur=0.163s
+  # 12  t=13.328-13.804s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.476s
+  # 13  t=13.816-13.967s  f=118.43 Hz  MIDI= 46 (46.3)  dur=0.151s
+  # 14  t=13.978-14.129s  f=148.04 Hz  MIDI= 50 (50.1)  dur=0.151s
+  # 15  t=14.141-14.327s  f=134.58 Hz  MIDI= 48 (48.5)  dur=0.186s
+  # 16  t=14.338-14.803s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.464s
+  # 17  t=14.814-14.965s  f=118.43 Hz  MIDI= 46 (46.3)  dur=0.151s
+  # 18  t=14.977-15.139s  f=148.04 Hz  MIDI= 50 (50.1)  dur=0.163s
+  # 19  t=15.151-15.325s  f=134.58 Hz  MIDI= 48 (48.5)  dur=0.174s
+  # 20  t=15.337-15.790s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.453s
+  # 21  t=15.801-15.964s  f=118.43 Hz  MIDI= 46 (46.3)  dur=0.163s
+  # 22  t=15.987-16.068s  f=148.04 Hz  MIDI= 50 (50.1)  dur=0.081s
+
+--- RIGHT channel sustained tones (50-1200 Hz) ---
+Count: 32
+  #  0  t=0.639-0.720s  f=787.31 Hz  MIDI= 79 (79.1)  dur=0.081s
+  #  1  t=3.402-3.483s  f=1060.51 Hz  MIDI= 84 (84.2)  dur=0.081s
+  #  2  t=6.571-6.618s  f=635.23 Hz  MIDI= 75 (75.4)  dur=0.046s
+  #  3  t=8.626-8.777s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.151s
+  #  4  t=9.532-9.601s  f=145.35 Hz  MIDI= 50 (49.8)  dur=0.070s
+  #  5  t=9.613-9.822s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.209s
+  #  6  t=10.484-10.612s  f=145.35 Hz  MIDI= 50 (49.8)  dur=0.128s
+  #  7  t=10.623-10.844s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.221s
+  #  8  t=11.401-11.471s  f=104.97 Hz  MIDI= 44 (44.2)  dur=0.070s
+  #  9  t=11.482-11.598s  f=145.35 Hz  MIDI= 50 (49.8)  dur=0.116s
+  # 10  t=11.610-11.865s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.255s
+  # 11  t=11.877-11.923s  f=129.20 Hz  MIDI= 48 (47.8)  dur=0.046s
+  # 12  t=12.353-12.481s  f=104.97 Hz  MIDI= 44 (44.2)  dur=0.128s
+  # 13  t=12.492-12.597s  f=145.35 Hz  MIDI= 50 (49.8)  dur=0.104s
+  # 14  t=12.608-12.864s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.255s
+  # 15  t=12.875-12.945s  f=129.20 Hz  MIDI= 48 (47.8)  dur=0.070s
+  # 16  t=13.026-13.096s  f=102.28 Hz  MIDI= 44 (43.7)  dur=0.070s
+  # 17  t=13.131-13.479s  f=104.97 Hz  MIDI= 44 (44.2)  dur=0.348s
+  # 18  t=13.491-13.595s  f=145.35 Hz  MIDI= 50 (49.8)  dur=0.104s
+  # 19  t=13.607-13.862s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.255s
+  # 20  t=13.874-13.944s  f=129.20 Hz  MIDI= 48 (47.8)  dur=0.070s
+  # 21  t=14.002-14.095s  f=102.28 Hz  MIDI= 44 (43.7)  dur=0.093s
+  # 22  t=14.129-14.489s  f=104.97 Hz  MIDI= 44 (44.2)  dur=0.360s
+  # 23  t=14.501-14.594s  f=145.35 Hz  MIDI= 50 (49.8)  dur=0.093s
+  # 24  t=14.605-14.861s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.255s
+  # 25  t=14.872-14.942s  f=129.20 Hz  MIDI= 48 (47.8)  dur=0.070s
+  # 26  t=15.012-15.093s  f=102.28 Hz  MIDI= 44 (43.7)  dur=0.081s
+  # 27  t=15.128-15.499s  f=104.97 Hz  MIDI= 44 (44.2)  dur=0.372s
+  # 28  t=15.511-15.592s  f=145.35 Hz  MIDI= 50 (49.8)  dur=0.081s
+  # 29  t=15.604-15.848s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.244s
+  # 30  t=15.859-15.940s  f=129.20 Hz  MIDI= 48 (47.8)  dur=0.081s
+  # 31  t=15.975-16.068s  f=104.97 Hz  MIDI= 44 (44.2)  dur=0.093s
+
+--- MONO channel sustained tones (50-1200 Hz) ---
+Count: 33
+  #  0  t=0.627-0.720s  f=785.96 Hz  MIDI= 79 (79.0)  dur=0.093s
+  #  1  t=3.402-3.483s  f=1055.13 Hz  MIDI= 84 (84.1)  dur=0.081s
+  #  2  t=6.548-6.629s  f=635.23 Hz  MIDI= 75 (75.4)  dur=0.081s
+  #  3  t=8.626-8.731s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.104s
+  #  4  t=9.567-9.787s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.221s
+  #  5  t=10.542-10.820s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.279s
+  #  6  t=11.447-11.494s  f=145.35 Hz  MIDI= 50 (49.8)  dur=0.046s
+  #  7  t=11.540-11.831s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.290s
+  #  8  t=11.854-11.935s  f=153.42 Hz  MIDI= 51 (50.8)  dur=0.081s
+  #  9  t=12.365-12.423s  f=126.51 Hz  MIDI= 47 (47.4)  dur=0.058s
+  # 10  t=12.434-12.527s  f=145.35 Hz  MIDI= 50 (49.8)  dur=0.093s
+  # 11  t=12.539-12.829s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.290s
+  # 12  t=12.852-12.945s  f=153.42 Hz  MIDI= 51 (50.8)  dur=0.093s
+  # 13  t=13.189-13.305s  f=113.05 Hz  MIDI= 45 (45.5)  dur=0.116s
+  # 14  t=13.317-13.421s  f=126.51 Hz  MIDI= 47 (47.4)  dur=0.104s
+  # 15  t=13.433-13.526s  f=145.35 Hz  MIDI= 50 (49.8)  dur=0.093s
+  # 16  t=13.537-13.827s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.290s
+  # 17  t=13.851-13.944s  f=153.42 Hz  MIDI= 51 (50.8)  dur=0.093s
+  # 18  t=13.955-14.002s  f=161.50 Hz  MIDI= 52 (51.6)  dur=0.046s
+  # 19  t=14.060-14.118s  f=107.67 Hz  MIDI= 45 (44.6)  dur=0.058s
+  # 20  t=14.187-14.303s  f=113.05 Hz  MIDI= 45 (45.5)  dur=0.116s
+  # 21  t=14.338-14.431s  f=126.51 Hz  MIDI= 47 (47.4)  dur=0.093s
+  # 22  t=14.443-14.536s  f=145.35 Hz  MIDI= 50 (49.8)  dur=0.093s
+  # 23  t=14.547-14.826s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.279s
+  # 24  t=14.838-14.942s  f=153.42 Hz  MIDI= 51 (50.8)  dur=0.104s
+  # 25  t=14.954-15.000s  f=161.50 Hz  MIDI= 52 (51.6)  dur=0.046s
+  # 26  t=15.058-15.116s  f=107.67 Hz  MIDI= 45 (44.6)  dur=0.058s
+  # 27  t=15.186-15.302s  f=113.05 Hz  MIDI= 45 (45.5)  dur=0.116s
+  # 28  t=15.314-15.430s  f=126.51 Hz  MIDI= 47 (47.4)  dur=0.116s
+  # 29  t=15.476-15.534s  f=145.35 Hz  MIDI= 50 (49.8)  dur=0.058s
+  # 30  t=15.546-15.801s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.255s
+  # 31  t=15.836-15.940s  f=153.42 Hz  MIDI= 51 (50.8)  dur=0.104s
+  # 32  t=15.952-16.068s  f=161.50 Hz  MIDI= 52 (51.6)  dur=0.116s
+
+--- DIFF channel sustained tones (50-1200 Hz) ---
+Count: 42
+  #  0  t=3.344-3.529s  f=1065.89 Hz  MIDI= 84 (84.3)  dur=0.186s
+  #  1  t=6.978-7.024s  f=1195.09 Hz  MIDI= 86 (86.3)  dur=0.046s
+  #  2  t=7.605-7.732s  f=121.12 Hz  MIDI= 47 (46.7)  dur=0.128s
+  #  3  t=8.557-8.731s  f=121.12 Hz  MIDI= 47 (46.7)  dur=0.174s
+  #  4  t=9.509-9.729s  f=121.12 Hz  MIDI= 47 (46.7)  dur=0.221s
+  #  5  t=9.787-9.834s  f=142.66 Hz  MIDI= 50 (49.5)  dur=0.046s
+  #  6  t=10.507-10.716s  f=121.12 Hz  MIDI= 47 (46.7)  dur=0.209s
+  #  7  t=10.728-10.774s  f=118.43 Hz  MIDI= 46 (46.3)  dur=0.046s
+  #  8  t=10.786-10.832s  f=142.66 Hz  MIDI= 50 (49.5)  dur=0.046s
+  #  9  t=10.844-10.913s  f=126.51 Hz  MIDI= 47 (47.4)  dur=0.070s
+  # 10  t=11.505-11.726s  f=121.12 Hz  MIDI= 47 (46.7)  dur=0.221s
+  # 11  t=11.738-11.784s  f=118.43 Hz  MIDI= 46 (46.3)  dur=0.046s
+  # 12  t=11.842-11.912s  f=126.51 Hz  MIDI= 47 (47.4)  dur=0.070s
+  # 13  t=11.923-11.970s  f=121.12 Hz  MIDI= 47 (46.7)  dur=0.046s
+  # 14  t=12.109-12.167s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.058s
+  # 15  t=12.179-12.330s  f=134.58 Hz  MIDI= 48 (48.5)  dur=0.151s
+  # 16  t=12.411-12.504s  f=110.36 Hz  MIDI= 45 (45.1)  dur=0.093s
+  # 17  t=12.516-12.725s  f=121.12 Hz  MIDI= 47 (46.7)  dur=0.209s
+  # 18  t=12.736-12.783s  f=118.43 Hz  MIDI= 46 (46.3)  dur=0.046s
+  # 19  t=12.841-12.910s  f=126.51 Hz  MIDI= 47 (47.4)  dur=0.070s
+  # 20  t=12.922-12.992s  f=121.12 Hz  MIDI= 47 (46.7)  dur=0.070s
+  # 21  t=13.073-13.166s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.093s
+  # 22  t=13.177-13.328s  f=134.58 Hz  MIDI= 48 (48.5)  dur=0.151s
+  # 23  t=13.410-13.502s  f=110.36 Hz  MIDI= 45 (45.1)  dur=0.093s
+  # 24  t=13.514-13.723s  f=121.12 Hz  MIDI= 47 (46.7)  dur=0.209s
+  # 25  t=13.735-13.781s  f=118.43 Hz  MIDI= 46 (46.3)  dur=0.046s
+  # 26  t=13.827-13.909s  f=126.51 Hz  MIDI= 47 (47.4)  dur=0.081s
+  # 27  t=13.920-13.990s  f=121.12 Hz  MIDI= 47 (46.7)  dur=0.070s
+  # 28  t=14.071-14.164s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.093s
+  # 29  t=14.176-14.338s  f=134.58 Hz  MIDI= 48 (48.5)  dur=0.163s
+  # 30  t=14.408-14.512s  f=110.36 Hz  MIDI= 45 (45.1)  dur=0.104s
+  # 31  t=14.524-14.710s  f=121.12 Hz  MIDI= 47 (46.7)  dur=0.186s
+  # 32  t=14.721-14.780s  f=118.43 Hz  MIDI= 46 (46.3)  dur=0.058s
+  # 33  t=14.814-14.907s  f=126.51 Hz  MIDI= 47 (47.4)  dur=0.093s
+  # 34  t=14.919-14.988s  f=121.12 Hz  MIDI= 47 (46.7)  dur=0.070s
+  # 35  t=15.070-15.163s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.093s
+  # 36  t=15.174-15.337s  f=134.58 Hz  MIDI= 48 (48.5)  dur=0.163s
+  # 37  t=15.360-15.406s  f=123.82 Hz  MIDI= 47 (47.0)  dur=0.046s
+  # 38  t=15.418-15.546s  f=110.36 Hz  MIDI= 45 (45.1)  dur=0.128s
+  # 39  t=15.557-15.685s  f=121.12 Hz  MIDI= 47 (46.7)  dur=0.128s
+  # 40  t=15.697-15.778s  f=118.43 Hz  MIDI= 46 (46.3)  dur=0.081s
+  # 41  t=15.906-16.022s  f=121.12 Hz  MIDI= 47 (46.7)  dur=0.116s
+
+======================================================================
+TRANSFORMATION RESULTS (sustained tones)
+======================================================================
+
+--- LEFT ---
+MIDI sequence: [84, 75, 47, 47, 47, 46, 47, 46, 47, 46, 50, 48, 47, 46, 50, 48, 47, 46, 50, 48, 47, 46, 50]
+Direct ASCII:  TK///././.20/.20/.20/.2
+Hex string:    544b2f2f2f2e2f2e2f2e32302f2e32302f2e32302f2e32
+Hex->ASCII:    TK///././.20/.20/.20/.2
+Best NMS (MIDI%26+shift):
+  shift= 2 score= 12: IZXXXWXWXWAYXWAYXWAYXWA
+  shift= 0 score=  2: GXVVVUVUVUYWVUYWVUYWVUY
+  shift= 5 score=  2: LCAAAZAZAZDBAZDBAZDBAZD
+  shift= 6 score=  2: MDBBBABABAECBAECBAECBAE
+  shift= 8 score=  2: OFDDDCDCDCGEDCGEDCGEDCG
+  shift= 9 score=  2: PGEEEDEDEDHFEDHFEDHFEDH
+  shift=10 score=  2: QHFFFEFEFEIGFEIGFEIGFEI
+  shift=13 score=  2: TKIIIHIHIHLJIHLJIHLJIHL
+  shift=14 score=  2: ULJJJIJIJIMKJIMKJIMKJIM
+  shift=16 score=  2: WNLLLKLKLKOMLKOMLKOMLKO
+  shift=19 score=  2: ZQOOONONONRPONRPONRPONR
+  shift=20 score=  2: ARPPPOPOPOSQPOSQPOSQPOS
+MIDI offset -> ASCII (low dot ratio):
+  offset=-15: E<   . . .#! .#! .#! .#
+  offset=-14: F=!!! ! ! $"! $"! $"! $
+  offset=-13: G>"""!"!"!%#"!%#"!%#"!%
+  offset=-12: H?###"#"#"&$#"&$#"&$#"&
+  offset=-11: I@$$$#$#$#'%$#'%$#'%$#'
+  offset=-10: JA%%%$%$%$(&%$(&%$(&%$(
+  offset= -9: KB&&&%&%&%)'&%)'&%)'&%)
+  offset= -8: LC'''&'&'&*('&*('&*('&*
+  offset= -7: MD((('('('+)('+)('+)('+
+  offset= -6: NE)))()()(,*)(,*)(,*)(,
+  offset= -5: OF***)*)*)-+*)-+*)-+*)-
+  offset= -4: PG+++*+*+*.,+*.,+*.,+*.
+  offset= -3: QH,,,+,+,+/-,+/-,+/-,+/
+  offset= -2: RI---,-,-,0.-,0.-,0.-,0
+  offset=  0: TK///././.20/.20/.20/.2
+  offset=  1: UL000/0/0/310/310/310/3
+  offset=  2: VM111010104210421042104
+  offset=  3: WN222121215321532153215
+  offset=  4: XO333232326432643264326
+  offset=  5: YP444343437543754375437
+  offset=  6: ZQ555454548654865486548
+  offset=  7: [R666565659765976597659
+  offset=  8: \S77767676:876:876:876:
+  offset=  9: ]T88878787;987;987;987;
+  offset= 10: ^U99989898<:98<:98<:98<
+  offset= 11: _V:::9:9:9=;:9=;:9=;:9=
+  offset= 12: `W;;;:;:;:><;:><;:><;:>
+  offset= 13: aX<<<;<;<;?=<;?=<;?=<;?
+  offset= 14: bY===<=<=<@>=<@>=<@>=<@
+  offset= 15: cZ>>>=>=>=A?>=A?>=A?>=A
+  offset= 16: d[???>?>?>B@?>B@?>B@?>B
+  offset= 17: e\@@@?@?@?CA@?CA@?CA@?C
+  offset= 18: f]AAA@A@A@DBA@DBA@DBA@D
+  offset= 19: g^BBBABABAECBAECBAECBAE
+  offset= 20: h_CCCBCBCBFDCBFDCBFDCBF
+  offset= 21: i`DDDCDCDCGEDCGEDCGEDCG
+  offset= 22: jaEEEDEDEDHFEDHFEDHFEDH
+  offset= 23: kbFFFEFEFEIGFEIGFEIGFEI
+  offset= 24: lcGGGFGFGFJHGFJHGFJHGFJ
+  offset= 25: mdHHHGHGHGKIHGKIHGKIHGK
+  offset= 26: neIIIHIHIHLJIHLJIHLJIHL
+  offset= 27: ofJJJIJIJIMKJIMKJIMKJIM
+  offset= 28: pgKKKJKJKJNLKJNLKJNLKJN
+  offset= 29: qhLLLKLKLKOMLKOMLKOMLKO
+MIDI - base -> A-Z (bases with <50% unknown):
+  base=21: ??ZZZYZYZY??ZY??ZY??ZY?
+  base=22: ??YYYXYXYX?ZYX?ZYX?ZYX?
+  base=23: ??XXXWXWXW?YXW?YXW?YXW?
+  base=24: ??WWWVWVWVZXWVZXWVZXWVZ
+  base=25: ??VVVUVUVUYWVUYWVUYWVUY
+  base=26: ??UUUTUTUTXVUTXVUTXVUTX
+  base=27: ??TTTSTSTSWUTSWUTSWUTSW
+  base=28: ??SSSRSRSRVTSRVTSRVTSRV
+  base=29: ??RRRQRQRQUSRQUSRQUSRQU
+  base=30: ??QQQPQPQPTRQPTRQPTRQPT
+  base=31: ??PPPOPOPOSQPOSQPOSQPOS
+  base=32: ??OOONONONRPONRPONRPONR
+  base=33: ??NNNMNMNMQONMQONMQONMQ
+  base=34: ??MMMLMLMLPNMLPNMLPNMLP
+  base=35: ??LLLKLKLKOMLKOMLKOMLKO
+  base=36: ??KKKJKJKJNLKJNLKJNLKJN
+  base=37: ??JJJIJIJIMKJIMKJIMKJIM
+  base=38: ??IIIHIHIHLJIHLJIHLJIHL
+  base=39: ??HHHGHGHGKIHGKIHGKIHGK
+  base=40: ??GGGFGFGFJHGFJHGFJHGFJ
+  base=41: ??FFFEFEFEIGFEIGFEIGFEI
+  base=42: ??EEEDEDEDHFEDHFEDHFEDH
+  base=43: ??DDDCDCDCGEDCGEDCGEDCG
+  base=44: ??CCCBCBCBFDCBFDCBFDCBF
+  base=45: ??BBBABABAECBAECBAECBAE
+  base=46: ??AAA?A?A?DBA?DBA?DBA?D
+
+--- RIGHT ---
+MIDI sequence: [79, 84, 75, 47, 50, 47, 50, 47, 44, 50, 47, 48, 44, 50, 47, 48, 44, 44, 50, 47, 48, 44, 44, 50, 47, 48, 44, 44, 50, 47, 48, 44]
+Direct ASCII:  OTK/2/2/,2/0,2/0,,2/0,,2/0,,2/0,
+Hex string:    4f544b2f322f322f2c322f302c322f302c2c322f302c2c322f302c2c322f302c
+Hex->ASCII:    OTK/2/2/,2/0,2/0,,2/0,,2/0,,2/0,
+Best NMS (MIDI%26+shift):
+  shift= 7 score= 10: INECFCFCZFCDZFCDZZFCDZZFCDZZFCDZ
+  shift= 4 score=  2: FKBZCZCZWCZAWCZAWWCZAWWCZAWWCZAW
+  shift= 5 score=  2: GLCADADAXDABXDABXXDABXXDABXXDABX
+  shift= 6 score=  2: HMDBEBEBYEBCYEBCYYEBCYYEBCYYEBCY
+  shift= 9 score=  2: KPGEHEHEBHEFBHEFBBHEFBBHEFBBHEFB
+  shift=10 score=  2: LQHFIFIFCIFGCIFGCCIFGCCIFGCCIFGC
+  shift=12 score=  2: NSJHKHKHEKHIEKHIEEKHIEEKHIEEKHIE
+  shift=13 score=  2: OTKILILIFLIJFLIJFFLIJFFLIJFFLIJF
+  shift=18 score=  2: TYPNQNQNKQNOKQNOKKQNOKKQNOKKQNOK
+  shift=19 score=  2: UZQOROROLROPLROPLLROPLLROPLLROPL
+  shift=24 score=  2: ZEVTWTWTQWTUQWTUQQWTUQQWTUQQWTUQ
+  shift=25 score=  2: AFWUXUXURXUVRXUVRRXUVRRXUVRRXUVR
+MIDI offset -> ASCII (low dot ratio):
+  offset=-15: @E< # # .# !.# !..# !..# !..# !.
+  offset=-14: AF=!$!$!.$!".$!"..$!"..$!"..$!".
+  offset=-13: BG>"%"%".%"#.%"#..%"#..%"#..%"#.
+  offset=-12: CH?#&#&# &#$ &#$  &#$  &#$  &#$ 
+  offset=-11: DI@$'$'$!'$%!'$%!!'$%!!'$%!!'$%!
+  offset=-10: EJA%(%(%"(%&"(%&""(%&""(%&""(%&"
+  offset= -9: FKB&)&)&#)&'#)&'##)&'##)&'##)&'#
+  offset= -8: GLC'*'*'$*'($*'($$*'($$*'($$*'($
+  offset= -7: HMD(+(+(%+()%+()%%+()%%+()%%+()%
+  offset= -6: INE),),)&,)*&,)*&&,)*&&,)*&&,)*&
+  offset= -5: JOF*-*-*'-*+'-*+''-*+''-*+''-*+'
+  offset= -4: KPG+.+.+(.+,(.+,((.+,((.+,((.+,(
+  offset= -3: LQH,/,/,)/,-)/,-))/,-))/,-))/,-)
+  offset= -2: MRI-0-0-*0-.*0-.**0-.**0-.**0-.*
+  offset= -1: NSJ.1.1.+1./+1./++1./++1./++1./+
+  offset=  0: OTK/2/2/,2/0,2/0,,2/0,,2/0,,2/0,
+  offset=  1: PUL03030-301-301--301--301--301-
+  offset=  2: QVM14141.412.412..412..412..412.
+  offset=  3: RWN25252/523/523//523//523//523/
+  offset=  4: SXO36363063406340063400634006340
+  offset=  5: TYP47474174517451174511745117451
+  offset=  6: UZQ58585285628562285622856228562
+  offset=  7: V[R69696396739673396733967339673
+  offset=  8: W\S7:7:74:784:7844:7844:7844:784
+  offset=  9: X]T8;8;85;895;8955;8955;8955;895
+  offset= 10: Y^U9<9<96<9:6<9:66<9:66<9:66<9:6
+  offset= 11: Z_V:=:=:7=:;7=:;77=:;77=:;77=:;7
+  offset= 12: [`W;>;>;8>;<8>;<88>;<88>;<88>;<8
+  offset= 13: \aX<?<?<9?<=9?<=99?<=99?<=99?<=9
+  offset= 14: ]bY=@=@=:@=>:@=>::@=>::@=>::@=>:
+  offset= 15: ^cZ>A>A>;A>?;A>?;;A>?;;A>?;;A>?;
+  offset= 16: _d[?B?B?<B?@<B?@<<B?@<<B?@<<B?@<
+  offset= 17: `e\@C@C@=C@A=C@A==C@A==C@A==C@A=
+  offset= 18: af]ADADA>DAB>DAB>>DAB>>DAB>>DAB>
+  offset= 19: bg^BEBEB?EBC?EBC??EBC??EBC??EBC?
+  offset= 20: ch_CFCFC@FCD@FCD@@FCD@@FCD@@FCD@
+  offset= 21: di`DGDGDAGDEAGDEAAGDEAAGDEAAGDEA
+  offset= 22: ejaEHEHEBHEFBHEFBBHEFBBHEFBBHEFB
+  offset= 23: fkbFIFIFCIFGCIFGCCIFGCCIFGCCIFGC
+  offset= 24: glcGJGJGDJGHDJGHDDJGHDDJGHDDJGHD
+  offset= 25: hmdHKHKHEKHIEKHIEEKHIEEKHIEEKHIE
+  offset= 26: ineILILIFLIJFLIJFFLIJFFLIJFFLIJF
+  offset= 27: jofJMJMJGMJKGMJKGGMJKGGMJKGGMJKG
+  offset= 28: kpgKNKNKHNKLHNKLHHNKLHHNKLHHNKLH
+  offset= 29: lqhLOLOLIOLMIOLMIIOLMIIOLMIIOLMI
+MIDI - base -> A-Z (bases with <50% unknown):
+  base=21: ???Z?Z?ZW?Z?W?Z?WW?Z?WW?Z?WW?Z?W
+  base=22: ???Y?Y?YV?YZV?YZVV?YZVV?YZVV?YZV
+  base=23: ???X?X?XU?XYU?XYUU?XYUU?XYUU?XYU
+  base=24: ???WZWZWTZWXTZWXTTZWXTTZWXTTZWXT
+  base=25: ???VYVYVSYVWSYVWSSYVWSSYVWSSYVWS
+  base=26: ???UXUXURXUVRXUVRRXUVRRXUVRRXUVR
+  base=27: ???TWTWTQWTUQWTUQQWTUQQWTUQQWTUQ
+  base=28: ???SVSVSPVSTPVSTPPVSTPPVSTPPVSTP
+  base=29: ???RURUROURSOURSOOURSOOURSOOURSO
+  base=30: ???QTQTQNTQRNTQRNNTQRNNTQRNNTQRN
+  base=31: ???PSPSPMSPQMSPQMMSPQMMSPQMMSPQM
+  base=32: ???OROROLROPLROPLLROPLLROPLLROPL
+  base=33: ???NQNQNKQNOKQNOKKQNOKKQNOKKQNOK
+  base=34: ???MPMPMJPMNJPMNJJPMNJJPMNJJPMNJ
+  base=35: ???LOLOLIOLMIOLMIIOLMIIOLMIIOLMI
+  base=36: ???KNKNKHNKLHNKLHHNKLHHNKLHHNKLH
+  base=37: ???JMJMJGMJKGMJKGGMJKGGMJKGGMJKG
+  base=38: ???ILILIFLIJFLIJFFLIJFFLIJFFLIJF
+  base=39: ???HKHKHEKHIEKHIEEKHIEEKHIEEKHIE
+  base=40: ???GJGJGDJGHDJGHDDJGHDDJGHDDJGHD
+  base=41: ???FIFIFCIFGCIFGCCIFGCCIFGCCIFGC
+  base=42: ???EHEHEBHEFBHEFBBHEFBBHEFBBHEFB
+  base=43: ???DGDGDAGDEAGDEAAGDEAAGDEAAGDEA
+  base=44: ???CFCFC?FCD?FCD??FCD??FCD??FCD?
+  base=45: ???BEBEB?EBC?EBC??EBC??EBC??EBC?
+  base=46: ???ADADA?DAB?DAB??DAB??DAB??DAB?
+
+--- MONO ---
+MIDI sequence: [79, 84, 75, 47, 47, 47, 50, 47, 51, 47, 50, 47, 51, 45, 47, 50, 47, 51, 52, 45, 45, 47, 50, 47, 51, 52, 45, 45, 47, 50, 47, 51, 52]
+Direct ASCII:  OTK///2/3/2/3-/2/34--/2/34--/2/34
+Hex string:    4f544b2f2f2f322f332f322f332d2f322f33342d2d2f322f33342d2d2f322f3334
+Hex->ASCII:    OTK///2/3/2/3-/2/34--/2/34--/2/34
+Best NMS (MIDI%26+shift):
+  shift= 7 score= 12: INECCCFCGCFCGACFCGHAACFCGHAACFCGH
+  shift= 1 score=  2: CHYWWWZWAWZWAUWZWABUUWZWABUUWZWAB
+  shift= 2 score=  2: DIZXXXAXBXAXBVXAXBCVVXAXBCVVXAXBC
+  shift= 6 score=  2: HMDBBBEBFBEBFZBEBFGZZBEBFGZZBEBFG
+  shift=10 score=  2: LQHFFFIFJFIFJDFIFJKDDFIFJKDDFIFJK
+  shift=11 score=  2: MRIGGGJGKGJGKEGJGKLEEGJGKLEEGJGKL
+  shift=13 score=  2: OTKIIILIMILIMGILIMNGGILIMNGGILIMN
+  shift=15 score=  2: QVMKKKNKOKNKOIKNKOPIIKNKOPIIKNKOP
+  shift=16 score=  2: RWNLLLOLPLOLPJLOLPQJJLOLPQJJLOLPQ
+  shift=19 score=  2: UZQOOOROSOROSMOROSTMMOROSTMMOROST
+  shift=21 score=  2: WBSQQQTQUQTQUOQTQUVOOQTQUVOOQTQUV
+  shift=22 score=  2: XCTRRRURVRURVPRURVWPPRURVWPPRURVW
+MIDI offset -> ASCII (low dot ratio):
+  offset=-15: @E<   # $ # $. # $%.. # $%.. # $%
+  offset=-14: AF=!!!$!%!$!%.!$!%&..!$!%&..!$!%&
+  offset=-13: BG>"""%"&"%"& "%"&'  "%"&'  "%"&'
+  offset=-12: CH?###&#'#&#'!#&#'(!!#&#'(!!#&#'(
+  offset=-11: DI@$$$'$($'$("$'$()""$'$()""$'$()
+  offset=-10: EJA%%%(%)%(%)#%(%)*##%(%)*##%(%)*
+  offset= -9: FKB&&&)&*&)&*$&)&*+$$&)&*+$$&)&*+
+  offset= -8: GLC'''*'+'*'+%'*'+,%%'*'+,%%'*'+,
+  offset= -7: HMD(((+(,(+(,&(+(,-&&(+(,-&&(+(,-
+  offset= -6: INE))),)-),)-'),)-.''),)-.''),)-.
+  offset= -5: JOF***-*.*-*.(*-*./((*-*./((*-*./
+  offset= -4: KPG+++.+/+.+/)+.+/0))+.+/0))+.+/0
+  offset= -3: LQH,,,/,0,/,0*,/,01**,/,01**,/,01
+  offset= -2: MRI---0-1-0-1+-0-12++-0-12++-0-12
+  offset=  0: OTK///2/3/2/3-/2/34--/2/34--/2/34
+  offset=  1: PUL0003040304.03045..03045..03045
+  offset=  2: QVM1114151415/14156//14156//14156
+  offset=  3: RWN222526252602526700252670025267
+  offset=  4: SXO333637363713637811363781136378
+  offset=  5: TYP444748474824748922474892247489
+  offset=  6: UZQ555859585935859:335859:335859:
+  offset=  7: V[R66696:696:4696:;44696:;44696:;
+  offset=  8: W\S777:7;7:7;57:7;<557:7;<557:7;<
+  offset=  9: X]T888;8<8;8<68;8<=668;8<=668;8<=
+  offset= 10: Y^U999<9=9<9=79<9=>779<9=>779<9=>
+  offset= 11: Z_V:::=:>:=:>8:=:>?88:=:>?88:=:>?
+  offset= 12: [`W;;;>;?;>;?9;>;?@99;>;?@99;>;?@
+  offset= 13: \aX<<<?<@<?<@:<?<@A::<?<@A::<?<@A
+  offset= 14: ]bY===@=A=@=A;=@=AB;;=@=AB;;=@=AB
+  offset= 15: ^cZ>>>A>B>A>B<>A>BC<<>A>BC<<>A>BC
+  offset= 16: _d[???B?C?B?C=?B?CD==?B?CD==?B?CD
+  offset= 17: `e\@@@C@D@C@D>@C@DE>>@C@DE>>@C@DE
+  offset= 18: af]AAADAEADAE?ADAEF??ADAEF??ADAEF
+  offset= 19: bg^BBBEBFBEBF@BEBFG@@BEBFG@@BEBFG
+  offset= 20: ch_CCCFCGCFCGACFCGHAACFCGHAACFCGH
+  offset= 21: di`DDDGDHDGDHBDGDHIBBDGDHIBBDGDHI
+  offset= 22: ejaEEEHEIEHEICEHEIJCCEHEIJCCEHEIJ
+  offset= 23: fkbFFFIFJFIFJDFIFJKDDFIFJKDDFIFJK
+  offset= 24: glcGGGJGKGJGKEGJGKLEEGJGKLEEGJGKL
+  offset= 25: hmdHHHKHLHKHLFHKHLMFFHKHLMFFHKHLM
+  offset= 26: ineIIILIMILIMGILIMNGGILIMNGGILIMN
+  offset= 27: jofJJJMJNJMJNHJMJNOHHJMJNOHHJMJNO
+  offset= 28: kpgKKKNKOKNKOIKNKOPIIKNKOPIIKNKOP
+  offset= 29: lqhLLLOLPLOLPJLOLPQJJLOLPQJJLOLPQ
+MIDI - base -> A-Z (bases with <50% unknown):
+  base=21: ???ZZZ?Z?Z?Z?XZ?Z??XXZ?Z??XXZ?Z??
+  base=22: ???YYY?Y?Y?Y?WY?Y??WWY?Y??WWY?Y??
+  base=23: ???XXX?X?X?X?VX?X??VVX?X??VVX?X??
+  base=24: ???WWWZW?WZW?UWZW??UUWZW??UUWZW??
+  base=25: ???VVVYVZVYVZTVYVZ?TTVYVZ?TTVYVZ?
+  base=26: ???UUUXUYUXUYSUXUYZSSUXUYZSSUXUYZ
+  base=27: ???TTTWTXTWTXRTWTXYRRTWTXYRRTWTXY
+  base=28: ???SSSVSWSVSWQSVSWXQQSVSWXQQSVSWX
+  base=29: ???RRRURVRURVPRURVWPPRURVWPPRURVW
+  base=30: ???QQQTQUQTQUOQTQUVOOQTQUVOOQTQUV
+  base=31: ???PPPSPTPSPTNPSPTUNNPSPTUNNPSPTU
+  base=32: ???OOOROSOROSMOROSTMMOROSTMMOROST
+  base=33: ???NNNQNRNQNRLNQNRSLLNQNRSLLNQNRS
+  base=34: ???MMMPMQMPMQKMPMQRKKMPMQRKKMPMQR
+  base=35: ???LLLOLPLOLPJLOLPQJJLOLPQJJLOLPQ
+  base=36: ???KKKNKOKNKOIKNKOPIIKNKOPIIKNKOP
+  base=37: ???JJJMJNJMJNHJMJNOHHJMJNOHHJMJNO
+  base=38: ???IIILIMILIMGILIMNGGILIMNGGILIMN
+  base=39: ???HHHKHLHKHLFHKHLMFFHKHLMFFHKHLM
+  base=40: ???GGGJGKGJGKEGJGKLEEGJGKLEEGJGKL
+  base=41: ???FFFIFJFIFJDFIFJKDDFIFJKDDFIFJK
+  base=42: ???EEEHEIEHEICEHEIJCCEHEIJCCEHEIJ
+  base=43: ???DDDGDHDGDHBDGDHIBBDGDHIBBDGDHI
+  base=44: ???CCCFCGCFCGACFCGHAACFCGHAACFCGH
+  base=45: ???BBBEBFBEBF?BEBFG??BEBFG??BEBFG
+  base=46: ???AAADAEADAE?ADAEF??ADAEF??ADAEF
+
+--- DIFF ---
+MIDI sequence: [84, 86, 47, 47, 47, 50, 47, 46, 50, 47, 47, 46, 47, 47, 47, 48, 45, 47, 46, 47, 47, 47, 48, 45, 47, 46, 47, 47, 47, 48, 45, 47, 46, 47, 47, 47, 48, 47, 45, 47, 46, 47]
+Direct ASCII:  TV///2/.2//.///0-/.///0-/.///0-/.///0/-/./
+Hex string:    54562f2f2f322f2e322f2f2e2f2f2f302d2f2e2f2f2f302d2f2e2f2f2f302d2f2e2f2f2f302f2d2f2e2f
+Hex->ASCII:    TV///2/.2//.///0-/.///0-/.///0-/.///0/-/./
+Best NMS (MIDI%26+shift):
+  shift= 0 score=  2: GIVVVYVUYVVUVVVWTVUVVVWTVUVVVWTVUVVVWVTVUV
+  shift= 6 score=  2: MOBBBEBAEBBABBBCZBABBBCZBABBBCZBABBBCBZBAB
+  shift=10 score=  2: QSFFFIFEIFFEFFFGDFEFFFGDFEFFFGDFEFFFGFDFEF
+  shift=14 score=  2: UWJJJMJIMJJIJJJKHJIJJJKHJIJJJKHJIJJJKJHJIJ
+  shift=20 score=  2: ACPPPSPOSPPOPPPQNPOPPPQNPOPPPQNPOPPPQPNPOP
+MIDI offset -> ASCII (low dot ratio):
+  offset=-15: EG   # .#  .   !. .   !. .   !. .   ! . . 
+  offset=-14: FH!!!$! $!! !!!".! !!!".! !!!".! !!!"!.! !
+  offset=-13: GI"""%"!%""!"""# "!"""# "!"""# "!"""#" "!"
+  offset=-12: HJ###&#"&##"###$!#"###$!#"###$!#"###$#!#"#
+  offset=-11: IK$$$'$#'$$#$$$%"$#$$$%"$#$$$%"$#$$$%$"$#$
+  offset=-10: JL%%%(%$(%%$%%%&#%$%%%&#%$%%%&#%$%%%&%#%$%
+  offset= -9: KM&&&)&%)&&%&&&'$&%&&&'$&%&&&'$&%&&&'&$&%&
+  offset= -8: LN'''*'&*''&'''(%'&'''(%'&'''(%'&'''('%'&'
+  offset= -7: MO(((+('+(('((()&('((()&('((()&('((()(&('(
+  offset= -6: NP))),)(,))()))*')()))*')()))*')()))*)')()
+  offset= -5: OQ***-*)-**)***+(*)***+(*)***+(*)***+*(*)*
+  offset= -4: PR+++.+*.++*+++,)+*+++,)+*+++,)+*+++,+)+*+
+  offset= -3: QS,,,/,+/,,+,,,-*,+,,,-*,+,,,-*,+,,,-,*,+,
+  offset= -2: RT---0-,0--,---.+-,---.+-,---.+-,---.-+-,-
+  offset=  0: TV///2/.2//.///0-/.///0-/.///0-/.///0/-/./
+  offset=  1: UW00030/300/0001.0/0001.0/0001.0/00010.0/0
+  offset=  2: VX11141041101112/101112/101112/1011121/101
+  offset=  3: WY2225215221222302122230212223021222320212
+  offset=  4: XZ3336326332333413233341323334132333431323
+  offset=  5: Y[4447437443444524344452434445243444542434
+  offset=  6: Z\5558548554555635455563545556354555653545
+  offset=  7: []6669659665666746566674656667465666764656
+  offset=  8: \^777:76:776777857677785767778576777875767
+  offset=  9: ]_888;87;887888968788896878889687888986878
+  offset= 10: ^`999<98<998999:798999:798999:798999:97989
+  offset= 11: _a:::=:9=::9:::;8:9:::;8:9:::;8:9:::;:8:9:
+  offset= 12: `b;;;>;:>;;:;;;<9;:;;;<9;:;;;<9;:;;;<;9;:;
+  offset= 13: ac<<<?<;?<<;<<<=:<;<<<=:<;<<<=:<;<<<=<:<;<
+  offset= 14: bd===@=<@==<===>;=<===>;=<===>;=<===>=;=<=
+  offset= 15: ce>>>A>=A>>=>>>?<>=>>>?<>=>>>?<>=>>>?><>=>
+  offset= 16: df???B?>B??>???@=?>???@=?>???@=?>???@?=?>?
+  offset= 17: eg@@@C@?C@@?@@@A>@?@@@A>@?@@@A>@?@@@A@>@?@
+  offset= 18: fhAAADA@DAA@AAAB?A@AAAB?A@AAAB?A@AAABA?A@A
+  offset= 19: giBBBEBAEBBABBBC@BABBBC@BABBBC@BABBBCB@BAB
+  offset= 20: hjCCCFCBFCCBCCCDACBCCCDACBCCCDACBCCCDCACBC
+  offset= 21: ikDDDGDCGDDCDDDEBDCDDDEBDCDDDEBDCDDDEDBDCD
+  offset= 22: jlEEEHEDHEEDEEEFCEDEEEFCEDEEEFCEDEEEFECEDE
+  offset= 23: kmFFFIFEIFFEFFFGDFEFFFGDFEFFFGDFEFFFGFDFEF
+  offset= 24: lnGGGJGFJGGFGGGHEGFGGGHEGFGGGHEGFGGGHGEGFG
+  offset= 25: moHHHKHGKHHGHHHIFHGHHHIFHGHHHIFHGHHHIHFHGH
+  offset= 26: npIIILIHLIIHIIIJGIHIIIJGIHIIIJGIHIIIJIGIHI
+  offset= 27: oqJJJMJIMJJIJJJKHJIJJJKHJIJJJKHJIJJJKJHJIJ
+  offset= 28: prKKKNKJNKKJKKKLIKJKKKLIKJKKKLIKJKKKLKIKJK
+  offset= 29: qsLLLOLKOLLKLLLMJLKLLLMJLKLLLMJLKLLLMLJLKL
+MIDI - base -> A-Z (bases with <50% unknown):
+  base=21: ??ZZZ?ZY?ZZYZZZ?XZYZZZ?XZYZZZ?XZYZZZ?ZXZYZ
+  base=22: ??YYY?YX?YYXYYYZWYXYYYZWYXYYYZWYXYYYZYWYXY
+  base=23: ??XXX?XW?XXWXXXYVXWXXXYVXWXXXYVXWXXXYXVXWX
+  base=24: ??WWWZWVZWWVWWWXUWVWWWXUWVWWWXUWVWWWXWUWVW
+  base=25: ??VVVYVUYVVUVVVWTVUVVVWTVUVVVWTVUVVVWVTVUV
+  base=26: ??UUUXUTXUUTUUUVSUTUUUVSUTUUUVSUTUUUVUSUTU
+  base=27: ??TTTWTSWTTSTTTURTSTTTURTSTTTURTSTTTUTRTST
+  base=28: ??SSSVSRVSSRSSSTQSRSSSTQSRSSSTQSRSSSTSQSRS
+  base=29: ??RRRURQURRQRRRSPRQRRRSPRQRRRSPRQRRRSRPRQR
+  base=30: ??QQQTQPTQQPQQQROQPQQQROQPQQQROQPQQQRQOQPQ
+  base=31: ??PPPSPOSPPOPPPQNPOPPPQNPOPPPQNPOPPPQPNPOP
+  base=32: ??OOORONROONOOOPMONOOOPMONOOOPMONOOOPOMONO
+  base=33: ??NNNQNMQNNMNNNOLNMNNNOLNMNNNOLNMNNNONLNMN
+  base=34: ??MMMPMLPMMLMMMNKMLMMMNKMLMMMNKMLMMMNMKMLM
+  base=35: ??LLLOLKOLLKLLLMJLKLLLMJLKLLLMJLKLLLMLJLKL
+  base=36: ??KKKNKJNKKJKKKLIKJKKKLIKJKKKLIKJKKKLKIKJK
+  base=37: ??JJJMJIMJJIJJJKHJIJJJKHJIJJJKHJIJJJKJHJIJ
+  base=38: ??IIILIHLIIHIIIJGIHIIIJGIHIIIJGIHIIIJIGIHI
+  base=39: ??HHHKHGKHHGHHHIFHGHHHIFHGHHHIFHGHHHIHFHGH
+  base=40: ??GGGJGFJGGFGGGHEGFGGGHEGFGGGHEGFGGGHGEGFG
+  base=41: ??FFFIFEIFFEFFFGDFEFFFGDFEFFFGDFEFFFGFDFEF
+  base=42: ??EEEHEDHEEDEEEFCEDEEEFCEDEEEFCEDEEEFECEDE
+  base=43: ??DDDGDCGDDCDDDEBDCDDDEBDCDDDEBDCDDDEDBDCD
+  base=44: ??CCCFCBFCCBCCCDACBCCCDACBCCCDACBCCCDCACBC
+  base=45: ??BBBEBAEBBABBBC?BABBBC?BABBBC?BABBBCB?BAB
+  base=46: ??AAADA?DAA?AAAB?A?AAAB?A?AAAB?A?AAABA?A?A
+
+======================================================================
+PYIN FUNDAMENTAL FREQUENCY EXTRACTION
+======================================================================
+
+--- LEFT pYIN notes ---
+Count: 1
+  t=1.115s  f=564.06Hz  dur=0.337s  MIDI= 73
+MIDI: [73]
+Direct ASCII: I
+Best NMS:
+
+--- RIGHT pYIN notes ---
+Count: 1
+  t=1.144s  f=564.06Hz  dur=1.213s  MIDI= 73
+MIDI: [73]
+Direct ASCII: I
+Best NMS:
+
+--- MONO pYIN notes ---
+Count: 3
+  t=3.100s  f=208.86Hz  dur=0.505s  MIDI= 56
+  t=3.709s  f=198.28Hz  dur=0.215s  MIDI= 55
+  t=15.505s  f=110.00Hz  dur=0.075s  MIDI= 45
+MIDI: [56, 55, 45]
+Direct ASCII: 87-
+Best NMS:
+  shift= 0 score=  1: EDT
+  shift= 4 score=  1: IHX
+  shift= 5 score=  1: JIY
+  shift= 7 score=  1: LKA
+  shift=10 score=  1: OND
+  shift=15 score=  1: TSI
+  shift=16 score=  1: UTJ
+  shift=17 score=  1: VUK
+
+--- DIFF pYIN notes ---
+Count: 2
+  t=1.115s  f=564.06Hz  dur=1.242s  MIDI= 73
+  t=2.363s  f=538.58Hz  dur=0.052s  MIDI= 72
+MIDI: [73, 72]
+Direct ASCII: IH
+Best NMS:
+
+======================================================================
+VALIDATION ON tape_9_16_final_b_side.wav (first 5 minutes)
+======================================================================
+Tape segments found: 145
+  #  0  t=59.257s  f=67.29Hz  MIDI= 36
+  #  1  t=59.675s  f=137.27Hz  MIDI= 49
+  #  2  t=60.175s  f=91.52Hz  MIDI= 42
+  #  3  t=60.418s  f=94.21Hz  MIDI= 42
+  #  4  t=61.336s  f=137.27Hz  MIDI= 49
+  #  5  t=61.556s  f=68.64Hz  MIDI= 37
+  #  6  t=62.137s  f=134.58Hz  MIDI= 48
+  #  7  t=62.206s  f=67.29Hz  MIDI= 36
+  #  8  t=81.746s  f=67.29Hz  MIDI= 36
+  #  9  t=82.199s  f=137.27Hz  MIDI= 49
+  # 10  t=82.350s  f=67.29Hz  MIDI= 36
+  # 11  t=82.698s  f=91.52Hz  MIDI= 42
+  # 12  t=83.847s  f=134.58Hz  MIDI= 48
+  # 13  t=83.975s  f=69.98Hz  MIDI= 37
+  # 14  t=84.660s  f=134.58Hz  MIDI= 48
+  # 15  t=84.741s  f=67.29Hz  MIDI= 36
+  # 16  t=90.314s  f=258.40Hz  MIDI= 60
+  # 17  t=92.346s  f=258.40Hz  MIDI= 60
+  # 18  t=109.459s  f=107.67Hz  MIDI= 45
+  # 19  t=113.453s  f=107.67Hz  MIDI= 45
+MIDI (first 30): [36, 49, 42, 42, 49, 37, 48, 36, 36, 49, 36, 42, 48, 37, 48, 36, 60, 60, 45, 45, 66, 65, 62, 65, 62, 66, 65, 64, 66, 66]
+Direct ASCII:    $1**1%0$$1$*0%0$<<--BA>A>BA@BB
+Shifts containing JOURNEY in first 5 min: []
+
+======================================================================
+CONSTANT-Q TRANSFORM (CQT) NOTE TRACKING
+======================================================================
+
+--- LEFT CQT notes ---
+Count: 45
+  t=0.580-0.627s  MIDI= 93
+  t=0.639-0.697s  MIDI= 92
+  t=3.866-3.924s  MIDI= 91
+  t=5.817-5.909s  MIDI= 92
+  t=8.603-8.661s  MIDI= 47
+  t=9.590-9.671s  MIDI= 47
+  t=10.577-10.704s  MIDI= 47
+  t=10.728-10.774s  MIDI= 48
+  t=11.238-11.285s  MIDI= 93
+  t=11.436-11.494s  MIDI= 47
+  t=11.575-11.691s  MIDI= 47
+  t=11.726-11.784s  MIDI= 48
+  t=11.796-11.842s  MIDI= 51
+  t=12.411-12.492s  MIDI= 47
+  t=12.562-12.701s  MIDI= 47
+  t=12.736-12.783s  MIDI= 48
+  t=12.794-12.841s  MIDI= 51
+  t=12.852-12.922s  MIDI= 46
+  t=12.945-12.992s  MIDI= 51
+  t=13.386-13.491s  MIDI= 47
+  t=13.502-13.711s  MIDI= 47
+  t=13.735-13.781s  MIDI= 48
+  t=13.793-13.839s  MIDI= 51
+  t=13.851-13.932s  MIDI= 46
+  t=13.944-14.025s  MIDI= 51
+  t=14.141-14.222s  MIDI= 48
+  t=14.257-14.303s  MIDI= 49
+  t=14.315-14.373s  MIDI= 46
+  t=14.385-14.489s  MIDI= 47
+  t=14.501-14.547s  MIDI= 46
+  t=14.571-14.710s  MIDI= 47
+  t=14.733-14.780s  MIDI= 48
+  t=14.791-14.838s  MIDI= 51
+  t=14.849-14.930s  MIDI= 46
+  t=14.942-15.023s  MIDI= 51
+  t=15.081-15.139s  MIDI= 50
+  t=15.151-15.221s  MIDI= 48
+  t=15.314-15.372s  MIDI= 46
+  t=15.383-15.488s  MIDI= 47
+  t=15.499-15.546s  MIDI= 46
+  t=15.592-15.720s  MIDI= 47
+  t=15.732-15.778s  MIDI= 48
+  t=15.790-15.836s  MIDI= 51
+  t=15.848-15.929s  MIDI= 46
+  t=15.940-16.045s  MIDI= 51
+MIDI: [93, 92, 91, 92, 47, 47, 47, 48, 93, 47, 47, 48, 51, 47, 47, 48, 51, 46, 51, 47, 47, 48, 51, 46, 51, 48, 49, 46, 47, 46, 47, 48, 51, 46, 51, 50, 48, 46, 47, 46, 47, 48, 51, 46, 51]
+Direct ASCII: ]\[\///0]//03//03.3//03.301././03.320././03.3
+Best NMS:
+  shift=14 score= 11: DCBCJJJKDJJKNJJKNINJJKNINKLIJIJKNINMKIJIJKNIN
+  shift=21 score= 11: KJIJQQQRKQQRUQQRUPUQQRUPURSPQPQRUPUTRPQPQRUPU
+  shift= 0 score=  1: PONOVVVWPVVWZVVWZUZVVWZUZWXUVUVWZUZYWUVUVWZUZ
+  shift= 1 score=  1: QPOPWWWXQWWXAWWXAVAWWXAVAXYVWVWXAVAZXVWVWXAVA
+  shift= 4 score=  1: TSRSZZZATZZADZZADYDZZADYDABYZYZADYDCAYZYZADYD
+  shift= 6 score=  1: VUTUBBBCVBBCFBBCFAFBBCFAFCDABABCFAFECABABCFAF
+  shift= 8 score=  1: XWVWDDDEXDDEHDDEHCHDDEHCHEFCDCDEHCHGECDCDEHCH
+  shift=10 score=  1: ZYXYFFFGZFFGJFFGJEJFFGJEJGHEFEFGJEJIGEFEFGJEJ
+
+--- RIGHT CQT notes ---
+Count: 40
+  t=0.604-0.685s  MIDI= 92
+  t=3.866-3.924s  MIDI= 91
+  t=5.851-5.898s  MIDI= 92
+  t=8.510-8.557s  MIDI= 93
+  t=8.673-8.731s  MIDI= 47
+  t=9.601-9.660s  MIDI= 49
+  t=9.671-9.752s  MIDI= 47
+  t=10.588-10.658s  MIDI= 49
+  t=10.670-10.774s  MIDI= 47
+  t=10.797-10.844s  MIDI= 48
+  t=11.215-11.273s  MIDI= 93
+  t=11.517-11.564s  MIDI= 45
+  t=11.587-11.656s  MIDI= 49
+  t=11.668-11.773s  MIDI= 47
+  t=11.796-11.842s  MIDI= 48
+  t=12.434-12.481s  MIDI= 45
+  t=12.504-12.562s  MIDI= 45
+  t=12.574-12.655s  MIDI= 49
+  t=12.666-12.771s  MIDI= 47
+  t=13.131-13.212s  MIDI= 45
+  t=13.433-13.572s  MIDI= 45
+  t=13.584-13.653s  MIDI= 49
+  t=13.665-13.781s  MIDI= 47
+  t=13.804-13.851s  MIDI= 48
+  t=13.862-13.909s  MIDI= 47
+  t=13.978-14.025s  MIDI= 52
+  t=14.071-14.118s  MIDI= 47
+  t=14.129-14.234s  MIDI= 45
+  t=14.431-14.571s  MIDI= 45
+  t=14.582-14.652s  MIDI= 49
+  t=14.663-14.780s  MIDI= 47
+  t=14.803-14.849s  MIDI= 48
+  t=14.861-14.907s  MIDI= 47
+  t=15.047-15.232s  MIDI= 46
+  t=15.267-15.314s  MIDI= 45
+  t=15.325-15.406s  MIDI= 48
+  t=15.430-15.569s  MIDI= 45
+  t=15.581-15.650s  MIDI= 49
+  t=15.662-15.778s  MIDI= 47
+  t=15.813-15.952s  MIDI= 48
+MIDI: [92, 91, 92, 93, 47, 49, 47, 49, 47, 48, 93, 45, 49, 47, 48, 45, 45, 49, 47, 45, 45, 49, 47, 48, 47, 52, 47, 45, 45, 49, 47, 48, 47, 46, 45, 48, 45, 49, 47, 48]
+Direct ASCII: \[\]/1/1/0]-1/0--1/--1/0/4/--1/0/.-0-1/0
+Best NMS:
+  shift= 3 score= 11: RQRSYAYAYZSWAYZWWAYWWAYZYDYWWAYZYXWZWAYZ
+  shift=13 score= 11: BABCIKIKIJCGKIJGGKIGGKIJINIGGKIJIHGJGKIJ
+  shift=20 score= 10: IHIJPRPRPQJNRPQNNRPNNRPQPUPNNRPQPONQNRPQ
+  shift= 1 score=  1: POPQWYWYWXQUYWXUUYWUUYWXWBWUUYWXWVUXUYWX
+  shift= 4 score=  1: SRSTZBZBZATXBZAXXBZXXBZAZEZXXBZAZYXAXBZA
+  shift= 5 score=  1: TSTUACACABUYCABYYCAYYCABAFAYYCABAZYBYCAB
+  shift= 7 score=  1: VUVWCECECDWAECDAAECAAECDCHCAAECDCBADAECD
+  shift= 8 score=  1: WVWXDFDFDEXBFDEBBFDBBFDEDIDBBFDEDCBEBFDE
+
+--- MONO CQT notes ---
+Count: 35
+  t=1.974-2.020s  MIDI= 99
+  t=3.855-3.913s  MIDI= 91
+  t=5.840-5.898s  MIDI= 92
+  t=8.510-8.557s  MIDI= 93
+  t=9.601-9.752s  MIDI= 47
+  t=10.600-10.774s  MIDI= 47
+  t=11.459-11.505s  MIDI= 50
+  t=11.598-11.784s  MIDI= 47
+  t=12.458-12.516s  MIDI= 50
+  t=12.527-12.574s  MIDI= 45
+  t=12.597-12.783s  MIDI= 47
+  t=12.829-12.875s  MIDI= 51
+  t=12.957-13.003s  MIDI= 51
+  t=13.386-13.456s  MIDI= 47
+  t=13.468-13.526s  MIDI= 50
+  t=13.595-13.781s  MIDI= 47
+  t=13.827-13.874s  MIDI= 51
+  t=13.886-13.932s  MIDI= 46
+  t=13.955-14.025s  MIDI= 51
+  t=14.129-14.338s  MIDI= 45
+  t=14.350-14.454s  MIDI= 47
+  t=14.466-14.524s  MIDI= 50
+  t=14.605-14.780s  MIDI= 47
+  t=14.826-14.872s  MIDI= 51
+  t=14.884-14.930s  MIDI= 46
+  t=14.942-15.035s  MIDI= 51
+  t=15.047-15.105s  MIDI= 46
+  t=15.128-15.348s  MIDI= 45
+  t=15.360-15.453s  MIDI= 47
+  t=15.464-15.523s  MIDI= 50
+  t=15.534-15.581s  MIDI= 45
+  t=15.604-15.778s  MIDI= 47
+  t=15.813-15.871s  MIDI= 51
+  t=15.882-15.940s  MIDI= 46
+  t=15.952-16.033s  MIDI= 51
+MIDI: [99, 91, 92, 93, 47, 47, 50, 47, 50, 45, 47, 51, 51, 47, 50, 47, 51, 46, 51, 45, 47, 50, 47, 51, 46, 51, 46, 45, 47, 50, 45, 47, 51, 46, 51]
+Direct ASCII: c[\]//2/2-/33/2/3.3-/2/3.3.-/2-/3.3
+Best NMS:
+  shift=21 score= 11: QIJKQQTQTOQUUQTQUPUOQTQUPUPOQTOQUPU
+  shift=14 score= 10: JBCDJJMJMHJNNJMJNINHJMJNINIHJMHJNIN
+  shift=22 score= 10: RJKLRRURUPRVVRURVQVPRURVQVQPRUPRVQV
+  shift= 1 score=  1: WOPQWWZWZUWAAWZWAVAUWZWAVAVUWZUWAVA
+  shift= 6 score=  1: BTUVBBEBEZBFFBEBFAFZBEBFAFAZBEZBFAF
+  shift=10 score=  1: FXYZFFIFIDFJJFIFJEJDFIFJEJEDFIDFJEJ
+  shift=13 score=  1: IABCIILILGIMMILIMHMGILIMHMHGILGIMHM
+  shift=15 score=  1: KCDEKKNKNIKOOKNKOJOIKNKOJOJIKNIKOJO
+
+--- DIFF CQT notes ---
+Count: 29
+  t=0.580-0.627s  MIDI= 93
+  t=0.639-0.697s  MIDI= 92
+  t=5.863-5.909s  MIDI= 92
+  t=8.603-8.719s  MIDI= 47
+  t=9.590-9.729s  MIDI= 47
+  t=10.588-10.728s  MIDI= 47
+  t=10.809-10.867s  MIDI= 47
+  t=11.471-11.540s  MIDI= 45
+  t=11.587-11.726s  MIDI= 47
+  t=11.807-11.877s  MIDI= 47
+  t=12.469-12.550s  MIDI= 45
+  t=12.585-12.725s  MIDI= 47
+  t=12.806-12.875s  MIDI= 47
+  t=13.259-13.305s  MIDI= 49
+  t=13.468-13.549s  MIDI= 45
+  t=13.584-13.723s  MIDI= 47
+  t=13.804-13.886s  MIDI= 47
+  t=14.083-14.141s  MIDI= 47
+  t=14.153-14.199s  MIDI= 49
+  t=14.257-14.327s  MIDI= 49
+  t=14.466-14.547s  MIDI= 45
+  t=14.594-14.721s  MIDI= 47
+  t=14.780-14.907s  MIDI= 47
+  t=15.081-15.151s  MIDI= 47
+  t=15.256-15.325s  MIDI= 49
+  t=15.476-15.557s  MIDI= 45
+  t=15.604-15.720s  MIDI= 47
+  t=15.813-15.882s  MIDI= 47
+  t=15.952-16.045s  MIDI= 51
+MIDI: [93, 92, 92, 47, 47, 47, 47, 45, 47, 47, 45, 47, 47, 49, 45, 47, 47, 47, 49, 49, 45, 47, 47, 47, 49, 45, 47, 47, 51]
+Direct ASCII: ]\\////-//-//1-///11-///1-//3
+Best NMS:
+  shift=16 score= 10: FEELLLLJLLJLLNJLLLNNJLLLNJLLP
+  shift= 1 score=  1: QPPWWWWUWWUWWYUWWWYYUWWWYUWWA
+  shift= 7 score=  1: WVVCCCCACCACCEACCCEEACCCEACCG
+  shift=11 score=  1: AZZGGGGEGGEGGIEGGGIIEGGGIEGGK
+  shift=15 score=  1: EDDKKKKIKKIKKMIKKKMMIKKKMIKKO
+  shift=21 score=  1: KJJQQQQOQQOQQSOQQQSSOQQQSOQQU

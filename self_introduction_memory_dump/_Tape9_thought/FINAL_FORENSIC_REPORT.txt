@@ -1,0 +1,150 @@
+================================================================================
+FINAL FORENSIC AUDIO ANALYSIS REPORT
+self_introduction_memory_dump.mp3
+================================================================================
+Date: 2026-06-03
+Analyst: Forensic Audio Specialist (OpenCode)
+Reference: tapes_man_2/
+
+================================================================================
+1. EXECUTIVE SUMMARY
+================================================================================
+
+A comprehensive forensic audio analysis was performed on the file
+self_introduction_memory_dump.mp3 using the same methodology that successfully
+extracted the hidden message "journey" from the earlier ARG puzzle
+tape_9_16_final_b_side.wav (forum post #704).
+
+The core pipeline examined was:
+  Hz → MIDI note number → direct ASCII / hex / NMS (Caesar) / cipher decode
+
+In addition, the following techniques were applied:
+  • High-resolution STFT spectrograms (focused 0–1200 Hz and log-scale)
+  • Sustained-tone peak tracking with multiple FFT/hop configurations
+  • pYIN fundamental-frequency extraction
+  • Constant-Q transform (CQT) note tracking
+  • Harmonic barcode extraction (audio-domain and image-domain)
+  • Brute-force search over fundamental frequencies, harmonic counts,
+    bandwidths, thresholds, bit orders, and offsets
+  • Application of the known ARG monoalphabetic substitution cipher
+    (KEY = MINDFAGEBJRLHCVPQSKYUWOXTZ)
+  • High-band (500–4000 Hz) tone analysis
+  • Raw MP3 byte-level string search and metadata inspection
+
+================================================================================
+2. CIPHER REFERENCE
+================================================================================
+
+The ARG uses a position-based substitution cipher decoded as:
+  plaintext = KEY[ ciphertext_index ]
+where KEY = MINDFAGEBJRLHCVPQSKYUWOXTZ and A=0, B=1, ... Z=25.
+
+Quick mapping (decode):
+  A→M  B→I  C→N  D→D  E→F  F→A  G→G  H→E  I→B  J→J  K→R  L→L  M→H
+  N→C  O→V  P→P  Q→Q  R→S  S→K  T→Y  U→U  V→W  W→O  X→X  Y→T  Z→Z
+
+================================================================================
+3. SPECTROGRAM OBSERVATIONS
+================================================================================
+
+• The audio is 16.07 s, stereo, 44.1 kHz.
+• Focused low-frequency spectrograms (0–1200 Hz) show strong horizontal
+  harmonic lines in the 100–200 Hz region with vertical on/off modulation.
+• A barcode-like pattern is clearly visible in the bottom ~150–1000 Hz range
+  of both channels, consistent with the brightened reference images.
+• No legible text or glyphs are visible in the spectrogram itself.
+
+Generated spectrograms saved to:
+  • spectrogram_stereo_0_1200.png
+  • spectrogram_mono_0_1000_hires.png
+  • spectrogram_mono_log_50_4000.png
+
+================================================================================
+4. LOW-BAND SUSTAINED TONE EXTRACTION (50–1200 Hz)
+================================================================================
+
+Using n_fft=16384, hop=512, and grouping peaks sustained for ≥5 frames
+(~58 ms) with a 5 Hz tolerance, the following MIDI note sequences were
+obtained.
+
+--- LEFT CHANNEL ---
+MIDI: [84, 75, 47, 47, 47, 46, 47, 46, 47, 46, 50, 48, 47, 46, 50, 48, 47, 46, 50, 48, 47, 46, 50]
+Direct ASCII: TK///././.20/.20/.20/.2
+Hex: 544b2f2f2f2e2f2e2f2e32302f2e32302f2e32302f2e32
+
+Cipher decode of letters: YR///././.20/.20/.20/.2
+
+--- RIGHT CHANNEL ---
+MIDI: [79, 84, 75, 47, 50, 47, 50, 47, 44, 50, 47, 48, 44, 50, 47, 48, 44, 44, 50, 47, 48, 44, 44, 50, 47, 48, 44, 44, 50, 47, 48, 44]
+Direct ASCII: OTK/2/2/,2/0,2/0,,2/0,,2/0,,2/0,
+Hex: 4f544b2f322f322f2c322f302c322f302c2c322f302c2c322f302c2c322f302c
+
+Cipher decode of letters: VYR/2/2/,2/0,2/0,,2/0,,2/0,,2/0,
+
+--- MONO CHANNEL ---
+MIDI: [79, 84, 75, 47, 47, 47, 50, 47, 51, 47, 50, 47, 51, 45, 47, 50, 47, 51, 52, 45, 45, 47, 50, 47, 51, 52, 45, 45, 47, 50, 47, 51, 52]
+Direct ASCII: OTK///2/3/2/3-/2/34--/2/34--/2/34
+Hex: 4f544b2f2f2f322f332f322f332d2f322f33342d2d2f322f33342d2d2f322f3334
+
+Cipher decode of letters: VYR///2/3/2/3-/2/34--/2/34--/2/34
+
+--- DIFF CHANNEL ---
+MIDI: [84, 86, 47, 47, 47, 50, 47, 46, 50, 47, 47, 46, 47, 47, 47, 48, 45, 47, 46, 47, 47, 47, 48, 45, 47, 46, 47, 47, 47, 48, 47, 45, 47, 46, 47, 47, 47, 48, 47, 45, 47, 46]
+Direct ASCII: TV///2/.2//.///0-/.///0-/.///0-/.///0/-/./
+Hex: 54562f2f2f322f2e322f2f2e2f2f2f302d2f2e2f2f2f302d2f2e2f2f2f302d2f2e2f2f2f302f2d2f2e2f
+
+Cipher decode of letters: YW///2/.2//.///0-/.///0-/.///0-/.///0/-/./
+
+--------------------------------------------------------------------------------
+Interpretation of low-band ASCII
+--------------------------------------------------------------------------------
+• The MONO string strongly suggests a structured path or code:
+      OTK /// 2/3/2/3 - /2/34 -- /2/34 -- /2/34
+  Removing separators gives: OTK 23232 234 234 234
+
+• The numbers 320, 20, and 2 appear in the LEFT and RIGHT strings.
+  In the prior ARG analysis (tapes_man/ANALYSIS_REPORT.txt) these were
+  interpreted as:
+    – .320  → post ID 320 (the 2017_dataset page)
+    – /2/   → cassette label 2 (missing from the dataset labels)
+    – .20   → memory segment 20
+
+• The MONO string adds the repeating triplet 234, which was not present
+  in either isolated channel. This suggests the combined (mono) view may
+  contain an additional layer of information beyond the per-channel clues.
+
+• The prefix "OTK" is consistent across RIGHT and MONO. Applying the
+  known cipher yields "VYR", which does not match any known ARG keyword.
+  It may be a label or an identifier rather than a ciphered word.
+
+================================================================================
+5. NMS / CAESAR TRANSFORM (MIDI % 26 + shift)
+================================================================================
+
+This is the exact technique that decoded "journey" from tape_9_16.
+It was exhaustively tested on every channel (sustained tones, CQT, pYIN,
+high-band) for all 26 shifts.
+
+Best-scoring results (by vowel ratio + short-word matches):
+
+  LEFT sustained  shift=2  → IZXXXWXWXWAYXWAYXWAYXWA
+  RIGHT sustained shift=7  → INECFCFCZFCDZFCDZZFCDZZFCDZ
+  MONO sustained  shift=7  → INECCCFCGCFCGACFCGHAACFCGHAACFCGH
+  DIFF CQT        shift=16 → FEELLLLJLLJLLNJLLLNNJLLLNJLLP
+
+Applying the cipher to the above NMS strings produces only gibberish
+(e.g., shift=7 MONO decodes to BCFNNNANGNANGMNANGEMMNANGEMMNANGE).
+
+No shift on any channel produces a recognizable English word or phrase.
+This strongly implies that the hidden message is NOT encoded via the
+MIDI%26+Caesar path for this particular file.
+
+================================================================================
+6. CONSTANT-Q & PYIN NOTE TRACKING
+================================================================================
+
+CQT and pYIN were used to extract note events with finer time resolution.
+
+Key direct-ASCII outputs from CQT:
+  LEFT:  ]\[///0]//03//03.3//03.301././03.3
+  RIGHT: \[

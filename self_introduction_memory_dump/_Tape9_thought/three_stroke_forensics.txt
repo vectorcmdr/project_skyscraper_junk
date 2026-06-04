@@ -1,0 +1,32 @@
+=== THREE-STROKE FORENSIC ANALYSIS ===
+
+Total 3-stroke segments: 12
+Unique patterns: 8
+
+Pattern breakdown:
+  Formants [5, 7, 8]: 3 occurrences
+  Formants [1, 2, 3]: 3 occurrences
+  Formants [4, 6, 8]: 1 occurrences
+  Formants [1, 2, 8]: 1 occurrences
+  Formants [1, 7, 8]: 1 occurrences
+  Formants [2, 7, 8]: 1 occurrences
+  Formants [2, 3, 6]: 1 occurrences
+  Formants [1, 2, 4]: 1 occurrences
+
+Sequence:
+    0: t=4.775s, formants=(4, 6, 8), freqs=(529, 702, 912), dur=0.119s
+    1: t=6.905s, formants=(5, 7, 8), freqs=(614, 820, 912), dur=0.203s
+    2: t=11.523s, formants=(1, 2, 8), freqs=(409, 443, 912), dur=0.009s
+    3: t=11.783s, formants=(1, 7, 8), freqs=(409, 820, 912), dur=0.078s
+    4: t=11.923s, formants=(5, 7, 8), freqs=(614, 820, 912), dur=0.286s
+    5: t=13.460s, formants=(1, 2, 3), freqs=(409, 443, 454), dur=0.284s
+    6: t=13.878s, formants=(2, 7, 8), freqs=(443, 820, 912), dur=0.007s
+    7: t=13.954s, formants=(5, 7, 8), freqs=(614, 820, 912), dur=0.136s
+    8: t=14.288s, formants=(2, 3, 6), freqs=(443, 454, 702), dur=0.132s
+    9: t=14.906s, formants=(1, 2, 3), freqs=(409, 443, 454), dur=0.045s
+   10: t=15.234s, formants=(1, 2, 3), freqs=(409, 443, 454), dur=0.015s
+   11: t=16.030s, formants=(1, 2, 4), freqs=(409, 443, 529), dur=0.003s
+
+Decoding attempts:
+1. First formant index: 451151252111
+7. Unique combo mapping: GHCDHAFHEAAB

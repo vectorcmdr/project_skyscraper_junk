@@ -1,0 +1,83 @@
+=== ACTIVE FORMANT COUNT ENCODING ===
+
+Total segments: 73
+
+Full sequence:
+    0: t=0.000s, count=0, formants=[], dur=0.367s
+    1: t=0.367s, count=1, formants=[7], dur=0.157s
+    2: t=0.524s, count=2, formants=[4, 7], dur=0.254s
+    3: t=0.778s, count=1, formants=[4], dur=0.254s
+    4: t=1.032s, count=0, formants=[], dur=0.506s
+    5: t=1.538s, count=1, formants=[6], dur=0.486s
+    6: t=2.049s, count=1, formants=[4], dur=0.347s
+    7: t=2.396s, count=0, formants=[], dur=0.528s
+    8: t=2.966s, count=2, formants=[5, 7], dur=0.206s
+    9: t=3.172s, count=1, formants=[5], dur=0.093s
+   10: t=3.265s, count=2, formants=[5, 7], dur=0.103s
+   11: t=3.368s, count=1, formants=[7], dur=0.096s
+   12: t=3.464s, count=2, formants=[1, 7], dur=0.136s
+   13: t=3.601s, count=1, formants=[1], dur=0.058s
+   14: t=3.704s, count=1, formants=[5], dur=0.231s
+   15: t=3.934s, count=2, formants=[5, 7], dur=0.052s
+   16: t=3.987s, count=1, formants=[7], dur=0.138s
+   17: t=4.124s, count=0, formants=[], dur=0.618s
+   18: t=4.775s, count=3, formants=[4, 6, 8], dur=0.119s
+   19: t=4.894s, count=2, formants=[4, 6], dur=0.194s
+   20: t=5.127s, count=0, formants=[], dur=0.453s
+   21: t=5.580s, count=1, formants=[4], dur=0.057s
+   22: t=5.637s, count=2, formants=[4, 7], dur=0.261s
+   23: t=5.898s, count=1, formants=[4], dur=0.144s
+   24: t=6.043s, count=1, formants=[6], dur=0.149s
+   25: t=6.192s, count=0, formants=[], dur=0.189s
+   26: t=6.415s, count=2, formants=[2, 8], dur=0.199s
+   27: t=6.613s, count=1, formants=[8], dur=0.070s
+   28: t=6.683s, count=2, formants=[5, 8], dur=0.075s
+   29: t=6.758s, count=1, formants=[5], dur=0.051s
+   30: t=6.809s, count=2, formants=[5, 7], dur=0.096s
+   31: t=6.905s, count=3, formants=[5, 7, 8], dur=0.203s
+   32: t=7.155s, count=0, formants=[], dur=1.489s
+   33: t=8.644s, count=1, formants=[6], dur=0.052s
+   34: t=8.696s, count=2, formants=[6, 8], dur=0.372s
+   35: t=9.112s, count=0, formants=[], dur=0.119s
+   36: t=9.234s, count=2, formants=[3, 6], dur=0.129s
+   37: t=9.363s, count=1, formants=[3], dur=0.113s
+   38: t=9.477s, count=0, formants=[], dur=1.609s
+   39: t=11.086s, count=1, formants=[5], dur=0.292s
+   40: t=11.378s, count=1, formants=[2], dur=0.135s
+   41: t=11.532s, count=4, formants=[1, 2, 3, 8], dur=0.086s
+   42: t=11.629s, count=4, formants=[1, 2, 7, 8], dur=0.154s
+   43: t=11.783s, count=3, formants=[1, 7, 8], dur=0.078s
+   44: t=11.861s, count=2, formants=[7, 8], dur=0.062s
+   45: t=11.923s, count=3, formants=[5, 7, 8], dur=0.286s
+   46: t=12.209s, count=2, formants=[5, 7], dur=0.118s
+   47: t=12.357s, count=0, formants=[], dur=0.054s
+   48: t=12.411s, count=1, formants=[3], dur=0.067s
+   49: t=12.478s, count=2, formants=[2, 3], dur=0.225s
+   50: t=12.703s, count=1, formants=[2], dur=0.116s
+   51: t=12.819s, count=0, formants=[], dur=0.553s
+   52: t=13.372s, count=1, formants=[3], dur=0.067s
+   53: t=13.460s, count=3, formants=[1, 2, 3], dur=0.284s
+   54: t=13.886s, count=4, formants=[2, 5, 7, 8], dur=0.068s
+   55: t=13.954s, count=3, formants=[5, 7, 8], dur=0.136s
+   56: t=14.132s, count=0, formants=[], dur=0.062s
+   57: t=14.195s, count=1, formants=[2], dur=0.091s
+   58: t=14.288s, count=3, formants=[2, 3, 6], dur=0.132s
+   59: t=14.528s, count=7, formants=[1, 2, 3, 4, 6, 7, 8], dur=0.103s
+   60: t=14.631s, count=8, formants=[1, 2, 3, 4, 5, 6, 7, 8], dur=0.077s
+   61: t=14.708s, count=7, formants=[1, 2, 3, 4, 6, 7, 8], dur=0.099s
+   62: t=14.807s, count=6, formants=[1, 2, 3, 4, 6, 8], dur=0.068s
+   63: t=14.993s, count=0, formants=[], dur=0.122s
+   64: t=15.115s, count=1, formants=[2], dur=0.065s
+   65: t=15.180s, count=2, formants=[1, 2], dur=0.054s
+   66: t=15.335s, count=5, formants=[1, 2, 3, 4, 6], dur=0.077s
+   67: t=15.412s, count=6, formants=[1, 2, 3, 4, 5, 6], dur=0.109s
+   68: t=15.521s, count=7, formants=[1, 2, 3, 4, 5, 6, 8], dur=0.119s
+   69: t=15.640s, count=6, formants=[1, 2, 3, 4, 5, 8], dur=0.138s
+   70: t=15.778s, count=7, formants=[1, 2, 3, 4, 5, 7, 8], dur=0.078s
+   71: t=15.888s, count=5, formants=[1, 2, 3, 4, 8], dur=0.058s
+   72: t=15.946s, count=4, formants=[1, 2, 3, 4], dur=0.084s
+
+Active count sequence: [np.int64(0), np.int64(1), np.int64(2), np.int64(1), np.int64(0), np.int64(1), np.int64(1), np.int64(0), np.int64(2), np.int64(1), np.int64(2), np.int64(1), np.int64(2), np.int64(1), np.int64(1), np.int64(2), np.int64(1), np.int64(0), np.int64(3), np.int64(2), np.int64(0), np.int64(1), np.int64(2), np.int64(1), np.int64(1), np.int64(0), np.int64(2), np.int64(1), np.int64(2), np.int64(1), np.int64(2), np.int64(3), np.int64(0), np.int64(1), np.int64(2), np.int64(0), np.int64(2), np.int64(1), np.int64(0), np.int64(1), np.int64(1), np.int64(4), np.int64(4), np.int64(3), np.int64(2), np.int64(3), np.int64(2), np.int64(0), np.int64(1), np.int64(2), np.int64(1), np.int64(0), np.int64(1), np.int64(3), np.int64(4), np.int64(3), np.int64(0), np.int64(1), np.int64(3), np.int64(7), np.int64(8), np.int64(7), np.int64(6), np.int64(0), np.int64(1), np.int64(2), np.int64(5), np.int64(6), np.int64(7), np.int64(6), np.int64(7), np.int64(5), np.int64(4)]
+
+Decode 1 (count->A-H): ?ABA?AA?BABABAABA?CB?ABAA?BABABC?AB?BA?AADDCBCB?ABA?ACDC?ACGHGF?ABEFGFGED
+Decode 2 (count as digits): 0121011021212112103201211021212301202101144323201210134301378760125676754
