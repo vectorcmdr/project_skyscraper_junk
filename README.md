@@ -53,6 +53,8 @@ Plain:    L  E  O  N  A  R  D     D  E     V  I  N  C  I
 
        =  LÉONARD DE VINCI
 ```
+Use [this link](https://gchq.github.io/CyberChef/#recipe=Substitute('ABCDEFGHIJKLMNOPQRSTUVWXYZ','MINDFAGEBJRLHCVPQSKYUWOXTZ',true)Reverse('Line'/disabled)&input=TGYgcHdreWggaHJ5IHd1b2hreWgu&oenc=65001&ieol=CRLF) assembled by the Operators for a quick way to decode messages.
+
 It seems the Architect or the team within the SYSTEM communicate in the "school code" cipher, with line positions inverted:
 <img src="https://github.com/vectorcmdr/project_skyscraper_junk/blob/main/archived/email_archi.png" width="640">
 
