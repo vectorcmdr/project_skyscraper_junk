@@ -26,6 +26,10 @@ I'll clean it up properly later (...probably) and do my best to keep it relative
 **⚠️ Warning for the audio files:** <br />
 - Some are like beautiful whale songs... others are like having your teeth jackhammered - make sure your headphones are not too loud.
 
+## WordPress Password Helper Script:
+
+[Grab this monkey script](https://github.com/vectorcmdr/project_skyscraper_junk/blob/main/archived/password-helper.js) and add it to your favourite greasemonkey/tampermonkey/whatever to stop the field from hiding the string, and auto try passwords in all case combinations.
+
 ## Current known message cipher "Highschool Code":
 This was part of the "/code" puzzle "When_we_were_17" image.
 
